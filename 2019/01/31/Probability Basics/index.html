@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 
     
 
@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="Probability">
     
-    <meta name="description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = {1,2,…,m}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with $$ p_i \g">
+    <meta name="description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with p_i \ge">
 <meta name="keywords" content="Probability">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Probability Basics">
 <meta property="og:url" content="http://yoursite.com/2019/01/31/Probability Basics/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = {1,2,…,m}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with $$ p_i \g">
+<meta property="og:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with p_i \ge">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-11T12:28:36.340Z">
+<meta property="og:updated_time" content="2019-02-14T16:31:51.059Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Probability Basics">
-<meta name="twitter:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = {1,2,…,m}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with $$ p_i \g">
+<meta name="twitter:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with p_i \ge">
     
 
     
@@ -46,7 +46,7 @@
         <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
@@ -55,7 +55,7 @@
 </head>
 </html>
 <body>
-    <div id="wrap">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
         <header id="header">
     <div id="header-outer" class="outer">
         <div class="container">
@@ -178,34 +178,55 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p>This note contains basic knowledge of probability</p>
-<h1 id="Probabilities-and-Events"><a href="#Probabilities-and-Events" class="headerlink" title="Probabilities and Events"></a>Probabilities and Events</h1><p>Consider an experiment with the sample space $S = {1,2,…,m}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with</p>
-<p>$$ p_i \geq 0, ~ i = 1, 2,…, m, ~~ and ~~ \displaystyle{\sum\limits_{i=1}^m}p_i = 1 $$</p>
-<p>and such that $p_i$ is the <em>probability</em> that $i$ is the outcome of the experiment.Any set of possible outcomes of the experiment is called an event. If $P(A)$ denote the probability that event A occurs, then</p>
-<p>$$<br>\begin{equation<em>}<br>P(A) = \sum_{i \in A} ~ p_i<br>\end{equation</em>}<br>$$</p>
-<p>And we can easily deduce that</p>
-<p>$$<br>\begin{equation<em>}<br>P(S) = \sum_{i} ~ p_i = 1<br>\end{equation</em>}<br>$$</p>
-<p>For any event $A$, let $A^c$, called the complement of $A$, be the event containing all those outcomes in $S$ that are not in $A$. That is, $A^c$ occurs if and only if $A$ does not. Since</p>
-<p>$$<br>\begin{align<em>}<br>1 &amp;= \displaystyle{\sum_{i}} ~ p_i  \<br>  &amp;= \displaystyle{\sum_{i \in A}} ~ p_i + \displaystyle{\sum_{i \in A^c}} ~ p_i   \<br>  &amp;= P(A) + P(A^c)  \<br>\end{align</em>}<br>$$</p>
+<h1 id="Probabilities-and-Events"><a href="#Probabilities-and-Events" class="headerlink" title="Probabilities and Events"></a>Probabilities and Events</h1><p>Consider an experiment with the sample space $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with</p>
+<script type="math/tex; mode=display">p_i \geq 0, ~ i = 1, 2,..., m, ~~ and ~~ \displaystyle{\sum\limits_{i=1}^m}p_i = 1</script><p>and such that $p_i$ is the <em>probability</em> that $i$ is the outcome of the experiment.Any set of possible outcomes of the experiment is called an event. If $P(A)$ denote the probability that event A occurs, then</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(A) = \sum_{i \in A} ~ p_i
+\end{equation*}</script><p>And we can easily deduce that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(S) = \sum_{i} ~ p_i = 1
+\end{equation*}</script><p>For any event $A$, let $A^c$, called the complement of $A$, be the event containing all those outcomes in $S$ that are not in $A$. That is, $A^c$ occurs if and only if $A$ does not. Since</p>
+<p>$<br>\begin{align<em>}<br>1 &amp;= \displaystyle{\sum_{i}} ~ p_i  \\<br>  &amp;= \displaystyle{\sum_{i \in A}} ~ p_i + \displaystyle{\sum_{i \in A^c}} ~ p_i   \\<br>  &amp;= P(A) + P(A^c)  \\<br>\end{align</em>}<br>​$</p>
 <p>So it implies that</p>
-<p>$$<br>\begin{equation<em>}<br>P(A^c) = 1 - P(A)<br>\end{equation</em>}<br>$$</p>
-<p>For $ \O = S^c $, we can obtain that</p>
-<p>$$<br>\begin{equation<em>}<br>P(\O) = 0<br>\end{equation</em>}<br>$$</p>
-<p>Based on simple principle of set theory, for any events $A$ and $B$, we can write</p>
-<p>$$<br>\begin{align<em>}<br>P(A \cup B) &amp;= \displaystyle{\sum_{i \in A \cup B}} ~ p_i  \<br>P(A)  &amp;= \displaystyle{\sum_{i \in A}} ~ p_i  \<br>P(B)  &amp;= \displaystyle{\sum_{i \in B}} ~ p_i  \\end{align</em>}<br>$$</p>
-<p>And the addition theorem of probability can be written that<br>$$<br>\begin{equation<em>}<br>P(A \cup B) = P(A) + P(B) - P(A \cap B)<br>\end{equation</em>}<br>$$</p>
-<h1 id="Conditional-Probability"><a href="#Conditional-Probability" class="headerlink" title="Conditional Probability"></a>Conditional Probability</h1><p>The probability that event $A$ occurs given that event $B$ occurs is called the conditional probability, which is donoted as</p>
-<p>$$P(A|B)$$</p>
-<p>The formula of conditional probability is that</p>
-<p>$$<br>\begin{equation<em>}<br>P(A|B) = \frac{P(A \cap B)}{P(B)}<br>\end{equation</em>}<br>$$</p>
-<p>This is because if the event $B$ happens, in order that the event $A$ happens, the occurrence must be a point in their intersection $AB$. Now that the event $B$ has occurred, it should be thought of the new sample space. And we can obtain the multiplication theorem of probability:</p>
-<p>$$<br>\begin{align<em>}<br>P(AB) &amp;= P(B)P(A|B)  \<br>      &amp;= P(A)P(B|A)<br>\end{align</em>}<br>$$</p>
-<p>If the event $A$ is independent of the event $B$, $B$ is also independent of $A$, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$. We get that<br>$$ P(AB) = P(A)P(B) $$</p>
-<h1 id="Random-Variables-and-Expected-Values"><a href="#Random-Variables-and-Expected-Values" class="headerlink" title="Random Variables and Expected Values"></a>Random Variables and Expected Values</h1><p>Numerical quantities whose values are determined by the outcome of the experiment are known as random variables. Hence, we can assign probabilities to their possible values.</p>
-<p>If $X$ is a random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P{X=x_j}~(j=1,…,n)$ is called the probability distribution of random variable. Since $X$ must assume one of these values, it follows that</p>
-<p>$$<br>\begin{equation<em>}<br>\displaystyle{\sum_{j=1}^{n}}~P{X = x_j} = 1.<br>\end{equation</em>}<br>$$</p>
-<p>If X is a random variable whose possible values are $x_1, x_2,…,x_n$, then the expected value of $X$, denoted by $E[X]$, is defined by</p>
-<p>$$<br>\begin{equation<em>}<br>E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P{X = x_j}<br>\end{equation</em>}<br>$$</p>
-
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(A^c) = 1 - P(A)
+\end{equation*}</script><p>For $ \O = S^c $, we can obtain that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(\O) = 0
+\end{equation*}</script><p>Based on simple principle of set theory, for any events $A​$ and $B​$, we can write</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P(A \cup B) &= \displaystyle{\sum_{i \in A \cup B}} ~ p_i  \\
+P(A)  &= \displaystyle{\sum_{i \in A}} ~ p_i  \\
+P(B)  &= \displaystyle{\sum_{i \in B}} ~ p_i  \\\end{align*}</script><p>And the addition theorem of probability can be written that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(A \cup B) = P(A) + P(B) - P(A \cap B)
+\end{equation*}</script><h1 id="Conditional-Probability"><a href="#Conditional-Probability" class="headerlink" title="Conditional Probability"></a>Conditional Probability</h1><p>The probability that event $A$ occurs given that event $B$ occurs is called the conditional probability, which is donoted as</p>
+<script type="math/tex; mode=display">P(A|B)</script><p>The formula of conditional probability is that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\end{equation*}</script><p>This is because if the event $B$ happens, in order that the event $A$ happens, the occurrence must be a point in their intersection $AB$. Now that the event $B$ has occurred, it should be thought of the new sample space. And we can obtain the multiplication theorem of probability:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P(AB) &= P(B)P(A|B)  \\
+      &= P(A)P(B|A)
+\end{align*}</script><p>If the event $A$ is independent of the event $B$, $B$ is also independent of $A$, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$. We get that</p>
+<script type="math/tex; mode=display">P(AB) = P(A)P(B)</script><h1 id="Random-Variables-and-Expected-Values"><a href="#Random-Variables-and-Expected-Values" class="headerlink" title="Random Variables and Expected Values"></a>Random Variables and Expected Values</h1><p>Numerical quantities whose values are determined by the outcome of the experiment are known as random variables. Hence, we can assign probabilities to their possible values.</p>
+<p>If $X$ is a random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P\{X=x_j\}~(j=1,…,n)$ is called the probability distribution of random variable. Since $X$ must assume one of these values, it follows that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+\displaystyle{\sum_{j=1}^{n}}~P\{X = x_j\} = 1.
+\end{equation*}</script><p>If X is a random variable whose possible values are $x_1, x_2,…,x_n$, then the expected value of $X$, denoted by $E[X]$, is defined by</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P\{X = x_j\}
+\end{equation*}</script>
         </div>
         <footer class="article-footer">
             
@@ -281,12 +302,12 @@
         "genre": "Mathematics Probability",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-02-11",
+        "dateModified": "2019-02-15",
         "url": "http://yoursite.com/2019/01/31/Probability Basics/",
         "description": "This note contains basic knowledge of probability
-Probabilities and EventsConsider an experiment with the sample space $S = {1,2,…,m}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with
-$$ p_i \g"
-        "wordCount": 478
+Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with
+p_i \ge"
+        "wordCount": 500
     }
 </script>
 
@@ -385,10 +406,76 @@ $$ p_i \g"
 
             
                 
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/02/12/NYU Tandon Webinar/" class="title">NYU Tandon Webinar</a></p>
+                            <p class="item-date"><time datetime="2019-02-11T16:00:00.000Z" itemprop="datePublished">2019-02-12</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/02/11/Level 2/" class="title">Verbal Advantage Level 2</a></p>
+                            <p class="item-date"><time datetime="2019-02-10T16:00:00.000Z" itemprop="datePublished">2019-02-11</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
+                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/01/C++ Class/" class="title">C++ Class</a></p>
+                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></p>
+                            <p class="item-title"><a href="/2019/01/31/Limit and Continuity/" class="title">Limit and Continuity</a></p>
+                            <p class="item-date"><time datetime="2019-01-30T16:00:00.000Z" itemprop="datePublished">2019-01-31</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
             <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED/">TED</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -408,7 +495,7 @@ $$ p_i \g"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">contact</h3>
         <div class="widget">
-            Email: ygnmax@gmail.com
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
         </div>
     </div>
 
@@ -502,6 +589,8 @@ $$ p_i \g"
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
 </body>
 </html>

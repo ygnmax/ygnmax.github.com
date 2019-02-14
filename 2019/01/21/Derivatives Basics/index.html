@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Derivatives Basics | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Derivatives,Option">
+    
+    <meta name="description" content="This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options. Classification of financial instruments basic securities fixed">
+<meta name="keywords" content="Derivatives,Option">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Derivatives Basics">
+<meta property="og:url" content="http://yoursite.com/2019/01/21/Derivatives Basics/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options. Classification of financial instruments basic securities fixed">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-01-25T12:19:59.496Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Derivatives Basics">
+<meta name="twitter:description" content="This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options. Classification of financial instruments basic securities fixed">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Finance/Derivatives/">Derivatives</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Derivatives Basics" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Derivatives Basics
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/01/21/Derivatives Basics/" class="article-date">
+            <time datetime="2019-01-20T16:00:00.000Z" itemprop="datePublished">2019-01-21</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Derivatives/">Derivatives</a>, <a class="tag-link" href="/tags/Option/">Option</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options.</p>
+<h1 id="Classification-of-financial-instruments"><a href="#Classification-of-financial-instruments" class="headerlink" title="Classification of financial instruments"></a>Classification of financial instruments</h1><ul>
+<li>basic securities<ul>
+<li>fixed income<ul>
+<li>bonds</li>
+<li>bank account</li>
+<li>loans</li>
+</ul>
+</li>
+<li>equities<ul>
+<li>stocks</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>derivatives and contracts<ul>
+<li>options (nonlinear function of a stock)<ul>
+<li>calls &amp; pulls</li>
+<li>exotic options</li>
+</ul>
+</li>
+<li>swaps</li>
+<li>futures &amp; forwards</li>
+<li>credit risk derivatives</li>
+</ul>
+</li>
+</ul>
+<h2 id="stocks"><a href="#stocks" class="headerlink" title="stocks"></a>stocks</h2><p>issued by firms to finance operations<br>represent ownership of the firm<br>price known today, but not in the future<br>may or may not pay diviends</p>
+<h2 id="bonds"><a href="#bonds" class="headerlink" title="bonds"></a>bonds</h2><p>price known today<br>future payoffs known at fixed dates<br>otherwise the price movement is random<br>final payoff at maturity: face value/ nominal value/principal<br>intermediate payoffs: coupons<br>exposed to default/credit risk</p>
+<h2 id="derivatives"><a href="#derivatives" class="headerlink" title="derivatives"></a>derivatives</h2><ul>
+<li>Sell for a <strong>price/value/premium</strong> today.</li>
+<li>Future value <strong>derived</strong> from the value of the<br>underlying securities (as a function of<br>those).</li>
+<li>Traded at exchanges – standardized<br>contracts, no credit risk;</li>
+<li>Over-the-counter (OTC) – a network of<br>dealers and institutions, can be nonstandard, some credit risk.</li>
+</ul>
+<h3 id="Why-derivatives"><a href="#Why-derivatives" class="headerlink" title="Why derivatives?"></a>Why derivatives?</h3><ul>
+<li>To hedge risk (primary reason)</li>
+<li>To speculate</li>
+<li>To attain “arbitrage” profit</li>
+<li>To exchange one type of payoff for another</li>
+<li>To circumvent regulations (flexible)</li>
+</ul>
+<h2 id="Forward-Contract"><a href="#Forward-Contract" class="headerlink" title="Forward Contract"></a>Forward Contract</h2><ul>
+<li>An agreement to buy (<strong>long</strong>) or sell (<strong>short</strong>) a given <strong>underlying</strong> asset S:<ul>
+<li>Underlying asset could be stock or merchandise</li>
+<li>At a predetermined future date T (<strong>maturity</strong>).</li>
+<li>At a predetermined price F (<strong>forward price</strong>).</li>
+</ul>
+</li>
+<li>F is chosen so that the contract has zero value today.<ul>
+<li>a kind of zero sum game</li>
+<li>Today: gain &amp; loss are 0 (different from options)</li>
+</ul>
+</li>
+<li>Delivery takes place at maturity T:<ul>
+<li>Payoff at maturity: <ul>
+<li>Long: S(T) - F</li>
+<li>Short: F - S(T)</li>
+</ul>
+</li>
+<li>Price F set when the contract is established.</li>
+<li>S(T) = spot (market) price at maturity</li>
+</ul>
+</li>
+<li>Long position: obligation to buy</li>
+<li>Short position: obligation to sell</li>
+<li><strong>Differences with options</strong>:<ul>
+<li>Delivery has to take place.</li>
+<li>Zero value today.<blockquote>
+<p><strong>Example</strong></p>
+<p>On May 13, a firm enters into a long<br>forward contract to buy one million euros in<br>six months at an exchange rate of 1.3. On November 13, the firm pays F=$1,300,000 and receives S(T)= one million euros. How does the payoff look like at time T as a<br>function of the dollar value of S(T) spot<br>exchange rate?</p>
+<p>graphs</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Swaps"><a href="#Swaps" class="headerlink" title="Swaps"></a>Swaps</h2><p>Agreement between two parties to exchange two series of payments.</p>
+<ul>
+<li>Classic interest rate swap:<ul>
+<li>One party pays fixed interest rate payments on a notional amount.</li>
+<li>Counterparty pays floating (random) interest rate payments on the same notional amount.</li>
+</ul>
+</li>
+<li>Floating rate is often linked to LIBOR (London Interbank Offer Rate), reset at every payment date.</li>
+</ul>
+<p>The two parties may be exposed to different interest rates in different markets, or to different institutional restrictions, or to different regulations.</p>
+<ul>
+<li>a swap example<ul>
+<li>New pension regulations require higher investment in fixed income securities by pension funds, creating a problem: liabilities are long-term while new holdings of fixed income securities may be short-term.</li>
+<li>Instead of selling assets such as stocks, a pension fund can enter a swap, exchanging returns from stocks for fixed income returns.</li>
+<li>Or, if it wants to have an option not to exchange, it can buy <strong>swaptions</strong> instead. </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Example: Swap Comparative Advantage<br>US firm B wants to borrow AUD, Australian firm A wants to borrow USD: </p>
+<ul>
+<li>Firm B can borrow at 5% in USD, 12.6% AUD</li>
+<li>Firm A can borrow at 7% USD, 13% AUD</li>
+<li>Expected gain = (7-5) – (13-12.6) = 1.6%</li>
+</ul>
+<p>Swaps:</p>
+<ul>
+<li>Bank gains 1.3% on USD, loses 1.1% on AUD, gain=0.2%</li>
+<li>Firm B gains (12.6-11.9) = 0.7%</li>
+<li>Firm A gains (7-6.3) = 0.7%</li>
+</ul>
+<p>Part of the reason for the gain is credit risk involved</p>
+</blockquote>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Derivatives Basics",
+        "image": "http://yoursite.com",
+        "keywords": "Derivatives Option",
+        "genre": "Finance Derivatives",
+        "datePublished": "2019-01-21",
+        "dateCreated": "2019-01-21",
+        "dateModified": "2019-01-25",
+        "url": "http://yoursite.com/2019/01/21/Derivatives Basics/",
+        "description": "This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options.
+Classification of financial instruments
+basic securities
+fixed "
+        "wordCount": 527
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/01/23/WSJ/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            WSJ Collections
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/01/16/C++ Basics/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">C++ Basics</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED/">TED</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 15px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 10px;">Probability</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 15px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: ygnmax@gmail.com
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/01/21/Derivatives Basics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

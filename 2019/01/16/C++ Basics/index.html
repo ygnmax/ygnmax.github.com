@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic structures of C++ including Iostream, if, while, for controlling statements. IOstreamStream class:  standard I/O read &amp;amp; write files  Standard I/O  Input: screen Output: ke">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-14T14:58:44.379Z">
+<meta property="og:updated_time" content="2019-02-14T17:03:51.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ Basics">
 <meta name="twitter:description" content="This note contains basic structures of C++ including Iostream, if, while, for controlling statements. IOstreamStream class:  standard I/O read &amp;amp; write files  Standard I/O  Input: screen Output: ke">
@@ -192,7 +192,7 @@
 <p>1.input: <code>&gt;&gt;</code>; output: <code>&lt;&lt;</code></p>
 <ul>
 <li>cout &lt;&lt; <em>expression</em> &lt;&lt; <em>expression</em></li>
-<li>cin &gt;&gt; <em>expression</em> &gt;&gt; *expression”<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a, b;</span><br><span class="line">cin &gt;&gt; a &gt;&gt; b</span><br></pre></td></tr></table></figure>
+<li>cin &gt;&gt; <em>expression</em> &gt;&gt; *expression”<pre><code>  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a, b;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b</span><br></pre></td></tr></table></figure>
 </code></pre></li>
 </ul>
 <p>2. manipulator</p>
@@ -205,13 +205,13 @@
 <li><code>ends</code>: insert blank character</li>
 <li><code>setsprecision(int)</code>: set the number of decimals of floats</li>
 <li><p><code>setw(int)</code>: set width</p>
-<pre><code>cout &lt;&lt; setw(5) &lt;&lt; setprecision(3) &lt;&lt; 3.1415
+<pre><code>  cout &lt;&lt; setw(5) &lt;&lt; setprecision(3) &lt;&lt; 3.1415
 </code></pre></li>
 </ul>
 <h2 id="if-statement"><a href="#if-statement" class="headerlink" title="if statement"></a>if statement</h2><p>syntax:</p>
 <ul>
 <li><p>if(<em>expression</em>) <em>statement</em></p>
-<pre><code><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br></pre></td></tr></table></figure>
+<pre><code>  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br></pre></td></tr></table></figure>
 </code></pre></li>
 <li><p>if(<em>expression</em>) <em>statement1</em><br>else <em>statement2</em></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; y;</span><br></pre></td></tr></table></figure>
@@ -221,9 +221,9 @@
 </ul>
 <blockquote>
 <p><strong>determine whether a year is a leap year</strong></p>
-</blockquote>
 <pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;  </span><br><span class="line">using namespace std</span><br><span class="line">int main()&#123;</span><br><span class="line">int year;</span><br><span class="line">bool isLeapYear;</span><br><span class="line">cout &lt;&lt; &quot;Enter the year: &quot;;</span><br><span class="line">cin &gt;&gt; year;</span><br><span class="line">isLeapYear = ((year % 4 == 0 &amp;&amp; year &amp; 100 != 0) || (year % 400 == 0));</span><br><span class="line">if (isLeapYear)</span><br><span class="line">	cout &lt;&lt; year &lt;&lt; &quot;is a leap year&quot; &lt;&lt; endl;</span><br><span class="line">else</span><br><span class="line">	cout &lt;&lt; year &lt;&lt; &quot;is not a leap year&quot; &lt;&lt; endl;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</code></pre><p>nesting:</p>
+</code></pre></blockquote>
+<p>nesting:</p>
 <ul>
 <li>if(<em>expression1</em>)<br>　　if(<em>expression2</em>) <em>statement1</em><br>　　else <em>statement2</em><br>else<br>　　if(<em>expression3</em>) <em>statement3</em><br>　　else <em>statement4</em></li>
 </ul>
@@ -233,23 +233,9 @@
 </ul>
 <blockquote>
 <p><strong>compare 2 input integers</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">&gt;<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt;	<span class="keyword">int</span> x, y;</span><br><span class="line">&gt;	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter x and y: "</span>;</span><br><span class="line">&gt;	<span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">&gt;	<span class="keyword">if</span> (x != y)</span><br><span class="line">&gt;		<span class="keyword">if</span> (x &gt; y)</span><br><span class="line">&gt;			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &gt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;		<span class="keyword">else</span></span><br><span class="line">&gt;			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &lt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;	<span class="keyword">else</span></span><br><span class="line">&gt;		<span class="built_in">cout</span> &lt;&lt; <span class="string">"x = y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<pre><code>#include&lt;iostream&gt;
-using namespace std;
-int main(){
-    int x, y;
-    cout &lt;&lt; &quot;Enter x and y: &quot;;
-    cin &gt;&gt; x &gt;&gt; y;
-    if (x != y)
-        if (x &gt; y)
-            cout &lt;&lt; &quot;x &gt; y&quot; &lt;&lt; endl;
-        else
-            cout &lt;&lt; &quot;x &lt; y&quot; &lt;&lt; endl;
-    else
-        cout &lt;&lt; &quot;x = y&quot; &lt;&lt; endl;
-    return 0;
-}
-</code></pre><h2 id="switch-statement"><a href="#switch-statement" class="headerlink" title="switch statement"></a>switch statement</h2><p>syntax:</p>
+<h2 id="switch-statement"><a href="#switch-statement" class="headerlink" title="switch statement"></a>switch statement</h2><p>syntax:</p>
 <ul>
 <li>switch(<em>expression</em>){<br>case <em>expression1</em> : <em>statement1</em></li>
 </ul>
@@ -267,35 +253,13 @@ int main(){
 </ul>
 <blockquote>
 <p><strong>calculate the sum of natural number 1 ~ 10</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">&gt; <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">&gt; <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt; <span class="keyword">int</span> i = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">&gt; <span class="keyword">while</span> (i &lt;= <span class="number">10</span>)&#123;</span><br><span class="line">&gt;     	sum += i;  <span class="comment">//sum = sum + i;</span></span><br><span class="line">&gt;     	i++;</span><br><span class="line">&gt;   	&#125;</span><br><span class="line">&gt; <span class="built_in">cout</span> &lt;&lt; <span class="string">"sum = "</span> &lt;&lt; sum &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt; &#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<pre><code>#include &lt;iostream&gt;
-using namespace std;
-int main(){
-int i = 1, sum = 0;
-while (i &lt;= 10){
-    sum += i;  //sum = sum + i;
-    i++;
-      }
-cout &lt;&lt; &quot;sum = &quot; &lt;&lt; sum &lt;&lt; endl;
-return 0;
-}
-</code></pre><h2 id="do-while-statement"><a href="#do-while-statement" class="headerlink" title="do-while statement"></a>do-while statement</h2><p>syntax:</p>
+<h2 id="do-while-statement"><a href="#do-while-statement" class="headerlink" title="do-while statement"></a>do-while statement</h2><p>syntax:</p>
 <blockquote>
-<p><strong>calculate the sum of natural number 1 ~ 10</strong></p>
+<p><strong>calculate the sum of natural number 1 ~ 10</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span> &#123;</span><br><span class="line">        sum += i;</span><br><span class="line">        i++;</span><br><span class="line">    &#125; <span class="keyword">while</span> (i &lt;= <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"sum = "</span> &lt;&lt; sum &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<pre><code>#include &lt;iostream&gt;
-using namespace std;
-int main()
-{
-    int i = 1, sum = 0;
-    do {
-        sum += i;
-        i++;
-    } while (i &lt;= 10);
-    cout &lt;&lt; &quot;sum = &quot; &lt;&lt; sum &lt;&lt; endl;
-    return 0;
-}
-</code></pre><h2 id="for-statement"><a href="#for-statement" class="headerlink" title="for statement"></a>for statement</h2><p>syntax:</p>
+<h2 id="for-statement"><a href="#for-statement" class="headerlink" title="for statement"></a>for statement</h2><p>syntax:</p>
 <ul>
 <li>for(<em>initial statement</em>; <em>expression1</em>; <em>expression2</em>) <em>statement</em></li>
 </ul>
@@ -306,20 +270,7 @@ int main()
 <li>The for statement can replace the while and do-while statement.</li>
 </ul>
 <blockquote>
-<p><strong>calculate the sum of natural number 1 ~ 10</strong></p>
-</blockquote>
-<pre><code>#include &lt;iostream&gt;
-using namespace std;
-int main(){
-    int i = 1, sum = 0;
-    for(i=1;i&lt;=10;i++)
-    {
-        sum += i;
-    }
-    cout &lt;&lt; &quot;sum = &quot; &lt;&lt; sum &lt;&lt; endl;
-    return 0;
-}
-</code></pre><blockquote>
+<p><strong>calculate the sum of natural number 1 ~ 10</strong><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>, sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum += i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"sum = "</span> &lt;&lt; sum &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>find all the factors of an input integer</strong></p>
 </blockquote>
 <h2 id="nesting-amp-other-statement"><a href="#nesting-amp-other-statement" class="headerlink" title="nesting &amp; other statement"></a>nesting &amp; other statement</h2><p>syntax:</p>
@@ -338,20 +289,18 @@ int main(){
 </ul>
 <p>2. enumeration</p>
 <ul>
-<li><p>enum <em>TypeName</em> {<em>list of values</em>}</p>
-<pre><code>enum Weekday
-{SUN, MON, TUE, WED, THU, FRI, SAT}
-</code></pre><p>tips:</p>
+<li>enum <em>TypeName</em> {<em>list of values</em>}  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Weekday</span><br><span class="line">&#123;SUN, MON, TUE, WED, THU, FRI, SAT&#125;</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<p>tips:</p>
+<ul>
 <li>they cannot be evaluated to new values.</li>
 <li><p>they can be matched with new values when defined.</p>
-<pre><code>enum Weekday
-{SUN=7, MON=1, 
-</code></pre></li>
-<li>they can be caluated.</li>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Weekday</span><br><span class="line">&#123;SUN=<span class="number">7</span>, MON=<span class="number">1</span>,&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>they can be caluated.</p>
+</li>
 </ul>
-<blockquote>
-</blockquote>
 <p>3. initial  </p>
 <ul>
 <li>auto</li>
@@ -433,7 +382,7 @@ int main(){
         "genre": "Computer Science Programming C++",
         "datePublished": "2019-01-16",
         "dateCreated": "2019-01-16",
-        "dateModified": "2019-02-14",
+        "dateModified": "2019-02-15",
         "url": "http://yoursite.com/2019/01/16/C++ Basics/",
         "description": "This note contains basic structures of C++ including Iostream, if, while, for controlling statements.
 IOstreamStream class:
@@ -445,7 +394,7 @@ Standard I/O
 
 Input: screen
 Output: ke"
-        "wordCount": 700
+        "wordCount": 851
     }
 </script>
 
@@ -728,7 +677,24 @@ Output: ke"
     });
 </script>
 <!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 
 </body>
 </html>

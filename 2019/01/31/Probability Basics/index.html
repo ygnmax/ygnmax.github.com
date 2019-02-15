@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="Probability">
     
-    <meta name="description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}​$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with p_i \">
+    <meta name="description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
 <meta name="keywords" content="Probability">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Probability Basics">
 <meta property="og:url" content="http://yoursite.com/2019/01/31/Probability Basics/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}​$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with p_i \">
+<meta property="og:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-15T04:58:02.028Z">
+<meta property="og:updated_time" content="2019-02-15T09:29:06.271Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Probability Basics">
-<meta name="twitter:description" content="This note contains basic knowledge of probability Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}​$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with p_i \">
+<meta name="twitter:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
     
 
     
@@ -177,8 +177,8 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>This note contains basic knowledge of probability</p>
-<h1 id="Probabilities-and-Events"><a href="#Probabilities-and-Events" class="headerlink" title="Probabilities and Events"></a>Probabilities and Events</h1><p>Consider an experiment with the sample space $S = \{1,2,…,m\}​$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with</p>
+            <p>This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.</p>
+<h1 id="Probabilities-and-Events"><a href="#Probabilities-and-Events" class="headerlink" title="Probabilities and Events"></a>Probabilities and Events</h1><p>Consider an experiment with the <em>sample space</em> $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with</p>
 <script type="math/tex; mode=display">p_i \geq 0, ~ i = 1, 2,..., m, ~~ and ~~ \displaystyle{\sum\limits_{i=1}^m}p_i = 1 ​</script><p>and such that $p_i​$ is the <em>probability</em> that $i​$ is the outcome of the experiment.Any set of possible outcomes of the experiment is called an event. If $P(A)​$ denote the probability that event A occurs, then</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
@@ -197,10 +197,10 @@ P(S) = \sum_{i} ~ p_i = 1
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(A^c) = 1 - P(A)
-\end{equation*}</script><p>For $ \O = S^c $, we can obtain that</p>
+\end{equation*}</script><p>For $ \varnothing = S^c $, we can obtain that</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
-P(\O) = 0
+P(\varnothing) = 0
 \end{equation*}</script><p>Based on simple principle of set theory, for any events $A​$ and $B​$, we can write</p>
 <script type="math/tex; mode=display">
 \begin{align*}
@@ -211,57 +211,27 @@ P(B)  &= \displaystyle{\sum_{i \in B}} ~ p_i  \\\end{align*}</script><p>And the 
 \begin{equation*}
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
 \end{equation*}</script><h1 id="Conditional-Probability"><a href="#Conditional-Probability" class="headerlink" title="Conditional Probability"></a>Conditional Probability</h1><h2 id="Conditional-Probablity"><a href="#Conditional-Probablity" class="headerlink" title="Conditional Probablity"></a>Conditional Probablity</h2><p>The probability that event $A$ occurs given that event $B$ occurs is called the conditional probability, which is donoted as</p>
-<script type="math/tex; mode=display">P(A|B)</script><p>The formula of conditional probability is that</p>
+<script type="math/tex; mode=display">P(A|B)​</script><p>The formula of conditional probability is that</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(A|B) = \frac{P(A \cap B)}{P(B)}
-\end{equation*}</script><p>This is because if the event $B​$ happens, in order that the event $A​$ happens, the occurrence must be a point in their intersection $AB​$. Now that the event $B​$ has occurred, it should be thought of the new sample space. And we can obtain the multiplication theorem of probability:</p>
+\end{equation*}</script><p>This is because if the event $B​$ happens, in order that the event $A​$ happens, the occurrence must be a point in their intersection $AB​$. Now that the event $B​$ has occurred, it should be thought of the new sample space. And we can obtain the <strong>multiplication theorem of probability</strong>:</p>
 <script type="math/tex; mode=display">
 \begin{align*}
 P(AB) &= P(B)P(A|B)  \\
       &= P(A)P(B|A)
 \end{align*}</script><p>If the event $A$ is independent of the event $B$, $B$ is also independent of $A$, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$. We get that</p>
-<script type="math/tex; mode=display">P(AB) = P(A)P(B)</script><h1 id="Random-Variables-and-Distribution"><a href="#Random-Variables-and-Distribution" class="headerlink" title="Random Variables and Distribution"></a>Random Variables and Distribution</h1><h2 id="Random-Variables"><a href="#Random-Variables" class="headerlink" title="Random Variables"></a>Random Variables</h2><p>Numerical quantities whose values are determined by the outcome of the experiment are known as <em>random variables</em>. Hence, we can assign probabilities to their possible values. The set of this probabilities is <em>distribution</em>.</p>
-<p>In fact, random variables can be <em>discrete</em> or <em>continuous</em>. The possible values of <strong><em>discrete random variables</em></strong> constituted sets of discrete values, whereas <strong><em>continuous random variables</em></strong> whose set of possible values is instead a continuous region can take on any value within some interval.</p>
-<p>Actually, the distribution differs random variables from general variables in calculus. A random variable must have its own distribution.</p>
-<h2 id="Distribution"><a href="#Distribution" class="headerlink" title="Distribution"></a>Distribution</h2><p>For discrete variables, the distribution is a sequence form. If $X$ is a discrete random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P\{X=x_j\}$$(j=1,…,n)$ is called the <em>probability distribution of discrete random variable</em>. Since $X$ must assume one of these values, it follows that</p>
+<script type="math/tex; mode=display">P(AB) = P(A)P(B)</script><p>Generally, if $P(A_1A_2…A_{n-1})&gt;0$, then</p>
 <script type="math/tex; mode=display">
-\begin{equation*}
-\displaystyle{\sum_{j=1}^{n}}~P\{X = x_j\} = 1.
-\end{equation*}</script><p>For continuous variables, the distribution is a function form. Every continuous random variable $X$ has a function $f$ associated with it. This function $f$ is called the <em>probability density function</em> of $X$. For any numbers $a&lt;b$, the area under $f$ between $a$ and $b$ is equal to the probability that $X$ assumes a value between $a$ and $b$.</p>
+P(A_1A_2...A{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1...A_{n-1})</script><h2 id="Formula-of-Total-Probability"><a href="#Formula-of-Total-Probability" class="headerlink" title="Formula of Total Probability"></a>Formula of Total Probability</h2><p><strong>Formula of total probability</strong> is an essential method to compute the probability of complex events whose <em>sample space</em> can be divided into small parts. We can get the probability of the original complicated event adding probabilities of these “small events”. </p>
+<p>If events $B_1, … , B_n$ constitute a <em>partition</em> of the sample space $\Omega$ , that is to say $B_i \cap B_j = \varnothing, ~ i \neq j, ~ i,j = 1,… n$ ; $P(B_i)&gt;0, i = 1, …, n$ and $ B_1 \cup … \cup B_n = \Omega$, and if $A$ is any event in $\Omega$ , then</p>
 <script type="math/tex; mode=display">
-P\{a \leq X \leq b \} = area ~ under ~ f ~ between ~ a ~ and ~ b</script><h2 id="Distribution-Function"><a href="#Distribution-Function" class="headerlink" title="Distribution Function"></a>Distribution Function</h2><p>If $X$ is a random variable, for any real number x, we define</p>
+P(A) = \sum_{i=1}^{\infty} P(B_i)P(A|B_i)</script><h2 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h2><p>Based on the multiplication theorem of probability and the formula of total probability, we can get the famous <strong><em>Bayes’ theorem</em></strong>.</p>
+<p>If events $B_1, … , B_n$ constitute a <em>partition</em> of the sample space $\Omega$ , and if $P(A) &gt; 0, P(B_i) &gt; 0, i = 1, 2, …, n$, then</p>
 <script type="math/tex; mode=display">
-F(x) = P(X \leq x)</script><p>as the distribution function of random variable $X$, which is also called $X$ is denoted by $F(x)$, or $X \sim F(x)$. Sometimes, $F_{X}(x)$ is the same meaning.</p>
-<h1 id="Expected-Values"><a href="#Expected-Values" class="headerlink" title="Expected Values"></a>Expected Values</h1><p>If X is a random variable whose possible values are $x_1, x_2,…,x_n$, then the expected value of $X$, denoted by $E[X]$, is defined by</p>
-<script type="math/tex; mode=display">
-\begin{equation*}
-E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P\{X = x_j\}
-\end{equation*}</script><p>$E[X]​$ also has alternative names: <em>expectation</em> or the <em>mean</em> of $X​$. It is a kind of weighted average of possible values of $X​$, where the weight given to a value is equal to the probability that $X​$ assumes that value.</p>
-<p>Here are some attributes of expectation. The first one is the linear attribute, which means that, for constants $a​$ and $b​$,</p>
-<script type="math/tex; mode=display">
-E[aX+b]=aE[X]+b</script><p>To verify it, let $Y = aX + b​$. Since $Y = ax_j + b​$ when $ X = x_j ​$, it follows that</p>
-<script type="math/tex; mode=display">
-\begin{align*}
-E[Y] &= \sum_{j=1}^{n} (ax_j + b) P\{X = x_j\} \\
-     &= \sum_{j=1}^{n}  ax_j P\{X = x_j\} ~ + ~ \sum_{j=1}^{n}b P\{X = x_j\} \\
-     &= a\sum_{j=1}^{n}  x_j P\{X = x_j\} ~ + ~ b\sum_{j=1}^{n} P\{X = x_j\} \\
-     &= aE[X] + b
-\end{align*}</script><p>And similarly, for random variables $X_1, …, X_k$,</p>
-<script type="math/tex; mode=display">
-E\left[\sum_{j=1}^{k} X_j \right] = \sum_{j=1}^{k}E[X_j]</script><h1 id="Variance"><a href="#Variance" class="headerlink" title="Variance"></a>Variance</h1><p>The <em>variance</em> of $X$, denoted by $Var(X)$, which measure the spread of a random variable, is defined by</p>
-<script type="math/tex; mode=display">
-Var(X) = E[(X - E(X))^2]</script><p>If a and b are constants, then </p>
-<script type="math/tex; mode=display">
-\begin{align*}
-Var(aX+b) &= E[(aX+b- E[aX+b])^2] \\
-          &= E[(aX - aE[X])^2] \\
-          &= E[a^2(X-E[X])^2] \\
-          &= a^2Var(X)
-\end{align*}</script><p>And if the <strong><em>random variables are independent</em></strong>, the variance of the sum of random variables is equal to the sum of their variances ($X_1,…X_k$ are <em>independent random variables</em>)</p>
-<script type="math/tex; mode=display">
-Var\left(\sum_{j=1}^{k} X_j \right) = \sum_{j=1}^{k} Var(X_j)</script><h1 id="Useful-distributions-of-random-variables"><a href="#Useful-distributions-of-random-variables" class="headerlink" title="Useful distributions of random variables"></a>Useful distributions of random variables</h1><h2 id="Discrete"><a href="#Discrete" class="headerlink" title="Discrete"></a>Discrete</h2><p>Here are some useful <em>distributions</em> of <strong><em>discrete random variables</em></strong> which have distinct expected values and variances.</p>
-<h3 id="Bernoulli-distribution"><a href="#Bernoulli-distribution" class="headerlink" title="Bernoulli distribution"></a>Bernoulli distribution</h3><h3 id="binomial-distribution"><a href="#binomial-distribution" class="headerlink" title="binomial distribution"></a>binomial distribution</h3><h3 id="Poisson-distribution"><a href="#Poisson-distribution" class="headerlink" title="Poisson distribution"></a>Poisson distribution</h3><h3 id="Geometric-distribution"><a href="#Geometric-distribution" class="headerlink" title="Geometric distribution"></a>Geometric distribution</h3><h3 id="Pascal-distribution"><a href="#Pascal-distribution" class="headerlink" title="Pascal distribution"></a>Pascal distribution</h3><h3 id="Hypergeometric-distribution"><a href="#Hypergeometric-distribution" class="headerlink" title="Hypergeometric distribution"></a>Hypergeometric distribution</h3><h2 id="Continuous"><a href="#Continuous" class="headerlink" title="Continuous"></a>Continuous</h2>
+P(B_i|A)=\frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{n}P(B_j)P(A|B_j)}</script><p>$P(B)$ is also called the <em>prior probability</em>, which indicates the probabilities of all possible reasons for event $A$, and $P(B_i|A)$ is also called the <em>posterior probability</em>, which indicates the new recognition of probabilities of all possible reasons after the occurrence of event A.</p>
+<p>More about Bayes’ theory click the <em>Link</em>.</p>
+
         </div>
         <footer class="article-footer">
             
@@ -339,10 +309,9 @@ Var\left(\sum_{j=1}^{k} X_j \right) = \sum_{j=1}^{k} Var(X_j)</script><h1 id="Us
         "dateCreated": "2019-01-31",
         "dateModified": "2019-02-15",
         "url": "http://yoursite.com/2019/01/31/Probability Basics/",
-        "description": "This note contains basic knowledge of probability
-Probabilities and EventsConsider an experiment with the sample space $S = \{1,2,…,m\}​$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with
-p_i \"
-        "wordCount": 1065
+        "description": "This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.
+Proba"
+        "wordCount": 639
     }
 </script>
 
@@ -425,9 +394,9 @@ p_i \"
     </a>
     
     
-        <a href="/2019/01/31/Real Number Theory/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/01/28/C++ Functions/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Real Number Theory</p>
+        <p class="article-nav-title">C++ Functions</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -445,6 +414,15 @@ p_i \"
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mathematics/Probability/">Probability</a></p>
+                            <p class="item-title"><a href="/2019/02/14/Random Variables and Distribution/" class="title">Random Variables and Distribution</a></p>
+                            <p class="item-date"><time datetime="2019-02-13T16:00:00.000Z" itemprop="datePublished">2019-02-14</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -468,15 +446,6 @@ p_i \"
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
-                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
-                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
                             <p class="item-title"><a href="/2019/02/01/C++ Class/" class="title">C++ Class</a></p>
                             <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
                         </div>
@@ -485,9 +454,9 @@ p_i \"
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></p>
-                            <p class="item-title"><a href="/2019/01/31/Limit and Continuity/" class="title">Limit and Continuity</a></p>
-                            <p class="item-date"><time datetime="2019-01-30T16:00:00.000Z" itemprop="datePublished">2019-01-31</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
+                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
                         </div>
                     </li>
                 
@@ -500,7 +469,7 @@ p_i \"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED/">TED</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED/">TED</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -510,7 +479,7 @@ p_i \"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -520,7 +489,7 @@ p_i \"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 15px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 10px;">Probability</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 15px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 15px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 15px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 15px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
         </div>
     </div>
 

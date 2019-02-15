@@ -6,21 +6,24 @@
     
 
     
-    <title>Category: Wall Street Journal | Guangnan&#39;s Notes</title>
+    <title>Random Variables and Distribution | Guangnan&#39;s Notes</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Guangnan">
-<meta name="keywords" content="Guangnan">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Guangnan&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/categories/Languages/English/Wall-Street-Journal/index.html">
+        <meta name="keywords" content="Probability,Statistics">
+    
+    <meta name="description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
+<meta name="keywords" content="Probability,Statistics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Random Variables and Distribution">
+<meta property="og:url" content="http://yoursite.com/2019/02/14/Random Variables and Distribution/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="Guangnan">
+<meta property="og:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-15T10:48:22.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guangnan&#39;s Notes">
-<meta name="twitter:description" content="Guangnan">
+<meta name="twitter:title" content="Random Variables and Distribution">
+<meta name="twitter:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
     
 
     
@@ -135,59 +138,213 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Wall Street Journal</em>
+    <a class="page-title-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/">Probability</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-Random Variables and Distribution" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a>
-            </div>
-            <div class="date"><time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished">2019-01-23</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/01/23/WSJ/">WSJ Collections</a>
+        Random Variables and Distribution
         </h1>
     
 
-        <p class="article-excerpt">
-            This note contains some summaries of news from the Wall Street Journal. 
-Stocks Decline as Growth Concerns ResurfaceDate: Jan. 22, 2019; By Michael Wursthorn and Avantika Chilkoti
-Points:
-
-The main in
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/14/Random Variables and Distribution/" class="article-date">
+            <time datetime="2019-02-13T16:00:00.000Z" itemprop="datePublished">2019-02-14</time>
+        </a>
     </div>
-</article>
-    
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Probability/">Probability</a>, <a class="tag-link" href="/tags/Statistics/">Statistics</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, other conceptions are about one random variable.</p>
+<h1 id="Random-Variables-and-Distribution"><a href="#Random-Variables-and-Distribution" class="headerlink" title="Random Variables and Distribution"></a>Random Variables and Distribution</h1><h2 id="Random-Variables"><a href="#Random-Variables" class="headerlink" title="Random Variables"></a>Random Variables</h2><p>Numerical quantities whose values are determined by the outcome of the experiment are known as <em>random variables</em>. Hence, we can assign probabilities to their possible values. The set of this probabilities is <em>distribution</em>.</p>
+<p>In fact, random variables can be <em>discrete</em> or <em>continuous</em>. The possible values of <strong><em>discrete random variables</em></strong> constituted sets of discrete values, whereas <strong><em>continuous random variables</em></strong> whose set of possible values is instead a continuous region can take on any value within some interval.</p>
+<p>Actually, the distribution differs random variables from general variables in calculus. A random variable must have its own distribution.</p>
+<h2 id="Distribution"><a href="#Distribution" class="headerlink" title="Distribution"></a>Distribution</h2><p>For discrete variables, the distribution is a sequence form. If $X$ is a discrete random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P\{X=x_j\}$$(j=1,…,n)$ is called the <em>probability distribution of discrete random variable</em>. Since $X$ must assume one of these values, it follows that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+\displaystyle{\sum_{j=1}^{n}}~P\{X = x_j\} = 1.
+\end{equation*}</script><p>For continuous variables, the distribution is a function form. Every continuous random variable $X$ has a function $f$ associated with it. This function $f$ is called the <em>probability density function</em> of $X$. For any numbers $a&lt;b$, the area under $f$ between $a$ and $b$ is equal to the probability that $X$ assumes a value between $a$ and $b$.</p>
+<script type="math/tex; mode=display">
+P\{a \leq X \leq b \} = area ~ under ~ f ~ between ~ a ~ and ~ b</script><h2 id="Distribution-Function"><a href="#Distribution-Function" class="headerlink" title="Distribution Function"></a>Distribution Function</h2><p>If $X$ is a random variable, for any real number x, we define</p>
+<script type="math/tex; mode=display">
+F(x) = P(X \leq x)</script><p>as the distribution function of random variable $X$, which is also called $X$ is denoted by $F(x)$, or $X \sim F(x)$. Sometimes, $F_{X}(x)$ is the same meaning.</p>
+<h1 id="Expected-Values"><a href="#Expected-Values" class="headerlink" title="Expected Values"></a>Expected Values</h1><p>If X is a random variable whose possible values are $x_1, x_2,…,x_n$, then the expected value of $X$, denoted by $E[X]$, is defined by</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P\{X = x_j\}
+\end{equation*}</script><p>$E[X]​$ also has alternative names: <em>expectation</em> or the <em>mean</em> of $X​$. It is a kind of weighted average of possible values of $X​$, where the weight given to a value is equal to the probability that $X​$ assumes that value.</p>
+<p>Here are some attributes of expectation. The first one is the linear attribute, which means that, for constants $a​$ and $b​$,</p>
+<script type="math/tex; mode=display">
+E[aX+b]=aE[X]+b</script><p>To verify it, let $Y = aX + b​$. Since $Y = ax_j + b​$ when $ X = x_j ​$, it follows that</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+E[Y] &= \sum_{j=1}^{n} (ax_j + b) P\{X = x_j\} \\
+     &= \sum_{j=1}^{n}  ax_j P\{X = x_j\} ~ + ~ \sum_{j=1}^{n}b P\{X = x_j\} \\
+     &= a\sum_{j=1}^{n}  x_j P\{X = x_j\} ~ + ~ b\sum_{j=1}^{n} P\{X = x_j\} \\
+     &= aE[X] + b
+\end{align*}</script><p>And similarly, for random variables $X_1, …, X_k$,</p>
+<script type="math/tex; mode=display">
+E\left[\sum_{j=1}^{k} X_j \right] = \sum_{j=1}^{k}E[X_j]</script><h1 id="Variance"><a href="#Variance" class="headerlink" title="Variance"></a>Variance</h1><p>The <em>variance</em> of $X$, denoted by $Var(X)$, which measure the spread of a random variable, is defined by</p>
+<script type="math/tex; mode=display">
+Var(X) = E[(X - E(X))^2]</script><p>If a and b are constants, then </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Var(aX+b) &= E[(aX+b- E[aX+b])^2] \\
+          &= E[(aX - aE[X])^2] \\
+          &= E[a^2(X-E[X])^2] \\
+          &= a^2Var(X)
+\end{align*}</script><p>And if the <strong><em>random variables are independent</em></strong>, the variance of the sum of random variables is equal to the sum of their variances ($X_1,…X_k$ are <em>independent random variables</em>)</p>
+<script type="math/tex; mode=display">
+Var\left(\sum_{j=1}^{k} X_j \right) = \sum_{j=1}^{k} Var(X_j)</script><p>The square root of the variance is called the <em>standard deviation</em>. A random variable tend s to lie within a few standard deviations of its expected value.</p>
+<h1 id="Covariance"><a href="#Covariance" class="headerlink" title="Covariance"></a>Covariance</h1><p>The covariance of any two random variables $X$ and $Y$, denoted by $Cov(X,Y)$, is defined by</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X,Y) &= E[(X-E[X])(Y-E[Y])] \\
+         &= E[XY-YE[X]-XE[Y]+E[X]E[Y]] \\
+         &= E[XY]-E[Y]E[X]-E[X]E[Y]+E[X]E[Y \\
+         &= E[XY]-E[X]E[Y]
+\end{align*}</script><p>A positive value of the covariance indicates that X and Y both tend to be large at the same time, whereas a negative value indicates that when one is large the other tends to be small. Independent random variables have covariance equal to 0. </p>
+<p>The following are some useful properties of covariance. For random variables $X$ and $Y$, and constant $c$:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X,Y) &= Cov(Y,X) \\
+Cov(X,X) &= Var(X) \\
+Cov(cX,Y) &= c~Cov(X,Y) \\
+Cov(c, Y) &= 0
+\end{align*}</script><p>Covariance also satisfies a linearity property, namely,</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X_1+X_2,Y) = Cov(X_1,Y)+Cov(X_2,Y)
+\end{align*}</script><p>which is easily generalized to yield the following identity:</p>
+<script type="math/tex; mode=display">
+Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{m}Y_j \right) = \sum_{i=1}^{n}\sum_{j=1}^{m}Cov(X_i,Y_j)</script><p>This yields a useful formula for the variance of the sum of random variables:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{n}X_j \right) \\
+&= \sum_{i=1}^{n}\sum_{j=1}^{n}Cov(X_i,X_j) \\
+&= \sum_{i=1}^{n}Cov(X_i,X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j) \\
+&= \sum_{i=1}^{n}Var(X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j)
+\end{align*}</script><p>The degree to which large values of $X$ tend to be associated with large values of $Y$ is measured by the <em>correlation</em> between $X$ and $Y$, denoted as $\rho(X,Y)​$ and defined by</p>
+<script type="math/tex; mode=display">
+\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}</script><p>It can be shown that</p>
+<script type="math/tex; mode=display">
+-1 \le \rho(X, Y) \le 1</script><p>If X and Y are linearly related by the equation $Y = a + bX$ , then $\rho(X,Y)$ will equal 1 when $b$ is positive and -1 when $b$ is negative.</p>
+<h1 id="K-Order-Moment"><a href="#K-Order-Moment" class="headerlink" title="K-Order Moment"></a>K-Order Moment</h1><h1 id="Coefficient-of-Variation"><a href="#Coefficient-of-Variation" class="headerlink" title="Coefficient of Variation"></a>Coefficient of Variation</h1><h1 id="Quantile"><a href="#Quantile" class="headerlink" title="Quantile"></a>Quantile</h1><h1 id="Median"><a href="#Median" class="headerlink" title="Median"></a>Median</h1><h1 id="Skewness"><a href="#Skewness" class="headerlink" title="Skewness"></a>Skewness</h1><h1 id="Kurtosis"><a href="#Kurtosis" class="headerlink" title="Kurtosis"></a>Kurtosis</h1>
         </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Random Variables and Distribution",
+        "image": "http://yoursite.com",
+        "keywords": "Probability Statistics",
+        "genre": "Mathematics Probability",
+        "datePublished": "2019-02-14",
+        "dateCreated": "2019-02-14",
+        "dateModified": "2019-02-15",
+        "url": "http://yoursite.com/2019/02/14/Random Variables and Distribution/",
+        "description": "This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe"
+        "wordCount": 945
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
-
+    
+    </section>
 
 
 
@@ -241,6 +398,19 @@ The main in
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/02/12/NYU Tandon Webinar/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">NYU Tandon Webinar</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -377,11 +547,13 @@ The main in
     var disqus_shortname = 'guest';
     
     
+    var disqus_url = 'http://yoursite.com/2019/02/14/Random Variables and Distribution/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

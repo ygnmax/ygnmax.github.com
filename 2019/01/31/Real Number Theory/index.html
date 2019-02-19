@@ -12,18 +12,18 @@
     
         <meta name="keywords" content="Calculus">
     
-    <meta name="description" content="This note contains basic knowledge of Set, 7 basic principles of the real number.">
+    <meta name="description" content="This note contains basic knowledge of Set, Some basic principles of the real number. Completeness of the Real NumbersExistence of supremum and infimumUpper Bound &amp;amp; Lower Bound Upper Bound  Let $S​">
 <meta name="keywords" content="Calculus">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Real Number Theory">
 <meta property="og:url" content="http://yoursite.com/2019/01/31/Real Number Theory/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="This note contains basic knowledge of Set, 7 basic principles of the real number.">
+<meta property="og:description" content="This note contains basic knowledge of Set, Some basic principles of the real number. Completeness of the Real NumbersExistence of supremum and infimumUpper Bound &amp;amp; Lower Bound Upper Bound  Let $S​">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-01-31T15:41:14.424Z">
+<meta property="og:updated_time" content="2019-02-19T09:28:43.526Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Real Number Theory">
-<meta name="twitter:description" content="This note contains basic knowledge of Set, 7 basic principles of the real number.">
+<meta name="twitter:description" content="This note contains basic knowledge of Set, Some basic principles of the real number. Completeness of the Real NumbersExistence of supremum and infimumUpper Bound &amp;amp; Lower Bound Upper Bound  Let $S​">
     
 
     
@@ -177,7 +177,46 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>This note contains basic knowledge of Set, 7 basic principles of the real number.</p>
+            <p>This note contains basic knowledge of Set, Some basic principles of the real number.</p>
+<h1 id="Completeness-of-the-Real-Numbers"><a href="#Completeness-of-the-Real-Numbers" class="headerlink" title="Completeness of the Real Numbers"></a>Completeness of the Real Numbers</h1><h2 id="Existence-of-supremum-and-infimum"><a href="#Existence-of-supremum-and-infimum" class="headerlink" title="Existence of supremum and infimum"></a>Existence of supremum and infimum</h2><h3 id="Upper-Bound-amp-Lower-Bound"><a href="#Upper-Bound-amp-Lower-Bound" class="headerlink" title="Upper Bound &amp; Lower Bound"></a>Upper Bound &amp; Lower Bound</h3><ul>
+<li>Upper Bound</li>
+</ul>
+<p>Let $S​$ be a nonempty set of real numbers. If $ \exists ~ M \in R​$, such that $ \forall ~ x \in S​$, $x \leq M ​$, then $M​$ is called an <strong>upper bound</strong> for $S​$, or $S​$ has an upper bound. And $S​$ is said to be <em>bounded above</em>. A set may have many upper bounds.</p>
+<ul>
+<li>Lower Bound</li>
+</ul>
+<p>Similarly, if $ \exists ~ m \in R$, such that $ \forall ~ x \in S$, $x \geq m $, then $m$ is called an <strong>lower bound</strong> for $S$, or $S$ has an lower bound. And $S$ is said to be <em>bounded below</em>. A set may have many upper bounds and lower bounds.</p>
+<p>If a set $S$ has both upper bounds and lower bounds, then $S$ is called the <strong>bounded set</strong>. Evidently, it is equivalent to:</p>
+<script type="math/tex; mode=display">
+\exists ~ X > 0, such ~ that ~ \forall ~ x \in S, |x| \leq X</script><h3 id="Supremum-amp-Infimum"><a href="#Supremum-amp-Infimum" class="headerlink" title="Supremum &amp; Infimum"></a>Supremum &amp; Infimum</h3><ul>
+<li>Supremum</li>
+</ul>
+<p>Let $U​$ be a set of upper bounds of $S​$. Obviously it has no maximum element. And let the minimum of $U​$ be $\beta​$, then $\beta​$ is called the least upper bound of $S​$, which is also called the <strong>supremum</strong> of $S​$. It is denoted as </p>
+<script type="math/tex; mode=display">
+\beta = sup ~ S</script><p>There are two properties of supremum $\beta​$</p>
+<ol>
+<li><p>$\beta$ is an upper bound of $S$: $\forall  ~ x \in S$, $x \leq \beta$.</p>
+</li>
+<li><p>Any number that is less than $\beta​$ is not the upper bound of $S​$: $\forall ~ \varepsilon &gt; 0​$, $\exists ~ x \in S​$, such that $x &gt; \beta - \varepsilon​$.</p>
+</li>
+</ol>
+<ul>
+<li>Infimum</li>
+</ul>
+<p>Similarly, let $L$ be a set of upper bounds of $S$. Obviously it has no minimum element. And let the maximum of $L$ be $\alpha$, then $\alpha$ is called the greatest lower bound of $S$, which is also called the <strong>infimum</strong> of $S$. It is denoted as</p>
+<script type="math/tex; mode=display">
+\alpha = inf ~ S</script><p>There are also two properties of infimum $\alpha$</p>
+<ol>
+<li><p>$\alpha$ is an lower bound of $S$: $\forall  ~ x \in S$, $x \geq \alpha$.</p>
+</li>
+<li><p>Any number that is greater than $\alpha$ is not the lower bound of $S$: $\forall ~ \varepsilon &gt; 0$, $\exists ~ x \in S$, such that $x &lt; \alpha + \varepsilon$.</p>
+</li>
+</ol>
+<h3 id="Supremum-and-Infimum-Theorem"><a href="#Supremum-and-Infimum-Theorem" class="headerlink" title="Supremum and Infimum Theorem"></a>Supremum and Infimum Theorem</h3><ul>
+<li>A nonempty set of real numbers that’s bounded above has supremum.</li>
+<li>A nonempty set of real numbers that’s bounded below has infimum.</li>
+</ul>
+<p>This theorem, which is crucial for establishing many of the important theorems of calculus and real analysis, is one of the basic theorems of the real number system.</p>
 
         </div>
         <footer class="article-footer">
@@ -254,11 +293,14 @@
         "genre": "Mathematics Mathematical Analysis",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-01-31",
+        "dateModified": "2019-02-19",
         "url": "http://yoursite.com/2019/01/31/Real Number Theory/",
-        "description": "This note contains basic knowledge of Set, 7 basic principles of the real number.
-"
-        "wordCount": 14
+        "description": "This note contains basic knowledge of Set, Some basic principles of the real number.
+Completeness of the Real NumbersExistence of supremum and infimumUpper Bound &amp; Lower Bound
+Upper Bound
+
+Let $S​"
+        "wordCount": 473
     }
 </script>
 

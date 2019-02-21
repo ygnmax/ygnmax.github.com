@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-15T09:29:06.271Z">
+<meta property="og:updated_time" content="2019-02-20T15:48:03.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Probability Basics">
 <meta name="twitter:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
@@ -215,7 +215,7 @@ P(A \cup B) = P(A) + P(B) - P(A \cap B)
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(A|B) = \frac{P(A \cap B)}{P(B)}
-\end{equation*}</script><p>This is because if the event $B​$ happens, in order that the event $A​$ happens, the occurrence must be a point in their intersection $AB​$. Now that the event $B​$ has occurred, it should be thought of the new sample space. And we can obtain the <strong>multiplication theorem of probability</strong>:</p>
+\end{equation*}</script><p>This is because if the event $B$ happens, in order that the event $A$ happens, the occurrence must be a point in their intersection $AB$. Now that the event $B$ has occurred, it should be thought of the new sample space. And we can obtain the <strong>multiplication theorem of probability</strong>:</p>
 <script type="math/tex; mode=display">
 \begin{align*}
 P(AB) &= P(B)P(A|B)  \\
@@ -223,7 +223,12 @@ P(AB) &= P(B)P(A|B)  \\
 \end{align*}</script><p>If the event $A$ is independent of the event $B$, $B$ is also independent of $A$, then $P(A|B) = P(A)$ and $P(B|A) = P(B)$. We get that</p>
 <script type="math/tex; mode=display">P(AB) = P(A)P(B)</script><p>Generally, if $P(A_1A_2…A_{n-1})&gt;0$, then</p>
 <script type="math/tex; mode=display">
-P(A_1A_2...A{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1...A_{n-1})</script><h2 id="Formula-of-Total-Probability"><a href="#Formula-of-Total-Probability" class="headerlink" title="Formula of Total Probability"></a>Formula of Total Probability</h2><p><strong>Formula of total probability</strong> is an essential method to compute the probability of complex events whose <em>sample space</em> can be divided into small parts. We can get the probability of the original complicated event adding probabilities of these “small events”. </p>
+P(A_1A_2...A{n})=P(A_1)P(A_2|A_1)P(A_3|A_1A_2)...P(A_n|A_1...A_{n-1})</script><p>Here are tricky equations which help to understand conditional probability, given $P(ABC)&gt;0$</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+P(AB|C)=P(A|C)P(B|C) \Longleftrightarrow P(B|AC)=P(B|C) \\
+\Longleftrightarrow P(A|BC)=P(A|C)
+\end{align*}</script><h2 id="Formula-of-Total-Probability"><a href="#Formula-of-Total-Probability" class="headerlink" title="Formula of Total Probability"></a>Formula of Total Probability</h2><p><strong>Formula of total probability</strong> is an essential method to compute the probability of complex events whose <em>sample space</em> can be divided into small parts. We can get the probability of the original complicated event adding probabilities of these “small events”. </p>
 <p>If events $B_1, … , B_n$ constitute a <em>partition</em> of the sample space $\Omega$ , that is to say $B_i \cap B_j = \varnothing, ~ i \neq j, ~ i,j = 1,… n$ ; $P(B_i)&gt;0, i = 1, …, n$ and $ B_1 \cup … \cup B_n = \Omega$, and if $A$ is any event in $\Omega$ , then</p>
 <script type="math/tex; mode=display">
 P(A) = \sum_{i=1}^{\infty} P(B_i)P(A|B_i)</script><h2 id="Bayes’-Theorem"><a href="#Bayes’-Theorem" class="headerlink" title="Bayes’ Theorem"></a>Bayes’ Theorem</h2><p>Based on the multiplication theorem of probability and the formula of total probability, we can get the famous <strong><em>Bayes’ theorem</em></strong>.</p>
@@ -307,11 +312,11 @@ P(B_i|A)=\frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{n}P(B_j)P(A|B_j)}</script><p>$P(B)$ i
         "genre": "Mathematics Probability",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-02-15",
+        "dateModified": "2019-02-20",
         "url": "http://yoursite.com/2019/01/31/Probability Basics/",
         "description": "This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.
 Proba"
-        "wordCount": 639
+        "wordCount": 656
     }
 </script>
 
@@ -579,22 +584,5 @@ Proba"
 <script src="/js/main.js"></script>
 
     </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>

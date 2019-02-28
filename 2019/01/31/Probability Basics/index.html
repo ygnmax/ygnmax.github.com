@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-20T15:48:03.031Z">
+<meta property="og:updated_time" content="2019-02-21T14:53:29.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Probability Basics">
 <meta name="twitter:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
@@ -178,12 +178,14 @@
         
         <div class="article-entry" itemprop="articleBody">
             <p>This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.</p>
-<h1 id="Probabilities-and-Events"><a href="#Probabilities-and-Events" class="headerlink" title="Probabilities and Events"></a>Probabilities and Events</h1><p>Consider an experiment with the <em>sample space</em> $S = \{1,2,…,m\}$. Suppose that there are numbers $p_1, p_2, …, p_m$ with</p>
-<script type="math/tex; mode=display">p_i \geq 0, ~ i = 1, 2,..., m, ~~ and ~~ \displaystyle{\sum\limits_{i=1}^m}p_i = 1 ​</script><p>and such that $p_i​$ is the <em>probability</em> that $i​$ is the outcome of the experiment.Any set of possible outcomes of the experiment is called an event. If $P(A)​$ denote the probability that event A occurs, then</p>
+<h1 id="Probability-Space"><a href="#Probability-Space" class="headerlink" title="Probability Space"></a>Probability Space</h1><h2 id="Finite-Sample-Space"><a href="#Finite-Sample-Space" class="headerlink" title="Finite Sample Space"></a>Finite Sample Space</h2><p>Generally, a set of all the possible results of a certain experiment $S$ is call the <em>sample space</em>, which is denoted as $\Omega$. All the results of the experiment, which are also in the $\Omega$ are called the sample point, denoted as $\omega$.</p>
+<script type="math/tex; mode=display">
+\Omega = \{\omega|\omega ~ \text{are sample points of the experiment S} \}</script><h2 id="Classical-Model-of-Probability"><a href="#Classical-Model-of-Probability" class="headerlink" title="Classical Model of Probability"></a>Classical Model of Probability</h2><p>Consider an experiment with a finite sample space $\Omega = \{\omega_1,\omega_2,…,\omega_m\}$. Suppose that there are numbers $p_1, p_2, …, p_m​$ with</p>
+<script type="math/tex; mode=display">p_i \geq 0, ~ i = 1, 2,..., m, ~~ and ~~ \displaystyle{\sum\limits_{i=1}^m}p_i = 1 ​</script><p>and such that $p_i​$ is the <em>probability</em> that $i​$ is the outcome of the experiment $S​$. Any set of possible outcomes of the experiment is called an event. If $P(A)​$ denote the probability that event A occurs, then</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
-P(A) = \sum_{i \in A} ~ p_i
-\end{equation*}</script><p>And we can easily deduce that</p>
+P(A) = \sum_{i \in A} ~ p_i = \frac{\text{number of elements in event A}}{\text{total number of elements in sample space $\Omega$}}
+\end{equation*}</script><p>If these $p_1,p_2,…,p_m$ all exist with each other, this situation is called the <strong>classical model of probability</strong>. And we can easily deduce that</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(S) = \sum_{i} ~ p_i = 1
@@ -201,17 +203,45 @@ P(A^c) = 1 - P(A)
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(\varnothing) = 0
-\end{equation*}</script><p>Based on simple principle of set theory, for any events $A​$ and $B​$, we can write</p>
+\end{equation*}</script><p>Based on simple principle of set theory, </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+A \cup B &= A + B\bar{A} \\
+A &= AB+A\bar{B} \\
+  &= A(B+\bar{B})
+\end{align*}</script><p>for any events $A$ and $B$, we can write</p>
 <script type="math/tex; mode=display">
 \begin{align*}
 P(A \cup B) &= \displaystyle{\sum_{i \in A \cup B}} ~ p_i  \\
 P(A)  &= \displaystyle{\sum_{i \in A}} ~ p_i  \\
-P(B)  &= \displaystyle{\sum_{i \in B}} ~ p_i  \\\end{align*}</script><p>And the addition theorem of probability can be written that</p>
+P(B)  &= \displaystyle{\sum_{i \in B}} ~ p_i  \\
+\end{align*}</script><p>And the addition theorem of probability can be written that</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(A \cup B) = P(A) + P(B) - P(A \cap B)
-\end{equation*}</script><h1 id="Conditional-Probability"><a href="#Conditional-Probability" class="headerlink" title="Conditional Probability"></a>Conditional Probability</h1><h2 id="Conditional-Probablity"><a href="#Conditional-Probablity" class="headerlink" title="Conditional Probablity"></a>Conditional Probablity</h2><p>The probability that event $A$ occurs given that event $B$ occurs is called the conditional probability, which is donoted as</p>
-<script type="math/tex; mode=display">P(A|B)​</script><p>The formula of conditional probability is that</p>
+\end{equation*}</script><h2 id="Geometric-Models-of-Probability"><a href="#Geometric-Models-of-Probability" class="headerlink" title="Geometric Models of Probability"></a>Geometric Models of Probability</h2><p>Consider $R^r$ denote a r dimension vector space</p>
+<script type="math/tex; mode=display">
+R^r=\{(x_1,x_2,...,x_r)|x_i \in (-\infty,\infty),1 \leq i \leq r\}</script><p>for subset $A$ of $R^r$,</p>
+<script type="math/tex; mode=display">
+m(A)=\int_Adx_1dx_2...dx_r</script><p>is volume of $A$. If $\Omega$ is the sample space of experiment $S$, when $\Omega \subset R^r$, the subset of $\Omega$ is <em>event</em>. So we can define the geometric models of probability:</p>
+<p>If the volume of sample space $\Omega$ is positive, that is to say $m(\Omega) &gt; 0$, and sample points are equiprobably in $\Omega$, for $A \subset \Omega$</p>
+<script type="math/tex; mode=display">
+P(A)=\frac{m(A)}{m(\Omega)}</script><p>is the probability of event $A$. And it has the similar properties like classical probability.</p>
+<h2 id="Probability-Space-1"><a href="#Probability-Space-1" class="headerlink" title="Probability Space"></a>Probability Space</h2><p>In a sample space $\Omega$, the event $A$ is subset of $\Omega$. If $A$ satisfy that</p>
+<script type="math/tex; mode=display">
+\text{$A$ is an event} \Rightarrow \text{$\bar{A}$ is also an event} \\
+\text{$A_j$ is an event} \Rightarrow \text{$\bigcup_{j=1}^{\infty}A_j$ is also an event}</script><p>that is to say, <strong>after the complementary set operation and countable union operation, they are still in $\Omega$</strong>, then the entire events in the $\Omega$ constitute a set $\mathcal{F}$, </p>
+<script type="math/tex; mode=display">
+\mathcal{F}=\{A|\text{$A$ is event},A \subset \Omega\}</script><p>The $\mathcal{F}$ is called $\sigma$-domain($\sigma$-algebra), which is also called the <strong>event domain</strong> in the <em>probability</em>.</p>
+<p> If a function $P$ is defined in the domain $\mathcal{F}$, and satisfy:</p>
+<script type="math/tex; mode=display">
+\left\{
+\begin{align*}
+&P(\Omega) = 1 \\
+&P(A) \ge 0, \forall A \in \mathcal{F} \\
+&P\left(\bigcup_{j=1}^{\infty}A_j\right)=\sum_{j=1}^{\infty}P(A_j)
+\end{align*}\right.</script><p>then such a function $P$ is a <strong>probability measure</strong> in $\mathcal{F}$, and a short name is <strong>probability</strong>. The combination $(\Omega, \mathcal{F}, P)$ is a <strong>probability space</strong>.</p>
+<h1 id="Conditional-Probability"><a href="#Conditional-Probability" class="headerlink" title="Conditional Probability"></a>Conditional Probability</h1><h2 id="Conditional-Probablity"><a href="#Conditional-Probablity" class="headerlink" title="Conditional Probablity"></a>Conditional Probablity</h2><p>The probability that event $A$ occurs given that event $B$ occurs is called the conditional probability, which is denoted as $P(A|B)$. The formula of conditional probability is that</p>
 <script type="math/tex; mode=display">
 \begin{equation*}
 P(A|B) = \frac{P(A \cap B)}{P(B)}
@@ -312,11 +342,11 @@ P(B_i|A)=\frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{n}P(B_j)P(A|B_j)}</script><p>$P(B)$ i
         "genre": "Mathematics Probability",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-02-20",
+        "dateModified": "2019-02-21",
         "url": "http://yoursite.com/2019/01/31/Probability Basics/",
         "description": "This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.
 Proba"
-        "wordCount": 656
+        "wordCount": 1020
     }
 </script>
 
@@ -388,20 +418,20 @@ Proba"
         
 <nav id="article-nav">
     
-        <a href="/2019/01/31/Limit and Continuity/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/01/31/Real Number Theory/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Limit and Continuity
+            Real Number Theory
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2019/01/28/C++ Functions/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/01/31/Limit and Continuity/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">C++ Functions</p>
+        <p class="article-nav-title">Limit and Continuity</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -419,6 +449,24 @@ Proba"
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/28/C++ Pragmatic Program-SavingsAccount/" class="title">Pragmatic Program Savings Account</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T16:00:00.000Z" itemprop="datePublished">2019-02-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/27/C++ Array, Pointer & String/" class="title">C++ Array, Pointer &amp; String</a></p>
+                            <p class="item-date"><time datetime="2019-02-26T16:00:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -447,24 +495,6 @@ Proba"
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
-                            <p class="item-title"><a href="/2019/02/11/Level 2/" class="title">Verbal Advantage Level 2</a></p>
-                            <p class="item-date"><time datetime="2019-02-10T16:00:00.000Z" itemprop="datePublished">2019-02-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
-                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
-                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -474,7 +504,7 @@ Proba"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -484,7 +514,7 @@ Proba"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -494,7 +524,7 @@ Proba"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 13.33px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 13.33px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 16.67px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 13.33px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12.5px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 17.5px;">English</a> <a href="/tags/Journal/" style="font-size: 12.5px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 15px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 12.5px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 12.5px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
         </div>
     </div>
 
@@ -584,5 +614,22 @@ Proba"
 <script src="/js/main.js"></script>
 
     </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>

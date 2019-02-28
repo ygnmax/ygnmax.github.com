@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of Limit and Continuity. Limits of SequencesDefinitionA sequence is an infinite or finite ordered list of terms base on the positive number index:  x_1, x_2,...,x_n,">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-19T10:36:17.328Z">
+<meta property="og:updated_time" content="2019-02-22T15:27:58.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Limit and Continuity">
 <meta name="twitter:description" content="This note contains basic knowledge of Limit and Continuity. Limits of SequencesDefinitionA sequence is an infinite or finite ordered list of terms base on the positive number index:  x_1, x_2,...,x_n,">
@@ -194,12 +194,26 @@ x_n \to a ~(x \to \infty)</script><p>If there does not exist a real number $a$ s
 O(a,\varepsilon) = \{x|a - \varepsilon < x < a+\varepsilon\}</script><p>Whether a sequence is convergent or divergent has nothing to do with the finite terms, because if a sequence is convergent, “when $n &gt; N$, there is $|x_n-a|&lt;\varepsilon$” means that all the terms from the $N+1$ order will be in the $\varepsilon$ neighborhood, that is to say $x_n \in O(a, \varepsilon), n &gt; N$.</p>
 <p>Among the convergent sequences, the one whose limit is 0 is called <strong>infinitesimals</strong>.</p>
 <h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><h3 id="Uniqueness"><a href="#Uniqueness" class="headerlink" title="Uniqueness"></a>Uniqueness</h3><p>The limit of a convergent sequence is unique.</p>
-<h3 id="Boundedness"><a href="#Boundedness" class="headerlink" title="Boundedness"></a>Boundedness</h3><p>A convergent sequence must be bounded.</p>
-<h3 id="Orderliness"><a href="#Orderliness" class="headerlink" title="Orderliness"></a>Orderliness</h3><h3 id="Squeeze-Theorem"><a href="#Squeeze-Theorem" class="headerlink" title="Squeeze Theorem"></a>Squeeze Theorem</h3><p>For 3 sequence $\{x_n\}$,  $\{y_n\}$,  $\{z_n\}$ from a certain term there is</p>
+<script type="math/tex; mode=display">
+\text{if}
+\lim_{n \to \infty}x_n=a \\
+\lim_{n \to \infty}x_n=b \\
+\text{then} \
+a = b</script><h3 id="Boundedness"><a href="#Boundedness" class="headerlink" title="Boundedness"></a>Boundedness</h3><p>A convergent sequence must be bounded.</p>
+<h3 id="Squeeze-Theorem"><a href="#Squeeze-Theorem" class="headerlink" title="Squeeze Theorem"></a>Squeeze Theorem</h3><p>For 3 sequence $\{x_n\}$,  $\{y_n\}$,  $\{z_n\}$ from a certain term there is</p>
 <script type="math/tex; mode=display">
 x_n \leq y_n \leq z_n, n \ge N_0</script><p>and $\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = a$, then</p>
 <script type="math/tex; mode=display">
-\lim_{n \to \infty}y_n = a</script>
+\lim_{n \to \infty}y_n = a</script><h3 id="Arithmetic"><a href="#Arithmetic" class="headerlink" title="Arithmetic"></a>Arithmetic</h3><p>If $\lim_{n \to \infty}x_n=a$, $\lim_{n \to \infty}y_n=b$, then</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+&\lim_{n \to \infty}(\alpha x_n+\beta y_n)=\alpha a+\beta b \\
+&\lim_{n \to \infty}(x_ny_n)=ab \\
+&\lim_{n \to \infty}\frac{x_n}{y_n}=\frac{a}{b}
+\end{align*}</script><h1 id="Infinity"><a href="#Infinity" class="headerlink" title="Infinity"></a>Infinity</h1><h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h2><p>For any given $G&gt;0$, if $\exist$ positive integer $N$ such that when $n&gt;N$, $|x_n|&gt;G$, then call $\{x_n\}$ the infinity, denote as</p>
+<script type="math/tex; mode=display">
+\lim_{n \to \infty}x_n=\infty</script><p>It can be $\lim_{n \to \infty}a_n=+\infty$ or $\lim_{n \to \infty}b_n=-\infty$.</p>
+
         </div>
         <footer class="article-footer">
             
@@ -275,13 +289,13 @@ x_n \leq y_n \leq z_n, n \ge N_0</script><p>and $\lim_{n \to \infty} x_n = \lim_
         "genre": "Mathematics Mathematical Analysis",
         "datePublished": "2019-01-31",
         "dateCreated": "2019-01-31",
-        "dateModified": "2019-02-19",
+        "dateModified": "2019-02-22",
         "url": "http://yoursite.com/2019/01/31/Limit and Continuity/",
         "description": "This note contains basic knowledge of Limit and Continuity.
 Limits of SequencesDefinitionA sequence is an infinite or finite ordered list of terms base on the positive number index:
 
 x_1, x_2,...,x_n,"
-        "wordCount": 344
+        "wordCount": 417
     }
 </script>
 
@@ -353,20 +367,20 @@ x_1, x_2,...,x_n,"
         
 <nav id="article-nav">
     
-        <a href="/2019/01/31/Real Number Theory/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/2019/01/31/Probability Basics/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">newer</strong>
         <p class="article-nav-title">
         
-            Real Number Theory
+            Probability Basics
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/2019/01/31/Probability Basics/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/01/28/C++ Functions/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Probability Basics</p>
+        <p class="article-nav-title">C++ Functions</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -384,6 +398,24 @@ x_1, x_2,...,x_n,"
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/28/C++ Pragmatic Program-SavingsAccount/" class="title">Pragmatic Program Savings Account</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T16:00:00.000Z" itemprop="datePublished">2019-02-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/27/C++ Array, Pointer & String/" class="title">C++ Array, Pointer &amp; String</a></p>
+                            <p class="item-date"><time datetime="2019-02-26T16:00:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -412,24 +444,6 @@ x_1, x_2,...,x_n,"
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
-                            <p class="item-title"><a href="/2019/02/11/Level 2/" class="title">Verbal Advantage Level 2</a></p>
-                            <p class="item-date"><time datetime="2019-02-10T16:00:00.000Z" itemprop="datePublished">2019-02-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
-                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
-                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -439,7 +453,7 @@ x_1, x_2,...,x_n,"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -449,7 +463,7 @@ x_1, x_2,...,x_n,"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -459,7 +473,7 @@ x_1, x_2,...,x_n,"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 13.33px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 13.33px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 16.67px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 13.33px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12.5px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 17.5px;">English</a> <a href="/tags/Journal/" style="font-size: 12.5px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 15px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 12.5px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 12.5px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
         </div>
     </div>
 
@@ -549,5 +563,22 @@ x_1, x_2,...,x_n,"
 <script src="/js/main.js"></script>
 
     </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>

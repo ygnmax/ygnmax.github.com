@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-21T07:09:19.127Z">
+<meta property="og:updated_time" content="2019-02-21T16:12:18.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Variables and Distribution">
 <meta name="twitter:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
@@ -304,7 +304,29 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
 \rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}</script><p>It can be shown that</p>
 <script type="math/tex; mode=display">
 -1 \le \rho(X, Y) \le 1</script><p>If X and Y are linearly related by the equation $Y = a + bX$ , then $\rho(X,Y)$ will equal 1 when $b$ is positive and -1 when $b$ is negative.</p>
-<h1 id="K-Order-Moment"><a href="#K-Order-Moment" class="headerlink" title="K-Order Moment"></a>K-Order Moment</h1><h1 id="Coefficient-of-Variation"><a href="#Coefficient-of-Variation" class="headerlink" title="Coefficient of Variation"></a>Coefficient of Variation</h1><h1 id="Quantile"><a href="#Quantile" class="headerlink" title="Quantile"></a>Quantile</h1><h1 id="Median"><a href="#Median" class="headerlink" title="Median"></a>Median</h1><h1 id="Skewness"><a href="#Skewness" class="headerlink" title="Skewness"></a>Skewness</h1><h1 id="Kurtosis"><a href="#Kurtosis" class="headerlink" title="Kurtosis"></a>Kurtosis</h1>
+<h1 id="K-Order-Moment"><a href="#K-Order-Moment" class="headerlink" title="K-Order Moment"></a>K-Order Moment</h1><p>Considering a random variable $X$, $k$ is a positive integer, if the expected values below both exist, then</p>
+<script type="math/tex; mode=display">
+\mu_{k}=E(X^k)</script><p>is called <strong>$k​$-order origin moment of $X​$</strong>.</p>
+<script type="math/tex; mode=display">
+v_k=E(X-E(X))^k</script><p>is called <strong>$k$-order central moment of $X$</strong>.</p>
+<p>Obviously, the one-order origin moment is the expected value, and the two-order central moment is the variance. Because of $|X|^{k-1} \leq |X|^k+1​$, if a k-order moment exists, a k-1-order moment also exists.</p>
+<p>There is a simple equation between the origin moment and the central moment:</p>
+<script type="math/tex; mode=display">
+v_k=E(X-E(X))^k=E(X-\mu_1)^k=\sum_{i=0}^k\left(_i ^k\right)\mu_i(-\mu_1)^{k-i}</script><h1 id="Coefficient-of-Variation"><a href="#Coefficient-of-Variation" class="headerlink" title="Coefficient of Variation"></a>Coefficient of Variation</h1><p>Provided the 2-order moment of $X$ exists, then</p>
+<script type="math/tex; mode=display">
+C_{v}(X)=\frac{\sqrt{Var(X)}}{E(X)}=\frac{\sigma(X)}{E(X)}</script><p>is called the <strong>coefficient of variation</strong> of $X$.</p>
+<h1 id="Quantile"><a href="#Quantile" class="headerlink" title="Quantile"></a>Quantile</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, for $\forall ~ p \in (0,1)$, then call the $x_p$ which satisfies</p>
+<script type="math/tex; mode=display">
+F(x_p)=\int_{-\infty}^{x_p}p(x)dx=p</script><p>is the <strong>$p$ quantile</strong> of this distribution, also the <strong>lower $p$ quantile</strong>.  In fact, the left area of the density function which is divided into two part by the $x_p$ equals exactly $p$. Similarly, if $x’_p$ satisfies</p>
+<script type="math/tex; mode=display">
+1-F(x'_p)=\int_{x'_p}^{\infty}p(x)dx=p</script><p>it is called the <strong>higher $p$ quantile</strong>. They have such a relationship:</p>
+<script type="math/tex; mode=display">
+x'_p=x_{1-p} \\
+x_p=x'_{1-p}</script><h1 id="Median"><a href="#Median" class="headerlink" title="Median"></a>Median</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, we call $x_p$ which satisfy the $p= 0.5$ as median, that is to say, $x_{0.5}​$ satisfy:</p>
+<script type="math/tex; mode=display">
+F(x_{0.5})=\int_{-\infty}^{x_{0.5}}p(x)dx=0.5</script><h1 id="Skewness"><a href="#Skewness" class="headerlink" title="Skewness"></a>Skewness</h1><p>If all the first 3-order moments of a random variable $X$ exist, then</p>
+<script type="math/tex; mode=display">
+</script><h1 id="Kurtosis"><a href="#Kurtosis" class="headerlink" title="Kurtosis"></a>Kurtosis</h1>
         </div>
         <footer class="article-footer">
             
@@ -380,10 +402,10 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
         "genre": "Mathematics Probability",
         "datePublished": "2019-02-14",
         "dateCreated": "2019-02-14",
-        "dateModified": "2019-02-21",
+        "dateModified": "2019-02-22",
         "url": "http://yoursite.com/2019/02/14/Random Variables and Distribution/",
         "description": "This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe"
-        "wordCount": 1282
+        "wordCount": 1510
     }
 </script>
 
@@ -490,6 +512,24 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/28/C++ Pragmatic Program-SavingsAccount/" class="title">Pragmatic Program Savings Account</a></p>
+                            <p class="item-date"><time datetime="2019-02-27T16:00:00.000Z" itemprop="datePublished">2019-02-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/02/27/C++ Array, Pointer & String/" class="title">C++ Array, Pointer &amp; String</a></p>
+                            <p class="item-date"><time datetime="2019-02-26T16:00:00.000Z" itemprop="datePublished">2019-02-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mathematics/Probability/">Probability</a></p>
                             <p class="item-title"><a href="/2019/02/15/Useful Distributions/" class="title">Useful Distributions</a></p>
                             <p class="item-date"><time datetime="2019-02-14T16:00:00.000Z" itemprop="datePublished">2019-02-15</time></p>
@@ -514,24 +554,6 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
-                            <p class="item-title"><a href="/2019/02/11/Level 2/" class="title">Verbal Advantage Level 2</a></p>
-                            <p class="item-date"><time datetime="2019-02-10T16:00:00.000Z" itemprop="datePublished">2019-02-11</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
-                            <p class="item-title"><a href="/2019/02/01/C++ Data Share & Protection/" class="title">C++ Data Share &amp; Protection</a></p>
-                            <p class="item-date"><time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-02-01</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -541,7 +563,7 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -551,7 +573,7 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -561,7 +583,7 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 13.33px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/Journal/" style="font-size: 13.33px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 16.67px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 13.33px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+            <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12.5px;">Calculus</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 17.5px;">English</a> <a href="/tags/Journal/" style="font-size: 12.5px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 15px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 12.5px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 12.5px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
         </div>
     </div>
 
@@ -651,5 +673,22 @@ Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^
 <script src="/js/main.js"></script>
 
     </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 </body>
 </html>

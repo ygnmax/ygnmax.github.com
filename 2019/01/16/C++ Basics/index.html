@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic structures of C++ including Iostream, if, while, for controlling statements. IOstreamStream class:  standard I/O read &amp;amp; write files  Standard I/O  Input: screen Output: ke">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-02-14T17:03:51.815Z">
+<meta property="og:updated_time" content="2019-03-18T08:05:25.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ Basics">
 <meta name="twitter:description" content="This note contains basic structures of C++ including Iostream, if, while, for controlling statements. IOstreamStream class:  standard I/O read &amp;amp; write files  Standard I/O  Input: screen Output: ke">
@@ -192,8 +192,8 @@
 <p>1.input: <code>&gt;&gt;</code>; output: <code>&lt;&lt;</code></p>
 <ul>
 <li>cout &lt;&lt; <em>expression</em> &lt;&lt; <em>expression</em></li>
-<li>cin &gt;&gt; <em>expression</em> &gt;&gt; *expression”<pre><code>  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a, b;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b</span><br></pre></td></tr></table></figure>
-</code></pre></li>
+<li>cin &gt;&gt; <em>expression</em> &gt;&gt; *expression”  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a, b;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; a &gt;&gt; b</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <p>2. manipulator</p>
 <ul>
@@ -211,8 +211,8 @@
 <h2 id="if-statement"><a href="#if-statement" class="headerlink" title="if statement"></a>if statement</h2><p>syntax:</p>
 <ul>
 <li><p>if(<em>expression</em>) <em>statement</em></p>
-<pre><code>  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br></pre></td></tr></table></figure>
-</code></pre></li>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>if(<em>expression</em>) <em>statement1</em><br>else <em>statement2</em></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> ( x &gt; y) <span class="built_in">cout</span> &lt;&lt; x;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; y;</span><br></pre></td></tr></table></figure>
 </li>
@@ -233,7 +233,7 @@
 </ul>
 <blockquote>
 <p><strong>compare 2 input integers</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line">&gt;<span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">&gt;	<span class="keyword">int</span> x, y;</span><br><span class="line">&gt;	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter x and y: "</span>;</span><br><span class="line">&gt;	<span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">&gt;	<span class="keyword">if</span> (x != y)</span><br><span class="line">&gt;		<span class="keyword">if</span> (x &gt; y)</span><br><span class="line">&gt;			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &gt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;		<span class="keyword">else</span></span><br><span class="line">&gt;			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &lt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;	<span class="keyword">else</span></span><br><span class="line">&gt;		<span class="built_in">cout</span> &lt;&lt; <span class="string">"x = y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&gt;	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&gt;&#125;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter x and y: "</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; x &gt;&gt; y;</span><br><span class="line">	<span class="keyword">if</span> (x != y)</span><br><span class="line">		<span class="keyword">if</span> (x &gt; y)</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &gt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"x &lt; y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="string">"x = y"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h2 id="switch-statement"><a href="#switch-statement" class="headerlink" title="switch statement"></a>switch statement</h2><p>syntax:</p>
 <ul>
@@ -382,7 +382,7 @@
         "genre": "Computer Science Programming C++",
         "datePublished": "2019-01-16",
         "dateCreated": "2019-01-16",
-        "dateModified": "2019-02-15",
+        "dateModified": "2019-03-18",
         "url": "http://yoursite.com/2019/01/16/C++ Basics/",
         "description": "This note contains basic structures of C++ including Iostream, if, while, for controlling statements.
 IOstreamStream class:
@@ -394,7 +394,7 @@ Standard I/O
 
 Input: screen
 Output: ke"
-        "wordCount": 851
+        "wordCount": 849
     }
 </script>
 
@@ -501,6 +501,15 @@ Output: ke"
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/15/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Data-Structure/">Data Structure</a></p>
                             <p class="item-title"><a href="/2019/03/10/Data Structure Basics/" class="title">Data Structure Basics</a></p>
                             <p class="item-date"><time datetime="2019-03-09T16:00:00.000Z" itemprop="datePublished">2019-03-10</time></p>
@@ -534,15 +543,6 @@ Output: ke"
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Mathematics/Probability/">Probability</a></p>
-                            <p class="item-title"><a href="/2019/02/14/Random Variables and Distribution/" class="title">Random Variables and Distribution</a></p>
-                            <p class="item-date"><time datetime="2019-02-13T16:00:00.000Z" itemprop="datePublished">2019-02-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -552,7 +552,7 @@ Output: ke"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -562,7 +562,7 @@ Output: ke"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -572,7 +572,7 @@ Output: ke"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 18px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16px;">English</a> <a href="/tags/Journal/" style="font-size: 12px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 14px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 12px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 12px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+            <a href="/tags/C/" style="font-size: 18px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16px;">English</a> <a href="/tags/Journal/" style="font-size: 12px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 14px;">Probability</a> <a href="/tags/Statistics/" style="font-size: 12px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 14px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
         </div>
     </div>
 

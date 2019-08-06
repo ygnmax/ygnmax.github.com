@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Python NumPy Basics | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Python,NYU,BootCamp">
+    
+    <meta name="description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+<meta name="keywords" content="Python,NYU,BootCamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python NumPy Basics">
+<meta property="og:url" content="http://yoursite.com/2019/08/05/Python NumPy Basics/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-06T02:04:23.123Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python NumPy Basics">
+<meta name="twitter:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/Python/">Python</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Python NumPy Basics" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Python NumPy Basics
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/08/05/Python NumPy Basics/" class="article-date">
+            <time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/BootCamp/">BootCamp</a>, <a class="tag-link" href="/tags/NYU/">NYU</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft.</p>
+<h1 id="Understanding-Data-Types-in-Python"><a href="#Understanding-Data-Types-in-Python" class="headerlink" title="Understanding Data Types in Python"></a>Understanding Data Types in Python</h1><h2 id="Statically-typing-amp-Dynamic-typing"><a href="#Statically-typing-amp-Dynamic-typing" class="headerlink" title="Statically-typing &amp; Dynamic typing"></a>Statically-typing &amp; Dynamic typing</h2><p>A statically-typed language like C or Java requires each variable to be explicitly declared, while Python skips this specification.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">    result += i</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
+<p>This means we can assign any kind of data to any variable.</p>
+<h2 id="Behind-the-python-flexibility"><a href="#Behind-the-python-flexibility" class="headerlink" title="Behind the python: flexibility"></a>Behind the python: flexibility</h2><p>The standard Python implementation is written in C, which means every Python object is simply a cleverly-disguised C structure, not only its value, but other information as well.</p>
+<h3 id="Integer"><a href="#Integer" class="headerlink" title="Integer"></a>Integer</h3><p>A single integer in Python 3.4 contains four pieces.</p>
+<ul>
+<li><code>ob_refcnt</code></li>
+<li><code>ob_type</code></li>
+<li><code>ob_size</code></li>
+<li><code>ob_digit</code></li>
+</ul>
+<p>A python integer is a pointer to a position in memory containing all the Python object information, including the bytes that contain the integer value.</p>
+<h3 id="List"><a href="#List" class="headerlink" title="List"></a>List</h3><p>List is almost the most flexibility type in Python.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L = list(range(<span class="number">10</span>))</span><br><span class="line">L</span><br><span class="line">type(L[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+int
+</code></pre><p>Change it to a list of strings:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L2 = [str(c) <span class="keyword">for</span> c <span class="keyword">in</span> L]</span><br><span class="line">L2</span><br><span class="line">type(L2[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>[&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+str
+</code></pre><p>Or we can create heterogeneous lists:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">L3 = [<span class="keyword">True</span>, <span class="string">"2"</span>, <span class="number">3.0</span>, <span class="number">4</span>]</span><br><span class="line">[type(item) <span class="keyword">for</span> item <span class="keyword">in</span> L3]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>[bool, str, float, int]
+</code></pre><p>Flexibility comes with a cost (<strong>loss of storage and efficiency</strong>). In the special case that all variables are of the same type, much of this flexibility is redundant. Then comes with fixed-type NumPy-style array.</p>
+<h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><p>The built in array module can be used to create dense arrays of a uniform type:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> array</span><br><span class="line">L = list(range(<span class="number">10</span>))</span><br><span class="line">A = array.array(<span class="string">'i'</span>, L)</span><br><span class="line">A</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array(&#39;i&#39;, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre><p>However, the NumPy Array is more efficient than array because of the operations on data.</p>
+<h2 id="NumPy-Array"><a href="#NumPy-Array" class="headerlink" title="NumPy Array"></a>NumPy Array</h2><p><strong>The NumPy Array basic syntax:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([1, 4, 2, 5, 3])
+</code></pre><p><strong>The type of elements in array should, but does not have to, be the same.  If the types do not match, Numpy will upcast if possible.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([<span class="number">3.14</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([3.14, 4.  , 2.  , 3.  ])
+</code></pre><p>Here, integers are up-cast to floating point. <strong>And we can use dtype keyword to set the data type:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], dtype=<span class="string">'float32'</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([1., 2., 3., 4.], dtype=float32)
+</code></pre><p><strong>Finally, Numpy arrays can explicity be muti-dimensional, using a list of lists:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nested lists result in multi-dimensional arrays</span></span><br><span class="line">np.array([range(i, i+<span class="number">3</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([[2, 3, 4],
+       [4, 5, 6],
+       [6, 7, 8]])
+</code></pre><p>for better understanding, we can run a 2*2 array:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([range(i, i+<span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<pre><code>array([[2, 3],
+       [4, 5]])
+</code></pre><p>or a 3*10 array:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([range(i, i+<span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([[ 2,  3,  4,  5,  6,  7,  8,  9, 10, 11],
+       [ 4,  5,  6,  7,  8,  9, 10, 11, 12, 13],
+       [ 6,  7,  8,  9, 10, 11, 12, 13, 14, 15]])
+</code></pre><p><strong>It is more efficient to create arrays from scratch using routines built into Numpy:</strong></p>
+<p><strong>zero array</strong> with 10 integer:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype=int)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
+</code></pre><p><strong>one array:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.ones((<span class="number">3</span>,<span class="number">5</span>), dtype=float)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([[1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.],
+       [1., 1., 1., 1., 1.]])
+</code></pre><p><strong>An array with some identical elements:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.full((<span class="number">3</span>, <span class="number">5</span>), <span class="number">3.14</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<pre><code>array([[3.14, 3.14, 3.14, 3.14, 3.14],
+       [3.14, 3.14, 3.14, 3.14, 3.14],
+       [3.14, 3.14, 3.14, 3.14, 3.14]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array filled with a linear sequence</span></span><br><span class="line"><span class="comment"># starting at 0</span></span><br><span class="line">np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array of five values evenly spaced</span></span><br><span class="line"><span class="comment"># between 0 and 1</span></span><br><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*e arrayof uniformly distributed random values between 0 and 1</span></span><br><span class="line">np.random.random((<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0.57226098, 0.56849713, 0.63410602],
+       [0.88335333, 0.46056684, 0.95494879],
+       [0.22305721, 0.18478839, 0.78352821]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 1.05100904,  1.71407429,  0.75356105],
+       [-0.61885082,  0.43198626,  0.63819954],
+       [-0.53911965,  1.07533192, -0.27227068]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 array of random integers in the interval [0, 10]</span></span><br><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[0, 7, 1],
+       [2, 7, 6],
+       [7, 8, 5]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 identity matrix</span></span><br><span class="line">np.eye(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an uninitialized array of three integers</span></span><br><span class="line"><span class="comment"># the values will be whatever happens to </span></span><br><span class="line"><span class="comment"># already exist at that memory location</span></span><br><span class="line">np.empty(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([1., 1., 1.])
+</code></pre><p>numpy is built in C</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype = <span class="string">'int16'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)
+</code></pre><h2 id="basics-of-NumPy-arrays"><a href="#basics-of-NumPy-arrays" class="headerlink" title="basics of NumPy arrays"></a>basics of NumPy arrays</h2><ul>
+<li>attributes of arrays</li>
+<li>indexing of arrays</li>
+<li>slicing of arrays</li>
+<li>slicing of arrays</li>
+<li>reshaping of arrays</li>
+<li>joining and splitting of arrays</li>
+</ul>
+<h3 id="attributes-of-arrays"><a href="#attributes-of-arrays" class="headerlink" title="attributes of arrays"></a>attributes of arrays</h3><ul>
+<li>random number generator, which we will seed with a set value in order to ensure that the same random arrays are generated each time this code is run:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)<span class="comment"># seed for reproducibility</span></span><br><span class="line">x1 = np.random.randint(<span class="number">10</span>, size=<span class="number">6</span>)</span><br><span class="line">x2 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">x3 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1)</span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<pre><code>[5 0 3 3 7 9]
+[[3 5 2 4]
+ [7 6 8 8]
+ [1 6 7 7]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x3</span><br></pre></td></tr></table></figure>
+<pre><code>array([[[8, 1, 5, 9, 8],
+        [9, 4, 3, 0, 3],
+        [5, 0, 2, 3, 8],
+        [1, 3, 3, 3, 7]],
+
+       [[0, 1, 9, 9, 0],
+        [4, 7, 3, 2, 7],
+        [2, 0, 0, 4, 5],
+        [5, 6, 8, 4, 1]],
+
+       [[4, 9, 8, 1, 1],
+        [7, 9, 9, 3, 6],
+        [7, 2, 0, 3, 5],
+        [9, 4, 4, 6, 4]]])
+</code></pre><p>each array has attributes ndim, shape and size:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"x3 ndim: "</span>, x3.ndim)</span><br><span class="line">print(<span class="string">"x3 shape: "</span>, x3.shape)</span><br><span class="line">print(<span class="string">"x3 size: "</span>, x3.size)</span><br></pre></td></tr></table></figure>
+<pre><code>x3 ndim:  3
+x3 shape:  (3, 4, 5)
+x3 size:  60
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"dtype:"</span>, x3.dtype)</span><br></pre></td></tr></table></figure>
+<pre><code>dtype: int32
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"itemsize: "</span>, x3.itemsize)</span><br></pre></td></tr></table></figure>
+<pre><code>itemsize:  4
+</code></pre><p>array indexing</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1[<span class="number">0</span>])</span><br><span class="line">print(x1[<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>5
+7
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1</span><br></pre></td></tr></table></figure>
+<pre><code>array([5, 0, 3, 3, 7, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1[<span class="number">-1</span>])</span><br><span class="line">print(x1[<span class="number">-2</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>9
+7
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>[[3 5 2 4]
+ [7 6 8 8]
+ [1 6 7 7]]
+1
+7
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">x2[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">12</span></span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<pre><code>[[3 5 2 4]
+ [7 6 8 8]
+ [1 6 7 7]]
+[[12  5  2  4]
+ [ 7  6  8  8]
+ [ 1  6  7  7]]
+</code></pre><p>the different type will be silently truncated</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x1[<span class="number">0</span>] = <span class="number">3.14159</span></span><br><span class="line">x1</span><br></pre></td></tr></table></figure>
+<pre><code>array([3, 0, 3, 3, 7, 9])
+</code></pre><h3 id="array-slicing-accessing-subarrays"><a href="#array-slicing-accessing-subarrays" class="headerlink" title="array slicing: accessing subarrays"></a>array slicing: accessing subarrays</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">10</span>)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:<span class="number">5</span>] <span class="comment"># first five elements</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">5</span>:]</span><br></pre></td></tr></table></figure>
+<pre><code>array([5, 6, 7, 8, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">4</span>:<span class="number">7</span>] <span class="comment"># middle sub-array</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([4, 5, 6])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[::<span class="number">2</span>] <span class="comment"># every other element</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 2, 4, 6, 8])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">1</span>::<span class="number">2</span>] <span class="comment"># every other element, starting at index1</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 3, 5, 7, 9])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">5</span>::<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
+<pre><code>array([5, 3, 1])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2</span><br></pre></td></tr></table></figure>
+<pre><code>array([[12,  5,  2,  4],
+       [ 7,  6,  8,  8],
+       [ 1,  6,  7,  7]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[:<span class="number">2</span>, :<span class="number">3</span>] <span class="comment"># first two rows, three columns</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[12,  5,  2],
+       [ 7,  6,  8]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[:<span class="number">3</span>, ::<span class="number">2</span>] <span class="comment">#all rows, every other column</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[12,  2],
+       [ 7,  8],
+       [ 1,  7]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[::<span class="number">-1</span>, ::<span class="number">-1</span>] <span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 7,  7,  6,  1],
+       [ 8,  8,  6,  7],
+       [ 4,  2,  5, 12]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2[:,<span class="number">0</span>]) <span class="comment">#first column of x2</span></span><br></pre></td></tr></table></figure>
+<pre><code>[12  7  1]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x2[<span class="number">0</span>,:]) <span class="comment">#first row of x2</span></span><br><span class="line">print(x2[<span class="number">0</span>]) <span class="comment">#equivalent</span></span><br></pre></td></tr></table></figure>
+<pre><code>[12  5  2  4]
+[12  5  2  4]
+</code></pre><p>slice return views rather than copies of the array data<br>in list, slices will be copies</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub = x2[:<span class="number">2</span>, :<span class="number">2</span>]</span><br><span class="line">print(x2_sub)</span><br></pre></td></tr></table></figure>
+<pre><code>[[12  5]
+ [ 7  6]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">99</span></span><br><span class="line">print(x2_sub)</span><br></pre></td></tr></table></figure>
+<pre><code>[[99  5]
+ [ 7  6]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<pre><code>[[99  5  2  4]
+ [ 7  6  8  8]
+ [ 1  6  7  7]]
+</code></pre><p>it is a useful property, we can access and process pieces of these datasets without the need to copy the underlying data buffer</p>
+<p>we can also create a explicitly copy the data within an array or a subarray</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy = x2[:<span class="number">2</span>,:<span class="number">2</span>].copy()</span><br><span class="line">print(x2_sub_copy)</span><br></pre></td></tr></table></figure>
+<pre><code>[[99  5]
+ [ 7  6]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<pre><code>[[99  5  2  4]
+ [ 7  6  8  8]
+ [ 1  6  7  7]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy[<span class="number">0</span>,<span class="number">0</span>] = <span class="number">42</span></span><br><span class="line">print(x2_sub_copy)</span><br></pre></td></tr></table></figure>
+<pre><code>[[42  5]
+ [ 7  6]]
+</code></pre><h3 id="Reshaping-of-arrays"><a href="#Reshaping-of-arrays" class="headerlink" title="Reshaping of arrays"></a>Reshaping of arrays</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># put number 1-9 in a 3*3 grid:</span></span><br><span class="line">grid = np.arange(<span class="number">1</span>,<span class="number">10</span>).reshape((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line">print(grid)</span><br></pre></td></tr></table></figure>
+<pre><code>[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">x.reshape((<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[np.newaxis, :]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.reshape((<span class="number">3</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1],
+       [2],
+       [3]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:, np.newaxis]</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1],
+       [2],
+       [3]])
+</code></pre><h2 id="array-concatenation-and-splitting"><a href="#array-concatenation-and-splitting" class="headerlink" title="array concatenation and splitting"></a>array concatenation and splitting</h2><p>combine multiple arrays into one</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">y = np.array([<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line">np.concatenate([x, y])</span><br></pre></td></tr></table></figure>
+<pre><code>array([1, 2, 3, 3, 2, 1])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = [<span class="number">99</span>, <span class="number">99</span>, <span class="number">99</span>]</span><br><span class="line">print(np.concatenate(z, z))</span><br></pre></td></tr></table></figure>
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-94-f4ee06b12dd7&gt; in &lt;module&gt;
+      1 z = [99, 99, 99]
+----&gt; 2 print(np.concatenate(z, z))
+
+
+TypeError: &#39;list&#39; object cannot be interpreted as an integer
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grid = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">               [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.concatenate([grid, grid])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [4, 5, 6],
+       [1, 2, 3],
+       [4, 5, 6]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zero-indexed</span></span><br><span class="line">np.concatenate([grid, grid], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3, 1, 2, 3],
+       [4, 5, 6, 4, 5, 6]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">grid = np.array([[<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>],</span><br><span class="line">                [<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vstack([x, grid])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[1, 2, 3],
+       [9, 8, 7],
+       [6, 5, 4]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># horizontal</span></span><br><span class="line">y = np.array([[<span class="number">99</span>],</span><br><span class="line">             [<span class="number">99</span>]])</span><br><span class="line">np.hstack([grid, y])</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 9,  8,  7, 99],
+       [ 6,  5,  4, 99]])
+</code></pre><p>spliting</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">99</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">x1, x2, x3 = np.split(x, [<span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(x1, x2, x3)</span><br></pre></td></tr></table></figure>
+<pre><code>[1 2 3] [99 99] [3 2 1]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grid = np.arange(<span class="number">16</span>).reshape((<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line">grid</span><br></pre></td></tr></table></figure>
+<pre><code>array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15]])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">upper, lower = np.vsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(upper)</span><br><span class="line">print(lower)</span><br></pre></td></tr></table></figure>
+<pre><code>[[0 1 2 3]
+ [4 5 6 7]]
+[[ 8  9 10 11]
+ [12 13 14 15]]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">left, right = np.hsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(left)</span><br><span class="line">print(right)</span><br></pre></td></tr></table></figure>
+<pre><code>[[ 0  1]
+ [ 4  5]
+ [ 8  9]
+ [12 13]]
+[[ 2  3]
+ [ 6  7]
+ [10 11]
+ [14 15]]
+</code></pre><h1 id="Computation-and-Functions-in-NumPy"><a href="#Computation-and-Functions-in-NumPy" class="headerlink" title="Computation and Functions in NumPy"></a>Computation and Functions in NumPy</h1><p>fast: use vectorized operations: universal functions</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># slowness of loops</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_reciprocals</span><span class="params">(values)</span>:</span></span><br><span class="line">    output = np.empty(len(values))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(values)):</span><br><span class="line">        output[i] = <span class="number">1.0</span> / values[i]</span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line">values = np.random.randint(<span class="number">1</span>, <span class="number">10</span>, size = <span class="number">5</span>)</span><br><span class="line">compute_reciprocals(values)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0.16666667, 1.        , 0.25      , 0.25      , 0.125     ])
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># IPython's %timeit</span></span><br><span class="line">big_array = np.random.randint(<span class="number">1</span>, <span class="number">100.</span> size=<span class="number">1000000</span>)</span><br><span class="line">%timeit compute_reciprocals(big_array)</span><br></pre></td></tr></table></figure>
+<p>vectorizedoperation</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(compute_reciprocals(values))</span><br><span class="line">print(<span class="number">1.0</span> / values)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%timeit (<span class="number">1.0</span> / big_array)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">5</span>) / np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0.        , 0.5       , 0.66666667, 0.75      , 0.8       ])
+</code></pre><p>in matlab, element by element computation is ./</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">5</span>) % np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>array([0, 1, 2, 3, 4], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multi-dimensional</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line"><span class="number">2</span> ** x</span><br></pre></td></tr></table></figure>
+<pre><code>array([[  1,   2,   4],
+       [  8,  16,  32],
+       [ 64, 128, 256]], dtype=int32)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Python NumPy Basics",
+        "image": "http://yoursite.com",
+        "keywords": "Python NYU BootCamp",
+        "genre": "Computer Science Programming Python",
+        "datePublished": "2019-08-05",
+        "dateCreated": "2019-08-05",
+        "dateModified": "2019-08-05",
+        "url": "http://yoursite.com/2019/08/05/Python NumPy Basics/",
+        "description": "This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft.
+Understanding Data Types in PythonStatically-typing &"
+        "wordCount": 3031
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">The Unamiable but Worthwhile Age of 22</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" class="title">The Unamiable but Worthwhile Age of 22</a></p>
+                            <p class="item-date"><time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished">2019-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2019/03/20/What I Have Lived For/" class="title">What I Have Lived For</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T16:00:00.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/14/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></p>
+                            <p class="item-title"><a href="/2019/03/09/Data Structure Basics/" class="title">Data Structure Basics</a></p>
+                            <p class="item-date"><time datetime="2019-03-09T16:00:00.000Z" itemprop="datePublished">2019-03-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/BootCamp/" style="font-size: 10px;">BootCamp</a> <a href="/tags/C/" style="font-size: 18.33px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.67px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 10px;">NYU</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 11.67px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/08/05/Python NumPy Basics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>C++ Data Share &amp; Protection | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="C++,MOOC">
+    
+    <meta name="description" content="This note contains basic knowledge of data share and protection in C++ including. Scope classification function prototype scope 1double area(double radius) local scope 12345678void fun(int a) &amp;#123;">
+<meta name="keywords" content="C++,MOOC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ Data Share &amp; Protection">
+<meta property="og:url" content="http://yoursite.com/2019/01/31/C++ Data Share & Protection/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains basic knowledge of data share and protection in C++ including. Scope classification function prototype scope 1double area(double radius) local scope 12345678void fun(int a) &amp;#123;">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-27T02:59:52.323Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++ Data Share &amp; Protection">
+<meta name="twitter:description" content="This note contains basic knowledge of data share and protection in C++ including. Scope classification function prototype scope 1double area(double radius) local scope 12345678void fun(int a) &amp;#123;">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/C/">C++</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-C++ Data Share &amp; Protection" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        C++ Data Share &amp; Protection
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/01/31/C++ Data Share & Protection/" class="article-date">
+            <time datetime="2019-01-31T16:00:00.000Z" itemprop="datePublished">2019-01-31</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C++</a>, <a class="tag-link" href="/tags/MOOC/">MOOC</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic knowledge of data share and protection in C++ including.</p>
+<h1 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope</h1><ul>
+<li><p>classification</p>
+<p>function prototype scope</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">area</span><span class="params">(<span class="keyword">double</span> radius)</span></span></span><br></pre></td></tr></table></figure>
+<p>local scope</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">(<span class="keyword">int</span> a)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> b = a;</span><br><span class="line">   <span class="built_in">cin</span> &gt;&gt; b;</span><br><span class="line">   <span class="keyword">if</span> (b &gt; <span class="number">0</span>) &#123;</span><br><span class="line">     <span class="keyword">int</span> c;</span><br><span class="line">     ......</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>global scope </p>
+<p>file scope</p>
+</li>
+<li><p>visibility</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> i;	<span class="comment">//global variable，file scope</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123; </span><br><span class="line">     i = <span class="number">5</span>; <span class="comment">//i is a global variable (external)</span></span><br><span class="line">     &#123;</span><br><span class="line">         <span class="keyword">int</span> i; <span class="comment">//local scope (inner)</span></span><br><span class="line">         i = <span class="number">7</span>;</span><br><span class="line">         <span class="built_in">cout</span> &lt;&lt; <span class="string">"i = "</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//output 7</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">cout</span> &lt;&lt; “i = ” &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;<span class="comment">//output 5</span></span><br><span class="line">      <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="Lifetime"><a href="#Lifetime" class="headerlink" title="Lifetime"></a>Lifetime</h1><ul>
+<li>static lifetime</li>
+<li>local lifetime</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i = <span class="number">1</span>; <span class="comment">// i is global variable with static lifetime and global visibility.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">other</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> b;</span><br><span class="line">    <span class="comment">// a,b are static local variables, with static lifetime and local visibility</span></span><br><span class="line">    <span class="comment">// a,b will be initialized only at the first time</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">10</span>; <span class="comment">// c is a local variable with local lifetime and local visibility</span></span><br><span class="line">    <span class="comment">//c will be initialized every time the "other function" is about to run.</span></span><br><span class="line">    a += <span class="number">2</span>; i += <span class="number">32</span>; c += <span class="number">5</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"---OTHER---\n"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">" i: "</span>&lt;&lt;i&lt;&lt;<span class="string">" a: "</span>&lt;&lt;a&lt;&lt;<span class="string">" b: "</span>&lt;&lt;b&lt;&lt;<span class="string">" c: "</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    b = a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a;<span class="comment">//a is static local variable with static lifetime and local visibility</span></span><br><span class="line">    <span class="keyword">int</span> b = <span class="number">-10</span>; <span class="comment">// b, c are local variables with local lifetime</span></span><br><span class="line">    <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"---MAIN---\n"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">" i: "</span>&lt;&lt;i&lt;&lt;<span class="string">" a: "</span>&lt;&lt;a&lt;&lt;<span class="string">" b: "</span>&lt;&lt;b&lt;&lt;<span class="string">" c: "</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    c += <span class="number">8</span>; other();</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"---MAIN---\n"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">" i: "</span>&lt;&lt;i&lt;&lt;<span class="string">" a: "</span>&lt;&lt;a&lt;&lt;<span class="string">" b: "</span>&lt;&lt;b&lt;&lt;<span class="string">" c: "</span>&lt;&lt;c&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    i += <span class="number">10</span>; other();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The result is below:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---MAIN---</span><br><span class="line">i: <span class="number">1</span> a: <span class="number">0</span> b: <span class="number">-10</span> c: <span class="number">0</span></span><br><span class="line">---OTHER---</span><br><span class="line">i: <span class="number">33</span> a: <span class="number">4</span> b: <span class="number">0</span> c: <span class="number">15</span></span><br><span class="line">---MAIN---</span><br><span class="line">i: <span class="number">33</span> a: <span class="number">0</span> b: <span class="number">-10</span> c: <span class="number">8</span></span><br><span class="line">---OTHER---</span><br><span class="line">i: <span class="number">75</span> a: <span class="number">6</span> b: <span class="number">4</span> c: <span class="number">15</span></span><br></pre></td></tr></table></figure>
+<h1 id="Friend-Function-amp-Class"><a href="#Friend-Function-amp-Class" class="headerlink" title="Friend Function &amp; Class"></a>Friend Function &amp; Class</h1><h2 id="friend-function"><a href="#friend-function" class="headerlink" title="friend function"></a>friend function</h2> <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span> <span class="comment">//Point类声明</span></span><br><span class="line"><span class="keyword">public</span>: <span class="comment">//外部接口</span></span><br><span class="line">	Point(<span class="keyword">int</span> x=<span class="number">0</span>, <span class="keyword">int</span> y=<span class="number">0</span>) : x(x), y(y) &#123; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">friend</span> <span class="keyword">float</span> <span class="title">dist</span><span class="params">(Point &amp;a, Point &amp;b)</span></span>;</span><br><span class="line"><span class="keyword">private</span>: <span class="comment">//私有数据成员</span></span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">dist</span><span class="params">(Point&amp; a, Point&amp; b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">double</span> x = a.x - b.x;</span><br><span class="line">	<span class="keyword">double</span> y = a.y - b.y;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">static_cast</span>&lt;<span class="keyword">float</span>&gt;(<span class="built_in">sqrt</span>(x * x + y * y));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Point p1(1, 1), p2(4, 5);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt;<span class="string">"The distance is: "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; dist(p1, p2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="friend-class"><a href="#friend-class" class="headerlink" title="friend class"></a>friend class</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line">	<span class="keyword">friend</span> <span class="class"><span class="keyword">class</span> <span class="title">B</span>;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="keyword">int</span> i)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	A a;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> B::<span class="built_in">set</span>(<span class="keyword">int</span> i) &#123;</span><br><span class="line">	a.x=i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> B::display() &#123;</span><br><span class="line">	a.display();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>tips:<ul>
+<li>The friend function and class is a one-direction relationship.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Shared-Data-Protection"><a href="#Shared-Data-Protection" class="headerlink" title="Shared Data Protection"></a>Shared Data Protection</h1><h2 id="const-object"><a href="#const-object" class="headerlink" title="const object"></a>const object</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span> i,<span class="keyword">int</span> j) &#123;x=i; y=j;&#125;</span><br><span class="line">                     ...</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> x,y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">A <span class="keyword">const</span> <span class="title">a</span><span class="params">(<span class="number">3</span>,<span class="number">4</span>)</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="const-function"><a href="#const-function" class="headerlink" title="const function"></a>const function</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">R</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	R(<span class="keyword">int</span> r1, <span class="keyword">int</span> r2) : r1(r1), r2(r2) &#123; &#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> r1, r2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> R::print() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; r1 &lt;&lt; <span class="string">":"</span> &lt;&lt; r2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> R::print() <span class="keyword">const</span> &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; r1 &lt;&lt; <span class="string">";"</span> &lt;&lt; r2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">R <span class="title">a</span><span class="params">(<span class="number">5</span>,<span class="number">4</span>)</span></span>;</span><br><span class="line">	a.print(); <span class="comment">//调用void print()</span></span><br><span class="line">	<span class="function"><span class="keyword">const</span> R <span class="title">b</span><span class="params">(<span class="number">20</span>,<span class="number">52</span>)</span></span>; </span><br><span class="line">	b.print(); <span class="comment">//调用void print() const</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="const-member"><a href="#const-member" class="headerlink" title="const member"></a>const member</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    A(<span class="keyword">int</span> i);</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> A::b=<span class="number">10</span>;</span><br><span class="line">A::A(<span class="keyword">int</span> i) : a(i) &#123; &#125;</span><br><span class="line"><span class="keyword">void</span> A::print() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="string">":"</span> &lt;&lt; b &lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//建立对象a和b，并以100和0作为初值，分别调用构造函数，</span></span><br><span class="line"><span class="comment">//通过构造函数的初始化列表给对象的常数据成员赋初值</span></span><br><span class="line">	A a1(100), a2(0);</span><br><span class="line">	a1.print();</span><br><span class="line">	a2.print();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="const-reference"><a href="#const-reference" class="headerlink" title="const reference"></a>const reference</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:          </span><br><span class="line">    Point(<span class="keyword">int</span> x = <span class="number">0</span>, <span class="keyword">int</span> y = <span class="number">0</span>)</span><br><span class="line">	: x(x), y(y) &#123; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">friend</span> <span class="keyword">float</span> <span class="title">dist</span><span class="params">(<span class="keyword">const</span> Point &amp;p1,<span class="keyword">const</span> Point &amp;p2)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">dist</span><span class="params">(<span class="keyword">const</span> Point &amp;p1, <span class="keyword">const</span> Point &amp;p2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x = p1.x - p2.x; </span><br><span class="line">    <span class="keyword">double</span> y = p1.y - p2.y;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">static_cast</span>&lt;<span class="keyword">float</span>&gt;(<span class="built_in">sqrt</span>(x*x+y*y));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    const Point myp1(1, 1), myp2(4, 5);    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"The distance is: "</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; dist(myp1, myp2) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "C++ Data Share &amp; Protection",
+        "image": "http://yoursite.com",
+        "keywords": "C++ MOOC",
+        "genre": "Computer Science Programming C++",
+        "datePublished": "2019-01-31",
+        "dateCreated": "2019-01-31",
+        "dateModified": "2019-02-26",
+        "url": "http://yoursite.com/2019/01/31/C++ Data Share & Protection/",
+        "description": "This note contains basic knowledge of data share and protection in C++ including.
+Scope
+classification
+function prototype scope
+1double area(double radius)
+local scope
+12345678void fun(int a) &#123;  "
+        "wordCount": 1651
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/10/Level 2/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Verbal Advantage Level 2
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/01/31/C++ Class/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">C++ Class</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" class="title">The Unamiable but Worthwhile Age of 22</a></p>
+                            <p class="item-date"><time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished">2019-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2019/03/20/What I Have Lived For/" class="title">What I Have Lived For</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T16:00:00.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/14/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></p>
+                            <p class="item-title"><a href="/2019/03/09/Data Structure Basics/" class="title">Data Structure Basics</a></p>
+                            <p class="item-date"><time datetime="2019-03-09T16:00:00.000Z" itemprop="datePublished">2019-03-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/BootCamp/" style="font-size: 10px;">BootCamp</a> <a href="/tags/C/" style="font-size: 18.33px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.67px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 10px;">NYU</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 11.67px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/01/31/C++ Data Share &amp; Protection/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

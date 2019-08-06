@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>C++ Array, Pointer &amp; String | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="C++,MOOC">
+    
+    <meta name="description" content="This note contains the basic rules of array, pointer and string in C++. ArrayDefinitionType Identifier Name [Expression1] [Expression2]… 12int a[10]// a is an integer array with 10 elements. 12int a[5">
+<meta name="keywords" content="C++,MOOC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ Array, Pointer &amp; String">
+<meta property="og:url" content="http://yoursite.com/2019/02/26/C++ Array, Pointer & String/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains the basic rules of array, pointer and string in C++. ArrayDefinitionType Identifier Name [Expression1] [Expression2]… 12int a[10]// a is an integer array with 10 elements. 12int a[5">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-03-02T15:26:33.401Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++ Array, Pointer &amp; String">
+<meta name="twitter:description" content="This note contains the basic rules of array, pointer and string in C++. ArrayDefinitionType Identifier Name [Expression1] [Expression2]… 12int a[10]// a is an integer array with 10 elements. 12int a[5">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/C/">C++</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-C++ Array, Pointer &amp; String" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        C++ Array, Pointer &amp; String
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/26/C++ Array, Pointer & String/" class="article-date">
+            <time datetime="2019-02-26T16:00:00.000Z" itemprop="datePublished">2019-02-26</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C++</a>, <a class="tag-link" href="/tags/MOOC/">MOOC</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains the basic rules of array, pointer and string in C++.</p>
+<h1 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Type Identifier <em>Name</em> [<em>Expression1</em>] [<em>Expression2</em>]…</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]</span><br><span class="line"><span class="comment">// a is an integer array with 10 elements.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>][<span class="number">3</span>]</span><br><span class="line"><span class="comment">// a is an 2-dimension integer array with 5 rows and 3 columns and 15 elements.</span></span><br></pre></td></tr></table></figure>
+<p>tips</p>
+<ul>
+<li><p>The array must be declared first, then be used.</p>
+</li>
+<li><p>refer the elements one by one, not the whole array.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">0</span>]=a[<span class="number">5</span>]+a[<span class="number">7</span>]-a[<span class="number">2</span>*<span class="number">3</span>]</span><br><span class="line">b[<span class="number">1</span>][<span class="number">2</span>]=a[<span class="number">2</span>][<span class="number">3</span>]/<span class="number">2</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>example</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>], b[<span class="number">10</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">		a[i] = i * <span class="number">2</span> - <span class="number">1</span>;</span><br><span class="line">		b[<span class="number">10</span> - i - <span class="number">1</span>] = a[i];</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"a["</span> &lt;&lt; i &lt;&lt; <span class="string">"] = "</span> &lt;&lt; a[i] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"b["</span> &lt;&lt; I &lt;&lt; <span class="string">"] = "</span> &lt;&lt; b[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;	</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><ul>
+<li><p>One dimension </p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. list all the initial value of elements</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;</span><br><span class="line"><span class="comment">// 2. initialize part of elements</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[<span class="number">10</span>]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;</span><br><span class="line"><span class="comment">// 3. don't set the length when initializing</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[]=&#123;<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>two dimension</p>
+  <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. list all the initial value in braces by order</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;</span><br><span class="line"><span class="comment">// 2. list the initial value by different rows</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>&#125;,&#123;<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;&#125;</span><br><span class="line"><span class="comment">// 3. initialize part of elements</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">4</span>]=&#123;&#123;<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,<span class="number">6</span>&#125;,&#123;<span class="number">0</span>,<span class="number">0</span>,<span class="number">11</span>&#125;&#125;</span><br><span class="line"><span class="comment">// 4. list all the initial values, the first index can be ignored</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[][<span class="number">4</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> a[][<span class="number">4</span>]=&#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>&#125;,&#123;<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>Find the first 20 items in Fibonacci sequence</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> f[<span class="number">20</span>] = &#123;<span class="number">1</span>,<span class="number">1</span>&#125;; <span class="comment">//initialize the 0th and the first number</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; <span class="number">20</span>; i++)</span><br><span class="line">		f[i] = f[i - <span class="number">2</span>] + f[i - <span class="number">1</span>];</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++) &#123; <span class="comment">//output 5 number on each row</span></span><br><span class="line">		<span class="keyword">if</span> (i % <span class="number">5</span> == <span class="number">0</span>) <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cout</span>.width(<span class="number">12</span>); <span class="comment">//set output width in 12</span></span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; f[i];</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Input the answers of multiple choices in a loop, compute and output the correct rate of each answer till input the ctrl+z. The answers will be input in a row as “a”, “b”, “c”, “d”.</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">char</span> key[ ] = &#123;<span class="string">'a'</span>,<span class="string">'c'</span>,<span class="string">'b'</span>,<span class="string">'a'</span>,<span class="string">'d'</span>&#125;;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> NUM_QUES = <span class="number">5</span>;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">	<span class="keyword">int</span> ques = <span class="number">0</span>, numCorrect = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter the "</span> &lt;&lt; NUM_QUES &lt;&lt; <span class="string">" question tests:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">cin</span>.get(c)) &#123;</span><br><span class="line">	    <span class="keyword">if</span>(c != <span class="string">'\n'</span>) &#123;</span><br><span class="line">	        <span class="keyword">if</span>(c == key[ques]) &#123;</span><br><span class="line">		        numCorrect++; <span class="built_in">cout</span> &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		    &#125; <span class="keyword">else</span></span><br><span class="line">		        <span class="built_in">cout</span>&lt;&lt;<span class="string">"*"</span>;</span><br><span class="line">			    ques++;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		    <span class="built_in">cout</span> &lt;&lt; <span class="string">" Score "</span> &lt;&lt; <span class="keyword">static_cast</span>&lt;<span class="keyword">float</span>&gt;(numCorrect)/NUM_QUES*<span class="number">100</span> &lt;&lt; <span class="string">"%"</span>;</span><br><span class="line">		    ques = <span class="number">0</span>;  numCorrect = <span class="number">0</span>; <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Array-as-argument"><a href="#Array-as-argument" class="headerlink" title="Array as argument"></a>Array as argument</h2><p>tips</p>
+<ul>
+<li>when elements in an array are parameters, they are just like variables. The name of array should be arguments and parameters. Type should be the same.</li>
+</ul>
+<blockquote>
+<p>Compute the sum of every row of an array.</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">rowSum</span><span class="params">(<span class="keyword">int</span> a[][<span class="number">4</span>], <span class="keyword">int</span> nRow)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nRow; i++) &#123;</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; <span class="number">4</span>; j++)</span><br><span class="line">        	a[i][<span class="number">0</span>] += a[i][j];</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> table[<span class="number">3</span>][<span class="number">4</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;, &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)  &#123;</span><br><span class="line">         <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">4</span>; j++)</span><br><span class="line">              <span class="built_in">cout</span> &lt;&lt; table[i][j] &lt;&lt; <span class="string">"   "</span>;</span><br><span class="line">         <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rowSum(table, <span class="number">3</span>); <span class="comment">//compute the sum of every row</span></span><br><span class="line">	<span class="comment">//output the result</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) </span><br><span class="line">	    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Sum of row "</span> &lt;&lt; i &lt;&lt; <span class="string">" is "</span> &lt;&lt; table[i][<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Object-Array"><a href="#Object-Array" class="headerlink" title="Object Array"></a>Object Array</h2><ul>
+<li><p>definition</p>
+<p><strong>Class Name</strong> <em>Array Name</em>[number of elements]</p>
+</li>
+<li><p>syntax</p>
+<p><strong>Array Name</strong>[index].<em>member Name</em></p>
+</li>
+<li><p>initialization</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Point a[<span class="number">2</span>]=&#123;Point(<span class="number">1</span>,<span class="number">2</span>),Point(<span class="number">3</span>,<span class="number">4</span>)&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>example</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Point.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _POINT_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _POINT_H</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	Point();</span><br><span class="line">	Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y);</span><br><span class="line">	~Point();</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> newX,<span class="keyword">int</span> newY)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">showCount</span><span class="params">()</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span> <span class="comment">//_POINT_H</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Point.cpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Point.h"</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line">Point::Point() : x(<span class="number">0</span>), y(<span class="number">0</span>) &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Default Constructor called."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">Point::Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) : x(x), y(y) &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Constructor called."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line">Point::~Point() &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Destructor called."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">void</span> Point::move(<span class="keyword">int</span> newX,<span class="keyword">int</span> newY) &#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Moving the point to ("</span> &lt;&lt; newX &lt;&lt; <span class="string">", "</span> &lt;&lt; newY &lt;&lt; <span class="string">")"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	x = newX;</span><br><span class="line">	y = newY;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//main.cpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"Point.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Entering main..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	Point a[<span class="number">2</span>];</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)</span><br><span class="line">		a[i].move(i + <span class="number">10</span>, i + <span class="number">20</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Exiting main..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="for-loop-based-on-range"><a href="#for-loop-based-on-range" class="headerlink" title="for loop based on range"></a>for loop based on range</h2><ul>
+<li>traversal all the elements in an array</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> *p;</span><br><span class="line">	<span class="keyword">for</span>(p = <span class="built_in">array</span>; p &lt; <span class="built_in">array</span> + <span class="keyword">sizeof</span>(<span class="built_in">array</span>) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>); ++p)&#123;</span><br><span class="line">	    *p += <span class="number">2</span>;</span><br><span class="line">	    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">3</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> &amp; e : <span class="built_in">array</span>)&#123;</span><br><span class="line">	    e += <span class="number">2</span>;</span><br><span class="line">	    <span class="built_in">std</span>::<span class="built_in">cout</span>&lt;&lt;e&lt;&lt;<span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Pointer"><a href="#Pointer" class="headerlink" title="Pointer"></a>Pointer</h1><h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h2><ul>
+<li><p>pointer operator</p>
+<ul>
+<li><p>*<em>Pointer Name</em></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">int</span>* ptr = &amp;i</span><br><span class="line">*ptr = <span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>address operator</p>
+<ul>
+<li>&amp;<em>Variable Name</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="Initialization-1"><a href="#Initialization-1" class="headerlink" title="Initialization"></a>Initialization</h2><p>syntax</p>
+<ul>
+<li><em>Storage Type</em> Type Identifier <em> <em>*Pointer Name</em></em> = initial address</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *pa = &amp;a</span><br></pre></td></tr></table></figure>
+<p>tips:</p>
+<ul>
+<li>The variable should be declared before assigned to a pointer.</li>
+<li>A non-static variable can be assigned to a static pointer.</li>
+</ul>
+<h2 id="Assignment"><a href="#Assignment" class="headerlink" title="Assignment"></a>Assignment</h2><p>syntax</p>
+<ul>
+<li><strong>Pointer Name</strong> = address value</li>
+</ul>
+<p>tips:</p>
+<ul>
+<li><p>The address value must be a address constant or address variable rather than an integer.</p>
+</li>
+<li><p>0 can be assigned to a pointer, which means a null pointer. Now <code>nullptr</code> can be used as a null pointer</p>
+</li>
+<li><code>void</code> pointer can be assigned to the address of any type object.</li>
+</ul>
+<p>example of pointer</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">int</span> *ptr = &amp;i; <span class="comment">//assign the address of i to ptr</span></span><br><span class="line">	i = <span class="number">10</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"i = "</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//output the value of the int variable</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*ptr = "</span> &lt;&lt; *ptr &lt;&lt; <span class="built_in">endl</span>; <span class="comment">//output the content that the int pointer is assigned to</span></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>the output result is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = 10</span><br><span class="line">*ptr = 10</span><br></pre></td></tr></table></figure>
+<p>example of a void pointer</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//!void voidObject; //wrong: there is no void  variable</span></span><br><span class="line">	<span class="keyword">void</span> *pv; <span class="comment">//right: the void type pointer</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">5</span>;</span><br><span class="line">	pv = &amp;i; <span class="comment">//void pointer is assigned to the int variable</span></span><br><span class="line">	<span class="keyword">int</span> *pint = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span> *&gt;(pv); <span class="comment">//void pointer is transformed to an int pointer</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"*pint = "</span> &lt;&lt; *pint &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>pointer assigned to an constant and const pointer</p>
+<ul>
+<li>the assigned object cannot be changed by a pointer assigned to an constant.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> *p1 = &amp;a; <span class="comment">//p1 is a pointer assigned to an constant</span></span><br><span class="line"><span class="keyword">int</span> b;</span><br><span class="line">p1 = &amp;b; <span class="comment">//right，the assigned value of p1 can be changed</span></span><br><span class="line"> *p1 = <span class="number">1</span>; <span class="comment">//wrong，the object value cannot be changed by p1</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>the assigned value of an const pointer cannot be changed</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a;</span><br><span class="line"><span class="keyword">int</span> * <span class="keyword">const</span> p2 = &amp;a;</span><br><span class="line">p2 = &amp;b; <span class="comment">//wrong，p2 is a const pointer which cannot be changed</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Operation"><a href="#Operation" class="headerlink" title="Operation"></a>Operation</h2><h3 id="Arithmetic-Operation"><a href="#Arithmetic-Operation" class="headerlink" title="Arithmetic Operation"></a>Arithmetic Operation</h3><ul>
+<li><p>addition and subtraction: </p>
+<ul>
+<li><p>+n or -n meaning</p>
+<p>the pointer assign to the initial address of the n-th data object.</p>
+</li>
+<li><p>++ or —</p>
+<p>the initial address of the last or the next data object</p>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">short</span> a[<span class="number">4</span>]</span><br><span class="line"><span class="keyword">short</span> *pa=a</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Relationship-Operation"><a href="#Relationship-Operation" class="headerlink" title="Relationship Operation"></a>Relationship Operation</h3><p>tips:</p>
+<ul>
+<li>the same type of pointers can be operated with relationship</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p==<span class="number">0</span></span><br><span class="line">p!=<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<h2 id="Access-Array-with-Pointer"><a href="#Access-Array-with-Pointer" class="headerlink" title="Access Array with Pointer"></a>Access Array with Pointer</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>], *pa;</span><br><span class="line">pa = &amp;a[<span class="number">0</span>]; <span class="comment">//or: pa = a</span></span><br></pre></td></tr></table></figure>
+<p>tips: </p>
+<ul>
+<li><p>There are similar expression:</p>
+<ul>
+<li><p><code>*pa</code> is <code>a[0]</code>,  <code>*(pa+1)</code> is <code>a[1]</code>,  <code>*(pa+i)</code> is <code>a[i]</code>,  </p>
+</li>
+<li><p><code>a[i]</code>,<code>*(pa+i)</code>,<code>*(a+i)</code> and <code>pa[i]</code>are the same effect.</p>
+</li>
+</ul>
+</li>
+<li><p><code>a++</code> is wrong, because a is the initial address of the array, a constant.</p>
+</li>
+</ul>
+<p>example:</p>
+<ul>
+<li>access array with index</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; a[i] &lt;&lt; <span class="string">"  "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>access array with pointer</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; *(a+i) &lt;&lt; <span class="string">"  "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>access array with pointer variable</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> *p = a; p &lt; (a + <span class="number">10</span>); p++)</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; *p &lt;&lt; <span class="string">"  "</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Array-with-pointer-elements"><a href="#Array-with-pointer-elements" class="headerlink" title="Array with pointer elements"></a>Array with pointer elements</h2><p>Definition：</p>
+<p>​    <code>Point *pa[2]</code> is made up of <code>pa[0]</code> and <code>pa[1]</code>.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> line1[] = &#123; <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span> &#125;;	<span class="comment">//The first row</span></span><br><span class="line">	<span class="keyword">int</span> line2[] = &#123; <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span> &#125;;	<span class="comment">//The second row</span></span><br><span class="line">	<span class="keyword">int</span> line3[] = &#123; <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span> &#125;;	<span class="comment">//The third row</span></span><br><span class="line">	<span class="comment">//define an int array with pointer elements and initialize it</span></span><br><span class="line">	<span class="keyword">int</span> *pLine[<span class="number">3</span>] = &#123; line1, line2, line3 &#125;;	</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Matrix test:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">	    	<span class="built_in">cout</span> &lt;&lt; pLine[i][j] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    	<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The output result is:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Matrix test:</span><br><span class="line"><span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span></span><br><span class="line"><span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span></span><br><span class="line"><span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h2 id="Function-with-pointer-arguments-and-parameters"><a href="#Function-with-pointer-arguments-and-parameters" class="headerlink" title="Function with pointer arguments and parameters"></a>Function with pointer arguments and parameters</h2><ul>
+<li>example: split a number into integer and fraction.</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">splitFloat</span><span class="params">(<span class="keyword">float</span> x, <span class="keyword">int</span> *intPart, <span class="keyword">float</span> *fracPart)</span> </span>&#123;</span><br><span class="line">    *intPart = <span class="keyword">static_cast</span>&lt;<span class="keyword">int</span>&gt;(x);</span><br><span class="line">	*fracPart = x - *intPart;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Enter 3 float point numbers:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">    	<span class="keyword">float</span> x, f;</span><br><span class="line">    	<span class="keyword">int</span> n;</span><br><span class="line">    	<span class="built_in">cin</span> &gt;&gt; x;</span><br><span class="line">    	splitFloat(x, &amp;n, &amp;f);	<span class="comment">//address is the parameter.</span></span><br><span class="line">    	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Integer Part = "</span> &lt;&lt; n &lt;&lt; <span class="string">" Fraction Part = "</span> &lt;&lt; f &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>example: a pointer assigned to const is argument</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">6</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> *p, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">array</span>[N];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;<span class="built_in">array</span>[i];</span><br><span class="line">    print(<span class="built_in">array</span>, N);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> *p, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"&#123; "</span> &lt;&lt; *p;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">", "</span> &lt;&lt; *(p+i);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">" &#125;"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Function-with-a-pointer-return-value"><a href="#Function-with-a-pointer-return-value" class="headerlink" title="Function with a pointer return value"></a>Function with a pointer return value</h2><p>syntax:</p>
+<ul>
+<li><p><strong>Type Identifier</strong> *Function Name(){</p>
+<p>​    //expression</p>
+<p>}</p>
+</li>
+</ul>
+<p>tips:</p>
+<ul>
+<li>a non-static local address cannot be a return value.</li>
+</ul>
+<p>example1:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">10</span>];</span><br><span class="line">    <span class="function"><span class="keyword">int</span>* <span class="title">search</span><span class="params">(<span class="keyword">int</span>* a, <span class="keyword">int</span> num)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;<span class="built_in">array</span>[i];</span><br><span class="line">    <span class="keyword">int</span>* zeroptr= search(<span class="built_in">array</span>, <span class="number">10</span>);  <span class="comment">//assign the address of array in main function to the sub-function</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">search</span><span class="params">(<span class="keyword">int</span>* a, <span class="keyword">int</span> num)</span></span>&#123; <span class="comment">//pointer a assign to the array defined in the main function</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;num; i++)</span><br><span class="line">        <span class="keyword">if</span>(a[i]==<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> &amp;a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example2:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span>* <span class="title">newintvar</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="keyword">int</span>* intptr= newintvar();</span><br><span class="line">    *intptr=<span class="number">5</span>; <span class="comment">//a valid address</span></span><br><span class="line">    <span class="keyword">delete</span> intptr; <span class="comment">//if not delete, the memory will leak</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">newintvar</span> <span class="params">()</span></span>&#123; </span><br><span class="line">    <span class="keyword">int</span>* p=<span class="keyword">new</span> <span class="keyword">int</span>();</span><br><span class="line">    <span class="keyword">return</span> p; <span class="comment">//the returned address is assigned to the dynamic allocated space</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Pointer-assigned-to-the-Function"><a href="#Pointer-assigned-to-the-Function" class="headerlink" title="Pointer assigned to the Function"></a>Pointer assigned to the Function</h2><p>Definition:</p>
+<p><em>Type Identifier</em> (*<strong>Function Pointer Name</strong>)();</p>
+<blockquote>
+<p>define a function which can achieve any kind of arithmetic operation</p>
+</blockquote>
+ <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compute</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span>(*func)(<span class="keyword">int</span>, <span class="keyword">int</span>))</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> func(a, b);&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span>((a &gt; b)?a: b);&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">min</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span>((a &lt; b)?a: b);&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> a + b;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a, b, res;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"inout intager a: "</span>; <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"inout intager b: "</span>; <span class="built_in">cin</span> &gt;&gt; b;</span><br><span class="line">    res = compute(a, b, &amp; max);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Max of "</span> &lt;&lt; a &lt;&lt; <span class="string">" and "</span> &lt;&lt; b &lt;&lt; <span class="string">" is "</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = compute(a, b, &amp; min);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Min of "</span> &lt;&lt; a &lt;&lt; <span class="string">" and "</span> &lt;&lt; b &lt;&lt; <span class="string">" is "</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    res = compute(a, b, &amp; sum);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Sum of "</span> &lt;&lt; a &lt;&lt; <span class="string">" and "</span> &lt;&lt; b &lt;&lt; <span class="string">" is "</span> &lt;&lt; res &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Object-Pointer"><a href="#Object-Pointer" class="headerlink" title="Object Pointer"></a>Object Pointer</h2><p>syntax: </p>
+<ul>
+<li><p>definition:</p>
+<p><em>Class Name</em> *<strong>Object Pointer Name</strong></p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Point a(5, 10);</span><br><span class="line">Point *ptr;</span><br><span class="line">ptr = &amp;a;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>access object member by pointer</p>
+<p><strong>Object Pointer Name</strong>-&gt; <em>object member name</em></p>
+<p>  <code>ptr-&gt;getx()</code> equals <code>(*ptr).getx()</code>;</p>
+</li>
+</ul>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point(<span class="keyword">int</span> x = <span class="number">0</span>, <span class="keyword">int</span> y = <span class="number">0</span>) : x(x), y(y) &#123; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Point <span class="title">a</span><span class="params">(<span class="number">4</span>, <span class="number">5</span>)</span></span>;</span><br><span class="line">    Point *p1 = &amp;a; <span class="comment">//define object pointer and initialize with address of a</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; p1-&gt;getX() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; a.getX() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="This-Pointer"><a href="#This-Pointer" class="headerlink" title="This Pointer"></a>This Pointer</h2><p><code>return x</code> equals to<code>return this -&gt; x</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fred</span>;</span> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Barney</span> &#123;</span></span><br><span class="line">	Fred *x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fred</span> &#123;</span></span><br><span class="line">	Barney y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Dynamic-Memory-Allocation"><a href="#Dynamic-Memory-Allocation" class="headerlink" title="Dynamic Memory Allocation"></a>Dynamic Memory Allocation</h2><h3 id="Definition-2"><a href="#Definition-2" class="headerlink" title="Definition"></a>Definition</h3><p>syntax:</p>
+<p><em>new</em> <strong>Type Identifier</strong>(initial arguments list)</p>
+<p><em>delete</em> <strong>Pointer Name</strong></p>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point() : x(<span class="number">0</span>), y(<span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Default Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) : x(x), y(y) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt; <span class="string">"Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Point() &#123; <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructor called."</span>&lt;&lt;<span class="built_in">endl</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> newX, <span class="keyword">int</span> newY)</span> </span>&#123;</span><br><span class="line">    x = newX;</span><br><span class="line">    y = newY;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"step one: "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    Point *ptr1 = <span class="keyword">new</span> Point; <span class="comment">//default constructor function</span></span><br><span class="line">    <span class="keyword">delete</span> ptr1; <span class="comment">//destructor function</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Step two: "</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    ptr1 = <span class="keyword">new</span> Point(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">delete</span> ptr1;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The result:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Step One:</span><br><span class="line">Default Constructor called.</span><br><span class="line">Destructor called.</span><br><span class="line">Step Two:</span><br><span class="line">Constructor called.</span><br><span class="line">Destructor called.</span><br></pre></td></tr></table></figure>
+<h3 id="Dynamic-Array"><a href="#Dynamic-Array" class="headerlink" title="Dynamic Array"></a>Dynamic Array</h3><p>syntax:</p>
+<ul>
+<li><p>one dimension</p>
+<p>new <strong>Type identifier</strong> [length of the array]</p>
+<p>delete[] <strong>Array Name</strong></p>
+</li>
+</ul>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point() : x(<span class="number">0</span>), y(<span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Default Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) : x(x), y(y) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt; <span class="string">"Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Point() &#123; <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructor called."</span>&lt;&lt;<span class="built_in">endl</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> newX, <span class="keyword">int</span> newY)</span> </span>&#123;</span><br><span class="line">    x = newX;</span><br><span class="line">    y = newY;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Point *ptr = <span class="keyword">new</span> Point[<span class="number">2</span>]; <span class="comment">//create</span></span><br><span class="line">    ptr[<span class="number">0</span>].move(<span class="number">5</span>, <span class="number">10</span>);</span><br><span class="line">    ptr[<span class="number">1</span>].move(<span class="number">15</span>, <span class="number">20</span>);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Deleting..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">delete</span>[] ptr;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The result is:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Default Constructor called.</span><br><span class="line">Default Constructor called.</span><br><span class="line">Deleting...</span><br><span class="line">Destructor called.</span><br><span class="line">Destructor called.</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>multiple dimension</p>
+<p>new <strong>Type identifier</strong> [length of the dimension1] [length of the dimension2]</p>
+</li>
+</ul>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*cp)[<span class="number">9</span>][<span class="number">8</span>] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">7</span>][<span class="number">9</span>][<span class="number">8</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">8</span>; k++)</span><br><span class="line">                *(*(*(cp + i) + j) + k) =（i * <span class="number">100</span> + j * <span class="number">10</span> + k);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; <span class="number">8</span>; k++)</span><br><span class="line">                <span class="built_in">cout</span> &lt;&lt; cp[i][j][k] &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">    		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">delete</span>[] cp;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example2: encapsulate dynamic array class</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cassert&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Point</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Point() : x(<span class="number">0</span>), y(<span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"Default Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Point(<span class="keyword">int</span> x, <span class="keyword">int</span> y) : x(x), y(y) &#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt; <span class="string">"Constructor called."</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    ~Point() &#123; <span class="built_in">cout</span>&lt;&lt;<span class="string">"Destructor called."</span>&lt;&lt;<span class="built_in">endl</span>; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getX</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> x; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getY</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> y; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> newX, <span class="keyword">int</span> newY)</span> </span>&#123;</span><br><span class="line">    x = newX;</span><br><span class="line">    y = newY;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> x, y;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ArrayOfPoints</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ArrayOfPoints(<span class="keyword">int</span> size) : size(size) &#123;</span><br><span class="line">    	points = <span class="keyword">new</span> Point[size];</span><br><span class="line">    &#125;</span><br><span class="line">    ~ArrayOfPoints() &#123;</span><br><span class="line">    	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Deleting..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    	<span class="keyword">delete</span>[] points;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">Point&amp; <span class="title">element</span><span class="params">(<span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line">    	assert(index &gt;= <span class="number">0</span> &amp;&amp; index &lt; size);</span><br><span class="line">    	<span class="keyword">return</span> points[index];</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Point *points; <span class="comment">//dynamic array initial address</span></span><br><span class="line">    <span class="keyword">int</span> size; <span class="comment">//size of array</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Please enter the count of points: "</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; count;</span><br><span class="line">    <span class="function">ArrayOfPoints <span class="title">points</span><span class="params">(count)</span></span>;</span><br><span class="line">    points.element(<span class="number">0</span>).move(<span class="number">5</span>, <span class="number">0</span>);</span><br><span class="line">    points.element(<span class="number">1</span>).move(<span class="number">15</span>, <span class="number">20</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The result is:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Please enter the number of points:<span class="number">2</span></span><br><span class="line">Default Constructor called.</span><br><span class="line">Default Constructor called.</span><br><span class="line">Deleting...</span><br><span class="line">Destructor called.</span><br><span class="line">Destructor called.</span><br></pre></td></tr></table></figure>
+<h2 id="Smart-Pointer"><a href="#Smart-Pointer" class="headerlink" title="Smart Pointer"></a>Smart Pointer</h2><p><code>unique_ptr</code></p>
+<p><code>shared_ptr</code></p>
+<p><code>weak_ptr</code></p>
+<h2 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h2><p>syntax:</p>
+<ul>
+<li>definition</li>
+</ul>
+<p>vector\&lt;<em>Element Type</em>> <strong>Array Name</strong>(array length);</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arr(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>access</li>
+</ul>
+<p>vector <strong>Array name</strong> [ index ]</p>
+<p>vector <strong>Array name</strong>.size()</p>
+<p>example:</p>
+<blockquote>
+<p>Calculate the average of elements in the array.</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">average</span><span class="params">(<span class="keyword">const</span> <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; &amp;arr)</span></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">unsigned</span> i = <span class="number">0</span>; i&lt;arr.size(); i++)</span><br><span class="line">    sum += arr[i];</span><br><span class="line">    <span class="keyword">return</span> sum / arr.size();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> n;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"n = "</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; arr(n); <span class="comment">//create array object</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Please input "</span> &lt;&lt; n &lt;&lt; <span class="string">" real numbers:"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">unsigned</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; arr[i];</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Average = "</span> &lt;&lt; average(arr) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example2: auto pointer</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> i = v.begin(); i != v.end(); ++i)</span><br><span class="line">    	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; *i &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">auto</span> e : v)</span><br><span class="line">    	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; e &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Object-Replication"><a href="#Object-Replication" class="headerlink" title="Object Replication"></a>Object Replication</h1><h2 id="Shallow-Copy"><a href="#Shallow-Copy" class="headerlink" title="Shallow Copy"></a>Shallow Copy</h2><h2 id="Deep-Copy"><a href="#Deep-Copy" class="headerlink" title="Deep Copy"></a>Deep Copy</h2><h2 id="Move-Assignment"><a href="#Move-Assignment" class="headerlink" title="Move Assignment"></a>Move Assignment</h2><p>syntax:</p>
+<p>class_name ( class_name &amp;&amp; )</p>
+<p>example: </p>
+<ul>
+<li>version 1</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IntNum</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	IntNum(<span class="keyword">int</span> x = <span class="number">0</span>) : xptr(<span class="keyword">new</span> <span class="keyword">int</span>(x))&#123; <span class="comment">//constructor</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling constructor..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    IntNum(<span class="keyword">const</span> IntNum &amp; n) : xptr(<span class="keyword">new</span> <span class="keyword">int</span>(*n.xptr))&#123;<span class="comment">//copy constructor</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling copy constructor..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">    ~IntNum()&#123; <span class="comment">//destructor</span></span><br><span class="line">    <span class="keyword">delete</span> xptr;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Destructing..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">getInt</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> *xptr; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> *xptr;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//return IntNum class object</span></span><br><span class="line"><span class="function">IntNum <span class="title">getNum</span><span class="params">()</span></span>&#123;</span><br><span class="line">	IntNum a;</span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;getNum().getInt()&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>version 2:</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IntNum</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    IntNum(<span class="keyword">int</span> x = <span class="number">0</span>) : xptr(<span class="keyword">new</span> <span class="keyword">int</span>(x))&#123; <span class="comment">//constructor</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling constructor..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	IntNum(<span class="keyword">const</span> IntNum &amp; n) : xptr(<span class="keyword">new</span> <span class="keyword">int</span>(*n.xptr))&#123; <span class="comment">// copy constructor</span></span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling copy constructor..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"> 	IntNum(IntNum &amp;&amp; n): xptr( n.xptr)&#123; <span class="comment">//move constructor</span></span><br><span class="line"> 	n.xptr = <span class="literal">nullptr</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"Calling move constructor..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">~IntNum()&#123; <span class="comment">//destructor</span></span><br><span class="line">    <span class="keyword">delete</span> xptr;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Destructing..."</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="keyword">int</span> *xptr;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//return IntNum class</span></span><br><span class="line"><span class="function">IntNum <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	IntNum a;</span><br><span class="line">	<span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; getNum().getInt() &lt;&lt; <span class="built_in">endl</span>; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="String-of-C-type"><a href="#String-of-C-type" class="headerlink" title="String of C type"></a>String of C type</h2><p>syntax:</p>
+<ul>
+<li>string constant</li>
+</ul>
+<p>const char *<strong>string name</strong>=”<em>string content</em>“</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">char</span> *STRING1 = <span class="string">"program"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>string array</li>
+</ul>
+<p>char <strong>string name</strong> = {,..,’\0’}</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> str[<span class="number">8</span>] = &#123; <span class="string">'p'</span>, <span class="string">'r'</span>, <span class="string">'o'</span>, <span class="string">'g'</span>, <span class="string">'r'</span>, <span class="string">'a'</span>, <span class="string">'m'</span>, <span class="string">'\0'</span> &#125;;</span><br><span class="line"><span class="keyword">char</span> str[<span class="number">8</span>] = <span class="string">"program"</span>;</span><br><span class="line"><span class="keyword">char</span> str[] = <span class="string">"program"</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="String-Class"><a href="#String-Class" class="headerlink" title="String Class"></a>String Class</h2><p>syntax:</p>
+<ul>
+<li><p>constructor</p>
+<ul>
+<li><code>string()</code></li>
+<li><code>string(const char *s)</code></li>
+<li><code>string(const string&amp; rhs)</code></li>
+</ul>
+</li>
+<li><p>operator</p>
+<ul>
+<li><code>s+t</code></li>
+<li><code>s=t</code></li>
+<li><code>s==t</code>, <code>s!=t</code>, <code>s&lt;=t</code>, <code>s&gt;=t</code>, <code>s&lt;t</code>, <code>s&gt;t</code></li>
+<li><code>s[i]</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s1 = <span class="string">"abc"</span>, s2 = <span class="string">"def"</span>;</span><br><span class="line"><span class="built_in">string</span> s3 = s1 + s2; <span class="comment">//"abcdef"</span></span><br><span class="line"><span class="keyword">bool</span> s4 = (s1 &lt; s2); <span class="comment">//true</span></span><br><span class="line"><span class="keyword">char</span> s5 = s2[<span class="number">1</span>]; <span class="comment">//'e'</span></span><br></pre></td></tr></table></figure>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//output true or false based on the value</span></span><br><span class="line"><span class="comment">//title is notification</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *title, <span class="keyword">bool</span> value)</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; title &lt;&lt; <span class="string">" returns "</span></span><br><span class="line">    &lt;&lt; (value ? <span class="string">"true"</span> : <span class="string">"false"</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">string</span> s1 = <span class="string">"DEF"</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s1 is "</span> &lt;&lt; s1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">string</span> s2;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Please enter s2: "</span>;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; s2;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"length of s2: "</span> &lt;&lt; s2.length() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    test(<span class="string">"s1 &lt;= \"ABC\""</span>, s1 &lt;= <span class="string">"ABC"</span>);</span><br><span class="line">    test(<span class="string">"\"DEF\" &lt;= s1"</span>, <span class="string">"DEF"</span> &lt;= s1);</span><br><span class="line">    s2 += s1;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"s2 = s2 + s1: "</span> &lt;&lt; s2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"length of s2: "</span> &lt;&lt; s2.length() &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="getline"><a href="#getline" class="headerlink" title="getline"></a>getline</h3><p>getline(<em>cin</em>, <strong>string name</strong>)</p>
+<p>getline(<em>cin</em>, <strong>string name</strong>, ‘,’)</p>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">include &lt;iostream&gt;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)&#123;</span><br><span class="line">    <span class="built_in">string</span> city, state;</span><br><span class="line">    getline(<span class="built_in">cin</span>, city, <span class="string">','</span>);</span><br><span class="line">    getline(<span class="built_in">cin</span>, state);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"City:"</span> &lt;&lt; city &lt;&lt; “ State:<span class="string">" &lt;&lt; state &lt;&lt; endl;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "C++ Array, Pointer &amp; String",
+        "image": "http://yoursite.com",
+        "keywords": "C++ MOOC",
+        "genre": "Computer Science Programming C++",
+        "datePublished": "2019-02-26",
+        "dateCreated": "2019-02-26",
+        "dateModified": "2019-03-02",
+        "url": "http://yoursite.com/2019/02/26/C++ Array, Pointer & String/",
+        "description": "This note contains the basic rules of array, pointer and string in C++.
+ArrayDefinitionType Identifier Name [Expression1] [Expression2]…
+12int a[10]// a is an integer array with 10 elements.
+12int a[5"
+        "wordCount": 6684
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/27/C++ Pragmatic Program-SavingsAccount/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Pragmatic Program Savings Account
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/13/Random Variables and Distribution/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Random Variables and Distribution</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" class="title">The Unamiable but Worthwhile Age of 22</a></p>
+                            <p class="item-date"><time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished">2019-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2019/03/20/What I Have Lived For/" class="title">What I Have Lived For</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T16:00:00.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/14/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></p>
+                            <p class="item-title"><a href="/2019/03/09/Data Structure Basics/" class="title">Data Structure Basics</a></p>
+                            <p class="item-date"><time datetime="2019-03-09T16:00:00.000Z" itemprop="datePublished">2019-03-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/BootCamp/" style="font-size: 10px;">BootCamp</a> <a href="/tags/C/" style="font-size: 18.33px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.67px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 10px;">NYU</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 11.67px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/02/26/C++ Array, Pointer &amp; String/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

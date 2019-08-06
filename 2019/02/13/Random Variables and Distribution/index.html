@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Random Variables and Distribution | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Probability,Statistics">
+    
+    <meta name="description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
+<meta name="keywords" content="Probability,Statistics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Random Variables and Distribution">
+<meta property="og:url" content="http://yoursite.com/2019/02/13/Random Variables and Distribution/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-02-21T16:12:18.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Random Variables and Distribution">
+<meta name="twitter:description" content="This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/">Probability</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Random Variables and Distribution" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Random Variables and Distribution
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/02/13/Random Variables and Distribution/" class="article-date">
+            <time datetime="2019-02-13T16:00:00.000Z" itemprop="datePublished">2019-02-13</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Probability/">Probability</a>, <a class="tag-link" href="/tags/Statistics/">Statistics</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, other conceptions are about one random variable.</p>
+<h1 id="Random-Variables-and-Distribution"><a href="#Random-Variables-and-Distribution" class="headerlink" title="Random Variables and Distribution"></a>Random Variables and Distribution</h1><h2 id="Random-Variables"><a href="#Random-Variables" class="headerlink" title="Random Variables"></a>Random Variables</h2><p>Numerical quantities whose values are determined by the outcome of the experiment are known as <em>random variables</em>. Hence, we can assign probabilities to their possible values. The set of this probabilities is <em>distribution</em>.</p>
+<p>In fact, random variables can be <em>discrete</em> or <em>continuous</em>. The possible values of <strong><em>discrete random variables</em></strong> constituted sets of discrete values, whereas <strong><em>continuous random variables</em></strong> whose set of possible values is instead a continuous region can take on any value within some interval.</p>
+<p>Actually, the distribution differs random variables from general variables in calculus. A random variable must have its own distribution.</p>
+<h2 id="Distribution"><a href="#Distribution" class="headerlink" title="Distribution"></a>Distribution</h2><p>For discrete variables, the distribution is a sequence form. If $X$ is a discrete random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P\{X=x_j\}$$(j=1,…,n)$ is called the <em>probability distribution of discrete random variable</em>. Since $X$ must assume one of these values, it follows that</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+\displaystyle{\sum_{j=1}^{n}}~P\{X = x_j\} = 1.
+\end{equation*}</script><p>For continuous variables, the distribution is a function form. Every continuous random variable $X$ has a function $f$ associated with it. This function $f$ is called the <em>probability density function</em> of $X$. For any numbers $a&lt;b$, the area under $f$ between $a$ and $b$ is equal to the probability that $X$ assumes a value between $a$ and $b$.</p>
+<script type="math/tex; mode=display">
+P\{a \leq X \leq b \} = area ~ under ~ f ~ between ~ a ~ and ~ b</script><h2 id="Distribution-Function"><a href="#Distribution-Function" class="headerlink" title="Distribution Function"></a>Distribution Function</h2><p>If $X$ is a random variable, for any real number x, we define</p>
+<script type="math/tex; mode=display">
+F(x) = P(X \leq x)</script><p>as the <strong>distribution function</strong> of random variable $X$, which is also called $X$ is denoted by $F(x)$, or $X \sim F(x)$. Sometimes, $F_{X}(x)$ is the same meaning. Sometimes it is also called <strong>cumulative distribution function</strong>(<strong>CDF</strong>).</p>
+<p>Any random variable has its own distribution function, no matter it is discrete or continuous. And here are three fundamental properties.</p>
+<ul>
+<li><p>monotonicity</p>
+<p>$F(x)$ is a monotonic and  nondecreasing function on the $(-\infty, \infty)$. that is to say, for any $x_1&lt;x_2$,</p>
+<script type="math/tex; mode=display">
+F(x_1) \leq F(x_2)</script></li>
+<li><p>boundedness</p>
+<p>For any $x$, $0 \leq F(x) \leq 1$, and</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+F(-\infty)=\lim_{x \to -\infty}F(x)=0 \\
+F(\infty)=\lim_{x \to \infty}F(x)=1
+\end{align*}</script></li>
+<li><p>right continuity</p>
+<p>$F(x)$ is the right-continuous function of $x$, that is to say, for any $x_0$,</p>
+<script type="math/tex; mode=display">
+\lim_{x \to x_0}F(x)=F(x_0) \\
+F(x_0+0)=F(x_0)</script></li>
+</ul>
+<p>These three fundamental properties are necessary and sufficient conditions whether a function is a distribution function.</p>
+<h2 id="Mass-amp-Density-Function"><a href="#Mass-amp-Density-Function" class="headerlink" title="Mass &amp; Density Function"></a>Mass &amp; Density Function</h2><p>For a discrete random variable $X$, the probability can be values like $x_1, x_2,…,x_n,…$, then the probability of $X$ equals $x_i$:</p>
+<script type="math/tex; mode=display">
+p_i = p_i(x_i)=P(X=x_i),~~i=1,2,...,n,...</script><p>is called the sequence of probability distribution, or the <strong>probability mass function</strong> of $X$. The abbreviation is <strong>PMF</strong>. </p>
+<p>And the cumulative distribution function of $X​$ is:</p>
+<script type="math/tex; mode=display">
+F(x)=\sum_{x_i \leq x}p(x_i)</script><p>For a continuous random variable $X$, the cumulative distribution function of is $F(x)$, if $\exists$ a nonnegative integrable function $p(x)$, such that for any real number $x$,</p>
+<script type="math/tex; mode=display">
+F(x)=\int_{-\infty}^{x}p(t)dt</script><p>then $p(x)$ is called the <strong>probability density function</strong> of $X$, sometimes the a shorter name is <strong>density</strong> or <strong>PDF</strong>.</p>
+<p>And here are two fundamental properties to determine whether a function is a probability density function or not.</p>
+<ul>
+<li>non-negativity</li>
+</ul>
+<script type="math/tex; mode=display">
+p(x) \geq 0</script><ul>
+<li>regularity</li>
+</ul>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}p(x)dx=1</script><h1 id="Expected-Values"><a href="#Expected-Values" class="headerlink" title="Expected Values"></a>Expected Values</h1><p>If X is a random variable whose possible values are $x_1, x_2,…,x_n​$, then the expected value of $X​$, denoted by $E[X]​$, is defined by</p>
+<script type="math/tex; mode=display">
+\begin{equation*}
+E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P\{X = x_j\}
+\end{equation*}</script><p>$E[X]​$ also has alternative names: <em>expectation</em> or the <em>mean</em> of $X​$. It is a kind of weighted average of possible values of $X​$, where the weight given to a value is equal to the probability that $X​$ assumes that value.</p>
+<p>Actually we can define it more accurately. For an infinite sequence of discrete random variables $p(x_i)=P(X=x_i), i=1,2,…,n,…$, if </p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^{\infty}|x_i|p(x_i)<\infty</script><p>then</p>
+<script type="math/tex; mode=display">
+E(x)=\sum_{i=1}^{\infty}x_ip(x_i)</script><p>is called the <strong>expected values</strong>. If $\sum_{i=1}^{\infty}|x_i|p(x_i)$ is not convergent, then the expected values of $X​$ is not existent.</p>
+<p>For continuous random variables $X$, its density function is $p(x)$. If</p>
+<script type="math/tex; mode=display">
+\int_{-\infty}^{\infty}|x|p(x)dx<\infty</script><p>then</p>
+<script type="math/tex; mode=display">
+E(X)=\int_{-\infty}^{\infty}xp(x)dx</script><p>is called the <strong>expected values</strong>. If $\int_{-\infty}^{\infty}|x|p(x)dx$ is not convergent, then the expected values of $X$ is not existent.</p>
+<p>If PMF or PDF of a random variable $X$ is $p(x_i)$ or $p(x)$, then the expected value of a function $g(X)$ of $X$ is:</p>
+<script type="math/tex; mode=display">
+E[g(X)]= \left\{
+\begin{align*}
+&\sum_{i}g(x_i)p(x_i) ~~~ &\text{for discrete } \\
+&\int_{-\infty}^{\infty}g(x)p(x)dx ~~~ &\text{for continuous}
+\end{align*}\right.</script><p>Here are some attributes of expectation. The first one is the linear attribute, which means that, for constants $a$ and $b$,</p>
+<script type="math/tex; mode=display">
+E[aX+b]=aE[X]+b</script><p>To verify it, let $Y = aX + b​$. Since $Y = ax_j + b​$ when $ X = x_j ​$, it follows that</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+E[Y] &= \sum_{j=1}^{n} (ax_j + b) P\{X = x_j\} \\
+     &= \sum_{j=1}^{n}  ax_j P\{X = x_j\} ~ + ~ \sum_{j=1}^{n}b P\{X = x_j\} \\
+     &= a\sum_{j=1}^{n}  x_j P\{X = x_j\} ~ + ~ b\sum_{j=1}^{n} P\{X = x_j\} \\
+     &= aE[X] + b
+\end{align*}</script><p>And similarly, for random variables $X_1, …, X_k$,</p>
+<script type="math/tex; mode=display">
+E\left[\sum_{j=1}^{k} X_j \right] = \sum_{j=1}^{k}E[X_j]</script><h1 id="Variance"><a href="#Variance" class="headerlink" title="Variance"></a>Variance</h1><p>The <em>variance</em> of $X$, denoted by $Var(X)$, which measure the spread of a random variable, is defined by</p>
+<script type="math/tex; mode=display">
+Var(X) = E[(X - E(X))^2]</script><p>If a and b are constants, then </p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Var(aX+b) &= E[(aX+b- E[aX+b])^2] \\
+          &= E[(aX - aE[X])^2] \\
+          &= E[a^2(X-E[X])^2] \\
+          &= a^2Var(X)
+\end{align*}</script><p>And if the <strong><em>random variables are independent</em></strong>, the variance of the sum of random variables is equal to the sum of their variances ($X_1,…X_k$ are <em>independent random variables</em>)</p>
+<script type="math/tex; mode=display">
+Var\left(\sum_{j=1}^{k} X_j \right) = \sum_{j=1}^{k} Var(X_j)</script><p>The square root of the variance is called the <em>standard deviation</em>. A random variable tend s to lie within a few standard deviations of its expected value.</p>
+<h1 id="Covariance"><a href="#Covariance" class="headerlink" title="Covariance"></a>Covariance</h1><p>The covariance of any two random variables $X$ and $Y$, denoted by $Cov(X,Y)$, is defined by</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X,Y) &= E[(X-E[X])(Y-E[Y])] \\
+         &= E[XY-YE[X]-XE[Y]+E[X]E[Y]] \\
+         &= E[XY]-E[Y]E[X]-E[X]E[Y]+E[X]E[Y \\
+         &= E[XY]-E[X]E[Y]
+\end{align*}</script><p>A positive value of the covariance indicates that X and Y both tend to be large at the same time, whereas a negative value indicates that when one is large the other tends to be small. Independent random variables have covariance equal to 0. </p>
+<p>The following are some useful properties of covariance. For random variables $X$ and $Y$, and constant $c$:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X,Y) &= Cov(Y,X) \\
+Cov(X,X) &= Var(X) \\
+Cov(cX,Y) &= c~Cov(X,Y) \\
+Cov(c, Y) &= 0
+\end{align*}</script><p>Covariance also satisfies a linearity property, namely,</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cov(X_1+X_2,Y) = Cov(X_1,Y)+Cov(X_2,Y)
+\end{align*}</script><p>which is easily generalized to yield the following identity:</p>
+<script type="math/tex; mode=display">
+Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{m}Y_j \right) = \sum_{i=1}^{n}\sum_{j=1}^{m}Cov(X_i,Y_j)</script><p>This yields a useful formula for the variance of the sum of random variables:</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{n}X_j \right) \\
+&= \sum_{i=1}^{n}\sum_{j=1}^{n}Cov(X_i,X_j) \\
+&= \sum_{i=1}^{n}Cov(X_i,X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j) \\
+&= \sum_{i=1}^{n}Var(X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j)
+\end{align*}</script><p>The degree to which large values of $X$ tend to be associated with large values of $Y$ is measured by the <em>correlation</em> between $X$ and $Y$, denoted as $\rho(X,Y)​$ and defined by</p>
+<script type="math/tex; mode=display">
+\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}</script><p>It can be shown that</p>
+<script type="math/tex; mode=display">
+-1 \le \rho(X, Y) \le 1</script><p>If X and Y are linearly related by the equation $Y = a + bX$ , then $\rho(X,Y)$ will equal 1 when $b$ is positive and -1 when $b$ is negative.</p>
+<h1 id="K-Order-Moment"><a href="#K-Order-Moment" class="headerlink" title="K-Order Moment"></a>K-Order Moment</h1><p>Considering a random variable $X$, $k$ is a positive integer, if the expected values below both exist, then</p>
+<script type="math/tex; mode=display">
+\mu_{k}=E(X^k)</script><p>is called <strong>$k​$-order origin moment of $X​$</strong>.</p>
+<script type="math/tex; mode=display">
+v_k=E(X-E(X))^k</script><p>is called <strong>$k$-order central moment of $X$</strong>.</p>
+<p>Obviously, the one-order origin moment is the expected value, and the two-order central moment is the variance. Because of $|X|^{k-1} \leq |X|^k+1​$, if a k-order moment exists, a k-1-order moment also exists.</p>
+<p>There is a simple equation between the origin moment and the central moment:</p>
+<script type="math/tex; mode=display">
+v_k=E(X-E(X))^k=E(X-\mu_1)^k=\sum_{i=0}^k\left(_i ^k\right)\mu_i(-\mu_1)^{k-i}</script><h1 id="Coefficient-of-Variation"><a href="#Coefficient-of-Variation" class="headerlink" title="Coefficient of Variation"></a>Coefficient of Variation</h1><p>Provided the 2-order moment of $X$ exists, then</p>
+<script type="math/tex; mode=display">
+C_{v}(X)=\frac{\sqrt{Var(X)}}{E(X)}=\frac{\sigma(X)}{E(X)}</script><p>is called the <strong>coefficient of variation</strong> of $X$.</p>
+<h1 id="Quantile"><a href="#Quantile" class="headerlink" title="Quantile"></a>Quantile</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, for $\forall ~ p \in (0,1)$, then call the $x_p$ which satisfies</p>
+<script type="math/tex; mode=display">
+F(x_p)=\int_{-\infty}^{x_p}p(x)dx=p</script><p>is the <strong>$p$ quantile</strong> of this distribution, also the <strong>lower $p$ quantile</strong>.  In fact, the left area of the density function which is divided into two part by the $x_p$ equals exactly $p$. Similarly, if $x’_p$ satisfies</p>
+<script type="math/tex; mode=display">
+1-F(x'_p)=\int_{x'_p}^{\infty}p(x)dx=p</script><p>it is called the <strong>higher $p$ quantile</strong>. They have such a relationship:</p>
+<script type="math/tex; mode=display">
+x'_p=x_{1-p} \\
+x_p=x'_{1-p}</script><h1 id="Median"><a href="#Median" class="headerlink" title="Median"></a>Median</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, we call $x_p$ which satisfy the $p= 0.5$ as median, that is to say, $x_{0.5}​$ satisfy:</p>
+<script type="math/tex; mode=display">
+F(x_{0.5})=\int_{-\infty}^{x_{0.5}}p(x)dx=0.5</script><h1 id="Skewness"><a href="#Skewness" class="headerlink" title="Skewness"></a>Skewness</h1><p>If all the first 3-order moments of a random variable $X$ exist, then</p>
+<script type="math/tex; mode=display">
+</script><h1 id="Kurtosis"><a href="#Kurtosis" class="headerlink" title="Kurtosis"></a>Kurtosis</h1>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Random Variables and Distribution",
+        "image": "http://yoursite.com",
+        "keywords": "Probability Statistics",
+        "genre": "Mathematics Probability",
+        "datePublished": "2019-02-13",
+        "dateCreated": "2019-02-13",
+        "dateModified": "2019-02-21",
+        "url": "http://yoursite.com/2019/02/13/Random Variables and Distribution/",
+        "description": "This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, othe"
+        "wordCount": 1510
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/02/26/C++ Array, Pointer & String/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            C++ Array, Pointer &amp; String
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/11/NYU Tandon Webinar/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">NYU Tandon Webinar</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" class="title">The Unamiable but Worthwhile Age of 22</a></p>
+                            <p class="item-date"><time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished">2019-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2019/03/20/What I Have Lived For/" class="title">What I Have Lived For</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T16:00:00.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/14/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-14</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></p>
+                            <p class="item-title"><a href="/2019/03/09/Data Structure Basics/" class="title">Data Structure Basics</a></p>
+                            <p class="item-date"><time datetime="2019-03-09T16:00:00.000Z" itemprop="datePublished">2019-03-09</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/BootCamp/" style="font-size: 10px;">BootCamp</a> <a href="/tags/C/" style="font-size: 18.33px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.67px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 10px;">NYU</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Probability/" style="font-size: 11.67px;">Probability</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/02/13/Random Variables and Distribution/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

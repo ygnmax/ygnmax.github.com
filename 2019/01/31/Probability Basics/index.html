@@ -16,11 +16,11 @@
 <meta name="keywords" content="Probability">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Probability Basics">
-<meta property="og:url" content="http://yoursite.com/2019/01/30/Probability Basics/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/01/31/Probability Basics/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-03-08T14:43:36.705Z">
+<meta property="og:updated_time" content="2019-08-06T23:25:06.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Probability Basics">
 <meta name="twitter:description" content="This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem. Proba">
@@ -160,8 +160,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/01/30/Probability Basics/" class="article-date">
-            <time datetime="2019-01-30T16:00:00.000Z" itemprop="datePublished">2019-01-30</time>
+        <a href="/2019/01/31/Probability Basics/" class="article-date">
+            <time datetime="2019-01-31T05:00:00.000Z" itemprop="datePublished">2019-01-31</time>
         </a>
     </div>
 
@@ -217,9 +217,13 @@ P(A)  &= \displaystyle{\sum_{i \in A}} ~ p_i  \\
 P(B)  &= \displaystyle{\sum_{i \in B}} ~ p_i  \\
 \end{align*}</script><p>And <strong>the addition theorem of probability for two events</strong> can be written that</p>
 <script type="math/tex; mode=display">
-\begin{equation*}
-P(A \cup B) = P(A) + P(B) - P(A \cap B)
-\end{equation*}</script><h2 id="Geometric-Models-of-Probability"><a href="#Geometric-Models-of-Probability" class="headerlink" title="Geometric Models of Probability"></a>Geometric Models of Probability</h2><p>Consider $R^r$ denote a r dimension vector space</p>
+\begin{align*}
+P(A \cup B) &= P(A) + P(B) - P(A \cap B) \\
+
+P(E_1 \cup E_2 \cup E_N) &= \sum_{i=1}^{N}P(E_i)-\sum_{i_1<i_2}P(E_{i_1}E_{i_2}) + \\
+...&+(-1)^{r+1}\sum_{i_1<i_2<...<i_r}P(E_{i_1}E_{i_2}...E_{i_r}) \\
+&+(-1)^{N+1}P(E_1E_2...E_N)
+\end{align*}</script><h2 id="Geometric-Models-of-Probability"><a href="#Geometric-Models-of-Probability" class="headerlink" title="Geometric Models of Probability"></a>Geometric Models of Probability</h2><p>Consider $R^r​$ denote a r dimension vector space</p>
 <script type="math/tex; mode=display">
 R^r=\{(x_1,x_2,...,x_r)|x_i \in (-\infty,\infty),1 \leq i \leq r\}</script><p>for subset $A$ of $R^r$,</p>
 <script type="math/tex; mode=display">
@@ -398,13 +402,13 @@ P(B_i|A)=\frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{n}P(B_j)P(A|B_j)}</script><p>$P(B)$ i
         "image": "http://yoursite.com",
         "keywords": "Probability",
         "genre": "Mathematics Probability",
-        "datePublished": "2019-01-30",
-        "dateCreated": "2019-01-30",
-        "dateModified": "2019-03-08",
-        "url": "http://yoursite.com/2019/01/30/Probability Basics/",
+        "datePublished": "2019-01-31",
+        "dateCreated": "2019-01-31",
+        "dateModified": "2019-08-06",
+        "url": "http://yoursite.com/2019/01/31/Probability Basics/",
         "description": "This note contains basic knowledge of probability, including events, probability, conditional probability, multiplication theorem of probability, formula of total probability and Bayes’ theorem.
 Proba"
-        "wordCount": 1433
+        "wordCount": 1443
     }
 </script>
 
@@ -631,7 +635,7 @@ Proba"
     var disqus_shortname = 'guest';
     
     
-    var disqus_url = 'http://yoursite.com/2019/01/30/Probability Basics/';
+    var disqus_url = 'http://yoursite.com/2019/01/31/Probability Basics/';
     
     (function() {
     var dsq = document.createElement('script');

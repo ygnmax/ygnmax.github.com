@@ -12,18 +12,20 @@
     
         <meta name="keywords" content="Python,NYU,BootCamp">
     
-    <meta name="description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+    <meta name="description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Understanding Data Types in Python to part of Operations of NumPy arrays was on Aug">
 <meta name="keywords" content="Python,NYU,BootCamp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python NumPy Basics">
 <meta property="og:url" content="http://yoursite.com/2019/08/05/Python NumPy Basics/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+<meta property="og:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Understanding Data Types in Python to part of Operations of NumPy arrays was on Aug">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-06T02:04:23.123Z">
+<meta property="og:image" content="e:/Blog/source/_posts/output_3_1.png">
+<meta property="og:updated_time" content="2019-08-07T03:12:01.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python NumPy Basics">
-<meta name="twitter:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft. Understanding Data Types in PythonStatically-typing &amp;">
+<meta name="twitter:description" content="This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Understanding Data Types in Python to part of Operations of NumPy arrays was on Aug">
+<meta name="twitter:image" content="e:/Blog/source/_posts/output_3_1.png">
     
 
     
@@ -177,7 +179,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft.</p>
+            <p>This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Understanding Data Types in Python to part of Operations of NumPy arrays was on Aug 5th; The rest was on Aug 6th.</p>
 <h1 id="Understanding-Data-Types-in-Python"><a href="#Understanding-Data-Types-in-Python" class="headerlink" title="Understanding Data Types in Python"></a>Understanding Data Types in Python</h1><h2 id="Statically-typing-amp-Dynamic-typing"><a href="#Statically-typing-amp-Dynamic-typing" class="headerlink" title="Statically-typing &amp; Dynamic typing"></a>Statically-typing &amp; Dynamic typing</h2><p>A statically-typed language like C or Java requires each variable to be explicitly declared, while Python skips this specification.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>):</span><br><span class="line">    result += i</span><br><span class="line">print(result)</span><br></pre></td></tr></table></figure>
 <p>This means we can assign any kind of data to any variable.</p>
@@ -195,7 +197,7 @@
 <p>output:</p>
 <pre><code>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 int
-</code></pre><p>Change it to a list of strings:</p>
+</code></pre><p><strong>Change it to a list of strings:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L2 = [str(c) <span class="keyword">for</span> c <span class="keyword">in</span> L]</span><br><span class="line">L2</span><br><span class="line">type(L2[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
 <p>output:</p>
 <pre><code>[&#39;0&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
@@ -210,7 +212,7 @@ str
 <p>output:</p>
 <pre><code>array(&#39;i&#39;, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 </code></pre><p>However, the NumPy Array is more efficient than array because of the operations on data.</p>
-<h2 id="NumPy-Array"><a href="#NumPy-Array" class="headerlink" title="NumPy Array"></a>NumPy Array</h2><p><strong>The NumPy Array basic syntax:</strong></p>
+<h1 id="Overlook-of-NumPy-arrays"><a href="#Overlook-of-NumPy-arrays" class="headerlink" title="Overlook of NumPy arrays"></a>Overlook of NumPy arrays</h1><h2 id="Basic-NumPy-array-syntax"><a href="#Basic-NumPy-array-syntax" class="headerlink" title="Basic NumPy array syntax:"></a>Basic NumPy array syntax:</h2><p><strong>basic syntax:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.array([<span class="number">1</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
 <p>output:</p>
 <pre><code>array([1, 4, 2, 5, 3])
@@ -222,7 +224,7 @@ str
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>], dtype=<span class="string">'float32'</span>)</span><br></pre></td></tr></table></figure>
 <p>output:</p>
 <pre><code>array([1., 2., 3., 4.], dtype=float32)
-</code></pre><p><strong>Finally, Numpy arrays can explicity be muti-dimensional, using a list of lists:</strong></p>
+</code></pre><h2 id="NumPy-array-as-matrix"><a href="#NumPy-array-as-matrix" class="headerlink" title="NumPy array as matrix"></a>NumPy array as matrix</h2><p><strong>Numpy arrays can explicity be muti-dimensional, using a list of lists:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># nested lists result in multi-dimensional arrays</span></span><br><span class="line">np.array([range(i, i+<span class="number">3</span>) <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
 <p>output:</p>
 <pre><code>array([[2, 3, 4],
@@ -256,220 +258,263 @@ str
 <pre><code>array([[3.14, 3.14, 3.14, 3.14, 3.14],
        [3.14, 3.14, 3.14, 3.14, 3.14],
        [3.14, 3.14, 3.14, 3.14, 3.14]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array filled with a linear sequence</span></span><br><span class="line"><span class="comment"># starting at 0</span></span><br><span class="line">np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>A linear sequence</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array filled with a linear sequence</span></span><br><span class="line"><span class="comment"># starting at 0, this is similar to the built-in range() function</span></span><br><span class="line">np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array of five values evenly spaced</span></span><br><span class="line"><span class="comment"># between 0 and 1</span></span><br><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>linspace</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an array of five values evenly spaced</span></span><br><span class="line"><span class="comment"># between 0 and 1</span></span><br><span class="line">np.linspace(<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([0.  , 0.25, 0.5 , 0.75, 1.  ])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*e arrayof uniformly distributed random values between 0 and 1</span></span><br><span class="line">np.random.random((<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>uniformly distributed random value</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*e arrayof uniformly distributed random values between 0 and 1</span></span><br><span class="line">np.random.random((<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[0.57226098, 0.56849713, 0.63410602],
        [0.88335333, 0.46056684, 0.95494879],
        [0.22305721, 0.18478839, 0.78352821]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>normal distributed random value</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.random.normal(<span class="number">0</span>, <span class="number">1</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[ 1.05100904,  1.71407429,  0.75356105],
        [-0.61885082,  0.43198626,  0.63819954],
        [-0.53911965,  1.07533192, -0.27227068]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 array of random integers in the interval [0, 10]</span></span><br><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>random value</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 array of random integers in the interval [0, 10]</span></span><br><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, (<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[0, 7, 1],
        [2, 7, 6],
        [7, 8, 5]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 identity matrix</span></span><br><span class="line">np.eye(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>create identity matrix</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create a 3*3 identity matrix</span></span><br><span class="line">np.eye(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[1., 0., 0.],
        [0., 1., 0.],
        [0., 0., 1.]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an uninitialized array of three integers</span></span><br><span class="line"><span class="comment"># the values will be whatever happens to </span></span><br><span class="line"><span class="comment"># already exist at that memory location</span></span><br><span class="line">np.empty(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>uninitialized array</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># create an uninitialized array of three integers</span></span><br><span class="line"><span class="comment"># the values will be whatever happens to </span></span><br><span class="line"><span class="comment"># already exist at that memory location</span></span><br><span class="line">np.empty(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([1., 1., 1.])
-</code></pre><p>numpy is built in C</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype = <span class="string">'int16'</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>Standard Data Types</strong></p>
+<p>numpy is also built in C, the data type  can be specified using a string:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.zeros(<span class="number">10</span>, dtype = <span class="string">'int16'</span>)</span><br><span class="line">np.zeros(<span class="number">10</span>, dtype = np.int16) <span class="comment">#same</span></span><br></pre></td></tr></table></figure>
+<p>output</p>
 <pre><code>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], dtype=int16)
-</code></pre><h2 id="basics-of-NumPy-arrays"><a href="#basics-of-NumPy-arrays" class="headerlink" title="basics of NumPy arrays"></a>basics of NumPy arrays</h2><ul>
+</code></pre><h1 id="Operations-of-NumPy-arrays"><a href="#Operations-of-NumPy-arrays" class="headerlink" title="Operations of NumPy arrays"></a>Operations of NumPy arrays</h1><ul>
 <li>attributes of arrays</li>
 <li>indexing of arrays</li>
-<li>slicing of arrays</li>
 <li>slicing of arrays</li>
 <li>reshaping of arrays</li>
 <li>joining and splitting of arrays</li>
 </ul>
-<h3 id="attributes-of-arrays"><a href="#attributes-of-arrays" class="headerlink" title="attributes of arrays"></a>attributes of arrays</h3><ul>
-<li>random number generator, which we will seed with a set value in order to ensure that the same random arrays are generated each time this code is run:</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)<span class="comment"># seed for reproducibility</span></span><br><span class="line">x1 = np.random.randint(<span class="number">10</span>, size=<span class="number">6</span>)</span><br><span class="line">x2 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">x3 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1)</span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<h2 id="Attributes-of-arrays"><a href="#Attributes-of-arrays" class="headerlink" title="Attributes of arrays"></a>Attributes of arrays</h2><p><strong>determining the size, shape, memory consumption, and data types of arrays</strong></p>
+<p>We can use random number generator, which we will seed with a set value in order to ensure that the same random arrays are generated each time this code is run:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">np.random.seed(<span class="number">0</span>)<span class="comment"># seed for reproducibility</span></span><br><span class="line">x1 = np.random.randint(<span class="number">10</span>, size=<span class="number">6</span>)</span><br><span class="line">x2 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">x3 = np.random.randint(<span class="number">10</span>, size=(<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br><span class="line">print(x1)</span><br><span class="line">print(x2)</span><br><span class="line">print(x3)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[5 0 3 3 7 9]
 [[3 5 2 4]
  [7 6 8 8]
  [1 6 7 7]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x3</span><br></pre></td></tr></table></figure>
-<pre><code>array([[[8, 1, 5, 9, 8],
-        [9, 4, 3, 0, 3],
-        [5, 0, 2, 3, 8],
-        [1, 3, 3, 3, 7]],
+([[[8, 1, 5, 9, 8],
+[9, 4, 3, 0, 3],
+[5, 0, 2, 3, 8],
+[1, 3, 3, 3, 7]],
 
-       [[0, 1, 9, 9, 0],
-        [4, 7, 3, 2, 7],
-        [2, 0, 0, 4, 5],
-        [5, 6, 8, 4, 1]],
+[[0, 1, 9, 9, 0],
+[4, 7, 3, 2, 7],
+[2, 0, 0, 4, 5],
+[5, 6, 8, 4, 1]],
 
-       [[4, 9, 8, 1, 1],
-        [7, 9, 9, 3, 6],
-        [7, 2, 0, 3, 5],
-        [9, 4, 4, 6, 4]]])
-</code></pre><p>each array has attributes ndim, shape and size:</p>
+[[4, 9, 8, 1, 1],
+[7, 9, 9, 3, 6],
+[7, 2, 0, 3, 5],
+[9, 4, 4, 6, 4]]])
+</code></pre><p><strong>each array has attributes ndim, shape and size:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"x3 ndim: "</span>, x3.ndim)</span><br><span class="line">print(<span class="string">"x3 shape: "</span>, x3.shape)</span><br><span class="line">print(<span class="string">"x3 size: "</span>, x3.size)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>x3 ndim:  3
 x3 shape:  (3, 4, 5)
 x3 size:  60
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"dtype:"</span>, x3.dtype)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>we can check the type of x3</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"dtype:"</span>, x3.dtype)</span><br></pre></td></tr></table></figure>
 <pre><code>dtype: int32
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"itemsize: "</span>, x3.itemsize)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong><code>itemsize</code> is another attribute, which list the size in bytes of each array element, and <code>nbytes</code> list the total size of the array:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">"itemsize: "</span>, x3.itemsize, <span class="string">"bytes"</span>)</span><br></pre></td></tr></table></figure>
 <pre><code>itemsize:  4
-</code></pre><p>array indexing</p>
+</code></pre><p>In general, we expect that <strong>nbytes is equal to itemsize times size</strong>.</p>
+<h2 id="Array-Indexing"><a href="#Array-Indexing" class="headerlink" title="Array Indexing"></a>Array Indexing</h2><p><strong>Getting and setting the value of individual array elements</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1[<span class="number">0</span>])</span><br><span class="line">print(x1[<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>5
 7
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x1</span><br></pre></td></tr></table></figure>
-<pre><code>array([5, 0, 3, 3, 7, 9])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1[<span class="number">-1</span>])</span><br><span class="line">print(x1[<span class="number">-2</span>])</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>use negative indices:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x1[<span class="number">-1</span>])</span><br><span class="line">print(x1[<span class="number">-2</span>])</span><br></pre></td></tr></table></figure>
+<p>ouptut:</p>
 <pre><code>9
 7
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>items can be accessed using a comma-separated tuple of indices:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">0</span>])</span><br><span class="line">print(x2[<span class="number">2</span>, <span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[[3 5 2 4]
  [7 6 8 8]
  [1 6 7 7]]
 1
 7
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">x2[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">12</span></span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>Values can be modified using any of the above index notation:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br><span class="line">x2[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">12</span></span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[[3 5 2 4]
  [7 6 8 8]
  [1 6 7 7]]
 [[12  5  2  4]
  [ 7  6  8  8]
  [ 1  6  7  7]]
-</code></pre><p>the different type will be silently truncated</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x1[<span class="number">0</span>] = <span class="number">3.14159</span></span><br><span class="line">x1</span><br></pre></td></tr></table></figure>
+</code></pre><p>Numpy arrays have a fixed type. The different type will be <strong>silently truncated automatically</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x1[<span class="number">0</span>] = <span class="number">3.14159</span> <span class="comment"># this will be truncated!</span></span><br><span class="line">x1</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([3, 0, 3, 3, 7, 9])
-</code></pre><h3 id="array-slicing-accessing-subarrays"><a href="#array-slicing-accessing-subarrays" class="headerlink" title="array slicing: accessing subarrays"></a>array slicing: accessing subarrays</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">10</span>)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="Array-Slicing"><a href="#Array-Slicing" class="headerlink" title="Array Slicing"></a>Array Slicing</h2><p><strong>Getting and setting smaller subarrays within a larger array</strong></p>
+<p>The standard Python list slicing is:</p>
+<p>​    <code>x[start:stop:step]</code></p>
+<p>The default to the values start = 0, stop = size of dimension, step = 1</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">10</span>)</span><br><span class="line">x</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:<span class="number">5</span>] <span class="comment"># first five elements</span></span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="One-dimension"><a href="#One-dimension" class="headerlink" title="One-dimension"></a>One-dimension</h3><p><strong>This is operation of one-dimensional subarrays</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x[:<span class="number">5</span>] <span class="comment"># first five elements</span></span><br><span class="line">x[<span class="number">5</span>:]</span><br><span class="line">x[<span class="number">4</span>:<span class="number">7</span>] <span class="comment"># middle sub-array</span></span><br><span class="line">x[::<span class="number">2</span>] <span class="comment"># every other element</span></span><br><span class="line">x[<span class="number">1</span>::<span class="number">2</span>] <span class="comment"># every other element, starting at index1</span></span><br><span class="line">x[::<span class="number">-1</span>] <span class="comment"># reversed</span></span><br><span class="line">x[<span class="number">5</span>::<span class="number">-2</span>] <span class="comment"># reversed every other from index 5</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([0, 1, 2, 3, 4])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">5</span>:]</span><br></pre></td></tr></table></figure>
-<pre><code>array([5, 6, 7, 8, 9])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">4</span>:<span class="number">7</span>] <span class="comment"># middle sub-array</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([4, 5, 6])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[::<span class="number">2</span>] <span class="comment"># every other element</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([0, 2, 4, 6, 8])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">1</span>::<span class="number">2</span>] <span class="comment"># every other element, starting at index1</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([1, 3, 5, 7, 9])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[::<span class="number">-1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[<span class="number">5</span>::<span class="number">-2</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>array([5, 3, 1])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2</span><br></pre></td></tr></table></figure>
+array([5, 6, 7, 8, 9])
+array([4, 5, 6])
+array([0, 2, 4, 6, 8])
+array([1, 3, 5, 7, 9])
+array([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+array([5, 3, 1])
+</code></pre><h3 id="Multi-dimension"><a href="#Multi-dimension" class="headerlink" title="Multi-dimension"></a>Multi-dimension</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[12,  5,  2,  4],
        [ 7,  6,  8,  8],
        [ 1,  6,  7,  7]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[:<span class="number">2</span>, :<span class="number">3</span>] <span class="comment"># first two rows, three columns</span></span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>Some operations of multi-dimensional subarrays</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x2[:<span class="number">2</span>, :<span class="number">3</span>] <span class="comment"># first two rows, three columns</span></span><br><span class="line">x2[:<span class="number">3</span>, ::<span class="number">2</span>] <span class="comment">#all rows, every other column</span></span><br><span class="line">x2[::<span class="number">-1</span>, ::<span class="number">-1</span>] <span class="comment"># subarray dimensions can even be reversed together</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[12,  5,  2],
        [ 7,  6,  8]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[:<span class="number">3</span>, ::<span class="number">2</span>] <span class="comment">#all rows, every other column</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[12,  2],
+array([[12,  2],
        [ 7,  8],
        [ 1,  7]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x2[::<span class="number">-1</span>, ::<span class="number">-1</span>] <span class="comment">#</span></span><br></pre></td></tr></table></figure>
-<pre><code>array([[ 7,  7,  6,  1],
+array([[ 7,  7,  6,  1],
        [ 8,  8,  6,  7],
        [ 4,  2,  5, 12]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2[:,<span class="number">0</span>]) <span class="comment">#first column of x2</span></span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>Accessing of single rows or columns of an array can be done by combining indexing and slicing, using an empty slice marked by a single colon (:):</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(x2[:,<span class="number">0</span>]) <span class="comment">#first column of x2</span></span><br><span class="line">print(x2[<span class="number">0</span>,:]) <span class="comment">#first row of x2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In the case of row access, the empty slice can be omitted for a more compact syntax</span></span><br><span class="line"></span><br><span class="line">print(x2[<span class="number">0</span>]) <span class="comment">#equivalent</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[12  7  1]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(x2[<span class="number">0</span>,:]) <span class="comment">#first row of x2</span></span><br><span class="line">print(x2[<span class="number">0</span>]) <span class="comment">#equivalent</span></span><br></pre></td></tr></table></figure>
-<pre><code>[12  5  2  4]
 [12  5  2  4]
-</code></pre><p>slice return views rather than copies of the array data<br>in list, slices will be copies</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub = x2[:<span class="number">2</span>, :<span class="number">2</span>]</span><br><span class="line">print(x2_sub)</span><br></pre></td></tr></table></figure>
-<pre><code>[[12  5]
- [ 7  6]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">99</span></span><br><span class="line">print(x2_sub)</span><br></pre></td></tr></table></figure>
-<pre><code>[[99  5]
- [ 7  6]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
-<pre><code>[[99  5  2  4]
- [ 7  6  8  8]
- [ 1  6  7  7]]
-</code></pre><p>it is a useful property, we can access and process pieces of these datasets without the need to copy the underlying data buffer</p>
-<p>we can also create a explicitly copy the data within an array or a subarray</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy = x2[:<span class="number">2</span>,:<span class="number">2</span>].copy()</span><br><span class="line">print(x2_sub_copy)</span><br></pre></td></tr></table></figure>
-<pre><code>[[99  5]
- [ 7  6]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
-<pre><code>[[99  5  2  4]
- [ 7  6  8  8]
- [ 1  6  7  7]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy[<span class="number">0</span>,<span class="number">0</span>] = <span class="number">42</span></span><br><span class="line">print(x2_sub_copy)</span><br></pre></td></tr></table></figure>
-<pre><code>[[42  5]
- [ 7  6]]
-</code></pre><h3 id="Reshaping-of-arrays"><a href="#Reshaping-of-arrays" class="headerlink" title="Reshaping of arrays"></a>Reshaping of arrays</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># put number 1-9 in a 3*3 grid:</span></span><br><span class="line">grid = np.arange(<span class="number">1</span>,<span class="number">10</span>).reshape((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line">print(grid)</span><br></pre></td></tr></table></figure>
+[12  5  2  4]
+</code></pre><h3 id="Copy-amp-No-Copy-Subarrays"><a href="#Copy-amp-No-Copy-Subarrays" class="headerlink" title="Copy &amp; No-Copy Subarrays"></a>Copy &amp; No-Copy Subarrays</h3><p><strong>NumPy array slice return views rather than copies of the array data. However, Python list slicing will be copies.</strong></p>
+<ul>
+<li><p>Changed Example</p>
+<p>Extract a 2*2 subarray from this:</p>
+</li>
+</ul>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x2_sub = x2[:<span class="number">2</span>, :<span class="number">2</span>]</span><br><span class="line">print(x2_sub)</span><br></pre></td></tr></table></figure>
+<pre><code>  [[12  5]
+   [ 7  6]]
+</code></pre><p>  <strong>The original array is changed:</strong></p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x2_sub[<span class="number">0</span>, <span class="number">0</span>] = <span class="number">99</span></span><br><span class="line">print(x2_sub)</span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<p>  output:</p>
+<pre><code>  [[99  5]
+   [ 7  6]]
+  [[99  5  2  4]
+   [ 7  6  8  8]
+   [ 1  6  7  7]]
+</code></pre><p>  it is a useful property, we can access and process pieces of these datasets without the need to copy the underlying data buffer.</p>
+<ul>
+<li><p>Unchanged Example</p>
+<p>we can also create a explicitly copy the data within an array or a subarray.</p>
+</li>
+</ul>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy = x2[:<span class="number">2</span>,:<span class="number">2</span>].copy()</span><br><span class="line">print(x2_sub_copy)</span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<p>  output:</p>
+<pre><code>  [[99  5]
+   [ 7  6]]
+  [[99  5  2  4]
+   [ 7  6  8  8]
+   [ 1  6  7  7]]
+</code></pre><p>  If we modify this subarray, <strong>the original array is not touched:</strong></p>
+  <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x2_sub_copy[<span class="number">0</span>,<span class="number">0</span>] = <span class="number">42</span></span><br><span class="line">print(x2_sub_copy)</span><br><span class="line">print(x2)</span><br></pre></td></tr></table></figure>
+<p>  output:</p>
+<pre><code>  [[42  5]
+   [ 7  6]]
+  [[99  5  2  4]
+   [ 7  6  8  8]
+   [ 1  6  7  7]]
+</code></pre><h2 id="Array-Reshaping"><a href="#Array-Reshaping" class="headerlink" title="Array Reshaping"></a>Array Reshaping</h2><p><strong>Changing the shape of a given array</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># put number 1-9 in a 3*3 grid:</span></span><br><span class="line">grid = np.arange(<span class="number">1</span>,<span class="number">10</span>).reshape((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line">print(grid)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[[1 2 3]
  [4 5 6]
  [7 8 9]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">x.reshape((<span class="number">1</span>,<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+</code></pre><p>The size of the initial array must match the size of the reshaped array. The reshape method will use a no-copy view of the initial array.</p>
+<p>We can use <code>newaxis</code> method to realize the reshape effect.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line"></span><br><span class="line">x.reshape((<span class="number">1</span>,<span class="number">3</span>))</span><br><span class="line">x[np.newaxis, :]</span><br><span class="line"></span><br><span class="line">x.reshape((<span class="number">3</span>,<span class="number">1</span>))</span><br><span class="line">x[:, np.newaxis]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[1, 2, 3]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[np.newaxis, :]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1, 2, 3]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x.reshape((<span class="number">3</span>,<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1],
+array([[1, 2, 3]])
+array([[1],
        [2],
        [3]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x[:, np.newaxis]</span><br></pre></td></tr></table></figure>
-<pre><code>array([[1],
+array([[1],
        [2],
        [3]])
-</code></pre><h2 id="array-concatenation-and-splitting"><a href="#array-concatenation-and-splitting" class="headerlink" title="array concatenation and splitting"></a>array concatenation and splitting</h2><p>combine multiple arrays into one</p>
+</code></pre><h2 id="Array-concatenation-and-splitting"><a href="#Array-concatenation-and-splitting" class="headerlink" title="Array concatenation and splitting"></a>Array concatenation and splitting</h2><p><strong>Combining multiple arrays into one, and splitting one array into many</strong></p>
+<h3 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h3><p><strong><code>concatenation</code>: combine multiple arrays into one</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">y = np.array([<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line">np.concatenate([x, y])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([1, 2, 3, 3, 2, 1])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">z = [<span class="number">99</span>, <span class="number">99</span>, <span class="number">99</span>]</span><br><span class="line">print(np.concatenate(z, z))</span><br></pre></td></tr></table></figure>
-<pre><code>---------------------------------------------------------------------------
-
-TypeError                                 Traceback (most recent call last)
-
-&lt;ipython-input-94-f4ee06b12dd7&gt; in &lt;module&gt;
-      1 z = [99, 99, 99]
-----&gt; 2 print(np.concatenate(z, z))
-
-
-TypeError: &#39;list&#39; object cannot be interpreted as an integer
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grid = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">               [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.concatenate([grid, grid])</span><br></pre></td></tr></table></figure>
+</code></pre><p>In two-dimensional situation, default is zero-indexed.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">grid = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>],</span><br><span class="line">               [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="comment"># concatenate along the first axis</span></span><br><span class="line">np.concatenate([grid, grid])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[1, 2, 3],
        [4, 5, 6],
        [1, 2, 3],
        [4, 5, 6]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zero-indexed</span></span><br><span class="line">np.concatenate([grid, grid], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+</code></pre><p>We can concatenate along the second axis (zero-indexed).</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># zero-indexed</span></span><br><span class="line">np.concatenate([grid, grid], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[1, 2, 3, 1, 2, 3],
        [4, 5, 6, 4, 5, 6]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">grid = np.array([[<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>],</span><br><span class="line">                [<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>]])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vstack([x, grid])</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong><code>vstack</code>:  vertically stack the arrays</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">grid = np.array([[<span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>],</span><br><span class="line">                [<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>]])</span><br><span class="line">np.vstack([x, grid])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[1, 2, 3],
        [9, 8, 7],
        [6, 5, 4]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># horizontal</span></span><br><span class="line">y = np.array([[<span class="number">99</span>],</span><br><span class="line">             [<span class="number">99</span>]])</span><br><span class="line">np.hstack([grid, y])</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong><code>hstack</code>: horizontally stack the arrays</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># horizontal</span></span><br><span class="line">y = np.array([[<span class="number">99</span>],</span><br><span class="line">             [<span class="number">99</span>]])</span><br><span class="line">np.hstack([grid, y])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[ 9,  8,  7, 99],
        [ 6,  5,  4, 99]])
-</code></pre><p>spliting</p>
+</code></pre><h3 id="Spliting"><a href="#Spliting" class="headerlink" title="Spliting"></a>Spliting</h3><p><strong><code>split</code>: opposite of concatenation.</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">99</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line">x1, x2, x3 = np.split(x, [<span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(x1, x2, x3)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[1 2 3] [99 99] [3 2 1]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grid = np.arange(<span class="number">16</span>).reshape((<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line">grid</span><br></pre></td></tr></table></figure>
+</code></pre><p>Notice that <em>N</em> split-points, leads to <em>N+1</em> subarrays.</p>
+<p><code>np.hsplit</code> and <code>np.vsplit</code> are similar. In multi-dimensional situation:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grid = np.arange(<span class="number">16</span>).reshape((<span class="number">4</span>, <span class="number">4</span>))</span><br><span class="line">grid</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[ 0,  1,  2,  3],
        [ 4,  5,  6,  7],
        [ 8,  9, 10, 11],
        [12, 13, 14, 15]])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">upper, lower = np.vsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(upper)</span><br><span class="line">print(lower)</span><br></pre></td></tr></table></figure>
+</code></pre><p><code>np.vsplit</code> and <code>np.hsplit</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">upper, lower = np.vsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(upper)</span><br><span class="line">print(lower)</span><br><span class="line"></span><br><span class="line">left, right = np.hsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(left)</span><br><span class="line">print(right)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>[[0 1 2 3]
  [4 5 6 7]]
 [[ 8  9 10 11]
  [12 13 14 15]]
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">left, right = np.hsplit(grid, [<span class="number">2</span>])</span><br><span class="line">print(left)</span><br><span class="line">print(right)</span><br></pre></td></tr></table></figure>
-<pre><code>[[ 0  1]
+[[ 0  1]
  [ 4  5]
  [ 8  9]
  [12 13]]
@@ -477,30 +522,118 @@ TypeError: &#39;list&#39; object cannot be interpreted as an integer
  [ 6  7]
  [10 11]
  [14 15]]
-</code></pre><h1 id="Computation-and-Functions-in-NumPy"><a href="#Computation-and-Functions-in-NumPy" class="headerlink" title="Computation and Functions in NumPy"></a>Computation and Functions in NumPy</h1><p>fast: use vectorized operations: universal functions</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># slowness of loops</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_reciprocals</span><span class="params">(values)</span>:</span></span><br><span class="line">    output = np.empty(len(values))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(values)):</span><br><span class="line">        output[i] = <span class="number">1.0</span> / values[i]</span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line">values = np.random.randint(<span class="number">1</span>, <span class="number">10</span>, size = <span class="number">5</span>)</span><br><span class="line">compute_reciprocals(values)</span><br></pre></td></tr></table></figure>
+</code></pre><h1 id="Computation-and-Functions-in-NumPy"><a href="#Computation-and-Functions-in-NumPy" class="headerlink" title="Computation and Functions in NumPy"></a>Computation and Functions in NumPy</h1><h2 id="The-speed-of-computation-on-Numpy"><a href="#The-speed-of-computation-on-Numpy" class="headerlink" title="The speed of computation on Numpy"></a>The speed of computation on Numpy</h2><p>Computation can be very fast or very slow. The key to making it fast is to use vectorized operations, generally implemented through universal functions(ufuncs).</p>
+<h3 id="The-Slowness-of-Loops"><a href="#The-Slowness-of-Loops" class="headerlink" title="The Slowness of Loops"></a>The Slowness of Loops</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># slowness of loops</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.seed(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_reciprocals</span><span class="params">(values)</span>:</span></span><br><span class="line">    output = np.empty(len(values))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(values)):</span><br><span class="line">        output[i] = <span class="number">1.0</span> / values[i]</span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line">values = np.random.randint(<span class="number">1</span>, <span class="number">10</span>, size = <span class="number">5</span>)</span><br><span class="line">compute_reciprocals(values)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([0.16666667, 1.        , 0.25      , 0.25      , 0.125     ])
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>If we use  this code for a large input, the operation is very slow.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># IPython's %timeit</span></span><br><span class="line">big_array = np.random.randint(<span class="number">1</span>, <span class="number">100.</span> size=<span class="number">1000000</span>)</span><br><span class="line">%timeit compute_reciprocals(big_array)</span><br></pre></td></tr></table></figure>
-<p>vectorizedoperation</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(compute_reciprocals(values))</span><br><span class="line">print(<span class="number">1.0</span> / values)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%timeit (<span class="number">1.0</span> / big_array)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>It turns out that the bottleneck here is not the operations themselves, but the type-checking and function dispatches that CPython must do at each cycle of the loop.</p>
+<h3 id="Vectorized-Operation"><a href="#Vectorized-Operation" class="headerlink" title="Vectorized Operation"></a>Vectorized Operation</h3><p>However, Numpy provides a convenient interface to compile routine, which is named as a vectorized operation.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(compute_reciprocals(values))</span><br><span class="line">print(<span class="number">1.0</span> / values)</span><br><span class="line">%timeit (<span class="number">1.0</span> / big_array)</span><br></pre></td></tr></table></figure>
+<p><strong>Vectorized operations in Numpy are implemented via ufuncs, whose main purpose is to quickly execute repeated operations or values in Numpy arrays.</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">5</span>) / np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([0.        , 0.5       , 0.66666667, 0.75      , 0.8       ])
-</code></pre><p>in matlab, element by element computation is ./</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.arange(<span class="number">5</span>) % np.arange(<span class="number">1</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([0, 1, 2, 3, 4], dtype=int32)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multi-dimensional</span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>Here is the multi-dimensional situation:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = np.arange(<span class="number">9</span>).reshape((<span class="number">3</span>,<span class="number">3</span>))</span><br><span class="line"><span class="number">2</span> ** x</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <pre><code>array([[  1,   2,   4],
        [  8,  16,  32],
        [ 64, 128, 256]], dtype=int32)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre><p>We can use these ufuncs to realize various purpose.</p>
+<h2 id="Computation-via-NumPy-UFuncs"><a href="#Computation-via-NumPy-UFuncs" class="headerlink" title="Computation via NumPy UFuncs"></a>Computation via NumPy UFuncs</h2><p>Ufuncs exist in two flavors:</p>
+<ul>
+<li>unary ufuncs, which operate on a single input</li>
+<li>binary ufuncs, which operate on two inputs</li>
+</ul>
+<p>We can use uFuncs to achieve arithmetic purpose.</p>
+<h3 id="Array-arithmetic"><a href="#Array-arithmetic" class="headerlink" title="Array arithmetic"></a>Array arithmetic</h3><p><strong>The basic arithmetic operations</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">x=np.arange(<span class="number">4</span>)</span><br><span class="line">print(<span class="string">"x     ="</span>, x)</span><br><span class="line">print(<span class="string">"x + 5 ="</span>, x + <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"x - 5 ="</span>, x - <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"x + 5 ="</span>, x + <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"x + 5 ="</span>, x + <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"x + 5 ="</span>, x + <span class="number">5</span>)</span><br><span class="line">print(<span class="string">"-x    ="</span>, -x) <span class="comment"># negation</span></span><br><span class="line">print(<span class="string">"x ** 2 ="</span>, x ** <span class="number">2</span>) <span class="comment"># exponentiation</span></span><br><span class="line">print(<span class="string">"x % 2 ="</span>, x &amp; <span class="number">2</span>) <span class="comment"># modulus</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">x     = [0 1 2 3]</span><br><span class="line">x + 5 = [5 6 7 8]</span><br><span class="line">x - 5 = [-5 -4 -3 -2]</span><br><span class="line">x + 5 = [5 6 7 8]</span><br><span class="line">x + 5 = [5 6 7 8]</span><br><span class="line">x + 5 = [5 6 7 8]</span><br><span class="line">-x    = [ 0 -1 -2 -3]</span><br><span class="line">x ** 2 = [0 1 4 9]</span><br><span class="line">x % 2 = [0 0 2 2]</span><br></pre></td></tr></table></figure>
+<p>We can also combine them together. these arithmetic are simply wrappers specific functions built into NumPy.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(-(<span class="number">0.5</span>* + <span class="number">1</span>)**<span class="number">2</span>)</span><br><span class="line">print(np.add(x, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-0.25</span><br><span class="line">[2 3 4 5]</span><br></pre></td></tr></table></figure>
+<p>Other arithmetic operators and functions include:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">abx(x)</span><br><span class="line">np.exp(x)</span><br><span class="line">np.log(x)</span><br><span class="line">np.sin(x)</span><br></pre></td></tr></table></figure>
+<p><strong>Specialized functions used in statistics exist in scipy</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> special</span><br><span class="line">x = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>]</span><br><span class="line">print(<span class="string">"gamma(x)      ="</span>, special.gamma(x))</span><br><span class="line">print(<span class="string">"ln|gamma(x)|  ="</span>, special.gammaln(x))</span><br><span class="line">print(<span class="string">"beta(x, 2)    ="</span>, special.beta(x, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gamma(x)      = [1.0000e+00 2.4000e+01 3.6288e+05]</span><br><span class="line">ln|gamma(x)|  = [ 0.          3.17805383 12.80182748]</span><br><span class="line">beta(x, 2)    = [0.5        0.03333333 0.00909091]</span><br></pre></td></tr></table></figure>
+<p><strong>To summarize the typical values in a dataset, we can use aggregates function.</strong> NumPy’s aggregate function version is computed much more quickly.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">L = np.random.random(<span class="number">100</span>)</span><br><span class="line">print(sum(L))</span><br><span class="line">print(np.sum(L))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">47.620210778723894</span><br><span class="line">47.620210778723894</span><br></pre></td></tr></table></figure>
+<p>Timing the different functions:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">big_array = np.random.rand(<span class="number">1000000</span>)</span><br><span class="line">%timeit sum(big_array)</span><br><span class="line">%timeit np.sum(big_array)</span><br></pre></td></tr></table></figure>
+<p>ouptut:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">113 ms ± 7.37 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)</span><br><span class="line">1.28 ms ± 69.8 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)</span><br></pre></td></tr></table></figure>
+<p><strong>For min, max, sum, and several other NumPy aggregates, a shorter syntax is to use methods of the array object itself:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">min(big_array), max(big_array)</span><br><span class="line">np.min(big_array), np.max(big_array)</span><br><span class="line">print(big_array.min(), big_array.max(), big_array.sum())</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(7.476608001599772e-07, 0.9999999017465359)</span><br><span class="line">(7.476608001599772e-07, 0.9999999017465359)</span><br><span class="line">7.476608001599772e-07 0.9999999017465359 499703.64780246833</span><br></pre></td></tr></table></figure>
+<p><strong>For multi-dimensional aggregates, there are three situation: the entire array, the row and the column.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">M = np.random.random((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">print(M)</span><br><span class="line">print(M.sum())</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[[0.31678953 0.12015542 0.47115746 0.91046151]</span><br><span class="line"> [0.66547603 0.36825635 0.79325825 0.2072341 ]</span><br><span class="line"> [0.73285524 0.39698562 0.5593977  0.514694  ]]</span><br><span class="line">6.0567212054611375</span><br></pre></td></tr></table></figure>
+<p>To calculate aggregate from an axis.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(M.min(axis=<span class="number">0</span>))</span><br><span class="line">print(M.max(axis=<span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[0.31678953 0.12015542 0.47115746 0.2072341 ]</span><br><span class="line">[0.91046151 0.79325825 0.73285524]</span><br></pre></td></tr></table></figure>
+<p><strong>The axis keyword specifies the dimension of the array will be collapsed, rather than the dimension that will be returned.</strong></p>
+<p>additionally, most aggregates have a NaN-safe counterpart that computes the result while ignoring values, for example, <code>np.sum</code> and <code>np.nansum</code>.</p>
+<h2 id="Example-What-is-Average-Height-of-US-Presidents"><a href="#Example-What-is-Average-Height-of-US-Presidents" class="headerlink" title="Example: What is Average Height of US Presidents?"></a>Example: What is Average Height of US Presidents?</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.read_csv(<span class="string">'E:/NYU/BootCamp/Bootcamp Onsite/Afternoon/python/president_heights.csv'</span>)</span><br><span class="line"><span class="comment"># data.head()</span></span><br><span class="line">heights = np.array(data[<span class="string">'height(cm)'</span>])</span><br><span class="line">print(heights)</span><br><span class="line">print(<span class="string">"Mean height: "</span>, heights.mean())</span><br><span class="line">print(<span class="string">"Standard deviation:"</span>, heights.std())</span><br><span class="line">print(<span class="string">"Minimum height: "</span>, heights.min())</span><br><span class="line">print(<span class="string">"Maximum height: "</span>, heights.max())</span><br><span class="line">print(<span class="string">"25th percentile: "</span>, np.percentile(heights, <span class="number">25</span>))</span><br><span class="line">print(<span class="string">"Median: "</span>, np.median(heights))</span><br><span class="line">print(<span class="string">"75th percentile: "</span>, np.percentile(heights, <span class="number">75</span>))</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>order</th>
+      <th>name</th>
+      <th>height(cm)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>George Washington</td>
+      <td>189</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>John Adams</td>
+      <td>170</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Thomas Jefferson</td>
+      <td>189</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>James Madison</td>
+      <td>163</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>James Monroe</td>
+      <td>183</td>
+    </tr>
+  </tbody>
+</table>
 
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[189 170 189 163 183 171 185 168 173 183 173 173 175 178 183 193 178 173</span><br><span class="line"> 174 183 183 168 170 178 182 180 183 178 182 188 175 179 183 193 182 183</span><br><span class="line"> 177 185 188 188 182 185]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn; seaborn.set() <span class="comment"># set  plot style</span></span><br><span class="line"></span><br><span class="line">plt.hist(heights)</span><br><span class="line">plt.title(<span class="string">'Height Distributtion of US Presidents'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'height (cm)'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'number'</span>)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Text(0, 0.5, &apos;number&apos;)</span><br></pre></td></tr></table></figure>
+<p><img src="E:/Blog/source/_posts/output_3_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
         </div>
         <footer class="article-footer">
             
@@ -571,16 +704,15 @@ TypeError: &#39;list&#39; object cannot be interpreted as an integer
             "name": "ygnmax"
         },
         "headline": "Python NumPy Basics",
-        "image": "http://yoursite.com",
+        "image": "http://yoursite.comE:/Blog/source/_posts/output_3_1.png",
         "keywords": "Python NYU BootCamp",
         "genre": "Computer Science Programming Python",
         "datePublished": "2019-08-05",
         "dateCreated": "2019-08-05",
-        "dateModified": "2019-08-05",
+        "dateModified": "2019-08-06",
         "url": "http://yoursite.com/2019/08/05/Python NumPy Basics/",
-        "description": "This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Version on Aug 5th is a draft.
-Understanding Data Types in PythonStatically-typing &"
-        "wordCount": 3031
+        "description": "This is a class note of NYU MFE Bootcamp, including contains basic knowledge of Python NumPy syntax and techniques. Understanding Data Types in Python to part of Operations of NumPy arrays was on Aug "
+        "wordCount": 4426
     }
 </script>
 

@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft. 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-07T03:43:42.645Z">
+<meta property="og:updated_time" content="2019-08-07T16:47:50.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Pandas Basics">
 <meta name="twitter:description" content="This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft. 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame">
@@ -208,29 +208,19 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">population[<span class="string">'California'</span>]</span><br><span class="line">population[<span class="string">'California'</span>:<span class="string">'Illinois'</span>]</span><br></pre></td></tr></table></figure>
 <p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">38332521</span><br><span class="line">California  38332521</span><br><span class="line">Florida     19552860</span><br><span class="line">Illinois    12882135</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
-<h3 id="1-1-3-Constructing-Series"><a href="#1-1-3-Constructing-Series" class="headerlink" title="1.1.3 Constructing Series"></a>1.1.3 Constructing Series</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(<span class="number">5</span>, index = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>])</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">100    5</span><br><span class="line">200    5</span><br><span class="line">300    5</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2    a</span><br><span class="line">1    b</span><br><span class="line">3    c</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;, index = [<span class="number">3</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3    c</span><br><span class="line">2    a</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
-<h2 id="DataFrame-Object"><a href="#DataFrame-Object" class="headerlink" title="DataFrame Object"></a>DataFrame Object</h2><p>Dataframe is an analog of a two dimensional array with flexible row indices and column names.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="1-1-3-Constructing-Series"><a href="#1-1-3-Constructing-Series" class="headerlink" title="1.1.3 Constructing Series"></a>1.1.3 Constructing Series</h3><p>We can construct a Series from scratch: <code>pd.Series(data, index = index)</code>, where Index is an optional argument. data can be one of many entities.</p>
+<p>The ‘data’ can be a list or Numpy array, can be a scalar, can be a dictionary</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(<span class="number">5</span>, index = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>])</span><br><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;)</span><br><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;, index = [<span class="number">3</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">100    5</span><br><span class="line">200    5</span><br><span class="line">300    5</span><br><span class="line">dtype: int64</span><br><span class="line">2    a</span><br><span class="line">1    b</span><br><span class="line">3    c</span><br><span class="line">dtype: object</span><br><span class="line">3    c</span><br><span class="line">2    a</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<p>In this case, the Series is populated only wit the explicitly identified keys.</p>
+<h2 id="1-2-DataFrame"><a href="#1-2-DataFrame" class="headerlink" title="1.2 DataFrame"></a>1.2 DataFrame</h2><h3 id="1-2-1-DataFrame-Basics"><a href="#1-2-1-DataFrame-Basics" class="headerlink" title="1.2.1 DataFrame Basics"></a>1.2.1 DataFrame Basics</h3><p>Dataframe can be thought of either as a generalization of a NumPy array, or as a specialization of a Python dictionary. It is an analog of a two dimensional array with flexible row indices and column names.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">area_dict = &#123;<span class="string">'California'</span>: <span class="number">423967</span>,</span><br><span class="line">                  <span class="string">'Florida'</span>: <span class="number">170312</span> ,</span><br><span class="line">                   <span class="string">'Illinois'</span>:<span class="number">149995</span>,</span><br><span class="line">                   <span class="string">'New York'</span>: <span class="number">141297</span>,</span><br><span class="line">                   <span class="string">'Texas'</span>: <span class="number">696562</span></span><br><span class="line">                  &#125;</span><br><span class="line">area = pd.Series(area_dict)</span><br><span class="line">area</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">California    423967</span><br><span class="line">Florida       170312</span><br><span class="line">Illinois      149995</span><br><span class="line">New York      141297</span><br><span class="line">Texas         696562</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<p>we can use a dictionary to construct a single two-dimensional object:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">states = pd.DataFrame(&#123;<span class="string">'population'</span>: population, <span class="string">'area'</span>: area&#125;)</span><br><span class="line">states</span><br></pre></td></tr></table></figure>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</style>
-
+<p>output:</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -268,23 +258,15 @@
   </tbody>
 </table>
 
-</div>
 
-
-
-
-
+<p><strong>DataFrame also has index attribute that gives access to the index lables:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">states.index</span><br><span class="line">states.columns</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Index([California, Florida, Illinois, New York,Texas], dtype=object)</span><br><span class="line">Index([area, population], dtype=object)</span><br></pre></td></tr></table></figure>
+<p><strong>A Pandas Dataframe can be constructed in variety of ways</strong></p>
+<p><strong>a. from a single Series object:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(population, columns=[<span class="string">'popluation'</span>])</span><br></pre></td></tr></table></figure>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</style>
-
+<p>output:</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -316,11 +298,11 @@
   </tbody>
 </table>
 
-</div>
 
 
-
+<p><strong>b. from a list of dicts:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = [&#123;<span class="string">'a'</span>:i, <span class="string">'b'</span>:<span class="number">2</span> * i&#125;</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>)]</span><br><span class="line">pd.DataFrame(data)</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -360,19 +342,9 @@
 
 </div>
 
-
-
+<p><strong>Even if some keys in the dictionary are missing, Pandas will fill them in with NaN (i.e., \not a number”) values:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame([&#123;<span class="string">'a'</span>:<span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>&#125;,&#123;<span class="string">'b'</span>:<span class="number">3</span>, <span class="string">'c'</span>:<span class="number">4</span>&#125;])</span><br></pre></td></tr></table></figure>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</style>
-
+<p>output:</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -398,22 +370,12 @@
   </tbody>
 </table>
 
-</div>
 
-
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><strong>c. from a dictionary of Series objects</strong> </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(&#123;population: population, area: area&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>d. from a two-dimensional Numpy array</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(np.random.rand(<span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">            columns=[<span class="string">'foo'</span>, <span class="string">'bar'</span>],</span><br><span class="line">            index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])</span><br></pre></td></tr></table></figure>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</style>
-
+<p>output:</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -441,54 +403,68 @@
   </tbody>
 </table>
 
-</div>
 
 
-
-<p>from a numpy structured array</p>
+<p><strong>e. from a numpy structured array</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = np.zeros(<span class="number">3</span>, dtype = [(<span class="string">'A'</span>, <span class="string">'i8'</span>), (<span class="string">'B'</span>, <span class="string">'f8'</span>)])</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Pandas Index Object</p>
+<h3 id="1-2-2-Pandas-Index-Object"><a href="#1-2-2-Pandas-Index-Object" class="headerlink" title="1.2.2 Pandas Index Object"></a>1.2.2 Pandas Index Object</h3><p>Here is an example:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ind = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">ind</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([2, 3, 5, 7, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<p><strong>a. we can use standard Python indexing notation to retrieve values or slices:</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(ind[<span class="number">1</span>])</span><br><span class="line">print(ind[::<span class="number">2</span>])</span><br><span class="line">print(ind.size,ind.shape, ind.ndim, ind.dtype)</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Int64Index([2, 5, 11], dtype=&apos;int64&apos;)</span><br><span class="line">5 (5,) 1 int64</span><br></pre></td></tr></table></figure>
-<p><strong>index objects and numpy arrays are immutable, they cannot be modified</strong></p>
+<p><strong>b. index objects and numpy arrays are immutable, they cannot be modified</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ind[<span class="number">1</span>] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input-66-906a9fa1424c&gt; in &lt;module&gt;</span><br><span class="line">----&gt; 1 ind[1] = 0</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\Anaconda\lib\site-packages\pandas\core\indexes\base.py in __setitem__(self, key, value)</span><br><span class="line">   2063 </span><br><span class="line">   2064     def __setitem__(self, key, value):</span><br><span class="line">-&gt; 2065         raise TypeError(&quot;Index does not support mutable operations&quot;)</span><br><span class="line">   2066 </span><br><span class="line">   2067     def __getitem__(self, key):</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: Index does not support mutable operations</span><br></pre></td></tr></table></figure>
-<p>Intersection</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA &amp; indB <span class="comment"># Intersection</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([3, 5, 7], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
-<p>Union</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA | indB <span class="comment"># Union</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([1, 2, 3, 5, 7, 9, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
-<p>symmetric difference</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA ^ indB <span class="comment">#difference</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([1, 2, 9, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>indexing</li>
-<li>slicing</li>
-<li>masking</li>
-<li>fancy indexing</li>
-<li>combinations thereof</li>
+<p><strong>This immutability makes it safer</strong> to share indices between multiple DataFrames and arrays, without the potential for side effects from inadvertent index modification.</p>
+<p><strong>c. set arithmetic</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA &amp; indB <span class="comment"># Intersection</span></span><br><span class="line">indA | indB <span class="comment"># Union</span></span><br><span class="line">indA ^ indB <span class="comment"># symmetric difference</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([3, 5, 7], dtype=&apos;int64&apos;)</span><br><span class="line">Int64Index([1, 2, 3, 5, 7, 9, 11], dtype=&apos;int64&apos;)</span><br><span class="line">Int64Index([1, 2, 9, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-Data-Selection-and-Operation"><a href="#1-3-Data-Selection-and-Operation" class="headerlink" title="1.3 Data Selection and Operation"></a>1.3 Data Selection and Operation</h2><ul>
+<li>indexing (e.g., arr[2; 1])</li>
+<li>slicing (e.g., arr[:; 1 : 5])</li>
+<li>masking (e.g., arr[arr &gt; 0])</li>
+<li>fancy indexing (e.g., arr[0; [1; 5]])</li>
+<li>combinations thereof (e.g., arr[:; [1; 5]])</li>
 </ul>
-<p>dictionary like series</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.Series([<span class="number">0.25</span>, <span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>])</span><br><span class="line">data.Index = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<h3 id="1-3-1-Series-Operation"><a href="#1-3-1-Series-Operation" class="headerlink" title="1.3.1 Series Operation"></a>1.3.1 Series Operation</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.Series([<span class="number">0.25</span>, <span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>])</span><br><span class="line">data.Index = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0    0.25</span><br><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">3    1.00</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[(data &gt; <span class="number">0.3</span>)&amp;(data&lt;<span class="number">0.8</span>)]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="indexers-loc-iloc-and-ix"><a href="#indexers-loc-iloc-and-ix" class="headerlink" title="indexers: loc, iloc, and ix"></a>indexers: loc, iloc, and ix</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data= pd.Series([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], index=[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># index changed </span></span><br><span class="line">print(data[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># cannot use slicing</span></span><br><span class="line">print(data[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p><strong>Index, key and values:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'a'</span> <span class="keyword">in</span> data</span><br><span class="line">data.keys()</span><br><span class="line">list(data.items())</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">True</span><br><span class="line">Index([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;], dtype=&apos;object&apos;)</span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+<p><strong>We can modify the values or extend a Series by assigning to a new index value.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[<span class="string">'e'</span>] = <span class="number">1.25</span></span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a 0.25</span><br><span class="line">b 0.50</span><br><span class="line">c 0.75</span><br><span class="line">d 1.00</span><br><span class="line">e 1.25</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<p><strong>Examples of slices, masking, fancy indexing:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># slicing by explicit index</span></span><br><span class="line">data[<span class="string">'a'</span>:<span class="string">'c'</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># slicing by implicit integer index</span></span><br><span class="line">data[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># masking</span></span><br><span class="line">data[(data &gt; <span class="number">0.3</span>)&amp;(data&lt;<span class="number">0.8</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># fancy indexing</span></span><br><span class="line">data[[<span class="string">'a'</span>, <span class="string">'e'</span>]]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">a 0.25</span><br><span class="line">b 0.50</span><br><span class="line">c 0.75</span><br><span class="line">dtype: float64</span><br><span class="line"></span><br><span class="line">a 0.25</span><br><span class="line">b 0.50</span><br><span class="line">dtype: float64</span><br><span class="line"></span><br><span class="line">b    0.50</span><br><span class="line">c    0.75</span><br><span class="line">dtype: float64</span><br><span class="line"></span><br><span class="line">a 0.25</span><br><span class="line">e 1.25</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<p>Notice that when slicing with an explicit index (i.e.,<code>data[&#39;a&#39;: &#39;c&#39;]</code>), the nal index is included in the slice, while when slicing with an implicit index (i.e., <code>data[0 : 2]</code>), the final index is excluded from the slice.</p>
+<h3 id="1-3-2-Indexers-loc-iloc-and-ix"><a href="#1-3-2-Indexers-loc-iloc-and-ix" class="headerlink" title="1.3.2 Indexers: loc, iloc, and ix"></a>1.3.2 Indexers: loc, iloc, and ix</h3><p>The slicing and indexing conventions can be a source of<br>confusion in term of explicit and implicit form:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data= pd.Series([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], index=[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># index changed </span></span><br><span class="line">print(data[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># cannot use slicing</span></span><br><span class="line">print(data[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1    a</span><br><span class="line">3    b</span><br><span class="line">5    c</span><br><span class="line">dtype: object</span><br><span class="line">a</span><br><span class="line">3    b</span><br><span class="line">5    c</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<p><strong>1. <code>loc</code></strong></p>
+<p>the <code>loc</code> attribute allows indexing and slicing that always references the explicit index:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(data.loc[<span class="number">1</span>])</span><br><span class="line">print(data.loc[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">1    a</span><br><span class="line">3    b</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
-
+<p><strong>2. <code>iloc</code></strong></p>
+<p>The <code>iloc</code> attribute allows indexing and slicing that always references the implicit Python-style index:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data.iloc[<span class="number">1</span>]</span><br><span class="line">data.iloc[<span class="number">1</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;b&apos;</span><br><span class="line">3 b</span><br><span class="line">5 c</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<p><strong>3. <code>ix</code></strong></p>
+<p><code>ix</code> , is a hybrid of the two, and for Series objects is equivalent to standard [] - based indexing, the purpose of which will become more apparent in the context of Dataframe object.</p>
+<h3 id="1-3-3-DataFrame-Operation"><a href="#1-3-3-DataFrame-Operation" class="headerlink" title="1.3.3 DataFrame Operation"></a>1.3.3 DataFrame Operation</h3>
         </div>
         <footer class="article-footer">
             
@@ -564,11 +540,11 @@
         "genre": "Computer Science Programming Python",
         "datePublished": "2019-03-18",
         "dateCreated": "2019-03-18",
-        "dateModified": "2019-08-06",
+        "dateModified": "2019-08-07",
         "url": "http://yoursite.com/2019/03/18/Python Pandas Basics/",
         "description": "This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft.
 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame"
-        "wordCount": 2692
+        "wordCount": 2883
     }
 </script>
 
@@ -836,22 +812,5 @@
 <script src="/js/main.js"></script>
 
     </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </body>
 </html>

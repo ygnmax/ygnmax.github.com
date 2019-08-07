@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Python Pandas Basics | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Python,NYU,Pandas,Bootcamp">
+    
+    <meta name="description" content="This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft. 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame">
+<meta name="keywords" content="Python,NYU,Pandas,Bootcamp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Pandas Basics">
+<meta property="og:url" content="http://yoursite.com/2019/03/18/Python Pandas Basics/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft. 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-07T03:43:42.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Pandas Basics">
+<meta name="twitter:description" content="This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft. 1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/">Finance</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Finance/Derivatives/">Derivatives</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/Python/">Python</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Python Pandas Basics" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Python Pandas Basics
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/03/18/Python Pandas Basics/" class="article-date">
+            <time datetime="2019-03-18T04:00:00.000Z" itemprop="datePublished">2019-03-18</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Bootcamp/">Bootcamp</a>, <a class="tag-link" href="/tags/NYU/">NYU</a>, <a class="tag-link" href="/tags/Pandas/">Pandas</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft.</p>
+<h1 id="1-Data-Type-in-Pandas"><a href="#1-Data-Type-in-Pandas" class="headerlink" title="1. Data Type in Pandas"></a>1. Data Type in Pandas</h1><p>pandas is a newer package built on top of NumPy. Series and DataFrame is the basic data type. Pandas provides efficient access to these sorts of “data munging” tasks that occupy much of a data scientist’s time.</p>
+<h2 id="1-1-Series"><a href="#1-1-Series" class="headerlink" title="1.1 Series"></a>1.1 Series</h2><h3 id="1-1-1-Series-Basics"><a href="#1-1-1-Series-Basics" class="headerlink" title="1.1.1 Series Basics"></a>1.1.1 Series Basics</h3><p><strong>Series is a one-dimensional array of indexed data.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.Series([<span class="number">0.25</span>, <span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>])</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0    0.25</span><br><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">3    1.00</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<p><strong>The values are simply a familiar Numpy array and the index is an array-like of type pd.index.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data.values</span><br><span class="line">data.index</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([0.25, 0.5 , 0.75, 1.  ])</span><br><span class="line">RangeIndex(start=0, stop=4, step=1)</span><br></pre></td></tr></table></figure>
+<p><strong>we can access the element in the series via square-bracket notation.</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(data[<span class="number">1</span>])</span><br><span class="line">print(data[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0.5</span><br><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-2-Series-Index"><a href="#1-1-2-Series-Index" class="headerlink" title="1.1.2 Series Index"></a>1.1.2 Series Index</h3><p><strong>Series is similar to one-dimensional NumPy Array.</strong> The essential difference is the presence of the index: while the NumPy Array has an implicitly defined integer index used to access the values, the Pandas Series has an explicitly defined index associated with the values.</p>
+<p>we can define the index with any desired type when creating a series</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data = pd.Series([<span class="number">0.25</span>, <span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>], index=[<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>])</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a    0.25</span><br><span class="line">b    0.50</span><br><span class="line">c    0.75</span><br><span class="line">d    1.00</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<p>We can access the element by using index</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[<span class="string">"b"</span>]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0.5</span><br></pre></td></tr></table></figure>
+<p><strong>Here, series is a bit like a specialization of a Python dictionary.</strong> It is even more clear and efficient than dictionary in Python.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">population_dict = &#123;<span class="string">'California'</span>: <span class="number">38332521</span>,</span><br><span class="line">                  <span class="string">'Florida'</span>: <span class="number">19652860</span>,</span><br><span class="line">                   <span class="string">'Illinois'</span>:<span class="number">12882135</span>,</span><br><span class="line">                   <span class="string">'New York'</span>: <span class="number">19651127</span>,</span><br><span class="line">                   <span class="string">'Texas'</span>: <span class="number">26448193</span></span><br><span class="line">                  &#125;</span><br><span class="line">population = pd.Series(population_dict)</span><br><span class="line">population</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">California    38332521</span><br><span class="line">Florida       19652860</span><br><span class="line">Illinois      12882135</span><br><span class="line">New York      19651127</span><br><span class="line">Texas         26448193</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<p><strong>Here, series is a bit like a specialization of a Python dictionary.</strong> It is even more clear and efficient than dictionary in Python.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">population[<span class="string">'California'</span>]</span><br><span class="line">population[<span class="string">'California'</span>:<span class="string">'Illinois'</span>]</span><br></pre></td></tr></table></figure>
+<p>output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">38332521</span><br><span class="line">California  38332521</span><br><span class="line">Florida     19552860</span><br><span class="line">Illinois    12882135</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<h3 id="1-1-3-Constructing-Series"><a href="#1-1-3-Constructing-Series" class="headerlink" title="1.1.3 Constructing Series"></a>1.1.3 Constructing Series</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(<span class="number">5</span>, index = [<span class="number">100</span>, <span class="number">200</span>, <span class="number">300</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">100    5</span><br><span class="line">200    5</span><br><span class="line">300    5</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">2    a</span><br><span class="line">1    b</span><br><span class="line">3    c</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.Series(&#123;<span class="number">2</span>:<span class="string">'a'</span>, <span class="number">1</span>:<span class="string">'b'</span>, <span class="number">3</span>:<span class="string">'c'</span>&#125;, index = [<span class="number">3</span>, <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3    c</span><br><span class="line">2    a</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<h2 id="DataFrame-Object"><a href="#DataFrame-Object" class="headerlink" title="DataFrame Object"></a>DataFrame Object</h2><p>Dataframe is an analog of a two dimensional array with flexible row indices and column names.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">area_dict = &#123;<span class="string">'California'</span>: <span class="number">423967</span>,</span><br><span class="line">                  <span class="string">'Florida'</span>: <span class="number">170312</span> ,</span><br><span class="line">                   <span class="string">'Illinois'</span>:<span class="number">149995</span>,</span><br><span class="line">                   <span class="string">'New York'</span>: <span class="number">141297</span>,</span><br><span class="line">                   <span class="string">'Texas'</span>: <span class="number">696562</span></span><br><span class="line">                  &#125;</span><br><span class="line">area = pd.Series(area_dict)</span><br><span class="line">area</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">California    423967</span><br><span class="line">Florida       170312</span><br><span class="line">Illinois      149995</span><br><span class="line">New York      141297</span><br><span class="line">Texas         696562</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">states = pd.DataFrame(&#123;<span class="string">'population'</span>: population, <span class="string">'area'</span>: area&#125;)</span><br><span class="line">states</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</style>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>population</th>
+      <th>area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>California</th>
+      <td>38332521</td>
+      <td>423967</td>
+    </tr>
+    <tr>
+      <th>Florida</th>
+      <td>19652860</td>
+      <td>170312</td>
+    </tr>
+    <tr>
+      <th>Illinois</th>
+      <td>12882135</td>
+      <td>149995</td>
+    </tr>
+    <tr>
+      <th>New York</th>
+      <td>19651127</td>
+      <td>141297</td>
+    </tr>
+    <tr>
+      <th>Texas</th>
+      <td>26448193</td>
+      <td>696562</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(population, columns=[<span class="string">'popluation'</span>])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</style>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>popluation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>California</th>
+      <td>38332521</td>
+    </tr>
+    <tr>
+      <th>Florida</th>
+      <td>19652860</td>
+    </tr>
+    <tr>
+      <th>Illinois</th>
+      <td>12882135</td>
+    </tr>
+    <tr>
+      <th>New York</th>
+      <td>19651127</td>
+    </tr>
+    <tr>
+      <th>Texas</th>
+      <td>26448193</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = [&#123;<span class="string">'a'</span>:i, <span class="string">'b'</span>:<span class="number">2</span> * i&#125;</span><br><span class="line">       <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">3</span>)]</span><br><span class="line">pd.DataFrame(data)</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</style>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame([&#123;<span class="string">'a'</span>:<span class="number">1</span>, <span class="string">'b'</span>: <span class="number">2</span>&#125;,&#123;<span class="string">'b'</span>:<span class="number">3</span>, <span class="string">'c'</span>:<span class="number">4</span>&#125;])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</style>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>a</th>
+      <th>b</th>
+      <th>c</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+      <td>2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>3</td>
+      <td>4.0</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pd.DataFrame(np.random.rand(<span class="number">3</span>, <span class="number">2</span>),</span><br><span class="line">            columns=[<span class="string">'foo'</span>, <span class="string">'bar'</span>],</span><br><span class="line">            index=[<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>])</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.dataframe tbody tr th &#123;</span><br><span class="line">    vertical-align: top;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.dataframe thead th &#123;</span><br><span class="line">    text-align: right;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</style>
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>foo</th>
+      <th>bar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>a</th>
+      <td>0.010853</td>
+      <td>0.798349</td>
+    </tr>
+    <tr>
+      <th>b</th>
+      <td>0.970245</td>
+      <td>0.074233</td>
+    </tr>
+    <tr>
+      <th>c</th>
+      <td>0.429177</td>
+      <td>0.251008</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+<p>from a numpy structured array</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A = np.zeros(<span class="number">3</span>, dtype = [(<span class="string">'A'</span>, <span class="string">'i8'</span>), (<span class="string">'B'</span>, <span class="string">'f8'</span>)])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Pandas Index Object</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ind = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">ind</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([2, 3, 5, 7, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(ind[<span class="number">1</span>])</span><br><span class="line">print(ind[::<span class="number">2</span>])</span><br><span class="line">print(ind.size,ind.shape, ind.ndim, ind.dtype)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">Int64Index([2, 5, 11], dtype=&apos;int64&apos;)</span><br><span class="line">5 (5,) 1 int64</span><br></pre></td></tr></table></figure>
+<p><strong>index objects and numpy arrays are immutable, they cannot be modified</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ind[<span class="number">1</span>] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line">TypeError                                 Traceback (most recent call last)</span><br><span class="line"></span><br><span class="line">&lt;ipython-input-66-906a9fa1424c&gt; in &lt;module&gt;</span><br><span class="line">----&gt; 1 ind[1] = 0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\Anaconda\lib\site-packages\pandas\core\indexes\base.py in __setitem__(self, key, value)</span><br><span class="line">   2063 </span><br><span class="line">   2064     def __setitem__(self, key, value):</span><br><span class="line">-&gt; 2065         raise TypeError(&quot;Index does not support mutable operations&quot;)</span><br><span class="line">   2066 </span><br><span class="line">   2067     def __getitem__(self, key):</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TypeError: Index does not support mutable operations</span><br></pre></td></tr></table></figure>
+<p>Intersection</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA &amp; indB <span class="comment"># Intersection</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([3, 5, 7], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<p>Union</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA | indB <span class="comment"># Union</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([1, 2, 3, 5, 7, 9, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<p>symmetric difference</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">indA = pd.Index([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>])</span><br><span class="line">indB = pd.Index([<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>])</span><br><span class="line">indA ^ indB <span class="comment">#difference</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Int64Index([1, 2, 9, 11], dtype=&apos;int64&apos;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>indexing</li>
+<li>slicing</li>
+<li>masking</li>
+<li>fancy indexing</li>
+<li>combinations thereof</li>
+</ul>
+<p>dictionary like series</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">data = pd.Series([<span class="number">0.25</span>, <span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>])</span><br><span class="line">data.Index = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>]</span><br><span class="line">data</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0    0.25</span><br><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">3    1.00</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[(data &gt; <span class="number">0.3</span>)&amp;(data&lt;<span class="number">0.8</span>)]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1    0.50</span><br><span class="line">2    0.75</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="indexers-loc-iloc-and-ix"><a href="#indexers-loc-iloc-and-ix" class="headerlink" title="indexers: loc, iloc, and ix"></a>indexers: loc, iloc, and ix</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data= pd.Series([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>], index=[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>])</span><br><span class="line">print(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># index changed </span></span><br><span class="line">print(data[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># cannot use slicing</span></span><br><span class="line">print(data[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1    a</span><br><span class="line">3    b</span><br><span class="line">5    c</span><br><span class="line">dtype: object</span><br><span class="line">a</span><br><span class="line">3    b</span><br><span class="line">5    c</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(data.loc[<span class="number">1</span>])</span><br><span class="line">print(data.loc[<span class="number">1</span>:<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">1    a</span><br><span class="line">3    b</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Python Pandas Basics",
+        "image": "http://yoursite.com",
+        "keywords": "Python NYU Pandas Bootcamp",
+        "genre": "Computer Science Programming Python",
+        "datePublished": "2019-03-18",
+        "dateCreated": "2019-03-18",
+        "dateModified": "2019-08-06",
+        "url": "http://yoursite.com/2019/03/18/Python Pandas Basics/",
+        "description": "This note contains basic knowledge of pandas including basic syntax and so on. Posted on Aug 6th is a draft.
+1. Data Type in Pandaspandas is a newer package built on top of NumPy. Series and DataFrame"
+        "wordCount": 2692
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="https://weibo.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/03/20/What I Have Lived For/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            What I Have Lived For
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/03/14/Level 3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Verbal Advantage Level 3</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></p>
+                            <p class="item-title"><a href="/2019/03/28/The Unamiable but Worthwhile Age of 22/" class="title">The Unamiable but Worthwhile Age of 22</a></p>
+                            <p class="item-date"><time datetime="2019-03-28T16:00:00.000Z" itemprop="datePublished">2019-03-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Thoughts/">Thoughts</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Thoughts/Other/">Other</a></p>
+                            <p class="item-title"><a href="/2019/03/20/What I Have Lived For/" class="title">What I Have Lived For</a></p>
+                            <p class="item-date"><time datetime="2019-03-20T16:00:00.000Z" itemprop="datePublished">2019-03-20</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/03/18/Python Pandas Basics/" class="title">Python Pandas Basics</a></p>
+                            <p class="item-date"><time datetime="2019-03-18T04:00:00.000Z" itemprop="datePublished">2019-03-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Languages/">Languages</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Languages/English/">English</a></p>
+                            <p class="item-title"><a href="/2019/03/14/Level 3/" class="title">Verbal Advantage Level 3</a></p>
+                            <p class="item-date"><time datetime="2019-03-14T16:00:00.000Z" itemprop="datePublished">2019-03-14</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/">Finance</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Mathematical-Analysis/">Mathematical Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/BootCamp/" style="font-size: 10px;">BootCamp</a> <a href="/tags/Bootcamp/" style="font-size: 10px;">Bootcamp</a> <a href="/tags/C/" style="font-size: 18.33px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.67px;">Calculus</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 16.67px;">English</a> <a href="/tags/Journal/" style="font-size: 15px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 11.67px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Option/" style="font-size: 10px;">Option</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Probability/" style="font-size: 11.67px;">Probability</a> <a href="/tags/Python/" style="font-size: 11.67px;">Python</a> <a href="/tags/Statistics/" style="font-size: 10px;">Statistics</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 13.33px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2019 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/03/18/Python Pandas Basics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

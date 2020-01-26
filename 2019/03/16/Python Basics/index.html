@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Python Basics | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Python">
+    
+    <meta name="description" content="This note contains basic knowledge of Python3 including basic syntax, arithmetic rules, comments, list, dictionary, strings, if statements, for statements, functions and debug operations and so on. Li">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Basics">
+<meta property="og:url" content="http://yoursite.com/2019/03/16/Python Basics/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This note contains basic knowledge of Python3 including basic syntax, arithmetic rules, comments, list, dictionary, strings, if statements, for statements, functions and debug operations and so on. Li">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-03-18T08:09:35.238Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python Basics">
+<meta name="twitter:description" content="This note contains basic knowledge of Python3 including basic syntax, arithmetic rules, comments, list, dictionary, strings, if statements, for statements, functions and debug operations and so on. Li">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/Python/">Python</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Python Basics" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Python Basics
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/03/16/Python Basics/" class="article-date">
+            <time datetime="2019-03-16T04:00:00.000Z" itemprop="datePublished">2019-03-16</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Python/">Python</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This note contains basic knowledge of Python3 including basic syntax, arithmetic rules, comments, list, dictionary, strings, if statements, for statements, functions and debug operations and so on.</p>
+<h1 id="List"><a href="#List" class="headerlink" title="List"></a>List</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># list</span></span><br><span class="line"><span class="comment"># 使用[]中括号 can create an new list</span></span><br><span class="line">list_var = []  <span class="comment"># 这是一个空list</span></span><br><span class="line">print(list_var), type(list_var)</span><br><span class="line"></span><br><span class="line"><span class="comment"># list是具有顺序的一组对象，其中的元素不需要是同类型</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="string">'2'</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="string">'seven'</span>, [<span class="number">8</span>], <span class="string">'九'</span>]  <span class="comment"># list举例，其中包含了整数、小数、字符串、数组</span></span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：索引，选取list中的某个元素</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="string">'2'</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="string">'seven'</span>, [<span class="number">8</span>], <span class="string">'九'</span>]  <span class="comment"># list举例</span></span><br><span class="line">print(list_var[<span class="number">0</span>])  <span class="comment"># 输出排在第1个位置的元素。位置的计数是从0开始的。</span></span><br><span class="line">print(list_var[<span class="number">3</span>])  <span class="comment"># 输出排在第4个位置的元素。</span></span><br><span class="line">print(list_var[<span class="number">8</span>])  <span class="comment"># 输出排在第9个位置的元素。也就是最后一个元素。</span></span><br><span class="line">print(list_var[<span class="number">-1</span>])  <span class="comment"># 输出最后一个元素的另外一种方式。</span></span><br><span class="line">print(list_var[<span class="number">-2</span>])  <span class="comment"># 输出最后第二个位置的元素。</span></span><br><span class="line">print(list_var[<span class="number">9</span>])  <span class="comment"># 超出长度会报错 IndexError: list index out of range</span></span><br><span class="line">print(list_var[<span class="number">-10</span>])  <span class="comment"># 超出长度会报错 IndexError: list index out of range</span></span><br><span class="line">list_var[<span class="number">3</span>] = <span class="number">100</span>  <span class="comment"># 可以根据索引，直接修改list中对应位置的元素</span></span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：切片，选取list中的一连串元素</span></span><br><span class="line"><span class="comment"># list_var = [1, '2', 3, 4.0, 5, 6, 'seven', [8], '九']  # list举例</span></span><br><span class="line"><span class="comment"># print list_var[3:8]  # list[a:b]，从第a个位置开始，一直到第b个位置之前的那些元素</span></span><br><span class="line"><span class="comment"># print list_var[:4]  # list[:b]，从头开始，一直到第b个位置之前的那些元素</span></span><br><span class="line"><span class="comment"># print list_var[3:]  # list[a:]，从第a个位置开始，一直到最后一个元素</span></span><br><span class="line"><span class="comment"># print list_var[1:7:3]  # list[a:b:c]，每c个元素，选取其中的一个</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：两个list相加</span></span><br><span class="line"><span class="comment"># list_var1 = [1, '2', 3, 4.0, 5]</span></span><br><span class="line"><span class="comment"># list_var2 = [6, 'seven', [8], '九']</span></span><br><span class="line"><span class="comment"># print(list_var1 + list_var2)  # 两个list相加</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：判断一个元素是否在list当中</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="string">'2'</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5</span>]</span><br><span class="line">print(<span class="number">1</span> <span class="keyword">in</span> list_var)  <span class="comment"># 判断1元素，是否在list_var中出现</span></span><br><span class="line">print(<span class="number">100</span> <span class="keyword">in</span> list_var)  <span class="comment"># 判断100元素，是否在list_var中出现</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：len，max，min</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(len(list_var))  <span class="comment"># list中元素的个数，或者说是list的长度</span></span><br><span class="line">print(len([]))  <span class="comment"># 空list的长度是？</span></span><br><span class="line">print(max(list_var))  <span class="comment"># 这个list中最大的元素，</span></span><br><span class="line">print(min(list_var))  <span class="comment"># 最小的元素</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：删除其中的一个元素</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">del</span> list_var[<span class="number">0</span>]  <span class="comment"># 删除位置0的那个元素</span></span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：如何查找一个元素的在list中的位置</span></span><br><span class="line">list_var = [<span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]  <span class="comment"># 如何才能知道1这个元素，在list中的位置是什么？</span></span><br><span class="line">print(list_var.index(<span class="number">4</span>))  <span class="comment"># 不知道的话，直接搜索</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：append,在后方增加一个元素</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="string">'2'</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5</span>]</span><br><span class="line">list_var.append(<span class="number">6</span>)</span><br><span class="line">print(list_var)</span><br><span class="line">list_var.append([<span class="string">'seven'</span>, [<span class="number">8</span>], <span class="string">'九'</span>])</span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：两个list合并</span></span><br><span class="line">list_var = [<span class="number">1</span>, <span class="string">'2'</span>, <span class="number">3</span>, <span class="number">4.0</span>, <span class="number">5</span>]</span><br><span class="line">list_var.extend([<span class="number">6</span>, <span class="string">'seven'</span>, [<span class="number">8</span>], <span class="string">'九'</span>])</span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：逆序、排序、</span></span><br><span class="line">list_var = [<span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]</span><br><span class="line">list_var.reverse()</span><br><span class="line">print(list_var)</span><br><span class="line">list_var = [<span class="number">3</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>]</span><br><span class="line">list_var.sort()</span><br><span class="line">print(list_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====list常见操作：range函数</span></span><br><span class="line"><span class="comment"># python2和python3不同</span></span><br><span class="line"><span class="comment"># range函数用于快速创建[0，1，2，3，4，5，6……]这样的list</span></span><br><span class="line">list(range(<span class="number">5</span>))  <span class="comment"># range(a)，对于[0，1，2，3……]这个数组，取前a个元素</span></span><br><span class="line">list(range(<span class="number">1</span>, <span class="number">5</span>))  <span class="comment"># range(a, b)，对于[0，1，2，3……]这个数组，取从第a个位置的元素开始，到第b个位置元素之前的那个元素</span></span><br><span class="line">list(range(<span class="number">1</span>, <span class="number">10</span>, <span class="number">3</span>))  <span class="comment"># range(a, b, c), 每c个元素，选取其中的一个</span></span><br></pre></td></tr></table></figure>
+<h1 id="dictionary"><a href="#dictionary" class="headerlink" title="dictionary"></a>dictionary</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =====dict介绍</span></span><br><span class="line"><span class="comment"># 使用&#123;&#125;大括号就可以新建一个dict。</span></span><br><span class="line">dict_var = &#123;&#125;  <span class="comment"># 这是一个空dict</span></span><br><span class="line">print(dict_var)</span><br><span class="line">type(dict_var)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 具有一系列成对的对象。一个叫做key，一个叫做value。其中的元素(包括key和value)不需要是同类型</span></span><br><span class="line">dict_var = &#123;<span class="string">'sh600000'</span>: <span class="string">'浦发银行'</span>,</span><br><span class="line">             <span class="string">'sz000002'</span>: <span class="string">'万科A'</span>,</span><br><span class="line">             <span class="number">300001</span>: <span class="string">'特锐德'</span>&#125;  <span class="comment"># 其中'sh600000'、'sz000002'、300001就是key，'浦发银行'、'万科A'、'特锐德'就是相对应的value。</span></span><br><span class="line">print(dict_var)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 字典是无顺序，key不可重复</span></span><br><span class="line">dict_var[<span class="number">0</span>]  <span class="comment"># 因为没有顺序，所以dict_var[0]并不能取出第0个位置的元素，此处会报错。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====dict常见操作：根据key的值，取相应的value的值</span></span><br><span class="line">dict_var[<span class="string">'sh600000'</span>]  <span class="comment"># 获取'sh600000'这个key对应的value</span></span><br><span class="line">print(dict_var[<span class="string">'sh600000'</span>])</span><br><span class="line">dict_var.get(<span class="string">'sh600000'</span>)</span><br><span class="line">print(dict_var.get(<span class="string">'sh600000'</span>))  <span class="comment"># 效果同上</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====dict常见操作：增加、修改一对key：value</span></span><br><span class="line">dict_var[<span class="string">'sh000001'</span>] = <span class="string">'上证指数'</span></span><br><span class="line">print(dict_var)</span><br><span class="line">dict_var[<span class="string">'sh000001'</span>] = <span class="string">'上证综合指数'</span></span><br><span class="line">print(dict_var[<span class="string">'sh000001'</span>])</span><br><span class="line">print(dict_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====dict常见操作：判断一个key是不是在dict里面</span></span><br><span class="line">print(<span class="string">'sh600000'</span> <span class="keyword">in</span> dict_var)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====dict常见操作：输出一个dict中所有的key和value</span></span><br><span class="line">print(dict_var.keys())  <span class="comment"># 输出所有的key</span></span><br><span class="line">print(dict_var.values())  <span class="comment"># 输出所有的value</span></span><br></pre></td></tr></table></figure>
+<h1 id="string"><a href="#string" class="headerlink" title="string"></a>string</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =====字符串转义</span></span><br><span class="line">print(<span class="string">'what is wrong'</span>)  <span class="comment"># 如何输入what's wrong</span></span><br><span class="line">print(<span class="string">'what\'s wrong\t'</span>)  <span class="comment"># 使用\对特殊字符进行转义。转义也可以用于表达不可见字符，例如tab符号：\t。</span></span><br><span class="line">print(<span class="string">'\\'</span>)  <span class="comment"># 如果要表达\本身，也需要转义，写为\。</span></span><br><span class="line">print(<span class="string">r'what\'s wrong'</span>)  <span class="comment"># 在字符串的开始加r（Raw String），使得字符串中不发生转义。</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====unicode字符串</span></span><br><span class="line">print(<span class="string">'中国'</span>) </span><br><span class="line">type(<span class="string">'中国'</span>)</span><br><span class="line">print(<span class="string">u'中国'</span>)</span><br><span class="line">type(<span class="string">u'中国'</span>)</span><br><span class="line"><span class="string">'中国'</span> == <span class="string">u'中国'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：字符串相加，相乘</span></span><br><span class="line">stock_code1 = <span class="string">'sh600000'</span></span><br><span class="line">stock_code2 = <span class="string">'sh600001'</span></span><br><span class="line">print(stock_code1 + <span class="string">', '</span> + stock_code2)  <span class="comment"># 字符串可以直接相加</span></span><br><span class="line">print(stock_code1 * <span class="number">3</span>)  <span class="comment"># 字符串可以乘以整数</span></span><br><span class="line">print(<span class="string">'*'</span> * <span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：startswith、endswith、</span></span><br><span class="line">stock_code = <span class="string">'sh600000'</span></span><br><span class="line">print(stock_code.startswith(<span class="string">'sh'</span>))  <span class="comment"># 判断字符串是否是以'sh'开头</span></span><br><span class="line">print(stock_code.startswith(<span class="string">'s'</span>))</span><br><span class="line">print(stock_code.startswith(<span class="string">'sz'</span>))</span><br><span class="line">print(stock_code.endswith(<span class="string">'0'</span>))  <span class="comment"># 判断字符串是否是以'0'结尾</span></span><br><span class="line">print(stock_code.endswith(<span class="string">'00'</span>))</span><br><span class="line">print(stock_code.endswith(<span class="string">'11'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：判断</span></span><br><span class="line">stock_code = <span class="string">'sh600000'</span></span><br><span class="line">print(<span class="string">'sh'</span> <span class="keyword">in</span> stock_code)  <span class="comment"># 判断字符串中是否包含'sh'</span></span><br><span class="line">print(<span class="string">'sz'</span> <span class="keyword">in</span> stock_code)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：替换</span></span><br><span class="line">stock_code = <span class="string">'sh600000'</span></span><br><span class="line">stock_code.replace(<span class="string">'sh'</span>, <span class="string">'sz'</span>)  <span class="comment"># 将字符串中的'sh'替换成'sz'</span></span><br><span class="line">print(<span class="string">'sh600000来自sh'</span>.replace(<span class="string">'sh'</span>, <span class="string">'sz'</span>))  <span class="comment"># 会替换所有的sh</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：split</span></span><br><span class="line">stock_code = <span class="string">'sh600000, sh600001, sh600002, sh600003'</span></span><br><span class="line">stock_code.split(<span class="string">', '</span>)</span><br><span class="line">print(stock_code.split(<span class="string">', '</span>)[<span class="number">0</span>])</span><br><span class="line">print(stock_code.split(<span class="string">'sh'</span>))</span><br><span class="line"><span class="comment"># 逆操作</span></span><br><span class="line">stock_code_list = [<span class="string">'sh600000'</span>, <span class="string">'sh600001'</span>, <span class="string">'sh600002'</span>, <span class="string">'sh600003'</span>]</span><br><span class="line">print(<span class="string">', '</span>.join(stock_code_list))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串常见操作：strip</span></span><br><span class="line">stock_code = <span class="string">'  sh600000  '</span></span><br><span class="line">print(stock_code)</span><br><span class="line">print(stock_code.strip())  <span class="comment"># 去除两边的空格</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====字符串的切片：把字符串当做list</span></span><br><span class="line">stock_code = <span class="string">'sh600000'</span></span><br><span class="line">print(stock_code[<span class="number">0</span>])</span><br><span class="line">print(stock_code[:<span class="number">2</span>])</span><br><span class="line">print(stock_code[<span class="number">2</span>:])</span><br><span class="line">print(len(stock_code))</span><br></pre></td></tr></table></figure>
+<h1 id="if-statement"><a href="#if-statement" class="headerlink" title="if statement"></a>if statement</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 条件语句语法如下：</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">if 条件A（结果为布尔值，true或者False）:</span></span><br><span class="line"><span class="string">    执行相关操作1（需要使用tab缩进）</span></span><br><span class="line"><span class="string">    ......</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">elif 条件B（结果为布尔值，true或者False）:</span></span><br><span class="line"><span class="string">    执行相关操作2</span></span><br><span class="line"><span class="string">    ......</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">else:</span></span><br><span class="line"><span class="string">    执行相关操作3</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件语句解释说明如下：</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">1. 若条件A为True，那么执行相关操作1，程序结束</span></span><br><span class="line"><span class="string">2. 若条件A为False，那么判断条件B，若条件B为True，那么执行相关操作2，程序结束</span></span><br><span class="line"><span class="string">3. 若条件A为False，那么判断条件B，若条件B为False，那么执行相关操作3，程序结束</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件语句示例：根据股票代码，判断股票来自于哪个市场</span></span><br><span class="line">stock_code = <span class="string">'sh600000'</span>  <span class="comment"># 尝试将stock_code改成'sz000002'，'aapl'看相关结果。</span></span><br><span class="line"><span class="keyword">if</span> stock_code.startswith(<span class="string">'sh'</span>):</span><br><span class="line">     print(<span class="string">'上海股票'</span>)</span><br><span class="line"><span class="keyword">elif</span> stock_code.startswith(<span class="string">'sz'</span>):</span><br><span class="line">     print(<span class="string">'深圳股票'</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">     print(<span class="string">'不知道哪里来的股票'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="for-statement"><a href="#for-statement" class="headerlink" title="for statement"></a>for statement</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =====for循环语句介绍</span></span><br><span class="line"><span class="comment"># for循环是最常用的循环语句</span></span><br><span class="line"><span class="comment"># 案例1：计算1+2+3+……+10</span></span><br><span class="line">sum_num = <span class="number">0</span>  <span class="comment"># 用于存储计算的结果</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list(range(<span class="number">10</span> + <span class="number">1</span>)):</span><br><span class="line">    sum_num += i  <span class="comment"># 此处需要使用tab按键进行缩进</span></span><br><span class="line">    print(i, sum_num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 案例2：批量判断股票来自于哪个市场</span></span><br><span class="line">stock_code_list = [<span class="string">'sh600000'</span>, <span class="string">'sh600001'</span>, <span class="string">'sz000001'</span>, <span class="string">'aapl'</span>]</span><br><span class="line"><span class="keyword">for</span> stock_code <span class="keyword">in</span> stock_code_list:</span><br><span class="line">    <span class="comment"># 若stock_code是sh600000</span></span><br><span class="line">    <span class="keyword">if</span> stock_code == <span class="string">'sh600000'</span>:</span><br><span class="line">        print(stock_code, <span class="string">'此股票为浦发银行，我已经知道它是来自上海的股票'</span>)</span><br><span class="line">        <span class="keyword">continue</span>  <span class="comment"># 跳过此次循环，不运行接下来的语句，直接进入下个循环</span></span><br><span class="line">        <span class="comment"># break  # 停止整个循环，跳出for语句</span></span><br><span class="line">    <span class="comment"># 判断股票来自于哪个市场</span></span><br><span class="line">    <span class="keyword">if</span> stock_code.startswith(<span class="string">'sh'</span>):</span><br><span class="line">        print(stock_code, <span class="string">'上海股票'</span>)</span><br><span class="line">    <span class="keyword">elif</span> stock_code.startswith(<span class="string">'sz'</span>):</span><br><span class="line">        print(stock_code, <span class="string">'深圳股票'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(stock_code, <span class="string">'不知道哪里来的股票'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="while-statement"><a href="#while-statement" class="headerlink" title="while statement"></a>while statement</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =====while语句</span></span><br><span class="line"><span class="comment"># while语句语法如下：</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">while 条件A:</span></span><br><span class="line"><span class="string">    执行相关操作1（需要使用tab缩进）</span></span><br><span class="line"><span class="string">    ......</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 条件语句解释说明如下：</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">1. 判断条件A，若条件A为False，那么程序结束。</span></span><br><span class="line"><span class="string">2. 判断条件A，若条件A为True，那么执行相关操作1。</span></span><br><span class="line"><span class="string">3. 然后再次判断条件A，重复上面的步骤</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># while语句案例1：计算1+2+3+……+10</span></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line">max_num = <span class="number">10</span></span><br><span class="line">sum_num = <span class="number">0</span>  <span class="comment"># 存储计算结果</span></span><br><span class="line"><span class="keyword">while</span> num &lt;= max_num:</span><br><span class="line">    sum_num += num</span><br><span class="line">    num += <span class="number">1</span></span><br><span class="line">    print(sum_num)</span><br><span class="line"></span><br><span class="line"><span class="comment"># while语句案例2：计算1+2+3+……+10</span></span><br><span class="line">num = <span class="number">1</span></span><br><span class="line">max_num = <span class="number">10</span></span><br><span class="line">sum_num = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    sum_num += num</span><br><span class="line">    num += <span class="number">1</span></span><br><span class="line">    print(sum_num, num)</span><br><span class="line">    <span class="keyword">if</span> num == max_num+<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+<h1 id="function"><a href="#function" class="headerlink" title="function"></a>function</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># =====基本函数的定义</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_h</span><span class="params">(str_var=<span class="string">'hello world'</span>)</span>:</span></span><br><span class="line">    <span class="comment"># 以下是函数内容</span></span><br><span class="line">    <span class="comment"># 函数的功能：将str_var变量打印出来</span></span><br><span class="line">    print(str_var)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 以def开头</span></span><br><span class="line"><span class="comment"># print_h是函数名</span></span><br><span class="line"><span class="comment"># str_var是参数，可以带上默认参数</span></span><br><span class="line"><span class="comment"># 函数首行的最后需要带上冒号</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># =====调用函数</span></span><br><span class="line">print_h()</span><br><span class="line">print_h(str_var=<span class="string">'你好，世界'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="try"><a href="#try" class="headerlink" title="try"></a>try</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time  <span class="comment"># 导入系统库time，可以使用一些系统级别的函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buy_one_stock</span><span class="params">(stock_name=<span class="string">'sh600000'</span>)</span>:</span>  <span class="comment"># 参数为股票名</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    此程序用于下单买入某个股票，但是买入过程中，程序有50%的概率报错。</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">import</span> random</span><br><span class="line">    random = random.random()</span><br><span class="line">    <span class="keyword">if</span> random &gt;= <span class="number">0.5</span>:</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">raise</span> ValueError(<span class="string">'程序报错！'</span>)</span><br><span class="line"><span class="comment"># buy_one_stock()</span></span><br><span class="line"></span><br><span class="line">max_try_num = <span class="number">5</span></span><br><span class="line">tyr_num = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    <span class="keyword">try</span>:  <span class="comment"># 尝试做以下事情</span></span><br><span class="line">        buy_one_stock()</span><br><span class="line">    <span class="keyword">except</span>:  <span class="comment"># 如果因为各种原因报错</span></span><br><span class="line">        print(<span class="string">'警告！下单出错，停止1秒再尝试'</span>)</span><br><span class="line">        tyr_num += <span class="number">1</span></span><br><span class="line">        time.sleep(<span class="number">5</span>)</span><br><span class="line">        <span class="keyword">if</span> tyr_num &gt; max_try_num:</span><br><span class="line">            print(<span class="string">'超过最大尝试次数，下单失败'</span>)</span><br><span class="line">            <span class="comment"># 此处需要执行相关程序，通知某些人</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">else</span>:  <span class="comment"># 如果没有报错</span></span><br><span class="line">        print(<span class="string">'下单成功了'</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Python Basics",
+        "image": "http://yoursite.com",
+        "keywords": "Python",
+        "genre": "Computer Science Programming Python",
+        "datePublished": "2019-03-16",
+        "dateCreated": "2019-03-16",
+        "dateModified": "2019-03-18",
+        "url": "http://yoursite.com/2019/03/16/Python Basics/",
+        "description": "This note contains basic knowledge of Python3 including basic syntax, arithmetic rules, comments, list, dictionary, strings, if statements, for statements, functions and debug operations and so on.
+Li"
+        "wordCount": 2013
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/03/18/Python Pandas Basics/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Python Pandas Basics
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/03/15/Level 3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Verbal Advantage Level 3</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2020/01/24/SQL Basics/" class="title">SQL Basic</a></p>
+                            <p class="item-date"><time datetime="2020-01-24T05:00:00.000Z" itemprop="datePublished">2020-01-24</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Economics/Finance/">Finance</a></p>
+                            <p class="item-title"><a href="/2019/12/15/BinModel/" class="title">Binary Model</a></p>
+                            <p class="item-date"><time datetime="2019-12-15T05:00:00.000Z" itemprop="datePublished">2019-12-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Economics/Finance/">Finance</a></p>
+                            <p class="item-title"><a href="/2019/11/23/BSM Model/" class="title">Binary Model</a></p>
+                            <p class="item-date"><time datetime="2019-11-23T05:00:00.000Z" itemprop="datePublished">2019-11-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/10/04/C++ Pointer/" class="title">C++ Class</a></p>
+                            <p class="item-date"><time datetime="2019-10-04T04:00:00.000Z" itemprop="datePublished">2019-10-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a></p>
+                            <p class="item-title"><a href="/2019/08/05/Python NumPy Basics/" class="title">Python NumPy Basics</a></p>
+                            <p class="item-date"><time datetime="2019-08-05T04:00:00.000Z" itemprop="datePublished">2019-08-05</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/SQL/">SQL</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Financial-Engineering/">Financial Engineering</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/Asset-Pricing/" style="font-size: 12px;">Asset Pricing</a> <a href="/tags/Bootcamp/" style="font-size: 12px;">Bootcamp</a> <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/Calculus/" style="font-size: 12px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 10px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/English/" style="font-size: 18px;">English</a> <a href="/tags/Finance/" style="font-size: 14px;">Finance</a> <a href="/tags/Journal/" style="font-size: 16px;">Journal</a> <a href="/tags/MOOC/" style="font-size: 20px;">MOOC</a> <a href="/tags/NYU/" style="font-size: 12px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Probability/" style="font-size: 14px;">Probability</a> <a href="/tags/Python/" style="font-size: 14px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 12px;">Real Analysis</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/Statistics/" style="font-size: 12px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vocabularies/" style="font-size: 14px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2020 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/03/16/Python Basics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

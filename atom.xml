@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-07T16:56:27.214Z</updated>
+  <updated>2020-01-26T04:08:00.487Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SQL Basic</title>
+    <link href="http://yoursite.com/2020/01/24/SQL%20Basics/"/>
+    <id>http://yoursite.com/2020/01/24/SQL Basics/</id>
+    <published>2020-01-24T05:00:00.000Z</published>
+    <updated>2020-01-26T04:08:00.487Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Basic-Syntax"><a href="#Basic-Syntax" class="headerlink" title="Basic Syntax"></a>Basic Syntax</h1><h2 id="CREATE"><a href="#CREATE" class="headerlink" title="CREATE"></a>CREATE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">CREATE People </span><br><span class="line"></span><br><span class="line">CREATE TABLE Users(</span><br><span class="line">name VARCHAR(128),</span><br><span class="line">email VARCHAR(128)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">DESCRIBE People;</span><br></pre></td></tr></table></figure><h2 id="DROP"><a href="#DROP" class="headerlink" title="DROP"></a>DROP</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE Users;</span><br></pre></td></tr></table></figure><h2 id="INSERT-INTO"><a href="#INSERT-INTO" class="headerlink" title="INSERT INTO"></a>INSERT INTO</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Chuck&apos;, &apos;csev@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Somesh&apos;, &apos;somesh@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Caitlin&apos;, &apos;cait@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Ted&apos;, &apos;ted@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Sally&apos;, &apos;sally@umich.edu&apos;) ;</span><br></pre></td></tr></table></figure><h2 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM Users WHERE email=&apos;ted@umich.edu&apos;</span><br></pre></td></tr></table></figure><h2 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h2><p>Replace / Change the values</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE Users SET name=&apos;Charles&apos; WHERE email=&apos;csev@umich.edu&apos;</span><br></pre></td></tr></table></figure><h2 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h2><p>Retrieving Records</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM Users</span><br></pre></td></tr></table></figure><h3 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM Users WHERE email=&apos;csev@umich.edu&apos;</span><br></pre></td></tr></table></figure><p>here, <code>*</code> is for all the columns</p><h3 id="ORDER-BY"><a href="#ORDER-BY" class="headerlink" title="ORDER BY"></a>ORDER BY</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="keyword">Users</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> email</span><br></pre></td></tr></table></figure><h3 id="LIKE"><a href="#LIKE" class="headerlink" title="LIKE"></a>LIKE</h3><p>Include or some characteristics</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM Users WHERE name LIKE &apos;%e%&apos;</span><br></pre></td></tr></table></figure><h3 id="LIMIT"><a href="#LIMIT" class="headerlink" title="LIMIT"></a>LIMIT</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT * FROM Users ORDER BY email DESC LIMIT 2;</span><br><span class="line">SELECT * FROM Users ORDER BY email LIMIT 1,2;</span><br></pre></td></tr></table></figure><h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h3><p>Counting rows with select</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT COUNT(*) FROM Users;</span><br><span class="line">SELECT COUNT(*) FROM Users WHERE email=&apos;csev@umich.edu&apos;;</span><br></pre></td></tr></table></figure><h1 id="Data-Types"><a href="#Data-Types" class="headerlink" title="Data Types"></a>Data Types</h1><h2 id="String-Fields"><a href="#String-Fields" class="headerlink" title="String Fields"></a>String Fields</h2><p>String Fields are indexable for searching</p><h3 id="CHAR"><a href="#CHAR" class="headerlink" title="CHAR"></a>CHAR</h3><p><strong>CHAR</strong> allocates the entire space (faster for small strings where length is known)</p><h3 id="VARCHAR"><a href="#VARCHAR" class="headerlink" title="VARCHAR"></a>VARCHAR</h3><p><strong>VARCHAR</strong> allocates a variable amount of space depending on the data length (less space)</p><h2 id="Text-Fields"><a href="#Text-Fields" class="headerlink" title="Text Fields"></a>Text Fields</h2><p>Have a character set - paragraphs or HTML pages</p><p>Generally not used with indexing or sorting - and only then limited to a prefix</p><ul><li><p>TINYTEXT</p></li><li><p>TEXT</p></li><li><p>MEDIUMTEXT</p></li><li><p>LONGTEXT</p></li></ul><h2 id="Binary-Types-rarely-used"><a href="#Binary-Types-rarely-used" class="headerlink" title="Binary Types (rarely used)"></a>Binary Types (rarely used)</h2><p>Character = 8 - 32 bits of information depending on character set</p><h2 id="Binary-Large-Object-BLOB"><a href="#Binary-Large-Object-BLOB" class="headerlink" title="Binary Large Object (BLOB)"></a>Binary Large Object (BLOB)</h2><p>Large raw data, files, images, word documents, PDFs, movies, etc.</p><p>No translation, indexing, or character set.</p><h2 id="Integer-Numbers"><a href="#Integer-Numbers" class="headerlink" title="Integer Numbers"></a>Integer Numbers</h2><ul><li>TINYINT (-128, 128)</li><li>SMALLINT (-32768, +32768)</li><li>INT or INTEGER (2 Billion)</li><li>BIGINT - (10**18 ish)</li></ul><h2 id="Floating-Point-Numbers"><a href="#Floating-Point-Numbers" class="headerlink" title="Floating Point Numbers"></a>Floating Point Numbers</h2><ul><li>FLOAT (32-bit) 10**38 with seven digits of accuracy</li><li>DOUBLE (64-bit) 10**308 with 14 digits of accuracy</li></ul><h2 id="Dates"><a href="#Dates" class="headerlink" title="Dates"></a>Dates</h2><ul><li>TIMESTAMP - ‘YYYY-MM-DD HH:MM:SS’ (1970, 2037)</li><li>DATETIME - ‘YYYY-MM-DD HH:MM:SS’</li><li>DATE - ‘YYYY-MM-DD’</li><li>TIME - ‘HH:MM:SS’</li><li>Built-in MySQL function <code>NOW()</code></li></ul><h1 id="Database-Keys-and-Indexes"><a href="#Database-Keys-and-Indexes" class="headerlink" title="Database Keys and Indexes"></a>Database Keys and Indexes</h1><h2 id="AUTO-INCREMENT"><a href="#AUTO-INCREMENT" class="headerlink" title="AUTO_INCREMENT"></a>AUTO_INCREMENT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE Users;</span><br><span class="line"></span><br><span class="line">CREATE TABLE Users (</span><br><span class="line">user_id INT UNSIGNED NOT NULL</span><br><span class="line">AUTO_INCREMENT,</span><br><span class="line">name VARCHAR(128),</span><br><span class="line">email VARCHAR(128),</span><br><span class="line">PRIMARY KEY(user_id),</span><br><span class="line">INDEX(name)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Chuck&apos;, &apos;csev@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Somesh&apos;, &apos;somesh@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Caitlin&apos;, &apos;cait@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Ted&apos;, &apos;ted@umich.edu&apos;) ;</span><br><span class="line">INSERT INTO Users (name, email) VALUES (&apos;Sally&apos;, &apos;sally@umich.edu&apos;) ;</span><br></pre></td></tr></table></figure><h2 id="Specifying-Indexes"><a href="#Specifying-Indexes" class="headerlink" title="Specifying Indexes"></a>Specifying Indexes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE Users ADD INDEX ( email ) USING BTREE</span><br></pre></td></tr></table></figure><p>Relation, B-Tree and Hashes</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Basic-Syntax&quot;&gt;&lt;a href=&quot;#Basic-Syntax&quot; class=&quot;headerlink&quot; title=&quot;Basic Syntax&quot;&gt;&lt;/a&gt;Basic Syntax&lt;/h1&gt;&lt;h2 id=&quot;CREATE&quot;&gt;&lt;a href=&quot;#CREATE&quot;
+      
+    
+    </summary>
+    
+      <category term="Computer Science" scheme="http://yoursite.com/categories/Computer-Science/"/>
+    
+      <category term="Programming" scheme="http://yoursite.com/categories/Computer-Science/Programming/"/>
+    
+      <category term="SQL" scheme="http://yoursite.com/categories/Computer-Science/Programming/SQL/"/>
+    
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+      <category term="Data Science" scheme="http://yoursite.com/tags/Data-Science/"/>
+    
+      <category term="Database" scheme="http://yoursite.com/tags/Database/"/>
+    
+  </entry>
   
   <entry>
     <title>Python NumPy Basics</title>
@@ -426,6 +459,36 @@
   </entry>
   
   <entry>
+    <title>Limit and Continuity</title>
+    <link href="http://yoursite.com/2019/01/31/Limit%20and%20Continuity/"/>
+    <id>http://yoursite.com/2019/01/31/Limit and Continuity/</id>
+    <published>2019-01-31T05:00:00.000Z</published>
+    <updated>2020-01-10T16:43:17.317Z</updated>
+    
+    <content type="html"><![CDATA[<p>This note contains basic knowledge of Limit and Continuity.</p><h1 id="Limits-of-Sequences"><a href="#Limits-of-Sequences" class="headerlink" title="Limits of Sequences"></a>Limits of Sequences</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>A sequence is an infinite or finite ordered list of terms base on the positive number index:</p><script type="math/tex; mode=display">x_1, x_2,...,x_n,...</script><p>It is usually denoted as $\{x_n\}$, and $x_n$ is called the general term. And the <strong>limits of sequences</strong> can be rigorously defined as this:</p><p>Let $\{ x_n \}$ is a given sequence, $a$ is a constant. If $\forall $ given $\varepsilon &gt; 0$, $\exists$ a positive integer $N$, such that when $n &gt; N$ there is </p><script type="math/tex; mode=display">|x_n - a|<\varepsilon</script><p>then we call sequence $\{ x_n \}$ is <strong>convergent</strong> and converges to $a$, or $a$ is the <strong>limit</strong> of  sequence $\{ x_n \}$, denoted as</p><script type="math/tex; mode=display">\lim_{n \to \infty}x_n=a</script><p>or</p><script type="math/tex; mode=display">x_n \to a ~(x \to \infty)</script><p>If there does not exist a real number $a$ such that $\{ x_n \}$ converges to $a$, then the sequence is said to be <strong>divergent</strong>. </p><p>Similarly, We can define the neighborhood as this:</p><p>For a point $a$ which is on the x-axis of the Cartesian Coordinates, the interval $(a-\varepsilon, a+\varepsilon)$ is called as the $\varepsilon$ <strong>neighborhood</strong> of point $a$, denoted as $O(a,\varepsilon)$:</p><script type="math/tex; mode=display">O(a,\varepsilon) = \{x|a - \varepsilon < x < a+\varepsilon\}</script><p>Whether a sequence is convergent or divergent has nothing to do with the finite terms, because if a sequence is convergent, “when $n &gt; N$, there is $|x_n-a|&lt;\varepsilon$” means that all the terms from the $N+1$ order will be in the $\varepsilon$ neighborhood, that is to say $x_n \in O(a, \varepsilon), n &gt; N$.</p><p>Among the convergent sequences, the one whose limit is 0 is called <strong>infinitesimals</strong>.</p><h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><h3 id="Uniqueness"><a href="#Uniqueness" class="headerlink" title="Uniqueness"></a>Uniqueness</h3><p>The limit of a convergent sequence is unique.</p><script type="math/tex; mode=display">\text{if}\lim_{n \to \infty}x_n=a \\\lim_{n \to \infty}x_n=b \\\text{then} \a = b</script><h3 id="Boundedness"><a href="#Boundedness" class="headerlink" title="Boundedness"></a>Boundedness</h3><p>A convergent sequence must be bounded.</p><h3 id="Squeeze-Theorem"><a href="#Squeeze-Theorem" class="headerlink" title="Squeeze Theorem"></a>Squeeze Theorem</h3><p>For 3 sequence $\{x_n\}$,  $\{y_n\}$,  $\{z_n\}$ from a certain term there is</p><script type="math/tex; mode=display">x_n \leq y_n \leq z_n, n \ge N_0</script><p>and $\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = a$, then</p><script type="math/tex; mode=display">\lim_{n \to \infty}y_n = a</script><h3 id="Arithmetic"><a href="#Arithmetic" class="headerlink" title="Arithmetic"></a>Arithmetic</h3><p>If $\lim_{n \to \infty}x_n=a$, $\lim_{n \to \infty}y_n=b$, then</p><script type="math/tex; mode=display">\begin{align*}&\lim_{n \to \infty}(\alpha x_n+\beta y_n)=\alpha a+\beta b \\&\lim_{n \to \infty}(x_ny_n)=ab \\&\lim_{n \to \infty}\frac{x_n}{y_n}=\frac{a}{b}\end{align*}</script><h1 id="Infinity"><a href="#Infinity" class="headerlink" title="Infinity"></a>Infinity</h1><h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h2><p>For any given $G&gt;0$, if $\exist$ positive integer $N$ such that when $n&gt;N$, $|x_n|&gt;G$, then call $\{x_n\}$ the infinity, denote as</p><script type="math/tex; mode=display">\lim_{n \to \infty}x_n=\infty</script><p>It can be $\lim_{n \to \infty}a_n=+\infty$ or $\lim_{n \to \infty}b_n=-\infty$.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This note contains basic knowledge of Limit and Continuity.&lt;/p&gt;
+&lt;h1 id=&quot;Limits-of-Sequences&quot;&gt;&lt;a href=&quot;#Limits-of-Sequences&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
+    
+      <category term="Analysis" scheme="http://yoursite.com/categories/Mathematics/Analysis/"/>
+    
+    
+      <category term="Calculus" scheme="http://yoursite.com/tags/Calculus/"/>
+    
+      <category term="Real Analysis" scheme="http://yoursite.com/tags/Real-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Probability Basics</title>
     <link href="http://yoursite.com/2019/01/31/Probability%20Basics/"/>
     <id>http://yoursite.com/2019/01/31/Probability Basics/</id>
@@ -469,36 +532,6 @@
       
         &lt;p&gt;This note contains basic knowledge of Set, Some basic principles of the real number.&lt;/p&gt;
 &lt;h1 id=&quot;Completeness-of-the-Real-Numbers&quot;&gt;&lt;a hre
-      
-    
-    </summary>
-    
-      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
-    
-      <category term="Analysis" scheme="http://yoursite.com/categories/Mathematics/Analysis/"/>
-    
-    
-      <category term="Calculus" scheme="http://yoursite.com/tags/Calculus/"/>
-    
-      <category term="Real Analysis" scheme="http://yoursite.com/tags/Real-Analysis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Limit and Continuity</title>
-    <link href="http://yoursite.com/2019/01/31/Limit%20and%20Continuity/"/>
-    <id>http://yoursite.com/2019/01/31/Limit and Continuity/</id>
-    <published>2019-01-31T05:00:00.000Z</published>
-    <updated>2020-01-10T16:43:17.317Z</updated>
-    
-    <content type="html"><![CDATA[<p>This note contains basic knowledge of Limit and Continuity.</p><h1 id="Limits-of-Sequences"><a href="#Limits-of-Sequences" class="headerlink" title="Limits of Sequences"></a>Limits of Sequences</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>A sequence is an infinite or finite ordered list of terms base on the positive number index:</p><script type="math/tex; mode=display">x_1, x_2,...,x_n,...</script><p>It is usually denoted as $\{x_n\}$, and $x_n$ is called the general term. And the <strong>limits of sequences</strong> can be rigorously defined as this:</p><p>Let $\{ x_n \}$ is a given sequence, $a$ is a constant. If $\forall $ given $\varepsilon &gt; 0$, $\exists$ a positive integer $N$, such that when $n &gt; N$ there is </p><script type="math/tex; mode=display">|x_n - a|<\varepsilon</script><p>then we call sequence $\{ x_n \}$ is <strong>convergent</strong> and converges to $a$, or $a$ is the <strong>limit</strong> of  sequence $\{ x_n \}$, denoted as</p><script type="math/tex; mode=display">\lim_{n \to \infty}x_n=a</script><p>or</p><script type="math/tex; mode=display">x_n \to a ~(x \to \infty)</script><p>If there does not exist a real number $a$ such that $\{ x_n \}$ converges to $a$, then the sequence is said to be <strong>divergent</strong>. </p><p>Similarly, We can define the neighborhood as this:</p><p>For a point $a$ which is on the x-axis of the Cartesian Coordinates, the interval $(a-\varepsilon, a+\varepsilon)$ is called as the $\varepsilon$ <strong>neighborhood</strong> of point $a$, denoted as $O(a,\varepsilon)$:</p><script type="math/tex; mode=display">O(a,\varepsilon) = \{x|a - \varepsilon < x < a+\varepsilon\}</script><p>Whether a sequence is convergent or divergent has nothing to do with the finite terms, because if a sequence is convergent, “when $n &gt; N$, there is $|x_n-a|&lt;\varepsilon$” means that all the terms from the $N+1$ order will be in the $\varepsilon$ neighborhood, that is to say $x_n \in O(a, \varepsilon), n &gt; N$.</p><p>Among the convergent sequences, the one whose limit is 0 is called <strong>infinitesimals</strong>.</p><h2 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h2><h3 id="Uniqueness"><a href="#Uniqueness" class="headerlink" title="Uniqueness"></a>Uniqueness</h3><p>The limit of a convergent sequence is unique.</p><script type="math/tex; mode=display">\text{if}\lim_{n \to \infty}x_n=a \\\lim_{n \to \infty}x_n=b \\\text{then} \a = b</script><h3 id="Boundedness"><a href="#Boundedness" class="headerlink" title="Boundedness"></a>Boundedness</h3><p>A convergent sequence must be bounded.</p><h3 id="Squeeze-Theorem"><a href="#Squeeze-Theorem" class="headerlink" title="Squeeze Theorem"></a>Squeeze Theorem</h3><p>For 3 sequence $\{x_n\}$,  $\{y_n\}$,  $\{z_n\}$ from a certain term there is</p><script type="math/tex; mode=display">x_n \leq y_n \leq z_n, n \ge N_0</script><p>and $\lim_{n \to \infty} x_n = \lim_{n \to \infty} z_n = a$, then</p><script type="math/tex; mode=display">\lim_{n \to \infty}y_n = a</script><h3 id="Arithmetic"><a href="#Arithmetic" class="headerlink" title="Arithmetic"></a>Arithmetic</h3><p>If $\lim_{n \to \infty}x_n=a$, $\lim_{n \to \infty}y_n=b$, then</p><script type="math/tex; mode=display">\begin{align*}&\lim_{n \to \infty}(\alpha x_n+\beta y_n)=\alpha a+\beta b \\&\lim_{n \to \infty}(x_ny_n)=ab \\&\lim_{n \to \infty}\frac{x_n}{y_n}=\frac{a}{b}\end{align*}</script><h1 id="Infinity"><a href="#Infinity" class="headerlink" title="Infinity"></a>Infinity</h1><h2 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h2><p>For any given $G&gt;0$, if $\exist$ positive integer $N$ such that when $n&gt;N$, $|x_n|&gt;G$, then call $\{x_n\}$ the infinity, denote as</p><script type="math/tex; mode=display">\lim_{n \to \infty}x_n=\infty</script><p>It can be $\lim_{n \to \infty}a_n=+\infty$ or $\lim_{n \to \infty}b_n=-\infty$.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This note contains basic knowledge of Limit and Continuity.&lt;/p&gt;
-&lt;h1 id=&quot;Limits-of-Sequences&quot;&gt;&lt;a href=&quot;#Limits-of-Sequences&quot; class=&quot;header
       
     
     </summary>
@@ -608,38 +641,6 @@
       <category term="English" scheme="http://yoursite.com/tags/English/"/>
     
       <category term="Vocabularies" scheme="http://yoursite.com/tags/Vocabularies/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSJ Collections</title>
-    <link href="http://yoursite.com/2019/01/22/WSJ/"/>
-    <id>http://yoursite.com/2019/01/22/WSJ/</id>
-    <published>2019-01-22T16:00:00.000Z</published>
-    <updated>2019-02-11T10:40:21.286Z</updated>
-    
-    <content type="html"><![CDATA[<p>This note contains some summaries of news from the Wall Street Journal. </p><h2 id="Stocks-Decline-as-Growth-Concerns-Resurface"><a href="#Stocks-Decline-as-Growth-Concerns-Resurface" class="headerlink" title="Stocks Decline as Growth Concerns Resurface"></a>Stocks Decline as Growth Concerns Resurface</h2><p>Date: Jan. 22, 2019; By Michael Wursthorn and Avantika Chilkoti</p><p>Points:</p><ul><li>The main index in US market fell down, seemly halting the recoveries.<ul><li>IMF reduced its forecast for global economic growth in 2019.</li><li>Chinese economy decelerate faster than expected, with growth at the slowest annual pace in 2018 since 1990.</li><li>FT said Trump administration turned down an offer hold preparatory trade talks with China, which was denied by officials.</li><li>US economy outlook was muddied by recent housing data, which showed existing-home sales fell in Dec. to the weakest level in more than 3 years.</li></ul></li></ul><p>Idiom &amp; Phrase &amp; Sentence:</p><ul><li>“We are <strong>in a positive, but slower, meandering path of growth</strong>,” <em>with US-China trade tensions, the continuing government shutdown and the overall impact on corporate profits all acting as wild cards for investors</em> that could <strong>drastically alter the investment landscape</strong>, He added.</li></ul><p>Links:<br><a href="https://www.wsj.com/articles/global-stocks-slip-as-economic-concerns-resurface-11548146958?mod=searchresults&amp;page=1&amp;pos=2" title="Stocks Decline as Growth Concerns Resurface" target="_blank" rel="noopener">Stocks Decline as Growth Concerns Resurface</a></p><h2 id="Scamming-Grandma-Financial-Abuse-of-Seniors-Hits-Record"><a href="#Scamming-Grandma-Financial-Abuse-of-Seniors-Hits-Record" class="headerlink" title="Scamming Grandma: Financial Abuse of Seniors Hits Record"></a>Scamming Grandma: Financial Abuse of Seniors Hits Record</h2><p>Date: Jan. 24, 2019; By Yuka Hayashi</p><p>Points:</p><ul><li>Cases of elder financial abuse was reported more than double the amount five years earlier.<ul><li>New law was enacted to prompt banks to address frauds and scams.</li><li>Bankers attribute a increase in social media use by the older for a surge in fraud cases targeting seniors.</li></ul></li></ul><p>Idiom &amp; Phrase &amp; Sentence:</p><ul><li><strong>Only later did he find out</strong> that there was no DUI and his grandson hadn’t been in an accident. </li><li>Besides the grandchild scam, there are romance or online dating schemes <strong>in which victims are deceived into online relationships</strong> before <strong>being swindled out of their savings</strong>.</li></ul><p>Links:<br><a href="https://www.wsj.com/articles/scamming-grandma-financial-abuse-of-seniors-hits-record-11548344907?mod=hp_lead_pos5" title="Scamming Grandma: Financial Abuse of Seniors Hits Record" target="_blank" rel="noopener">Scamming Grandma: Financial Abuse of Seniors Hits Record</a></p><h2 id="As-China-Trade-Talks-Begin-Trump-Faces-Pressure-to-Make-a-Deal"><a href="#As-China-Trade-Talks-Begin-Trump-Faces-Pressure-to-Make-a-Deal" class="headerlink" title="As China Trade Talks Begin, Trump Faces Pressure to Make a Deal"></a>As China Trade Talks Begin, Trump Faces Pressure to Make a Deal</h2><p>Date: Jan. 29, 2019; By Vivian Salama</p><p>Points:</p><ul><li>Recent: Trump gets pressure.<ul><li>Chinese tariffs imposed to counter U.S. levies have a negative impact on business groups and his staunchest supporters and constituencies.</li></ul></li><li>Background: Trump made a pledge.<ul><li>Trump are on a pledge to renegotiate trade deals with the aim of protecting American workers. If optimistic, it is a big victory and create real momentum across the globe.</li></ul></li><li>However: risk for Republicans, if it is failure.</li><li>Another source of pressure: <ul><li>Concerns that the fight drag on indefinitely</li></ul></li><li>Next: Talk will begin Wednesday and conclude Thursday.<ul><li>Talk aimed at staving off the plans of raising tariffs.</li><li>Two sides <strong>remain far apart</strong>, with Chinese little sign of a change.</li><li>China hawks and business groups are concerned that Trump seek a quick win.</li></ul></li></ul><p>Idiom &amp; Phrase &amp; Sentence:</p><p><strong><em>As stocks swooned</em></strong>, Mr. Trump anxiously called advisers both inside and outside the White House, seeking reassurances that his stance on China wasn’t <em>driving the selloff</em>.</p><p>Links:<br><a href="https://www.wsj.com/articles/as-china-trade-talks-begin-trump-faces-pressure-to-make-a-deal-11548808477" title="As China Trade Talks Begin, Trump Faces Pressure to Make a Deal" target="_blank" rel="noopener">As China Trade Talks Begin, Trump Faces Pressure to Make a Deal</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This note contains some summaries of news from the Wall Street Journal. &lt;/p&gt;
-&lt;h2 id=&quot;Stocks-Decline-as-Growth-Concerns-Resurface&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="Wall Street Journal" scheme="http://yoursite.com/categories/Languages/English/Wall-Street-Journal/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="WSJ" scheme="http://yoursite.com/tags/WSJ/"/>
     
   </entry>
   

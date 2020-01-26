@@ -6,21 +6,24 @@
     
 
     
-    <title>Tag: Database | Guangnan&#39;s Notes</title>
+    <title>SQL Keys | Guangnan&#39;s Notes</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Guangnan">
-<meta name="keywords" content="Guangnan">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Guangnan&#39;s Notes">
-<meta property="og:url" content="http://yoursite.com/tags/Database/index.html">
+        <meta name="keywords" content="MOOC,SQL,Database">
+    
+    <meta name="description" content="Key TerminologyThree Kinds of KeysPrimary key generally an integer autoincrement field, indicating the row.  Relationships that are based on matching string fields are less efficient than integers.">
+<meta name="keywords" content="MOOC,SQL,Database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL Keys">
+<meta property="og:url" content="http://yoursite.com/2020/01/25/SQL Keys/index.html">
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
-<meta property="og:description" content="Guangnan">
+<meta property="og:description" content="Key TerminologyThree Kinds of KeysPrimary key generally an integer autoincrement field, indicating the row.  Relationships that are based on matching string fields are less efficient than integers.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-26T19:05:36.153Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guangnan&#39;s Notes">
-<meta name="twitter:description" content="Guangnan">
+<meta name="twitter:title" content="SQL Keys">
+<meta name="twitter:description" content="Key TerminologyThree Kinds of KeysPrimary key generally an integer autoincrement field, indicating the row.  Relationships that are based on matching string fields are less efficient than integers.">
     
 
     
@@ -135,89 +138,200 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>Database</em>
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/SQL/">SQL</a>
     </h1>
 </div>
 
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-SQL Keys" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2020" class="archive-year"><i class="icon fa fa-calendar-o"></i>2020</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a>
-            </div>
-            <div class="date"><time datetime="2020-01-25T05:00:00.000Z" itemprop="datePublished">2020-01-25</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2020/01/25/SQL Keys/">SQL Keys</a>
+        SQL Keys
         </h1>
     
 
-        <p class="article-excerpt">
-            Key TerminologyThree Kinds of KeysPrimary key
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/01/25/SQL Keys/" class="article-date">
+            <time datetime="2020-01-25T05:00:00.000Z" itemprop="datePublished">2020-01-25</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Database/">Database</a>, <a class="tag-link" href="/tags/MOOC/">MOOC</a>, <a class="tag-link" href="/tags/SQL/">SQL</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Key-Terminology"><a href="#Key-Terminology" class="headerlink" title="Key Terminology"></a>Key Terminology</h1><h2 id="Three-Kinds-of-Keys"><a href="#Three-Kinds-of-Keys" class="headerlink" title="Three Kinds of Keys"></a>Three Kinds of Keys</h2><h3 id="Primary-key"><a href="#Primary-key" class="headerlink" title="Primary key"></a>Primary key</h3><ul>
+<li><p>generally an integer autoincrement field, indicating the row.</p>
+</li>
+<li><p>Relationships that are based on matching string fields are less efficient than integers.</p>
+</li>
+</ul>
+<h3 id="Logical-key"><a href="#Logical-key" class="headerlink" title="Logical key"></a>Logical key</h3><ul>
+<li>what the outside world uses for lookup.</li>
+<li><strong>Never use your logical key as the primary key</strong>.</li>
+<li>Logical keys can and do change, albeit slowly.</li>
+</ul>
+<h3 id="Foreign-key"><a href="#Foreign-key" class="headerlink" title="Foreign key"></a>Foreign key</h3><ul>
+<li>A foreign key is when a table has a column containing a key that points to the primary key of another table.</li>
+</ul>
+<h1 id="One-to-Many-Many-to-One"><a href="#One-to-Many-Many-to-One" class="headerlink" title="One to Many / Many to One"></a>One to Many / Many to One</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE Music DEFAULT CHARACTER SET utf8;</span><br><span class="line"></span><br><span class="line">USE Music;</span><br><span class="line"></span><br><span class="line">CREATE TABLE Artist (</span><br><span class="line">  artist_id INTEGER NOT NULL AUTO_INCREMENT,</span><br><span class="line">  name VARCHAR(255),</span><br><span class="line">  PRIMARY KEY(artist_id)</span><br><span class="line">) ENGINE = InnoDB;</span><br><span class="line"></span><br><span class="line">CREATE TABLE Album (</span><br><span class="line">  album_id INTEGER NOT NULL AUTO_INCREMENT,</span><br><span class="line">  title VARCHAR(255),</span><br><span class="line">  artist_id INTEGER,</span><br><span class="line"></span><br><span class="line">  PRIMARY KEY(album_id),</span><br><span class="line">  INDEX USING BTREE (title),</span><br><span class="line"></span><br><span class="line">  CONSTRAINT FOREIGN KEY (artist_id)</span><br><span class="line">    REFERENCES Artist (artist_id)</span><br><span class="line">    ON DELETE CASCADE ON UPDATE CASCADE</span><br><span class="line">) ENGINE = InnoDB;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">CREATE TABLE Genre (</span><br><span class="line">  genre_id INTEGER NOT NULL AUTO_INCREMENT,</span><br><span class="line">  name VARCHAR(255),</span><br><span class="line">  PRIMARY KEY(genre_id)</span><br><span class="line">) ENGINE = InnoDB;</span><br><span class="line"></span><br><span class="line">CREATE TABLE Track (</span><br><span class="line">  track_id INTEGER NOT NULL AUTO_INCREMENT,</span><br><span class="line">  title VARCHAR(255),</span><br><span class="line">  len INTEGER,</span><br><span class="line">  rating INTEGER,</span><br><span class="line">  count INTEGER,</span><br><span class="line">  album_id INTEGER,</span><br><span class="line">  genre_id INTEGER,</span><br><span class="line"></span><br><span class="line">  PRIMARY KEY(track_id),</span><br><span class="line">  INDEX USING BTREE (title),</span><br><span class="line"></span><br><span class="line">  CONSTRAINT FOREIGN KEY (album_id) REFERENCES Album (album_id)</span><br><span class="line">    ON DELETE CASCADE ON UPDATE CASCADE,</span><br><span class="line">  CONSTRAINT FOREIGN KEY (genre_id) REFERENCES Genre (genre_id)</span><br><span class="line">    ON DELETE CASCADE ON UPDATE CASCADE</span><br><span class="line">) ENGINE = InnoDB;</span><br></pre></td></tr></table></figure>
+<h2 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h2><p>The JOIN operation links across several tables as part of a SELECT operation;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT Album.title, Artist.name FROM Album JOIN Artist ON;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>You must tell the JOIN how to use the keys that make the connection between the tables <strong>using an ON clause</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT Album.title, Album.artist_id, Artist.artist_id,Artist.name</span><br><span class="line">FROM Album JOIN Artist ON Album.artist_id = Artist.artist_id</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Joining two tables <strong>without an ON clause</strong> gives all possible combinations of rows</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT Track.title, Track.genre_id, Genre.genre_id, Genre.name FROM Track JOIN Genre</span><br></pre></td></tr></table></figure>
+<h2 id="Get-more-complex"><a href="#Get-more-complex" class="headerlink" title="Get more complex"></a>Get more complex</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT Track.title, Genre.name FROM Track JOIN Genre ON Track.genre_id = Genre.genre_id</span><br><span class="line"></span><br><span class="line">SELECT Track.title, Artist.name, Album.title, Genre.name FROM Track JOIN Genre JOIN Album JOIN Artist ON Track.genre_id = Genre.genre_id AND Track.album_id = Album.album_id AND Album.artist_id = Artist.artist_id</span><br></pre></td></tr></table></figure>
+<h2 id="ON-DELETE-CASCADE"><a href="#ON-DELETE-CASCADE" class="headerlink" title="ON DELETE CASCADE"></a>ON DELETE CASCADE</h2><ul>
+<li>Default / Restrict - Don’t allow changes that break the constraint</li>
+<li>CASCADE – Adjust child rows by removing or updating to maintain consistency</li>
+<li>SET NULL – Set the foreign key columns in the child rows to null</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DELETE FROM Genre WHERE name = &apos;Metal&apos;</span><br></pre></td></tr></table></figure>
+<h1 id="Many-to-Many-Relationships"><a href="#Many-to-Many-Relationships" class="headerlink" title="Many to Many Relationships"></a>Many to Many Relationships</h1><ul>
+<li>Sometimes we need to model a relationship that is many to many.</li>
+<li>We need to add a “connection” table with two foreign keys.</li>
+<li>There is usually no separate primary key</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE User (</span><br><span class="line">user_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,</span><br><span class="line">email VARCHAR(128) UNIQUE,</span><br><span class="line">name VARCHAR(128)</span><br><span class="line">) ENGINE=InnoDB CHARACTER SET=utf8;</span><br><span class="line"></span><br><span class="line">CREATE TABLE Course (</span><br><span class="line">course_id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,</span><br><span class="line">title VARCHAR(128) UNIQUE</span><br><span class="line">) ENGINE=InnoDB CHARACTER SET=utf8;</span><br></pre></td></tr></table></figure>
+<h2 id="Combination-Keys"><a href="#Combination-Keys" class="headerlink" title="Combination Keys"></a>Combination Keys</h2><ul>
+<li>Combination key is unique</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE Member (</span><br><span class="line">user_id INTEGER,</span><br><span class="line">course_id INTEGER,</span><br><span class="line">role INTEGER,</span><br><span class="line">CONSTRAINT FOREIGN KEY (user_id) REFERENCES User (user_id)</span><br><span class="line">ON DELETE CASCADE ON UPDATE CASCADE,</span><br><span class="line">CONSTRAINT FOREIGN KEY (course_id) REFERENCES Course (course_id)</span><br><span class="line">ON DELETE CASCADE ON UPDATE CASCADE,</span><br><span class="line">PRIMARY KEY (user_id, course_id)</span><br><span class="line">) ENGINE=InnoDB CHARACTER SET=utf8;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Insert contents:</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">User</span> (<span class="keyword">name</span>, email) <span class="keyword">VALUES</span> (<span class="string">'Jane'</span>, <span class="string">'jane@tsugi.org'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">User</span> (<span class="keyword">name</span>, email) <span class="keyword">VALUES</span> (<span class="string">'Ed'</span>, <span class="string">'ed@tsugi.org'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">User</span> (<span class="keyword">name</span>, email) <span class="keyword">VALUES</span> (<span class="string">'Sue'</span>, <span class="string">'sue@tsugi.org'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course (title) <span class="keyword">VALUES</span> (<span class="string">'Python'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course (title) <span class="keyword">VALUES</span> (<span class="string">'SQL'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Course (title) <span class="keyword">VALUES</span> (<span class="string">'PHP'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">3</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">Member</span> (user_id, course_id, <span class="keyword">role</span>) <span class="keyword">VALUES</span> (<span class="number">3</span>, <span class="number">3</span>, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Select rows you want: </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT User.name, Member.role, Course.title</span><br><span class="line">FROM User JOIN Member JOIN Course</span><br><span class="line">ON Member.user_id = User.user_id AND</span><br><span class="line">Member.course_id = Course.course_id</span><br><span class="line">ORDER BY Course.title, Member.role DESC, User.name</span><br></pre></td></tr></table></figure>
+<h1 id="Complexity-Enables-Speeds"><a href="#Complexity-Enables-Speeds" class="headerlink" title="Complexity Enables Speeds"></a>Complexity Enables Speeds</h1><ul>
+<li>Complexity makes speed possible and allows you to get very fast results as the data size grows.</li>
+<li>By normalizing the data and linking it with integer keys, the overall amount of data which the relational database must scan is far lower than if the data were simply flattened out.</li>
+<li>It might seem like a tradeoff - spend some time designing your database so it continues to be fast when your application is a success.</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "SQL Keys",
+        "image": "http://yoursite.com",
+        "keywords": "MOOC SQL Database",
+        "genre": "Computer Science Programming SQL",
+        "datePublished": "2020-01-25",
+        "dateCreated": "2020-01-25",
+        "dateModified": "2020-01-26",
+        "url": "http://yoursite.com/2020/01/25/SQL Keys/",
+        "description": "Key TerminologyThree Kinds of KeysPrimary key
 generally an integer autoincrement field, indicating the row.
 
 Relationships that are based on matching string fields are less efficient than integers.
 
 
+"
+        "wordCount": 1064
+    }
+</script>
 
-        </p>
-    </div>
 </article>
-    
 
+    <section id="comments">
     
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Computer-Science/Programming/">Programming</a>
-            </div>
-            <div class="date"><time datetime="2020-01-24T05:00:00.000Z" itemprop="datePublished">2020-01-24</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2020/01/24/SQL Basics/">SQL Basic</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Basic SyntaxCREATE12345678CREATE People CREATE TABLE Users(name VARCHAR(128),email VARCHAR(128));DESCRIBE People;
-DROP1DROP TABLE Users;
-INSERT INTO12345INSERT INTO Users (name, email) VALUES (&apos;C
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
-
-    </div></section>
+    
+    </section>
 
 
 
@@ -263,6 +377,19 @@ INSERT INTO12345INSERT INTO Users (name, email) VALUES (&apos;C
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/01/24/SQL Basics/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">SQL Basic</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -399,11 +526,13 @@ INSERT INTO12345INSERT INTO Users (name, email) VALUES (&apos;C
     var disqus_shortname = 'guest';
     
     
+    var disqus_url = 'http://yoursite.com/2020/01/25/SQL Keys/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

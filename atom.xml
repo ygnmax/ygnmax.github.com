@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-01-27T15:51:17.021Z</updated>
+  <updated>2020-01-28T18:56:13.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Summary of Asset Pricing Papers</title>
-    <link href="http://yoursite.com/2020/01/27/Summary%20of%20Asset%20Pricing%20Papers/"/>
-    <id>http://yoursite.com/2020/01/27/Summary of Asset Pricing Papers/</id>
-    <published>2020-01-27T05:00:00.000Z</published>
-    <updated>2020-01-27T15:51:17.021Z</updated>
+    <title>Summary of Monetary Papers</title>
+    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Monetary%20Papers/"/>
+    <id>http://yoursite.com/2020/01/28/Summary of Monetary Papers/</id>
+    <published>2020-01-28T05:00:00.000Z</published>
+    <updated>2020-01-28T18:56:13.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Asset-Pricing"><a href="#Asset-Pricing" class="headerlink" title="Asset Pricing"></a>Asset Pricing</h1><h2 id="Taming-the-Factor-Zoo-A-Test-of-New-Factors"><a href="#Taming-the-Factor-Zoo-A-Test-of-New-Factors" class="headerlink" title="Taming the Factor Zoo: A Test of New Factors"></a>Taming the Factor Zoo: A Test of New Factors</h2><p>24 January 2020<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12883" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12883</a><br>We propose a model selection method to systematically evaluate the contribution to asset pricing of any new factor, above and beyond what a high‐dimensional set of existing factors explains. </p><h2 id="High‐Frequency-Trading-and-Market-Performance"><a href="#High‐Frequency-Trading-and-Market-Performance" class="headerlink" title="High‐Frequency Trading and Market Performance"></a>High‐Frequency Trading and Market Performance</h2><p>23 January 2020<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12882" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12882</a><br>We study the consequences of, and potential policy responses to, high‐frequency trading (HFT) via the <strong>tradeoff between liquidity and information production</strong>. Faster speeds facilitate HFT, with consequences for this tradeoff: </p><ul><li>information production decreases because informed traders have less time to trade before HFTs react, </li><li>but liquidity (measured by the bid‐ask spread) improves because informational asymmetries decline.</li><li>HFT also pushes outcomes inside the frontier of this tradeoff. However, outcomes can be restored to the frontier by replacing the limit order book with one of two alternative mechanisms: <ul><li>delaying all orders except cancellations or </li><li>implementing frequent batch auctions.</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Monetary-Policy"><a href="#Monetary-Policy" class="headerlink" title="Monetary Policy"></a>Monetary Policy</h1><h2 id="Optimal-Monetary-Policy-with-Informational-Frictions"><a href="#Optimal-Monetary-Policy-with-Informational-Frictions" class="headerlink" title="Optimal Monetary Policy with Informational Frictions"></a>Optimal Monetary Policy with Informational Frictions</h2><p>28 January 2020 from JPE<br><a href="https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf" target="_blank" rel="noopener">https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf</a><br>We study optimal policy in a business-cycle setting in which firms hold dispersed private information about, or are rationally inattentive to, the state of the economy. The informational friction is the source of both nominal and real rigidity. </p><ul><li>Because of the latter, the optimal monetary policy does not target price stability. Instead, it targets a negative relation between the nominal price level and real economic activity. </li><li>Such leaning against the wind helps maximize production efficiency. An additional contribution is the adaptation of the primal approach of the Ramsey literature to a flexible form of informational friction.</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Asset-Pricing&quot;&gt;&lt;a href=&quot;#Asset-Pricing&quot; class=&quot;headerlink&quot; title=&quot;Asset Pricing&quot;&gt;&lt;/a&gt;Asset Pricing&lt;/h1&gt;&lt;h2 id=&quot;Taming-the-Factor-Zoo
+        &lt;h1 id=&quot;Monetary-Policy&quot;&gt;&lt;a href=&quot;#Monetary-Policy&quot; class=&quot;headerlink&quot; title=&quot;Monetary Policy&quot;&gt;&lt;/a&gt;Monetary Policy&lt;/h1&gt;&lt;h2 id=&quot;Optimal-Monet
       
     
     </summary>
@@ -38,12 +38,14 @@
     
       <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
     
-      <category term="Asset pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-pricing/"/>
+      <category term="Monetary" scheme="http://yoursite.com/categories/Economics/Literature-Review/Monetary/"/>
     
     
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+      <category term="Macroeconomics" scheme="http://yoursite.com/tags/Macroeconomics/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+      <category term="Monetary" scheme="http://yoursite.com/tags/Monetary/"/>
     
   </entry>
   
@@ -75,6 +77,68 @@
       <category term="Vim" scheme="http://yoursite.com/tags/Vim/"/>
     
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Summary of Asset Pricing Papers</title>
+    <link href="http://yoursite.com/2020/01/27/Summary%20of%20Asset%20Pricing%20Papers/"/>
+    <id>http://yoursite.com/2020/01/27/Summary of Asset Pricing Papers/</id>
+    <published>2020-01-27T05:00:00.000Z</published>
+    <updated>2020-01-28T19:14:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Equity"><a href="#Equity" class="headerlink" title="Equity"></a>Equity</h1><h2 id="Taming-the-Factor-Zoo-A-Test-of-New-Factors"><a href="#Taming-the-Factor-Zoo-A-Test-of-New-Factors" class="headerlink" title="Taming the Factor Zoo: A Test of New Factors"></a>Taming the Factor Zoo: A Test of New Factors</h2><p>24 January 2020 from JF<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12883" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12883</a><br>We propose a model selection method to systematically evaluate the contribution to asset pricing of any new factor, above and beyond what a high‐dimensional set of existing factors explains. </p><ul><li>Our methodology accounts for <strong>model selection mistakes</strong> that produce a bias due to omitted variables, unlike standard approaches that assume perfect variable selection. </li><li>We apply our procedure to a set of factors recently discovered in the literature. While <strong>most of these new factors are shown to be redundant</strong> relative to the existing factors, <strong>a few have statistically significant explanatory power</strong> beyond the hundreds of factors proposed in the past.</li></ul><h2 id="Stock-Return-Asymmetry-Beyond-Skewness"><a href="#Stock-Return-Asymmetry-Beyond-Skewness" class="headerlink" title="Stock Return Asymmetry: Beyond Skewness"></a>Stock Return Asymmetry: Beyond Skewness</h2><p>28 January 2020 form JFQA<br><a href="https://dx.doi.org/10.1017/S0022109019000206?urlappend=%3Fsource%3Drss&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://dx.doi.org/10.1017/S0022109019000206?urlappend=%3Fsource%3Drss&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We propose two asymmetry measures for stock returns. Unlike the popular skewness measure, our measures are based on the distribution function of the data rather than just the third central moment. </p><ul><li>We present empirical evidence that the greater upside asymmetries calculated using our new measures imply lower average returns in the cross section of stocks.</li><li>In contrast, when using the skewness measure, the relationship between asymmetry and returns is inconclusive.</li></ul><h2 id="Googling-Investor-Sentiment-around-the-World"><a href="#Googling-Investor-Sentiment-around-the-World" class="headerlink" title="Googling Investor Sentiment around the World"></a>Googling Investor Sentiment around the World</h2><p>28 January 2020 from JFQA<br><a href="http://pdfs.semanticscholar.org/d881/c405d186d0f15c22c258555f024f03401cf7.pdf" target="_blank" rel="noopener">http://pdfs.semanticscholar.org/d881/c405d186d0f15c22c258555f024f03401cf7.pdf</a><br>We study <strong>how investor sentiment affects stock prices</strong> around the world. Relying on households’ Google search behavior, we construct a <strong>weekly measure of sentiment for 38 countries during 2004–2014</strong>. We validate the sentiment index in tests using sports outcomes</p><ul><li>the sentiment measure is a contrarian predictor of country-level market returns. </li><li>Furthermore, we document an important role of global sentiment in stock markets.</li></ul><h1 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h1><h2 id="Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times"><a href="#Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times" class="headerlink" title="Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times"></a>Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times</h2><p>28 January 2020 from JFQA<br><a href="http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf" target="_blank" rel="noopener">http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf</a><br>We provide <strong>a new framework for valuing multidimensional real options</strong> where opportunities to exercise the option are generated by an exogenous Poisson process, which can be viewed as a liquidity constraint on decision times. This approach, which we call the Poisson optional stopping times (POST) method, finds the value function as a monotone sequence of lower bounds. </p><ul><li>In a case study, we demonstrate that the frequently used quasi-analytic method yields a suboptimal policy and an inaccurate value function. </li><li>The proposed method is demonstrably correct, straightforward to implement, reliable in computation, and broadly applicable in analyzing multidimensional option-valuation problems.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Equity&quot;&gt;&lt;a href=&quot;#Equity&quot; class=&quot;headerlink&quot; title=&quot;Equity&quot;&gt;&lt;/a&gt;Equity&lt;/h1&gt;&lt;h2 id=&quot;Taming-the-Factor-Zoo-A-Test-of-New-Factors&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Asset pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-pricing/"/>
+    
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Summary of Financial Market Papers</title>
+    <link href="http://yoursite.com/2020/01/27/Summary%20of%20Financial%20Market%20Papers/"/>
+    <id>http://yoursite.com/2020/01/27/Summary of Financial Market Papers/</id>
+    <published>2020-01-27T05:00:00.000Z</published>
+    <updated>2020-01-28T23:35:03.826Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="High-Frequency-Trading"><a href="#High-Frequency-Trading" class="headerlink" title="High-Frequency Trading"></a>High-Frequency Trading</h1><h2 id="High‐Frequency-Trading-and-Market-Performance"><a href="#High‐Frequency-Trading-and-Market-Performance" class="headerlink" title="High‐Frequency Trading and Market Performance"></a>High‐Frequency Trading and Market Performance</h2><p>23 January 2020 from JF<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12882" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12882</a><br>We study the consequences of, and potential policy responses to, high‐frequency trading (HFT) via the <strong>tradeoff between liquidity and information production</strong>. Faster speeds facilitate HFT, with consequences for this tradeoff: </p><ul><li>information production decreases because informed traders have less time to trade before HFTs react, </li><li>but liquidity (measured by the bid‐ask spread) improves because informational asymmetries decline.</li><li>HFT also pushes outcomes inside the frontier of this tradeoff. However, outcomes can be restored to the frontier by replacing the limit order book with one of two alternative mechanisms: <ul><li>delaying all orders except cancellations or </li><li>implementing frequent batch auctions.</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;High-Frequency-Trading&quot;&gt;&lt;a href=&quot;#High-Frequency-Trading&quot; class=&quot;headerlink&quot; title=&quot;High-Frequency Trading&quot;&gt;&lt;/a&gt;High-Frequency Tradi
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Financial Market" scheme="http://yoursite.com/categories/Economics/Literature-Review/Financial-Market/"/>
+    
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+      <category term="Financial Market" scheme="http://yoursite.com/tags/Financial-Market/"/>
     
   </entry>
   
@@ -587,65 +651,6 @@
       <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
     
       <category term="Stochastic" scheme="http://yoursite.com/tags/Stochastic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Random Variables and Distribution</title>
-    <link href="http://yoursite.com/2019/02/14/Random%20Variables%20and%20Distribution/"/>
-    <id>http://yoursite.com/2019/02/14/Random Variables and Distribution/</id>
-    <published>2019-02-14T05:00:00.000Z</published>
-    <updated>2019-08-13T02:35:39.878Z</updated>
-    
-    <content type="html"><![CDATA[<p>This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covariance, and other characteristic values. Except the covariance, other conceptions are about one random variable.</p><h1 id="Random-Variables-and-Distribution"><a href="#Random-Variables-and-Distribution" class="headerlink" title="Random Variables and Distribution"></a>Random Variables and Distribution</h1><h2 id="Random-Variables"><a href="#Random-Variables" class="headerlink" title="Random Variables"></a>Random Variables</h2><p>Numerical quantities whose values are determined by the outcome of the experiment are known as <em>random variables</em>. Hence, we can assign probabilities to their possible values. The set of this probabilities is <em>distribution</em>.</p><p>In fact, random variables can be <em>discrete</em> or <em>continuous</em>. The possible values of <strong><em>discrete random variables</em></strong> constituted sets of discrete values, whereas <strong><em>continuous random variables</em></strong> whose set of possible values is instead a continuous region can take on any value within some interval.</p><p>Actually, the distribution differs random variables from general variables in calculus. A random variable must have its own distribution.</p><h2 id="Distribution"><a href="#Distribution" class="headerlink" title="Distribution"></a>Distribution</h2><p>For discrete variables, the distribution is a sequence form. If $X$ is a discrete random variable whose possible values are $x_1, x_2,…,x_n$, then the set of probabilities $P\{X=x_j\}$$(j=1,…,n)$ is called the <em>probability distribution of discrete random variable</em>. Since $X$ must assume one of these values, it follows that</p><script type="math/tex; mode=display">\begin{equation*}\displaystyle{\sum_{j=1}^{n}}~P\{X = x_j\} = 1.\end{equation*}</script><p>For continuous variables, the distribution is a function form. Every continuous random variable $X$ has a function $f$ associated with it. This function $f$ is called the <em>probability density function</em> of $X$. For any numbers $a&lt;b$, the area under $f$ between $a$ and $b$ is equal to the probability that $X$ assumes a value between $a$ and $b$.</p><script type="math/tex; mode=display">P\{a \leq X \leq b \} = area ~ under ~ f ~ between ~ a ~ and ~ b</script><h2 id="Distribution-Function"><a href="#Distribution-Function" class="headerlink" title="Distribution Function"></a>Distribution Function</h2><p>If $X$ is a random variable, for any real number x, we define</p><script type="math/tex; mode=display">F(x) = P(X \leq x)</script><p>as the <strong>distribution function</strong> of random variable $X$, which is also called $X$ is denoted by $F(x)$, or $X \sim F(x)$. Sometimes, $F_{X}(x)$ is the same meaning. Sometimes it is also called <strong>cumulative distribution function</strong>(<strong>CDF</strong>).</p><p>Any random variable has its own distribution function, no matter it is discrete or continuous. And here are three fundamental properties.</p><ul><li><p>monotonicity</p><p>$F(x)$ is a monotonic and  nondecreasing function on the $(-\infty, \infty)$. that is to say, for any $x_1&lt;x_2$,</p><script type="math/tex; mode=display">F(x_1) \leq F(x_2)</script></li><li><p>boundedness</p><p>For any $x$, $0 \leq F(x) \leq 1$, and</p><script type="math/tex; mode=display">\begin{align*}F(-\infty)=\lim_{x \to -\infty}F(x)=0 \\F(\infty)=\lim_{x \to \infty}F(x)=1\end{align*}</script></li><li><p>right continuity</p><p>$F(x)$ is the right-continuous function of $x$, that is to say, for any $x_0$,</p><script type="math/tex; mode=display">\lim_{x \to x_0}F(x)=F(x_0) \\F(x_0+0)=F(x_0)</script></li></ul><p>These three fundamental properties are necessary and sufficient conditions whether a function is a distribution function.</p><h2 id="Mass-amp-Density-Function"><a href="#Mass-amp-Density-Function" class="headerlink" title="Mass &amp; Density Function"></a>Mass &amp; Density Function</h2><p>For a discrete random variable $X$, the probability can be values like $x_1, x_2,…,x_n,…$, then the probability of $X$ equals $x_i$:</p><script type="math/tex; mode=display">p_i = p_i(x_i)=P(X=x_i),~~i=1,2,...,n,...</script><p>is called the sequence of probability distribution, or the <strong>probability mass function</strong> of $X$. The abbreviation is <strong>PMF</strong>. </p><p>And the cumulative distribution function of $X​$ is:</p><script type="math/tex; mode=display">F(x)=\sum_{x_i \leq x}p(x_i)</script><p>For a continuous random variable $X$, the cumulative distribution function of is $F(x)$, if $\exists$ a nonnegative integrable function $p(x)$, such that for any real number $x$,</p><script type="math/tex; mode=display">F(x)=\int_{-\infty}^{x}p(t)dt</script><p>then $p(x)$ is called the <strong>probability density function</strong> of $X$, sometimes the a shorter name is <strong>density</strong> or <strong>PDF</strong>.</p><p>And here are two fundamental properties to determine whether a function is a probability density function or not.</p><ul><li>non-negativity</li></ul><script type="math/tex; mode=display">p(x) \geq 0</script><ul><li>regularity</li></ul><script type="math/tex; mode=display">\int_{-\infty}^{\infty}p(x)dx=1</script><h1 id="Expected-Values"><a href="#Expected-Values" class="headerlink" title="Expected Values"></a>Expected Values</h1><p>If X is a random variable whose possible values are $x_1, x_2,…,x_n​$, then the expected value of $X​$, denoted by $E[X]​$, is defined by</p><script type="math/tex; mode=display">\begin{equation*}E[X] = \displaystyle{\sum_{j=1}^{n}}~{x_j}P\{X = x_j\}\end{equation*}</script><p>$E[X]​$ also has alternative names: <em>expectation</em> or the <em>mean</em> of $X​$. It is a kind of weighted average of possible values of $X​$, where the weight given to a value is equal to the probability that $X​$ assumes that value.</p><p>Actually we can define it more accurately. For an infinite sequence of discrete random variables $p(x_i)=P(X=x_i), i=1,2,…,n,…$, if </p><script type="math/tex; mode=display">\sum_{i=1}^{\infty}|x_i|p(x_i)<\infty</script><p>then</p><script type="math/tex; mode=display">E(x)=\sum_{i=1}^{\infty}x_ip(x_i)</script><p>is called the <strong>expected values</strong>. If $\sum_{i=1}^{\infty}|x_i|p(x_i)$ is not convergent, then the expected values of $X​$ is not existent.</p><p>For continuous random variables $X$, its density function is $p(x)$. If</p><script type="math/tex; mode=display">\int_{-\infty}^{\infty}|x|p(x)dx<\infty</script><p>then</p><script type="math/tex; mode=display">E(X)=\int_{-\infty}^{\infty}xp(x)dx</script><p>is called the <strong>expected values</strong>. If $\int_{-\infty}^{\infty}|x|p(x)dx$ is not convergent, then the expected values of $X$ is not existent.</p><p>If PMF or PDF of a random variable $X$ is $p(x_i)$ or $p(x)$, then the expected value of a function $g(X)$ of $X$ is:</p><script type="math/tex; mode=display">E[g(X)]= \left\{\begin{align*}&\sum_{i}g(x_i)p(x_i) ~~~ &\text{for discrete } \\&\int_{-\infty}^{\infty}g(x)p(x)dx ~~~ &\text{for continuous}\end{align*}\right.</script><p>Here are some attributes of expectation. The first one is the linear attribute, which means that, for constants $a$ and $b$,</p><script type="math/tex; mode=display">E[aX+b]=aE[X]+b</script><p>To verify it, let $Y = aX + b​$. Since $Y = ax_j + b​$ when $ X = x_j ​$, it follows that</p><script type="math/tex; mode=display">\begin{align*}E[Y] &= \sum_{j=1}^{n} (ax_j + b) P\{X = x_j\} \\     &= \sum_{j=1}^{n}  ax_j P\{X = x_j\} ~ + ~ \sum_{j=1}^{n}b P\{X = x_j\} \\     &= a\sum_{j=1}^{n}  x_j P\{X = x_j\} ~ + ~ b\sum_{j=1}^{n} P\{X = x_j\} \\     &= aE[X] + b\end{align*}</script><p>And similarly, for random variables $X_1, …, X_k$,</p><script type="math/tex; mode=display">E\left[\sum_{j=1}^{k} X_j \right] = \sum_{j=1}^{k}E[X_j]</script><p>If $X$ and $Y$ are independent, then</p><script type="math/tex; mode=display">E[g(X)h(Y)]=E[g(X)]E[h(Y)]</script><h1 id="Variance"><a href="#Variance" class="headerlink" title="Variance"></a>Variance</h1><p>The <em>variance</em> of $X$, denoted by $Var(X)$, which measure the spread of a random variable, is defined by</p><script type="math/tex; mode=display">\begin{align*}Var(X) &= E[(X - E(X))^2] \\       &= E[X^2]-E[X]^2\end{align*}</script><p>If a and b are constants, then </p><script type="math/tex; mode=display">\begin{align*}Var(aX+b) &= E[(aX+b- E[aX+b])^2] \\          &= E[(aX - aE[X])^2] \\          &= E[a^2(X-E[X])^2] \\          &= a^2Var(X)\end{align*}</script><p>And if the <strong><em>random variables are independent</em></strong>, the variance of the sum of random variables is equal to the sum of their variances ($X_1,…X_k$ are <em>independent random variables</em>)</p><script type="math/tex; mode=display">Var\left(\sum_{j=1}^{k} X_j \right) = \sum_{j=1}^{k} Var(X_j)</script><p>The square root of the variance is called the <em>standard deviation</em>. A random variable tend s to lie within a few standard deviations of its expected value.</p><h1 id="Covariance"><a href="#Covariance" class="headerlink" title="Covariance"></a>Covariance</h1><p>The covariance of any two random variables $X$ and $Y$, denoted by $Cov(X,Y)$, is defined by</p><script type="math/tex; mode=display">\begin{align*}Cov(X,Y) &= E[(X-E[X])(Y-E[Y])] \\         &= E[XY-YE[X]-XE[Y]+E[X]E[Y]] \\         &= E[XY]-E[Y]E[X]-E[X]E[Y]+E[X]E[Y \\         &= E[XY]-E[X]E[Y]\end{align*}</script><p>A positive value of the covariance indicates that X and Y both tend to be large at the same time, whereas a negative value indicates that when one is large the other tends to be small. Independent random variables have covariance equal to 0. </p><p>The following are some useful properties of covariance. For random variables $X$ and $Y$, and constant $c$:</p><script type="math/tex; mode=display">\begin{align*}Cov(X,Y) &= Cov(Y,X) \\Cov(X,X) &= Var(X) \\Cov(cX,Y) &= c~Cov(X,Y) \\Cov(c, Y) &= 0\end{align*}</script><p>Covariance also satisfies a linearity property, namely,</p><script type="math/tex; mode=display">\begin{align*}Cov(X_1+X_2,Y) = Cov(X_1,Y)+Cov(X_2,Y)\end{align*}</script><p>which is easily generalized to yield the following identity:</p><script type="math/tex; mode=display">Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{m}Y_j \right) = \sum_{i=1}^{n}\sum_{j=1}^{m}Cov(X_i,Y_j)</script><p>This yields a useful formula for <strong>the variance of the sum of random variables</strong>:</p><script type="math/tex; mode=display">\begin{align*}Var\left(\sum_{i=1}^{n} X_i \right) &= Cov\left( \sum_{i=1}^{n} X_i, \sum_{j=1}^{n}X_j \right) \\&= \sum_{i=1}^{n}\sum_{j=1}^{n}Cov(X_i,X_j) \\&= \sum_{i=1}^{n}Cov(X_i,X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j) \\&= \sum_{i=1}^{n}Var(X_i)+\sum_{i=1}^{n}\sum_{j \neq i}Cov(X_i,X_j)\end{align*}</script><p>The degree to which large values of $X$ tend to be associated with large values of $Y$ is measured by the <em>correlation</em> between $X$ and $Y$, denoted as $\rho(X,Y)$ and defined by</p><script type="math/tex; mode=display">\rho(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}}</script><p>It can be shown that</p><script type="math/tex; mode=display">-1 \le \rho(X, Y) \le 1</script><p>If X and Y are linearly related by the equation $Y = a + bX$ , then $\rho(X,Y)$ will equal 1 when $b$ is positive and -1 when $b$ is negative.</p><h1 id="Coefficient-of-Variation"><a href="#Coefficient-of-Variation" class="headerlink" title="Coefficient of Variation"></a>Coefficient of Variation</h1><p>Provided the 2-order moment of $X$ exists, then</p><script type="math/tex; mode=display">C_{v}(X)=\frac{\sqrt{Var(X)}}{E(X)}=\frac{\sigma(X)}{E(X)}</script><p>is called the <strong>coefficient of variation</strong> of $X$.</p><h1 id="Quantile"><a href="#Quantile" class="headerlink" title="Quantile"></a>Quantile</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, for $\forall ~ p \in (0,1)$, then call the $x_p$ which satisfies</p><script type="math/tex; mode=display">F(x_p)=\int_{-\infty}^{x_p}p(x)dx=p</script><p>is the <strong>$p$ quantile</strong> of this distribution, also the <strong>lower $p$ quantile</strong>.  In fact, the left area of the density function which is divided into two part by the $x_p$ equals exactly $p$. Similarly, if $x’_p$ satisfies</p><script type="math/tex; mode=display">1-F(x'_p)=\int_{x'_p}^{\infty}p(x)dx=p</script><p>it is called the <strong>higher $p$ quantile</strong>. They have such a relationship:</p><script type="math/tex; mode=display">x'_p=x_{1-p} \\x_p=x'_{1-p}</script><h1 id="K-Order-Moment"><a href="#K-Order-Moment" class="headerlink" title="K-Order Moment"></a>K-Order Moment</h1><p>Considering a random variable $X$, $k$ is a positive integer, if the expected values below both exist, then</p><script type="math/tex; mode=display">\mu_{k}=E(X^k)</script><p>is called <strong>$k​$-order origin moment of $X​$</strong>.</p><script type="math/tex; mode=display">v_k=E(X-E(X))^k</script><p>is called <strong>$k$-order central moment of $X$</strong>.</p><p>Obviously, the one-order origin moment is the expected value, and the two-order central moment is the variance. Because of $|X|^{k-1} \leq |X|^k+1​$, if a k-order moment exists, a k-1-order moment also exists.</p><p>There is a simple equation between the origin moment and the central moment:</p><script type="math/tex; mode=display">v_k=E(X-E(X))^k=E(X-\mu_1)^k=\sum_{i=0}^k\left(_i ^k\right)\mu_i(-\mu_1)^{k-i}</script><h2 id="Moment-generating-function"><a href="#Moment-generating-function" class="headerlink" title="Moment generating function"></a>Moment generating function</h2><p>There is a moment generating functions for both discrete and continuous distribution:</p><script type="math/tex; mode=display">\begin{align*}M(t)=E \left[ e^{tX}\right] = \end{align*}</script><p>Sequentially taking derivatives of $M(t)$, we get one frequently used property of $M(t)$:</p><script type="math/tex; mode=display">\begin{align*}M'(t) \\M''(t) \\M^{n}(t)\end{align*}</script><h1 id="Median"><a href="#Median" class="headerlink" title="Median"></a>Median</h1><p>If the distribution function of a continuous random variable of $X$ is $F(x)$, the density function is $p(x)$, we call $x_p$ which satisfy the $p= 0.5$ as median, that is to say, $x_{0.5}​$ satisfy:</p><script type="math/tex; mode=display">F(x_{0.5})=\int_{-\infty}^{x_{0.5}}p(x)dx=0.5</script><h1 id="Skewness"><a href="#Skewness" class="headerlink" title="Skewness"></a>Skewness</h1><p>If all the first 3-order moments of a random variable $X$ exist, then</p><script type="math/tex; mode=display"></script><h1 id="Kurtosis"><a href="#Kurtosis" class="headerlink" title="Kurtosis"></a>Kurtosis</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This note contains basic knowledge of random variables and distribution, including random variables, expected values, variance, covarianc
-      
-    
-    </summary>
-    
-      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
-    
-      <category term="Probability" scheme="http://yoursite.com/categories/Mathematics/Probability/"/>
-    
-      <category term="Probability Theory" scheme="http://yoursite.com/categories/Mathematics/Probability/Probability-Theory/"/>
-    
-    
-      <category term="Probability" scheme="http://yoursite.com/tags/Probability/"/>
-    
-      <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NYU Tandon Webinar</title>
-    <link href="http://yoursite.com/2019/02/11/NYU%20Tandon%20Webinar/"/>
-    <id>http://yoursite.com/2019/02/11/NYU Tandon Webinar/</id>
-    <published>2019-02-11T16:00:00.000Z</published>
-    <updated>2019-02-12T16:29:34.943Z</updated>
-    
-    <content type="html"><![CDATA[<p>NYU Tandon Engineering Admitted Student Webinar</p><p>I attended the NYU Engineering Webinar which introduces some basic information of NYU as well as Tandon Engineering school, life in NYC, future opportunities and the next steps for admitted students. Here are some impressive slides.</p><ul><li><strong>NYU has 3 portal campuses and 11 global academic centers where NYU students have access to the academic resources.</strong></li></ul><p><a href="https://i.loli.net/2019/02/13/5c62ee0a0f673.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/13/5c62ee0a0f673.png" alt="NYU Without Wall.png"></a></p><ul><li><strong>Numbers of NYU speak for themselves. </strong></li></ul><p><a href="https://i.loli.net/2019/02/13/5c62ee0a45c90.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/13/5c62ee0a45c90.png" alt="NYU Rank.png"></a></p><ul><li><strong>The life in New York city will be fabulous.</strong></li></ul><p><a href="https://i.loli.net/2019/02/13/5c62ee0a431c3.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/13/5c62ee0a431c3.png" alt="NYU Life in NYC.png"></a></p><ul><li><strong>The value of graduates from NYU Tandon School of Engineering</strong> </li></ul><p><a href="https://i.loli.net/2019/02/13/5c62ee0a3ff12.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/13/5c62ee0a3ff12.png" alt="NYU Graduate.png"></a></p><ul><li><strong>The cost is a relatively tremendous burden for me and my family, which push me a lot.</strong> </li></ul><p><a href="https://i.loli.net/2019/02/13/5c62ee09e4523.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2019/02/13/5c62ee09e4523.png" alt="NYU Cost.png"></a></p><p>Finally, here is a quote from Andrew Hamilton, NYU President, I want to share with you.</p><blockquote><p>Here at NYU, we should remind ourselves who are we as a community: We reject intimidation and discrimination; we strive for diversity and inclusiveness; and we are a community in which each person takes as his or her responsibility the welfare and well-being of others, irrespective of citizenship, faith, race, national origin, gender, sexual orientation, or any of the other identities that might, but surely need not, divide us.</p></blockquote><p>Such a varied and inclusive culture in NYU really fascinates me.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;NYU Tandon Engineering Admitted Student Webinar&lt;/p&gt;
-&lt;p&gt;I attended the NYU Engineering Webinar which introduces some basic information of 
-      
-    
-    </summary>
-    
-      <category term="Thoughts" scheme="http://yoursite.com/categories/Thoughts/"/>
-    
-      <category term="Personal Journals" scheme="http://yoursite.com/categories/Thoughts/Personal-Journals/"/>
-    
-    
-      <category term="Journal" scheme="http://yoursite.com/tags/Journal/"/>
     
   </entry>
   

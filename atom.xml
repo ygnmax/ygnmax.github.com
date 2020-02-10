@@ -265,11 +265,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Mathematical Finance</title>
     <link href="http://yoursite.com/2020/02/02/Summary%20of%20Financial%20Mathematics/"/>
     <id>http://yoursite.com/2020/02/02/Summary of Financial Mathematics/</id>
     <published>2020-02-02T05:00:00.000Z</published>
-    <updated>2020-02-02T16:10:36.677Z</updated>
+    <updated>2020-02-10T01:41:24.961Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h1><h2 id="Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process"><a href="#Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process" class="headerlink" title="Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process"></a>Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process</h2><p>04 December 2019 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a></p><p>We study the asymptotics of the ruin probability for a process which is the solution of a linear SDE defined by a pair of independent Lévy processes. Our main interest is <strong>a model describing the evolution of the capital reserve of an insurance company</strong> selling annuities and investing in a risky asset. </p><ul><li>Let $\beta &gt; 0$  be the root of the cumulant-generating function ${H}$ of the increment $V_1$ of the log-price process. We show that the ruin probability admits the exact asymptotic  $Cu^{-\beta}$ as the initial capital $u \to \infty$, assuming only that the law of $V_{T}$ is non-arithmetic without any further assumptions on the price process.</li></ul>]]></content>
     
@@ -286,12 +286,12 @@
     
       <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
     
-      <category term="Financial Mathematics" scheme="http://yoursite.com/categories/Economics/Literature-Review/Financial-Mathematics/"/>
+      <category term="Mathematical Finance" scheme="http://yoursite.com/categories/Economics/Literature-Review/Mathematical-Finance/"/>
     
     
       <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
-      <category term="Financial Mathematics" scheme="http://yoursite.com/tags/Financial-Mathematics/"/>
+      <category term="Mathematical Finance" scheme="http://yoursite.com/tags/Mathematical-Finance/"/>
     
   </entry>
   

@@ -21,7 +21,7 @@
 <meta property="og:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income. Fixed Income OverviewFixed Income Market identify primary risks classify other risks">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png">
-<meta property="og:updated_time" content="2020-02-10T16:45:31.483Z">
+<meta property="og:updated_time" content="2020-02-12T22:05:40.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Risk Management of Fixed Income">
 <meta name="twitter:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income. Fixed Income OverviewFixed Income Market identify primary risks classify other risks">
@@ -337,9 +337,159 @@ r = 0.0167</script>Semiannual yield = 0.0334 </li>
 </ul>
 </li>
 </ul>
-<h3 id="shapes-tool-to-forecast-economic-activity"><a href="#shapes-tool-to-forecast-economic-activity" class="headerlink" title="shapes - tool to forecast economic activity"></a>shapes - tool to forecast economic activity</h3><p><img src="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png" alt="yield_curve_invision.png"></p>
-<h3 id="spot-curves"><a href="#spot-curves" class="headerlink" title="spot curves"></a>spot curves</h3><h3 id="par-curves"><a href="#par-curves" class="headerlink" title="par curves"></a>par curves</h3><h3 id="forward-curves"><a href="#forward-curves" class="headerlink" title="forward curves"></a>forward curves</h3><h3 id="yield-to-maturity-curves"><a href="#yield-to-maturity-curves" class="headerlink" title="yield to maturity curves"></a>yield to maturity curves</h3><p>If the three conditions doesn’t meet:</p>
-<h1 id="Source-of-bond-risk"><a href="#Source-of-bond-risk" class="headerlink" title="Source of bond risk"></a>Source of bond risk</h1><h2 id="Duration"><a href="#Duration" class="headerlink" title="Duration"></a>Duration</h2><h3 id="Macaulay-duration"><a href="#Macaulay-duration" class="headerlink" title="Macaulay duration"></a>Macaulay duration</h3><h3 id="Modified-duration"><a href="#Modified-duration" class="headerlink" title="Modified duration"></a>Modified duration</h3><h3 id="Effective-Duration"><a href="#Effective-Duration" class="headerlink" title="Effective Duration"></a>Effective Duration</h3><h3 id="Money-Duration"><a href="#Money-Duration" class="headerlink" title="Money Duration"></a>Money Duration</h3><h3 id="Portfolio-Duration"><a href="#Portfolio-Duration" class="headerlink" title="Portfolio Duration"></a>Portfolio Duration</h3><h2 id="Convexity"><a href="#Convexity" class="headerlink" title="Convexity"></a>Convexity</h2><h2 id="Bond-Portfolio"><a href="#Bond-Portfolio" class="headerlink" title="Bond Portfolio"></a>Bond Portfolio</h2><h3 id="Bond-Portfolio-Duration-and-Convexity"><a href="#Bond-Portfolio-Duration-and-Convexity" class="headerlink" title="Bond Portfolio Duration and Convexity"></a>Bond Portfolio Duration and Convexity</h3><h1 id="Other-Products"><a href="#Other-Products" class="headerlink" title="Other Products"></a>Other Products</h1><h2 id="Risk-free-rate-Repurchase-agreement"><a href="#Risk-free-rate-Repurchase-agreement" class="headerlink" title="Risk free rate: Repurchase agreement"></a>Risk free rate: Repurchase agreement</h2><h2 id="Interest-Rate-Swap"><a href="#Interest-Rate-Swap" class="headerlink" title="Interest Rate Swap"></a>Interest Rate Swap</h2>
+<h3 id="shapes-tool-to-forecast-economic-activity"><a href="#shapes-tool-to-forecast-economic-activity" class="headerlink" title="shapes - tool to forecast economic activity"></a>shapes - tool to forecast economic activity</h3><ul>
+<li><p>A positively sloped curve is generally associated with a future increase in real economic activity</p>
+</li>
+<li><p><strong>Curve flattening or inversion</strong> where short term yields exceed long term yields portends <strong>a drop in short term rates and an expected decline in GDP</strong></p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png" alt="yield_curve_invision.png"></p>
+<p>Influence Factors:</p>
+<ul>
+<li>Monetary policy (<strong>tightening tends to slow the economy and flatten (or invert) the curve</strong>) </li>
+<li>Investor expectations of future short-term rates as influenced by both credit demand and expected inflation </li>
+<li>General financial market conditions</li>
+</ul>
+<h3 id="spot-curves"><a href="#spot-curves" class="headerlink" title="spot curves"></a>spot curves</h3><p>Zero curves represent one cash flow on a pre-determined date. </p>
+<ul>
+<li>One example is for zero-coupon government bonds across maturities. This government bond spot curve (or zero or “strip” curve as individual coupons are “stripped” off of coupon bonds) is a set of yields-to-maturity on zero-coupon bonds. While often referred to as “risk-free” yields, this only refers to relative default risk, not inflation or liquidity risk.</li>
+</ul>
+<h3 id="par-curves"><a href="#par-curves" class="headerlink" title="par curves"></a>par curves</h3><p>Par curves represent par value bonds maturing on pre-determined dates. </p>
+<ul>
+<li>In addition to the yield curve on coupon bonds and the spot curve on zero-coupon bonds, maturity structure can be assessed using a par curve. A par curve is <strong>a sequence of yields-to-maturity such that each bond is priced at par value</strong>. The bonds have the same currency, credit risk, liquidity, tax status, and annual yields stated for the same periodicity</li>
+</ul>
+<h3 id="forward-curves"><a href="#forward-curves" class="headerlink" title="forward curves"></a>forward curves</h3><p>Forward curves are a series of forward (future delivery) rates derived from spot rates. </p>
+<ul>
+<li>Implied forward rates (also known as forward yields) are calculated from spot rates as a break-even reinvestment rate linking return on investment in a shorter-term zero-coupon bond to that of a longer-term zero-coupon bond.</li>
+</ul>
+<p>Example:</p>
+<p>There are two alternative loans:</p>
+<ul>
+<li>A is for 1 year at 2%; B is for 2 Years at 3%. Then $F_{1,1}$ is the one-year rate a year from now which equates 102 at year 1 to 106 at year 2:<script type="math/tex; mode=display">
+r = \frac{106}{102}-1 = 3.9216\%</script>which means <script type="math/tex; mode=display">
+102 \times 1.039216 = 106</script>The implied forward rate may be checked by investing 102 for 1 year at this rate. This is also the basic principle of forward rate agreement(FRA):<script type="math/tex; mode=display">
+(1 + Z_A)^A \times(1+IFR_{A,B-A})^{B-A}=(1+Z_B)^B</script>A is the shorter term bond in A periods. B is longer term bond in B periods.</li>
+</ul>
+<h1 id="Source-of-bond-risk"><a href="#Source-of-bond-risk" class="headerlink" title="Source of bond risk"></a>Source of bond risk</h1><p>The market value sensitivity of a bond (or other rate sensitive instrument) to interest rate changes is<br>based on the bond valuation formula shown below based upon the full (or “dirty”) price</p>
+<script type="math/tex; mode=display">
+MV = \frac{PMT}{(1+y)^{1-\frac{t}{T}}} + \frac{PMT}{(1+y)^{2-\frac{t}{T}}}+ ... +\frac{PMT}{(1+y)^{N-\frac{t}{T}}}</script><p>where MV is the full price, PMT is the coupon, FV is principal, y is yield per period and the bond settles t days into the T day period with N periods to maturity. It can be expanded as:</p>
+<script type="math/tex; mode=display">
+dMV = (\frac{\partial MV}{\partial y}\times dy)+(\frac{1}{2}\frac{\partial^2 MV}{\partial y^2}\times dy^2)</script><p>The first expression is a duration and the second term is a convexity, which are often shown divided by 100 on Bloomberg.</p>
+<h2 id="Duration"><a href="#Duration" class="headerlink" title="Duration"></a>Duration</h2><h3 id="Macaulay-duration"><a href="#Macaulay-duration" class="headerlink" title="Macaulay duration"></a>Macaulay duration</h3><p>measures <strong>the sensitivity of the bond’s full price</strong> (including accrued interest) to changes in the <strong>bond’s yield to maturity</strong> or, more generally, to changes in <strong>benchmark interest rates</strong>. It assumes variables other than yield or benchmark rates (including time to maturity) are unchanged:</p>
+<script type="math/tex; mode=display">
+\text{Macaulay Duration} = -\frac{\partial  \text{MV}}{\partial y}\times\frac{1+y}{MV}=-\frac{\frac{\partial  \text{MV}}{MV}}{\frac{\partial y}{1+y}}</script><p>Duration measures <strong>instantaneous (or same day) bond price changes</strong> and may be considered a<br><strong>weighted average</strong> (the share of full price corresponding to each cash flow) of the time to receipt of<br>promised cash flows. Using an annual coupon example on a coupon date, we can simplify</p>
+<script type="math/tex; mode=display">
+\sum_{t=1}^{n}\frac{(\text{PV of CF})\times t}{PV^{full}}</script><p>Example:</p>
+<p>For a 6% annual coupon 5 year bond with 5% yield to maturity, the price is:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.329477,~ ~ r=5\%</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Cash Flow</th>
+<th>Present Value</th>
+<th>Weight</th>
+<th>Period $\times$ Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^1}=5.714$</td>
+<td>$\frac{5.714}{104.329}=0.0548$</td>
+<td>0.055</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^2}=5.442$</td>
+<td>$\frac{5.442}{104.329}=0.0522$</td>
+<td>0.104</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^3}=5.183$</td>
+<td>$\frac{5.183}{104.329}=0.0497$</td>
+<td>0.149</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^4}=4.936$</td>
+<td>$\frac{4.936}{104.329}=0.0473$</td>
+<td>0.189</td>
+</tr>
+<tr>
+<td>5</td>
+<td>106</td>
+<td>$\frac{106}{(1+5\%)^5}=83.054$</td>
+<td>$\frac{83.054}{104.329}=0.7961$</td>
+<td>3.981</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>104.329</td>
+<td><strong>Duration</strong></td>
+<td>4.478</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Modified-duration"><a href="#Modified-duration" class="headerlink" title="Modified duration"></a>Modified duration</h3><p>Modified duration is a minor adjustment to Macaulay duration (dividing by 1 + yield per period) and is<br>directly related to the percentage change in a bond’s market value:</p>
+<script type="math/tex; mode=display">
+\text{Modified Duration} = -\frac{\text{Macaulay Duration}}{(1+\frac{r}{c})}</script><p>This is a linear estimate of a fixed-rate bond’s price change for a given yield to maturity change:</p>
+<script type="math/tex; mode=display">
+\%\Delta PV = -\text{Modified Duration} \times\Delta\text{Yield}</script><p>Example:</p>
+<p>How does the bond price in the prior example (6% annual 5 yr coupon bond with a 5% yield to maturity) change if yields decline 100 bps?</p>
+<p>Given a Macaulay Duration of 4.478, the Modified Duration is $\frac{4.478}{1.05}=4.265$. Therefore,</p>
+<script type="math/tex; mode=display">
+-4.265 \times (-100bps) \times \%= 4.265\%</script><p>there will be 4.2645% price appreciation.</p>
+<p>The error:</p>
+<p>For original bond price:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.329477,~ ~ r=5\%</script><p>For the new price estimate:</p>
+<script type="math/tex; mode=display">
+104.329477 \times (1 + 4.2645\%) = 108.77863</script><p>For the Actual new bond price:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 108.903645,~ ~ r=4\%</script><p>There are $108.90365 - 108.77863 = -.125$ difference in price explained by the non-linearity of the price-yield relationship.</p>
+<h3 id="Effective-Duration"><a href="#Effective-Duration" class="headerlink" title="Effective Duration"></a>Effective Duration</h3><p>Effective Duration is <strong>the sensitivity of a bond’s price</strong> to <strong>a change in a benchmark yield curve</strong> such as a <strong>government par curve</strong>, similar to approximate modified duration except it involves a benchmark and also may be used for more complex bonds or portfolios of complex bonds</p>
+<script type="math/tex; mode=display">
+\text{Effective Duration} = \frac{PV_{-}-PV_{+}}{2\times(\Delta\text{Curve})(PV_0)}</script><h3 id="Money-Duration-Dollar-Duration"><a href="#Money-Duration-Dollar-Duration" class="headerlink" title="Money Duration (Dollar Duration)"></a>Money Duration (Dollar Duration)</h3><p>Dollar Duration is <strong>the price change</strong> for a given change in yield in units of the currency in which the bond is denominated (as opposed to a percentage change) stated per 100 of par or based upon an actual<br>portfolio position (known as “dollar duration in the U.S.)</p>
+<script type="math/tex; mode=display">
+\text{Dollar Duration} = -\frac{\part MV}{\part y}=\text{Modified Duration}\times MV</script><script type="math/tex; mode=display">
+\Delta PV = -\text{Dollar Duration} \times\Delta\text{Yield}</script><p>A related statistic is the present value of a basis point:</p>
+<script type="math/tex; mode=display">
+\text{PV of a Basis Point} = \frac{PV_{-} - PV_{+}}{2}</script><p>This is the dollar value (DV01) or present value of a basis point (PV01), which is calculated by increasing and decreasing the yield by 1 bp to get the price change.</p>
+<h3 id="Portfolio-Duration"><a href="#Portfolio-Duration" class="headerlink" title="Portfolio Duration"></a>Portfolio Duration</h3><p>Portfolio duration is <strong>the sum of market value weighted durations</strong> of component positions.</p>
+<ul>
+<li>Positive is a long position and negative is a short position </li>
+<li>Practitioners use duration and DV 01 PVBP statistics to analyze cash and synthetic positions to gauge net exposure, profitability and/or evaluate trade ideas</li>
+</ul>
+<p>Example:</p>
+<p>A bond trader holds two 2 year U.S. Treasury notes and one 30 year U S Treasury bond. Each bond has a face value of $1000000 with 2 year duration of 1.94 and the 30 year duration of 19.69.</p>
+<ul>
+<li><p>Portfolio duration is $7.86 = \frac{2}{3} \times 1.94 + \frac{1}{3} \times 19.69$</p>
+</li>
+<li><p>Portfolio DV01 equals $7.86 \times \frac{\$3000000}{10 000} = \$2358$</p>
+</li>
+<li><p>If 2 year and 30 year yields rise 10 bps, her portfolio LOSS $\$23580 = \$2358 \times 10 bps$</p>
+</li>
+</ul>
+<p>Coupon: For zero-coupon bonds, duration = maturity. As  Coupons increase, duration decrease.</p>
+<p>Maturity: increase as maturity increase.</p>
+<p>Time: As maturity decrease to 0, time goes down</p>
+<p>Yield: As yields increase, duration decrease.</p>
+<h2 id="Convexity"><a href="#Convexity" class="headerlink" title="Convexity"></a>Convexity</h2><p>While modified duration is a linear approximation of price changes for a given change in yield, the true price/yield relationship is a convexity adjusted equation expressed as follows:</p>
+<script type="math/tex; mode=display">
+\%\Delta PV = -\text{Modified Duration} \times\Delta\text{Yield} + \frac{1}{2}\times\text{Convexity}\times(\Delta Yield)^2</script><p>The second convexity term is positive for traditional (option free) fixed rate bond for a yield increase or decrease. Convexity may be calculated with tables, precisely derived or closely approximated:</p>
+<script type="math/tex; mode=display">
+\text{Convexity} = \frac{PV_-+PV_+}{(\Delta \text{yield})^2\times PV_0}</script><p>Example:</p>
+<p>Calculate the change in full bond price from our prior example (6% annual 5 yr coupon bond with a 5% yield to maturity) given a 100 bp yield decline with the convexity adjustment?</p>
+<h2 id="Bond-Portfolio"><a href="#Bond-Portfolio" class="headerlink" title="Bond Portfolio"></a>Bond Portfolio</h2><h3 id="Bond-Portfolio-Duration-and-Convexity"><a href="#Bond-Portfolio-Duration-and-Convexity" class="headerlink" title="Bond Portfolio Duration and Convexity"></a>Bond Portfolio Duration and Convexity</h3><h1 id="Other-Products"><a href="#Other-Products" class="headerlink" title="Other Products"></a>Other Products</h1><h2 id="Risk-free-rate-Repurchase-agreement"><a href="#Risk-free-rate-Repurchase-agreement" class="headerlink" title="Risk free rate: Repurchase agreement"></a>Risk free rate: Repurchase agreement</h2><h2 id="Interest-Rate-Swap"><a href="#Interest-Rate-Swap" class="headerlink" title="Interest Rate Swap"></a>Interest Rate Swap</h2>
         </div>
         <footer class="article-footer">
             
@@ -415,13 +565,13 @@ r = 0.0167</script>Semiannual yield = 0.0334 </li>
         "genre": "Economics Finance Risk Management",
         "datePublished": "2020-02-07",
         "dateCreated": "2020-02-07",
-        "dateModified": "2020-02-10",
+        "dateModified": "2020-02-12",
         "url": "http://yoursite.com/2020/02/07/Financial Risk Management Fixed Income/",
         "description": "This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income.
 Fixed Income OverviewFixed Income Market
 identify primary risks
 classify other risks"
-        "wordCount": 1352
+        "wordCount": 2498
     }
 </script>
 
@@ -496,9 +646,9 @@ classify other risks"
     </a>
     
     
-        <a href="/2020/02/03/EnglishPod Love/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2020/02/03/EnglishPod Daily Life/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Applied English in Love</p>
+        <p class="article-nav-title">Applied English in Daily Life</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -515,7 +665,7 @@ classify other risks"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/SQL/">SQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Financial-Engineering/">Financial Engineering</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-pricing/">Asset pricing</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Behavioral-Finance/">Behavioral Finance</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Growth-Inequality/">Growth & Inequality</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/SQL/">SQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-pricing/">Asset pricing</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Behavioral-Finance/">Behavioral Finance</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Growth-Inequality/">Growth & Inequality</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -525,7 +675,7 @@ classify other risks"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -535,7 +685,7 @@ classify other risks"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/Asset-Pricing/" style="font-size: 15.71px;">Asset Pricing</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Bootcamp/" style="font-size: 11.43px;">Bootcamp</a> <a href="/tags/C/" style="font-size: 17.14px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.43px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12.86px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 11.43px;">FRM</a> <a href="/tags/Finance/" style="font-size: 12.86px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 11.43px;">Inequality</a> <a href="/tags/Journal/" style="font-size: 14.29px;">Journal</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 18.57px;">MOOC</a> <a href="/tags/Macroeconomics/" style="font-size: 10px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 14.29px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 17.14px;">Papers</a> <a href="/tags/Probability/" style="font-size: 12.86px;">Probability</a> <a href="/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11.43px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 11.43px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12.86px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 17.14px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 11.43px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 14.29px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11.43px;">WSJ</a>
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/Asset-Pricing/" style="font-size: 15.71px;">Asset Pricing</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Bootcamp/" style="font-size: 11.43px;">Bootcamp</a> <a href="/tags/C/" style="font-size: 17.14px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11.43px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12.86px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 12.86px;">FRM</a> <a href="/tags/Finance/" style="font-size: 12.86px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 11.43px;">Inequality</a> <a href="/tags/Journal/" style="font-size: 14.29px;">Journal</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 18.57px;">MOOC</a> <a href="/tags/Macroeconomics/" style="font-size: 10px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 15.71px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 17.14px;">Papers</a> <a href="/tags/Probability/" style="font-size: 12.86px;">Probability</a> <a href="/tags/Python/" style="font-size: 14.29px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11.43px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 12.86px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12.86px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 17.14px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 11.43px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 14.29px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11.43px;">WSJ</a>
         </div>
     </div>
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-20T07:15:19.521Z</updated>
+  <updated>2020-02-23T06:41:41.923Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linear Algebra Basics</title>
+    <link href="http://yoursite.com/2020/02/22/Algebra%20Linear%20Algebra%20Basics/"/>
+    <id>http://yoursite.com/2020/02/22/Algebra Linear Algebra Basics/</id>
+    <published>2020-02-22T05:00:00.000Z</published>
+    <updated>2020-02-23T06:41:41.923Z</updated>
+    
+    <content type="html"><![CDATA[<p>This note contains basic knowledge and summary of Linear Algebra, including vector, matrix, linear transform etc.</p><h1 id="Space"><a href="#Space" class="headerlink" title="Space"></a>Space</h1><h2 id="basis"><a href="#basis" class="headerlink" title="basis"></a>basis</h2><h2 id="transformation"><a href="#transformation" class="headerlink" title="transformation"></a>transformation</h2><h3 id="linear-transformation"><a href="#linear-transformation" class="headerlink" title="linear transformation"></a>linear transformation</h3><ul><li>$90^\circ$ counterclockwise rotate</li></ul><script type="math/tex; mode=display">\left[\begin{array}{cc}0 & -1 \\1 & 0\end{array}\right]</script><ul><li>$90^\circ$ clockwise rotate</li></ul><script type="math/tex; mode=display">\left[\begin{array}{cc}0 & 1 \\-1 & 0\end{array}\right]</script><ul><li>rightward shear</li></ul><script type="math/tex; mode=display">\left[\begin{array}{cc}1 & 1 \\0 & 1\end{array}\right]</script><ul><li>leftward shear</li></ul><script type="math/tex; mode=display">\left[\begin{array}{cc}1 & -1 \\0 & 1\end{array}\right]</script><ul><li>identical transformation</li></ul><script type="math/tex; mode=display">\left[\begin{array}{cc}1 & 0 \\0 & 1\end{array}\right]</script><h3 id="linear-dependent-and-independent"><a href="#linear-dependent-and-independent" class="headerlink" title="linear dependent and independent"></a>linear dependent and independent</h3><h2 id="matrix-multiplication"><a href="#matrix-multiplication" class="headerlink" title="matrix multiplication"></a>matrix multiplication</h2><ul><li>$2 \times 1$ example</li></ul><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{cc}a & b \\c & d\end{array}\right]\left[\begin{array}{c}x \\y\end{array}\right] =x \left[\begin{array}{c}a \\b\end{array}\right] + y \left[\begin{array}{c}c \\d\end{array}\right] =\left[\begin{array}{c}ax+cy \\bx+dy\end{array}\right]\end{eqnarray*}</script><ul><li>$2 \times 2$ example</li></ul><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{cc}a & b \\c & d\end{array}\right]\left[\begin{array}{cc}e & f \\g & h\end{array}\right]=\left[\begin{array}{cc}ae+bg & af+bh \\ce+dg & cf+dh\end{array}\right]\end{eqnarray*}</script><ul><li><p>$3 \times 1$ example</p><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1 & 2 \\3 & 4 & 5 \\6 & 7 & 8\end{array}\right]\left[\begin{array}{ccc}x \\y \\z\end{array}\right]=x \left[\begin{array}{ccc}0 \\3 \\6\end{array}\right] + y \left[\begin{array}{ccc}1 \\4 \\7\end{array}\right] + z \left[\begin{array}{ccc}2 \\5 \\8\end{array}\right]\end{eqnarray*}</script></li><li><p>$3 \times 3$ example</p></li></ul><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1 & 2 \\3 & 4 & 5 \\6 & 7 & 8\end{array}\right]\left[\begin{array}{ccc}x_1 & x_2 & x_3 \\y_1 & y_2 & y_3 \\z_1 & z_2 & z_3\end{array}\right]=\left[\begin{array}{ccc}0x_1+1y_1+2z_1 & 0x_2+1y_2+2z_2 & 0x_3+1y_3+2z_3 \\3x_1+4y_1+5z_1 & 3x_2+4y_2+5z_2 & 3x_3+4y_3+5z_3 \\6x_1+7y_1+8z_1 & 6x_2+7y_2+8z_2 & 6x_3+7y_3+8z_3 \\\end{array}\right]\end{eqnarray*}</script><h3 id="determinant"><a href="#determinant" class="headerlink" title="determinant"></a>determinant</h3><script type="math/tex; mode=display">\begin{eqnarray*}\left|\begin{array}{ccc}0 & 1 & 2 \\3 & 4 & 5 \\6 & 7 & 8\end{array}\right|=0 \left|\begin{array}{cc}4 & 5 \\7 & 8\end{array}\right| - 1 \left|\begin{array}{ccc}3 & 6 \\5 & 8\end{array}\right| + 2 \left|\begin{array}{ccc}3 & 4 \\6 & 7 \\\end{array}\right|\end{eqnarray*}</script><h1 id="linear-system-of-equations"><a href="#linear-system-of-equations" class="headerlink" title="linear system of equations"></a>linear system of equations</h1><p>Consider a linear system of equation:</p><script type="math/tex; mode=display">\begin{eqnarray*}0x + 1y + 2z &=& -3 \\3x + 4y + 5z &=& 0 \\6x + 7y + 8z &=& 2\end{eqnarray*}</script><p>rewrite them in matrix format:</p><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1 & 2 \\3 & 4 & 5 \\6 & 7 & 8\end{array}\right]\left[\begin{array}{ccc}x \\y \\z\end{array}\right]=\left[\begin{array}{ccc}-3 \\0 \\2\end{array}\right]\end{eqnarray*}</script><p>we can abstract them as this:</p><script type="math/tex; mode=display">A \vec x = \vec v</script><p>here $A$ is a linear transformation. we need to find  $\vec x$ to match $\vec a$ after the linear transformation.</p><h3 id="inverse-matrix"><a href="#inverse-matrix" class="headerlink" title="inverse matrix"></a>inverse matrix</h3><p>find a transformation inverse the original transformation</p><script type="math/tex; mode=display">A^{-1}A=\left[\begin{array}{cc} 1 & 0 \\ 0 & 1\end{array}\right]</script><h3 id="rank"><a href="#rank" class="headerlink" title="rank"></a>rank</h3><p>the number of dimensions in the output of a transformation</p><h3 id="column-space"><a href="#column-space" class="headerlink" title="column space"></a>column space</h3><p>column space is the span of columns （以列为基向量的空间）</p><p>The rank is the number of dimensions in the column space. (full rank)</p><p>zero vector is always in the column space. </p><h3 id="null-space-and-kernel"><a href="#null-space-and-kernel" class="headerlink" title="null space and kernel"></a>null space and kernel</h3><ul><li>For a full rank transformation, <strong>the only vector</strong> that lands at the origin is the <strong>zero vector itself</strong>.</li><li>For matrices that aren’t full rank, they will be squish to a smaller dimension, which means a series of vectors will land at the origin. </li><li><p>This set of vectors that lands on the origin is called the <strong>null space</strong> or <strong>kernel of the matrix</strong>.</p><ul><li>the space of all vectors become null, and they land on the zero vectors.</li></ul></li><li><p>For linear system equations:</p><ul><li><strong>When $\vec v$ is a zero vector, then the null space gives you all of the possible solutions</strong> to the equation.</li></ul></li></ul><h2 id="non-square-matrices"><a href="#non-square-matrices" class="headerlink" title="non-square matrices"></a>non-square matrices</h2><p>A 3 by 2 matrix means mapping two dimensions to three dimensions</p><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1 \\3 & 4 \\6 & 7\end{array}\right]\end{eqnarray*}</script><ul><li><p>Two columns indicate that the input space has two basis vectors. </p></li><li><p>Three rows indicate that the landing spots of each of those basis vectors is described with three separate coordinates.</p></li></ul><p>Similarly,  a 2 by 3 matrix means mapping three dimensions to two dimensions.</p><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1 & 2 \\3 & 4 & 5\end{array}\right]\end{eqnarray*}</script><p>A 1 by 2 matrix means mapping a surface to an axis.</p><script type="math/tex; mode=display">\begin{eqnarray*}\left[\begin{array}{ccc}0 & 1\end{array}\right]\end{eqnarray*}</script><h1 id="Dot-product"><a href="#Dot-product" class="headerlink" title="Dot product"></a>Dot product</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This note contains basic knowledge and summary of Linear Algebra, including vector, matrix, linear transform etc.&lt;/p&gt;
+&lt;h1 id=&quot;Space&quot;&gt;&lt;a h
+      
+    
+    </summary>
+    
+      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
+    
+      <category term="Algebra" scheme="http://yoursite.com/categories/Mathematics/Algebra/"/>
+    
+      <category term="Linear Algebra" scheme="http://yoursite.com/categories/Mathematics/Algebra/Linear-Algebra/"/>
+    
+    
+      <category term="Linear Algebra" scheme="http://yoursite.com/tags/Linear-Algebra/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Asset Pricing - Mathematics</title>
+    <link href="http://yoursite.com/2020/02/21/Summary%20of%20Asset%20Pricing%20Mathematics/"/>
+    <id>http://yoursite.com/2020/02/21/Summary of Asset Pricing Mathematics/</id>
+    <published>2020-02-21T05:00:00.000Z</published>
+    <updated>2020-02-22T22:18:18.547Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Stochastic-Processes"><a href="#Stochastic-Processes" class="headerlink" title="Stochastic Processes"></a>Stochastic Processes</h1><h2 id="Regime-switching-affine-processes-with-applications-to-finance"><a href="#Regime-switching-affine-processes-with-applications-to-finance" class="headerlink" title="Regime switching affine processes with applications to finance"></a>Regime switching affine processes with applications to finance</h2><p>21 February 2020 From FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We introduce the notion of a <strong>regime switching affine process</strong>. Informally this is a Markov process that behaves conditionally on each regime as an affine process with specific parameters. To facilitate our analysis, specific restrictions are imposed on these parameters. The regime switches are driven by a Markov chain. </p><ul><li>We prove that the joint process of the Markov chain and the conditionally affine part is a process with an affine structure on an enlarged state space, conditionally on the starting state of the Markov chain. </li><li>Like for affine processes, the characteristic function can be expressed in a set of ordinary differential equations that can sometimes be solved analytically. This result unifies several semi-analytical solutions found in the literature for pricing derivatives of specific regime switching processes on smaller state spaces. </li><li>It also provides a unifying theory that allows us to <strong>introduce regime switching to the pricing of many derivatives within the broad class of affine processes</strong>. Examples include European options and term structure derivatives with stochastic volatility and default. </li><li>Essentially, whenever there is a pricing solution based on an affine process, we can extend this to a regime switching affine process without sacrificing the analytical tractability of the affine process.</li></ul><h2 id="The-value-of-informational-arbitrage"><a href="#The-value-of-informational-arbitrage" class="headerlink" title="The value of informational arbitrage"></a>The value of informational arbitrage</h2><p>11 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>In the context of a general <strong>semimartingale model</strong>, we aim at determining how much an investor is willing to pay to learn additional information that allows achieving arbitrage. If such a value exists, we call it the value of informational arbitrage. We are interested in the case where the information yields arbitrage opportunities but not unbounded profits with bounded risk. As in Amendinger et al. (Finance Stoch. 7:29–46, 2003), we rely on an indifference valuation approach and study optimal consumption–investment problems under initial information and arbitrage. We establish some new results on models with additional information and characterise when the value of informational arbitrage is universal.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Stochastic-Processes&quot;&gt;&lt;a href=&quot;#Stochastic-Processes&quot; class=&quot;headerlink&quot; title=&quot;Stochastic Processes&quot;&gt;&lt;/a&gt;Stochastic Processes&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
+    
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+  </entry>
   
   <entry>
     <title>Risk Management of Commodity</title>
@@ -47,37 +108,6 @@
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Asset Pricing - Mathematics</title>
-    <link href="http://yoursite.com/2020/02/21/Summary%20of%20Asset%20Pricing%20Mathematics/"/>
-    <id>http://yoursite.com/2020/02/21/Summary of Asset Pricing Mathematics/</id>
-    <published>2020-02-21T05:00:00.000Z</published>
-    <updated>2020-02-22T22:18:18.547Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Stochastic-Processes"><a href="#Stochastic-Processes" class="headerlink" title="Stochastic Processes"></a>Stochastic Processes</h1><h2 id="Regime-switching-affine-processes-with-applications-to-finance"><a href="#Regime-switching-affine-processes-with-applications-to-finance" class="headerlink" title="Regime switching affine processes with applications to finance"></a>Regime switching affine processes with applications to finance</h2><p>21 February 2020 From FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We introduce the notion of a <strong>regime switching affine process</strong>. Informally this is a Markov process that behaves conditionally on each regime as an affine process with specific parameters. To facilitate our analysis, specific restrictions are imposed on these parameters. The regime switches are driven by a Markov chain. </p><ul><li>We prove that the joint process of the Markov chain and the conditionally affine part is a process with an affine structure on an enlarged state space, conditionally on the starting state of the Markov chain. </li><li>Like for affine processes, the characteristic function can be expressed in a set of ordinary differential equations that can sometimes be solved analytically. This result unifies several semi-analytical solutions found in the literature for pricing derivatives of specific regime switching processes on smaller state spaces. </li><li>It also provides a unifying theory that allows us to <strong>introduce regime switching to the pricing of many derivatives within the broad class of affine processes</strong>. Examples include European options and term structure derivatives with stochastic volatility and default. </li><li>Essentially, whenever there is a pricing solution based on an affine process, we can extend this to a regime switching affine process without sacrificing the analytical tractability of the affine process.</li></ul><h2 id="The-value-of-informational-arbitrage"><a href="#The-value-of-informational-arbitrage" class="headerlink" title="The value of informational arbitrage"></a>The value of informational arbitrage</h2><p>11 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>In the context of a general <strong>semimartingale model</strong>, we aim at determining how much an investor is willing to pay to learn additional information that allows achieving arbitrage. If such a value exists, we call it the value of informational arbitrage. We are interested in the case where the information yields arbitrage opportunities but not unbounded profits with bounded risk. As in Amendinger et al. (Finance Stoch. 7:29–46, 2003), we rely on an indifference valuation approach and study optimal consumption–investment problems under initial information and arbitrage. We establish some new results on models with additional information and characterise when the value of informational arbitrage is universal.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Stochastic-Processes&quot;&gt;&lt;a href=&quot;#Stochastic-Processes&quot; class=&quot;headerlink&quot; title=&quot;Stochastic Processes&quot;&gt;&lt;/a&gt;Stochastic Processes&lt;/h1&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
-    
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
-    
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
-    
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
   </entry>
   
@@ -181,50 +211,19 @@
   </entry>
   
   <entry>
-    <title>Applied English for Office and Work</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Office/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Office/</id>
+    <title>Applied English in Emotion</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Emotion/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Emotion/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:28:15.046Z</updated>
+    <updated>2020-02-09T22:29:01.489Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><h1 id="Late"><a href="#Late" class="headerlink" title="Late"></a>Late</h1><h2 id="113c-Sorry-I’m-late"><a href="#113c-Sorry-I’m-late" class="headerlink" title="113c - Sorry I’m late"></a>113c - Sorry I’m late</h2><ul><li><strong>when you arrive late</strong><ul><li>good excuses</li></ul></li><li><p><strong>get tied up</strong></p><ul><li>I got tied up at the office.</li><li>I was tied up on the phone all afternoon and didn’t get any work done</li><li>get tied up in traffic on the way here.</li></ul></li><li><p><strong>a huge traffic jam</strong></p><ul><li>a huge pileup<ul><li>accident</li><li>get pied on top of each other / get accident</li></ul></li></ul></li><li><p><strong>running late</strong></p><ul><li>I am running late. (The speaker knows it will be late)</li><li>Jane is running late, she’ll be here.</li></ul></li><li><p><strong>run over</strong></p><ul><li>a meet ran over 15mins</li><li>longer than expected</li></ul></li><li><p>be here <strong>in a sec</strong></p><ul><li>very very soon</li></ul></li><li><p>be here <strong>in a minute</strong></p></li><li><p>get stuck in a traffic</p><ul><li>in the traffic jam</li><li>the traffic is <strong>backed up for miles</strong></li></ul></li></ul><h1 id="Deadline"><a href="#Deadline" class="headerlink" title="Deadline"></a>Deadline</h1><h2 id="116c-You-missed-the-deadline"><a href="#116c-You-missed-the-deadline" class="headerlink" title="116c - You missed the deadline"></a>116c - You missed the deadline</h2><ul><li>tantamount</li><li>behind schedule</li><li>procrastinate</li><li>glitch<ul><li>an error</li></ul></li><li>rationalize <ul><li>an psychological word: try to convince sb about sth</li><li>You cannot rationalize your son’s behavior.</li><li>rationalize buying such an expensive pair of shoes</li><li>stop trying to rationalize it</li></ul></li><li><strong>phony</strong>: false, fake</li></ul><ul><li>a fairly significant deadline <ul><li>fairly: <ul><li>kind of, sort of</li><li>very important</li></ul></li></ul></li><li>essentially blame<ul><li>essentially:<ul><li>pretty much</li></ul></li></ul></li><li>I am not trying to <strong>pass the buck</strong> here<ul><li>I am not trying to pass the blame, put the responsibility on someone else</li></ul></li><li><strong>use something as a crutch</strong><ul><li>crutch: wooden or metal sticks to walk with<ul><li>excuses</li></ul></li><li>I was using alcohol as a crutch to get through the day.</li><li>he uses his disability as a crutch.</li><li>stop using your weight as a crutch.</li></ul></li><li><strong>assuming guilt</strong><ul><li>lose face</li></ul></li><li>in over your hand</li></ul><h1 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h1><h2 id="108c-Bad-News-Boss"><a href="#108c-Bad-News-Boss" class="headerlink" title="108c - Bad News, Boss"></a>108c - Bad News, Boss</h2><ul><li><strong>shoulder</strong> the burden</li></ul><ul><li><p><strong>go under</strong>: bankrupt</p></li><li><p><strong>lay it on me</strong></p><ul><li>tell me (the bad news)</li></ul></li><li><p><strong>for crying out loud</strong></p><ul><li>Oh, my God</li></ul></li><li><p><strong>how can I put this</strong> … <strong>let’s just say that…</strong></p><ul><li>soften it up a bit</li></ul></li></ul><h1 id="Day-off"><a href="#Day-off" class="headerlink" title="Day off"></a>Day off</h1><h2 id="c115-I-don’t-feel-so-good"><a href="#c115-I-don’t-feel-so-good" class="headerlink" title="c115 - I don’t feel so good"></a>c115 - I don’t feel so good</h2><ul><li>a hangover</li><li>drink fest</li><li>dizzy / spinning</li><li>throw up</li><li>dehydrated</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Scared"><a href="#Scared" class="headerlink" title="Scared"></a>Scared</h1><h2 id="119c-being-scared"><a href="#119c-being-scared" class="headerlink" title="119c - being scared"></a>119c - being scared</h2><ul><li>haunt</li><li><strong>coward</strong><ul><li>be a coward</li><li>be coward</li></ul></li><li><strong>goosebumps</strong>: chicken skin</li><li>scaredy cat<ul><li>some body afraid of everything </li></ul></li><li>scary looking mansion<ul><li>mansion: a big house looking scary</li><li>adj + looking<ul><li>creepy looking</li><li>craziest looking</li></ul></li></ul></li><li><strong>gives me the creeps</strong><ul><li>something make you uncomfortable and scared</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Interview&quot;&gt;&lt;a href=&quot;#Interview&quot; class=&quot;headerlink&quot; title=&quot;Interview&quot;&gt;&lt;/a&gt;Interview&lt;/h1&gt;&lt;h1 id=&quot;Late&quot;&gt;&lt;a href=&quot;#Late&quot; class=&quot;headerli
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Art</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Art/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Art/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:24:27.933Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h1><h2 id="127c-I-love-that-song"><a href="#127c-I-love-that-song" class="headerlink" title="127c - I love that song!"></a>127c - I love that song!</h2><ul><li>tune / genre</li><li>abbreviation: acronym</li><li><strong>The pressure is on (you)</strong></li><li>double or nothing</li><li>the lyrics were more profound. <ul><li>You just get a lot of temporary music that doesn’t really transcend into the future.</li><li>They fade into history</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Music&quot;&gt;&lt;a href=&quot;#Music&quot; class=&quot;headerlink&quot; title=&quot;Music&quot;&gt;&lt;/a&gt;Music&lt;/h1&gt;&lt;h2 id=&quot;127c-I-love-that-song&quot;&gt;&lt;a href=&quot;#127c-I-love-that-son
+        &lt;h1 id=&quot;Scared&quot;&gt;&lt;a href=&quot;#Scared&quot; class=&quot;headerlink&quot; title=&quot;Scared&quot;&gt;&lt;/a&gt;Scared&lt;/h1&gt;&lt;h2 id=&quot;119c-being-scared&quot;&gt;&lt;a href=&quot;#119c-being-scared&quot; c
       
     
     </summary>
@@ -274,19 +273,50 @@
   </entry>
   
   <entry>
-    <title>Applied English in Social Activities</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <title>Applied English in Love</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:26:35.448Z</updated>
+    <updated>2020-02-09T22:27:00.720Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li>you are something else<ul><li>I cannot believe you</li></ul></li></ul><pre><code>+ keep my eye out for that</code></pre><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
+        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English for Office and Work</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Office/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Office/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:28:15.046Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><h1 id="Late"><a href="#Late" class="headerlink" title="Late"></a>Late</h1><h2 id="113c-Sorry-I’m-late"><a href="#113c-Sorry-I’m-late" class="headerlink" title="113c - Sorry I’m late"></a>113c - Sorry I’m late</h2><ul><li><strong>when you arrive late</strong><ul><li>good excuses</li></ul></li><li><p><strong>get tied up</strong></p><ul><li>I got tied up at the office.</li><li>I was tied up on the phone all afternoon and didn’t get any work done</li><li>get tied up in traffic on the way here.</li></ul></li><li><p><strong>a huge traffic jam</strong></p><ul><li>a huge pileup<ul><li>accident</li><li>get pied on top of each other / get accident</li></ul></li></ul></li><li><p><strong>running late</strong></p><ul><li>I am running late. (The speaker knows it will be late)</li><li>Jane is running late, she’ll be here.</li></ul></li><li><p><strong>run over</strong></p><ul><li>a meet ran over 15mins</li><li>longer than expected</li></ul></li><li><p>be here <strong>in a sec</strong></p><ul><li>very very soon</li></ul></li><li><p>be here <strong>in a minute</strong></p></li><li><p>get stuck in a traffic</p><ul><li>in the traffic jam</li><li>the traffic is <strong>backed up for miles</strong></li></ul></li></ul><h1 id="Deadline"><a href="#Deadline" class="headerlink" title="Deadline"></a>Deadline</h1><h2 id="116c-You-missed-the-deadline"><a href="#116c-You-missed-the-deadline" class="headerlink" title="116c - You missed the deadline"></a>116c - You missed the deadline</h2><ul><li>tantamount</li><li>behind schedule</li><li>procrastinate</li><li>glitch<ul><li>an error</li></ul></li><li>rationalize <ul><li>an psychological word: try to convince sb about sth</li><li>You cannot rationalize your son’s behavior.</li><li>rationalize buying such an expensive pair of shoes</li><li>stop trying to rationalize it</li></ul></li><li><strong>phony</strong>: false, fake</li></ul><ul><li>a fairly significant deadline <ul><li>fairly: <ul><li>kind of, sort of</li><li>very important</li></ul></li></ul></li><li>essentially blame<ul><li>essentially:<ul><li>pretty much</li></ul></li></ul></li><li>I am not trying to <strong>pass the buck</strong> here<ul><li>I am not trying to pass the blame, put the responsibility on someone else</li></ul></li><li><strong>use something as a crutch</strong><ul><li>crutch: wooden or metal sticks to walk with<ul><li>excuses</li></ul></li><li>I was using alcohol as a crutch to get through the day.</li><li>he uses his disability as a crutch.</li><li>stop using your weight as a crutch.</li></ul></li><li><strong>assuming guilt</strong><ul><li>lose face</li></ul></li><li>in over your hand</li></ul><h1 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h1><h2 id="108c-Bad-News-Boss"><a href="#108c-Bad-News-Boss" class="headerlink" title="108c - Bad News, Boss"></a>108c - Bad News, Boss</h2><ul><li><strong>shoulder</strong> the burden</li></ul><ul><li><p><strong>go under</strong>: bankrupt</p></li><li><p><strong>lay it on me</strong></p><ul><li>tell me (the bad news)</li></ul></li><li><p><strong>for crying out loud</strong></p><ul><li>Oh, my God</li></ul></li><li><p><strong>how can I put this</strong> … <strong>let’s just say that…</strong></p><ul><li>soften it up a bit</li></ul></li></ul><h1 id="Day-off"><a href="#Day-off" class="headerlink" title="Day off"></a>Day off</h1><h2 id="c115-I-don’t-feel-so-good"><a href="#c115-I-don’t-feel-so-good" class="headerlink" title="c115 - I don’t feel so good"></a>c115 - I don’t feel so good</h2><ul><li>a hangover</li><li>drink fest</li><li>dizzy / spinning</li><li>throw up</li><li>dehydrated</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Interview&quot;&gt;&lt;a href=&quot;#Interview&quot; class=&quot;headerlink&quot; title=&quot;Interview&quot;&gt;&lt;/a&gt;Interview&lt;/h1&gt;&lt;h1 id=&quot;Late&quot;&gt;&lt;a href=&quot;#Late&quot; class=&quot;headerli
       
     
     </summary>
@@ -336,6 +366,68 @@
   </entry>
   
   <entry>
+    <title>Applied English in Art</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Art/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Art/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:24:27.933Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Music"><a href="#Music" class="headerlink" title="Music"></a>Music</h1><h2 id="127c-I-love-that-song"><a href="#127c-I-love-that-song" class="headerlink" title="127c - I love that song!"></a>127c - I love that song!</h2><ul><li>tune / genre</li><li>abbreviation: acronym</li><li><strong>The pressure is on (you)</strong></li><li>double or nothing</li><li>the lyrics were more profound. <ul><li>You just get a lot of temporary music that doesn’t really transcend into the future.</li><li>They fade into history</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Music&quot;&gt;&lt;a href=&quot;#Music&quot; class=&quot;headerlink&quot; title=&quot;Music&quot;&gt;&lt;/a&gt;Music&lt;/h1&gt;&lt;h2 id=&quot;127c-I-love-that-song&quot;&gt;&lt;a href=&quot;#127c-I-love-that-son
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English in Social Activities</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:26:35.448Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li>you are something else<ul><li>I cannot believe you</li></ul></li></ul><pre><code>+ keep my eye out for that</code></pre><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Applied English in Home</title>
     <link href="http://yoursite.com/2020/02/03/EnglishPod%20Home/"/>
     <id>http://yoursite.com/2020/02/03/EnglishPod Home/</id>
@@ -349,68 +441,6 @@
       
       
         &lt;h1 id=&quot;Fix&quot;&gt;&lt;a href=&quot;#Fix&quot; class=&quot;headerlink&quot; title=&quot;Fix&quot;&gt;&lt;/a&gt;Fix&lt;/h1&gt;&lt;h2 id=&quot;112c-Dr-Plumber&quot;&gt;&lt;a href=&quot;#112c-Dr-Plumber&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Love</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:27:00.720Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Emotion</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Emotion/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Emotion/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:29:01.489Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Scared"><a href="#Scared" class="headerlink" title="Scared"></a>Scared</h1><h2 id="119c-being-scared"><a href="#119c-being-scared" class="headerlink" title="119c - being scared"></a>119c - being scared</h2><ul><li>haunt</li><li><strong>coward</strong><ul><li>be a coward</li><li>be coward</li></ul></li><li><strong>goosebumps</strong>: chicken skin</li><li>scaredy cat<ul><li>some body afraid of everything </li></ul></li><li>scary looking mansion<ul><li>mansion: a big house looking scary</li><li>adj + looking<ul><li>creepy looking</li><li>craziest looking</li></ul></li></ul></li><li><strong>gives me the creeps</strong><ul><li>something make you uncomfortable and scared</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Scared&quot;&gt;&lt;a href=&quot;#Scared&quot; class=&quot;headerlink&quot; title=&quot;Scared&quot;&gt;&lt;/a&gt;Scared&lt;/h1&gt;&lt;h2 id=&quot;119c-being-scared&quot;&gt;&lt;a href=&quot;#119c-being-scared&quot; c
       
     
     </summary>
@@ -463,6 +493,37 @@
   </entry>
   
   <entry>
+    <title>Asset Pricing - Derivatives</title>
+    <link href="http://yoursite.com/2020/01/30/Summary%20of%20Asset%20Pricing%20Derivatives/"/>
+    <id>http://yoursite.com/2020/01/30/Summary of Asset Pricing Derivatives/</id>
+    <published>2020-01-30T05:00:00.000Z</published>
+    <updated>2020-02-22T22:17:55.332Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h1><h2 id="Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework"><a href="#Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework" class="headerlink" title="Option Profit and Loss Attribution and Pricing: A New Framework"></a>Option Profit and Loss Attribution and Pricing: A New Framework</h2><p>21 February 2020 from JF<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894</a><br>This paper develops a new top‐down valuation framework that links the pricing of an option investment to its <strong>daily profit and loss attribution</strong>. The framework uses the Black‐Merton‐Scholes option pricing formula to attribute the short‐term option investment risk to <strong>variation in the underlying security price</strong> and the <strong>option’s implied volatility</strong>.<br>Taking risk‐neutral expectation and demanding no dynamic arbitrage results in a pricing relation that links <strong>an option’s fair implied volatility level</strong> to the <strong>underlying’s volatility level</strong> with corrections for the implied volatility’s own expected direction of movement, its variance, and its covariance with the underlying security return.</p><h2 id="Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times"><a href="#Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times" class="headerlink" title="Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times"></a>Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times</h2><p>28 January 2020 from JFQA<br><a href="http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf" target="_blank" rel="noopener">http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf</a><br>We provide <strong>a new framework for valuing multidimensional real options</strong> where opportunities to exercise the option are generated by an exogenous Poisson process, which can be viewed as a liquidity constraint on decision times. This approach, which we call the Poisson optional stopping times (POST) method, finds the value function as a monotone sequence of lower bounds. </p><ul><li>In a case study, we demonstrate that the frequently used quasi-analytic method yields a suboptimal policy and an inaccurate value function. </li><li>The proposed method is demonstrably correct, straightforward to implement, reliable in computation, and broadly applicable in analyzing multidimensional option-valuation problems.</li></ul><h1 id="Credit"><a href="#Credit" class="headerlink" title="Credit"></a>Credit</h1><h2 id="Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process"><a href="#Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process" class="headerlink" title="Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process"></a>Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process</h2><p>04 December 2019 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a></p><p>We study the asymptotics of the ruin probability for a process which is the solution of a linear SDE defined by a pair of independent Lévy processes. Our main interest is <strong>a model describing the evolution of the capital reserve of an insurance company</strong> selling annuities and investing in a risky asset. </p><ul><li>Let $\beta &gt; 0$  be the root of the cumulant-generating function ${H}$ of the increment $V_1$ of the log-price process. We show that the ruin probability admits the exact asymptotic  $Cu^{-\beta}$ as the initial capital $u \to \infty$, assuming only that the law of $V_{T}$ is non-arithmetic without any further assumptions on the price process.</li></ul><h2 id="Is-the-Credit-Spread-Puzzle-a-Myth"><a href="#Is-the-Credit-Spread-Puzzle-a-Myth" class="headerlink" title="Is the Credit Spread Puzzle a Myth?"></a>Is the Credit Spread Puzzle a Myth?</h2><p>20 February 2020 from JFE<br><a href="https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We revisit Feldhütter and Schaefer (FS, 2018), who report evidence of a “credit spread puzzle” for high-yield but not investment-grade bonds. We show their results are reversed when their model is calibrated to market values of debt (as required by theory) rather than book values.<br>We then demonstrate that using credit spreads rather than historical default rates to identify the default boundary provides the statistical power necessary to reject their assumption that firm dynamics follow geometric Brownian motion. A large market price of jump risk is required to match historical default rates, which generates a credit spread puzzle for investment-grade but not high-yield bonds.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Option&quot;&gt;&lt;a href=&quot;#Option&quot; class=&quot;headerlink&quot; title=&quot;Option&quot;&gt;&lt;/a&gt;Option&lt;/h1&gt;&lt;h2 id=&quot;Option-Profit-and-Loss-Attribution-and-Pricing-A-
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
+    
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Asset Pricing - Fixed Income</title>
     <link href="http://yoursite.com/2020/01/30/Summary%20of%20Asset%20Pricing%20Fixed%20Income/"/>
     <id>http://yoursite.com/2020/01/30/Summary of Asset Pricing Fixed Income/</id>
@@ -492,37 +553,6 @@
       <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
       <category term="Fixed Income" scheme="http://yoursite.com/tags/Fixed-Income/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Asset Pricing - Derivatives</title>
-    <link href="http://yoursite.com/2020/01/30/Summary%20of%20Asset%20Pricing%20Derivatives/"/>
-    <id>http://yoursite.com/2020/01/30/Summary of Asset Pricing Derivatives/</id>
-    <published>2020-01-30T05:00:00.000Z</published>
-    <updated>2020-02-22T22:17:55.332Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h1><h2 id="Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework"><a href="#Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework" class="headerlink" title="Option Profit and Loss Attribution and Pricing: A New Framework"></a>Option Profit and Loss Attribution and Pricing: A New Framework</h2><p>21 February 2020 from JF<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894</a><br>This paper develops a new top‐down valuation framework that links the pricing of an option investment to its <strong>daily profit and loss attribution</strong>. The framework uses the Black‐Merton‐Scholes option pricing formula to attribute the short‐term option investment risk to <strong>variation in the underlying security price</strong> and the <strong>option’s implied volatility</strong>.<br>Taking risk‐neutral expectation and demanding no dynamic arbitrage results in a pricing relation that links <strong>an option’s fair implied volatility level</strong> to the <strong>underlying’s volatility level</strong> with corrections for the implied volatility’s own expected direction of movement, its variance, and its covariance with the underlying security return.</p><h2 id="Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times"><a href="#Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times" class="headerlink" title="Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times"></a>Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times</h2><p>28 January 2020 from JFQA<br><a href="http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf" target="_blank" rel="noopener">http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf</a><br>We provide <strong>a new framework for valuing multidimensional real options</strong> where opportunities to exercise the option are generated by an exogenous Poisson process, which can be viewed as a liquidity constraint on decision times. This approach, which we call the Poisson optional stopping times (POST) method, finds the value function as a monotone sequence of lower bounds. </p><ul><li>In a case study, we demonstrate that the frequently used quasi-analytic method yields a suboptimal policy and an inaccurate value function. </li><li>The proposed method is demonstrably correct, straightforward to implement, reliable in computation, and broadly applicable in analyzing multidimensional option-valuation problems.</li></ul><h1 id="Credit"><a href="#Credit" class="headerlink" title="Credit"></a>Credit</h1><h2 id="Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process"><a href="#Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process" class="headerlink" title="Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process"></a>Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process</h2><p>04 December 2019 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a></p><p>We study the asymptotics of the ruin probability for a process which is the solution of a linear SDE defined by a pair of independent Lévy processes. Our main interest is <strong>a model describing the evolution of the capital reserve of an insurance company</strong> selling annuities and investing in a risky asset. </p><ul><li>Let $\beta &gt; 0$  be the root of the cumulant-generating function ${H}$ of the increment $V_1$ of the log-price process. We show that the ruin probability admits the exact asymptotic  $Cu^{-\beta}$ as the initial capital $u \to \infty$, assuming only that the law of $V_{T}$ is non-arithmetic without any further assumptions on the price process.</li></ul><h2 id="Is-the-Credit-Spread-Puzzle-a-Myth"><a href="#Is-the-Credit-Spread-Puzzle-a-Myth" class="headerlink" title="Is the Credit Spread Puzzle a Myth?"></a>Is the Credit Spread Puzzle a Myth?</h2><p>20 February 2020 from JFE<br><a href="https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We revisit Feldhütter and Schaefer (FS, 2018), who report evidence of a “credit spread puzzle” for high-yield but not investment-grade bonds. We show their results are reversed when their model is calibrated to market values of debt (as required by theory) rather than book values.<br>We then demonstrate that using credit spreads rather than historical default rates to identify the default boundary provides the statistical power necessary to reject their assumption that firm dynamics follow geometric Brownian motion. A large market price of jump risk is required to match historical default rates, which generates a credit spread puzzle for investment-grade but not high-yield bonds.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Option&quot;&gt;&lt;a href=&quot;#Option&quot; class=&quot;headerlink&quot; title=&quot;Option&quot;&gt;&lt;/a&gt;Option&lt;/h1&gt;&lt;h2 id=&quot;Option-Profit-and-Loss-Attribution-and-Pricing-A-
-      
-    
-    </summary>
-    
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
-    
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
-    
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
-    
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
   </entry>
   
@@ -558,39 +588,6 @@
   </entry>
   
   <entry>
-    <title>Monetary and Bank Papers</title>
-    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Macroeconomics%20Monetary%20Papers/"/>
-    <id>http://yoursite.com/2020/01/28/Summary of Macroeconomics Monetary Papers/</id>
-    <published>2020-01-28T05:00:00.000Z</published>
-    <updated>2020-02-22T22:08:35.841Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Monetary-Policy"><a href="#Monetary-Policy" class="headerlink" title="Monetary Policy"></a>Monetary Policy</h1><h2 id="Optimal-Monetary-Policy-with-Informational-Frictions"><a href="#Optimal-Monetary-Policy-with-Informational-Frictions" class="headerlink" title="Optimal Monetary Policy with Informational Frictions"></a>Optimal Monetary Policy with Informational Frictions</h2><p>28 January 2020 from JPE<br><a href="https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf" target="_blank" rel="noopener">https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf</a><br>We study optimal policy in a business-cycle setting in which firms hold dispersed private information about, or are rationally inattentive to, the state of the economy. The informational friction is the source of both nominal and real rigidity. </p><ul><li>Because of the latter, the optimal monetary policy does not target price stability. Instead, it targets a negative relation between the nominal price level and real economic activity. </li><li>Such leaning against the wind helps maximize production efficiency. An additional contribution is the adaptation of the primal approach of the Ramsey literature to a flexible form of informational friction.</li></ul><h2 id="Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral"><a href="#Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral" class="headerlink" title="Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral"></a>Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral</h2><p>17 June 2019 from RFS<br><a href="https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>This paper finds that <strong>declining bank equity or liquidity</strong> reduces <strong>liquidation values of bank-owned real estate and accelerates the pace of asset sales</strong>. </p><ul><li>Buyers of these assets earn significant returns for providing liquidity to banks, as prices tend to rebound sharply after sales by illiquid banks. </li><li>Lower liquidation values also depress the prices of nearby real estate transactions. </li><li>Policy interventions, such as equity injections and central bank asset purchases, increase liquidation values by providing institutions with the balance sheet capacity to slow asset sales. </li><li>This evidence suggests that <strong>balance sheet adjustments at financial institutions can explain real asset price dynamics</strong>.</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Monetary-Policy&quot;&gt;&lt;a href=&quot;#Monetary-Policy&quot; class=&quot;headerlink&quot; title=&quot;Monetary Policy&quot;&gt;&lt;/a&gt;Monetary Policy&lt;/h1&gt;&lt;h2 id=&quot;Optimal-Monet
-      
-    
-    </summary>
-    
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
-    
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
-    
-      <category term="Macroeconomics" scheme="http://yoursite.com/categories/Economics/Literature-Review/Macroeconomics/"/>
-    
-    
-      <category term="Macroeconomics" scheme="http://yoursite.com/tags/Macroeconomics/"/>
-    
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
-    
-      <category term="Monetary" scheme="http://yoursite.com/tags/Monetary/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Behavioral Asset Pricing Papers</title>
     <link href="http://yoursite.com/2020/01/28/Summary%20of%20Asset%20Pricing%20Behavioral%20Finance/"/>
     <id>http://yoursite.com/2020/01/28/Summary of Asset Pricing Behavioral Finance/</id>
@@ -622,19 +619,19 @@
   </entry>
   
   <entry>
-    <title>Economic Growth Papers</title>
-    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Macroeconomics%20Growth%20Papers/"/>
-    <id>http://yoursite.com/2020/01/28/Summary of Macroeconomics Growth Papers/</id>
+    <title>Monetary and Bank Papers</title>
+    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Macroeconomics%20Monetary%20Papers/"/>
+    <id>http://yoursite.com/2020/01/28/Summary of Macroeconomics Monetary Papers/</id>
     <published>2020-01-28T05:00:00.000Z</published>
-    <updated>2020-02-22T22:09:55.602Z</updated>
+    <updated>2020-02-22T22:08:35.841Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Global-Economy"><a href="#Global-Economy" class="headerlink" title="Global Economy"></a>Global Economy</h1><h2 id="The-Global-Diffusion-of-Ideas"><a href="#The-Global-Diffusion-of-Ideas" class="headerlink" title="The Global Diffusion of Ideas"></a>The Global Diffusion of Ideas</h2><p>05 February 2020<br><a href="https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA14044?af=R&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA14044?af=R&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We provide a tractable, quantitatively‐oriented theory of innovation and technology diffusion to explore <strong>the role of international trade in the process of development</strong>. </p><ul><li><p>We model innovation and diffusion as a process involving the combination of new ideas with insights from other industries or countries. </p><ul><li>We provide conditions under which each country’s equilibrium frontier of knowledge converges to a Fréchet distribution, and derive a system of differential equations describing the evolution of the scale parameters of these distributions, that is, <strong>countries’ stocks of knowledge</strong>. </li></ul></li><li>The model remains tractable with many asymmetric countries and generates a rich set of predictions about <strong>how the level and composition of trade affect countries’ frontiers of knowledge</strong>. <ul><li>We use the framework to quantify the contribution of bilateral trade costs to long‐run changes in TFP and individual post‐war growth miracles. </li><li>For our preferred calibration, we find that both gains from trade and the fraction of variation of TFP growth accounted for by changes in trade more than double relative to a model without diffusion.</li></ul></li></ul><h1 id="Environmental-Economics"><a href="#Environmental-Economics" class="headerlink" title="Environmental Economics"></a>Environmental Economics</h1><h2 id="Pricing-Uncertainty-Induced-by-Climate-Change"><a href="#Pricing-Uncertainty-Induced-by-Climate-Change" class="headerlink" title="Pricing Uncertainty Induced by Climate Change"></a>Pricing Uncertainty Induced by Climate Change</h2><p><a href="https://academic.oup.com/rfs/article/33/3/1024/5735312?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://academic.oup.com/rfs/article/33/3/1024/5735312?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>Geophysicists examine and document the repercussions for the earth’s climate induced by alternative emission scenarios and model specifications. Using simplified approximations, they produce <strong>tractable characterizations of the associated uncertainty</strong>. Meanwhile, economists write <strong>highly stylized damage functions</strong> to speculate about how climate change alters macroeconomic and growth opportunities. </p><ul><li>How can we assess <strong>both climate</strong> and <strong>emissions impacts</strong>, as well as <strong>uncertainty in the broadest sense, in social decision-making</strong>? We provide a framework for answering this question by embracing <strong>recent decision theory and tools from asset pricing</strong>, and we apply this structure with its interacting components to a revealing quantitative illustration.</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Monetary-Policy"><a href="#Monetary-Policy" class="headerlink" title="Monetary Policy"></a>Monetary Policy</h1><h2 id="Optimal-Monetary-Policy-with-Informational-Frictions"><a href="#Optimal-Monetary-Policy-with-Informational-Frictions" class="headerlink" title="Optimal Monetary Policy with Informational Frictions"></a>Optimal Monetary Policy with Informational Frictions</h2><p>28 January 2020 from JPE<br><a href="https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf" target="_blank" rel="noopener">https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf</a><br>We study optimal policy in a business-cycle setting in which firms hold dispersed private information about, or are rationally inattentive to, the state of the economy. The informational friction is the source of both nominal and real rigidity. </p><ul><li>Because of the latter, the optimal monetary policy does not target price stability. Instead, it targets a negative relation between the nominal price level and real economic activity. </li><li>Such leaning against the wind helps maximize production efficiency. An additional contribution is the adaptation of the primal approach of the Ramsey literature to a flexible form of informational friction.</li></ul><h2 id="Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral"><a href="#Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral" class="headerlink" title="Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral"></a>Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral</h2><p>17 June 2019 from RFS<br><a href="https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>This paper finds that <strong>declining bank equity or liquidity</strong> reduces <strong>liquidation values of bank-owned real estate and accelerates the pace of asset sales</strong>. </p><ul><li>Buyers of these assets earn significant returns for providing liquidity to banks, as prices tend to rebound sharply after sales by illiquid banks. </li><li>Lower liquidation values also depress the prices of nearby real estate transactions. </li><li>Policy interventions, such as equity injections and central bank asset purchases, increase liquidation values by providing institutions with the balance sheet capacity to slow asset sales. </li><li>This evidence suggests that <strong>balance sheet adjustments at financial institutions can explain real asset price dynamics</strong>.</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Global-Economy&quot;&gt;&lt;a href=&quot;#Global-Economy&quot; class=&quot;headerlink&quot; title=&quot;Global Economy&quot;&gt;&lt;/a&gt;Global Economy&lt;/h1&gt;&lt;h2 id=&quot;The-Global-Diffus
+        &lt;h1 id=&quot;Monetary-Policy&quot;&gt;&lt;a href=&quot;#Monetary-Policy&quot; class=&quot;headerlink&quot; title=&quot;Monetary Policy&quot;&gt;&lt;/a&gt;Monetary Policy&lt;/h1&gt;&lt;h2 id=&quot;Optimal-Monet
       
     
     </summary>
@@ -650,7 +647,7 @@
     
       <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
-      <category term="Economic Growth" scheme="http://yoursite.com/tags/Economic-Growth/"/>
+      <category term="Monetary" scheme="http://yoursite.com/tags/Monetary/"/>
     
   </entry>
   

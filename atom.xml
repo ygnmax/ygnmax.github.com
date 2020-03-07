@@ -140,37 +140,6 @@
   </entry>
   
   <entry>
-    <title>Asset Pricing - Mathematics</title>
-    <link href="http://yoursite.com/2020/02/21/Summary%20of%20Asset%20Pricing%20Mathematics/"/>
-    <id>http://yoursite.com/2020/02/21/Summary of Asset Pricing Mathematics/</id>
-    <published>2020-02-21T05:00:00.000Z</published>
-    <updated>2020-02-22T22:18:18.547Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Stochastic-Processes"><a href="#Stochastic-Processes" class="headerlink" title="Stochastic Processes"></a>Stochastic Processes</h1><h2 id="Regime-switching-affine-processes-with-applications-to-finance"><a href="#Regime-switching-affine-processes-with-applications-to-finance" class="headerlink" title="Regime switching affine processes with applications to finance"></a>Regime switching affine processes with applications to finance</h2><p>21 February 2020 From FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We introduce the notion of a <strong>regime switching affine process</strong>. Informally this is a Markov process that behaves conditionally on each regime as an affine process with specific parameters. To facilitate our analysis, specific restrictions are imposed on these parameters. The regime switches are driven by a Markov chain. </p><ul><li>We prove that the joint process of the Markov chain and the conditionally affine part is a process with an affine structure on an enlarged state space, conditionally on the starting state of the Markov chain. </li><li>Like for affine processes, the characteristic function can be expressed in a set of ordinary differential equations that can sometimes be solved analytically. This result unifies several semi-analytical solutions found in the literature for pricing derivatives of specific regime switching processes on smaller state spaces. </li><li>It also provides a unifying theory that allows us to <strong>introduce regime switching to the pricing of many derivatives within the broad class of affine processes</strong>. Examples include European options and term structure derivatives with stochastic volatility and default. </li><li>Essentially, whenever there is a pricing solution based on an affine process, we can extend this to a regime switching affine process without sacrificing the analytical tractability of the affine process.</li></ul><h2 id="The-value-of-informational-arbitrage"><a href="#The-value-of-informational-arbitrage" class="headerlink" title="The value of informational arbitrage"></a>The value of informational arbitrage</h2><p>11 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>In the context of a general <strong>semimartingale model</strong>, we aim at determining how much an investor is willing to pay to learn additional information that allows achieving arbitrage. If such a value exists, we call it the value of informational arbitrage. We are interested in the case where the information yields arbitrage opportunities but not unbounded profits with bounded risk. As in Amendinger et al. (Finance Stoch. 7:29–46, 2003), we rely on an indifference valuation approach and study optimal consumption–investment problems under initial information and arbitrage. We establish some new results on models with additional information and characterise when the value of informational arbitrage is universal.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Stochastic-Processes&quot;&gt;&lt;a href=&quot;#Stochastic-Processes&quot; class=&quot;headerlink&quot; title=&quot;Stochastic Processes&quot;&gt;&lt;/a&gt;Stochastic Processes&lt;/h1&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
-    
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
-    
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
-    
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Risk Management of Commodity</title>
     <link href="http://yoursite.com/2020/02/21/Financial%20Risk%20Management%20Commodity/"/>
     <id>http://yoursite.com/2020/02/21/Financial Risk Management Commodity/</id>
@@ -304,68 +273,6 @@
   </entry>
   
   <entry>
-    <title>Applied English in Home</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Home/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Home/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:18:44.810Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><h2 id="112c-Dr-Plumber"><a href="#112c-Dr-Plumber" class="headerlink" title="112c - Dr. Plumber"></a>112c - Dr. Plumber</h2><ul><li><strong>clogged</strong></li><li><strong>faucet</strong></li><li><strong>flushing the toilet</strong></li><li><strong>shut off</strong></li></ul><ul><li><strong>not far from the truth</strong></li><li><strong>trades person</strong><ul><li>works in a trade</li></ul></li></ul><h1 id="Baby"><a href="#Baby" class="headerlink" title="Baby"></a>Baby</h1><h2 id="c118-baby-talk"><a href="#c118-baby-talk" class="headerlink" title="c118 - baby talk"></a>c118 - baby talk</h2><ul><li><p>widdle : little</p></li><li><p><strong>it’s your turn</strong></p></li><li><strong>I could just eat it up</strong>: it’s so cute</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Fix&quot;&gt;&lt;a href=&quot;#Fix&quot; class=&quot;headerlink&quot; title=&quot;Fix&quot;&gt;&lt;/a&gt;Fix&lt;/h1&gt;&lt;h2 id=&quot;112c-Dr-Plumber&quot;&gt;&lt;a href=&quot;#112c-Dr-Plumber&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Emotion</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Emotion/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Emotion/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:29:01.489Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Scared"><a href="#Scared" class="headerlink" title="Scared"></a>Scared</h1><h2 id="119c-being-scared"><a href="#119c-being-scared" class="headerlink" title="119c - being scared"></a>119c - being scared</h2><ul><li>haunt</li><li><strong>coward</strong><ul><li>be a coward</li><li>be coward</li></ul></li><li><strong>goosebumps</strong>: chicken skin</li><li>scaredy cat<ul><li>some body afraid of everything </li></ul></li><li>scary looking mansion<ul><li>mansion: a big house looking scary</li><li>adj + looking<ul><li>creepy looking</li><li>craziest looking</li></ul></li></ul></li><li><strong>gives me the creeps</strong><ul><li>something make you uncomfortable and scared</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Scared&quot;&gt;&lt;a href=&quot;#Scared&quot; class=&quot;headerlink&quot; title=&quot;Scared&quot;&gt;&lt;/a&gt;Scared&lt;/h1&gt;&lt;h2 id=&quot;119c-being-scared&quot;&gt;&lt;a href=&quot;#119c-being-scared&quot; c
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Applied English in Formal situation</title>
     <link href="http://yoursite.com/2020/02/03/EnglishPod%20Formal/"/>
     <id>http://yoursite.com/2020/02/03/EnglishPod Formal/</id>
@@ -428,19 +335,50 @@
   </entry>
   
   <entry>
-    <title>Applied English in Daily Life</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Daily%20Life/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Daily Life/</id>
+    <title>Applied English in Emotion</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Emotion/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Emotion/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-12T01:45:49.000Z</updated>
+    <updated>2020-02-09T22:29:01.489Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Restaurant"><a href="#Restaurant" class="headerlink" title="Restaurant"></a>Restaurant</h1><h2 id="107c-Restaurant-complaining-at-a-restaurant"><a href="#107c-Restaurant-complaining-at-a-restaurant" class="headerlink" title="107c -Restaurant- complaining at a restaurant"></a>107c -Restaurant- complaining at a restaurant</h2><ul><li>an <strong>establishment</strong>: <ul><li>_in this kind of establishment_</li><li>in a restaurant content: a place of business</li></ul></li><li><strong>too runny</strong><ul><li>The soup is too runny (too liquid)</li><li>a little bit thicker</li></ul></li><li><strong>over seasoned</strong><ul><li>too salty</li></ul></li><li><strong>inedible</strong><ul><li>disgusting, not physically you cannot eat</li></ul></li><li><strong>rubbery</strong><ul><li>swallow</li></ul></li><li>over-cooked</li><li><strong>a liver of</strong> duck liver<ul><li>sliver: slice</li><li>a sliver of cake and no ice-cream</li><li>cut me a sliver</li><li>you call this sliver of beef on my plate a meal?</li></ul></li><li><strong>shell out</strong><ul><li>I am gonna have to shell out for a present.</li><li>she shelled out the eight hundred bucks for the tickets.</li><li>cannot afford to shell out four hundred dollars</li></ul></li><li><strong>my hard earned bucks</strong> / cash </li><li><strong>a doggy bag</strong></li></ul><h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="106c-Shop-mobile-phone-plan"><a href="#106c-Shop-mobile-phone-plan" class="headerlink" title="106c -Shop- mobile phone plan"></a>106c -Shop- mobile phone plan</h2><ul><li><p><strong>prepaid plan</strong> / monthly rate plan</p></li><li><p><strong>activate</strong> my cellphone / bank account</p><ul><li>make the cellphone work</li></ul></li><li>handset: the device / cellphone</li><li>rollover plan<ul><li>to rollover</li></ul></li><li><p>fee</p><ul><li>service fee</li><li>cannot be something which can be touched</li><li>wrong: bottle fee</li></ul></li><li><p><strong>be compatible with</strong></p><ul><li>applications compatible with the cellphone</li><li>roommates are compatible with the party</li></ul></li><li><p><strong>what’s the catch</strong></p><ul><li>catch: condition</li></ul></li><li><p><strong>in luck</strong></p><ul><li>you are in luck (used by the second person)</li></ul></li><li><p><strong>throw sth. in</strong> : include for free</p></li><li><p><strong>voice mail</strong></p></li><li><strong>screen your calls</strong></li></ul><h1 id="Internet-Service"><a href="#Internet-Service" class="headerlink" title="Internet Service"></a>Internet Service</h1><h2 id="c137-Getting-Internet-Service"><a href="#c137-Getting-Internet-Service" class="headerlink" title="c137 - Getting Internet Service"></a>c137 - Getting Internet Service</h2><ul><li>broadband internet<ul><li>bandwidth</li></ul></li><li>dialup</li><li>download<ul><li>download something</li><li>a download</li></ul></li><li>kbps: kilobytes per second</li><li>mbps: megabytes per second</li><li>lag: delay, slowness<ul><li>there’s too much lag: speed is slow</li></ul></li><li>router<ul><li>wireless router</li></ul></li><li>get in the way of a connect <ul><li>firewall</li></ul></li><li>I have no idea: I don’t know</li><li>bucks: Dallas</li><li>throw in for free<ul><li>include it for free</li><li>I will buy computer if you throw in a pair of headphones, deal?</li><li>salesman threw in a subscription to the local newspaper for buying his product.</li></ul></li></ul><h1 id="Automotive"><a href="#Automotive" class="headerlink" title="Automotive"></a>Automotive</h1><h2 id="b138-Renting-a-Car"><a href="#b138-Renting-a-Car" class="headerlink" title="b138 - Renting a Car"></a>b138 - Renting a Car</h2><ul><li>keep yourself in check</li><li>compact: small<ul><li>a compact car - VW Golf</li><li>very small</li></ul></li><li>mid-size vehicle<ul><li>Ford Taurus, Toyota Camry</li><li>SUV: sports utility vehicle<ul><li>for off-road</li><li>Ford Explorer / Jeep Cherokee</li></ul></li></ul></li><li><strong>make a reservation</strong></li><li>throw a fit</li><li>run out of cars<ul><li>run out of gasoline. We need to find a gas station soon</li><li>we ran out last night.</li><li>my pen ran out of ink.</li></ul></li><li>have no sth<ul><li>haven’t geo any …</li></ul></li><li>you’d better : a threat<ul><li>you had better</li></ul></li><li>beat the hell out of sb/sth<ul><li>keep hit sb/sth</li></ul></li><li>convertible<ul><li></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Scared"><a href="#Scared" class="headerlink" title="Scared"></a>Scared</h1><h2 id="119c-being-scared"><a href="#119c-being-scared" class="headerlink" title="119c - being scared"></a>119c - being scared</h2><ul><li>haunt</li><li><strong>coward</strong><ul><li>be a coward</li><li>be coward</li></ul></li><li><strong>goosebumps</strong>: chicken skin</li><li>scaredy cat<ul><li>some body afraid of everything </li></ul></li><li>scary looking mansion<ul><li>mansion: a big house looking scary</li><li>adj + looking<ul><li>creepy looking</li><li>craziest looking</li></ul></li></ul></li><li><strong>gives me the creeps</strong><ul><li>something make you uncomfortable and scared</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Restaurant&quot;&gt;&lt;a href=&quot;#Restaurant&quot; class=&quot;headerlink&quot; title=&quot;Restaurant&quot;&gt;&lt;/a&gt;Restaurant&lt;/h1&gt;&lt;h2 id=&quot;107c-Restaurant-complaining-at-a-
+        &lt;h1 id=&quot;Scared&quot;&gt;&lt;a href=&quot;#Scared&quot; class=&quot;headerlink&quot; title=&quot;Scared&quot;&gt;&lt;/a&gt;Scared&lt;/h1&gt;&lt;h2 id=&quot;119c-being-scared&quot;&gt;&lt;a href=&quot;#119c-being-scared&quot; c
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English in Social Activities</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-23T22:32:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li><p>you are something else</p><ul><li>I cannot believe you</li></ul></li><li><p>keep my eye out for that</p></li></ul><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
       
     
     </summary>
@@ -490,19 +428,19 @@
   </entry>
   
   <entry>
-    <title>Applied English in Love</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
+    <title>Applied English in Daily Life</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Daily%20Life/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Daily Life/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:27:00.720Z</updated>
+    <updated>2020-02-12T01:45:49.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="Restaurant"><a href="#Restaurant" class="headerlink" title="Restaurant"></a>Restaurant</h1><h2 id="107c-Restaurant-complaining-at-a-restaurant"><a href="#107c-Restaurant-complaining-at-a-restaurant" class="headerlink" title="107c -Restaurant- complaining at a restaurant"></a>107c -Restaurant- complaining at a restaurant</h2><ul><li>an <strong>establishment</strong>: <ul><li>_in this kind of establishment_</li><li>in a restaurant content: a place of business</li></ul></li><li><strong>too runny</strong><ul><li>The soup is too runny (too liquid)</li><li>a little bit thicker</li></ul></li><li><strong>over seasoned</strong><ul><li>too salty</li></ul></li><li><strong>inedible</strong><ul><li>disgusting, not physically you cannot eat</li></ul></li><li><strong>rubbery</strong><ul><li>swallow</li></ul></li><li>over-cooked</li><li><strong>a liver of</strong> duck liver<ul><li>sliver: slice</li><li>a sliver of cake and no ice-cream</li><li>cut me a sliver</li><li>you call this sliver of beef on my plate a meal?</li></ul></li><li><strong>shell out</strong><ul><li>I am gonna have to shell out for a present.</li><li>she shelled out the eight hundred bucks for the tickets.</li><li>cannot afford to shell out four hundred dollars</li></ul></li><li><strong>my hard earned bucks</strong> / cash </li><li><strong>a doggy bag</strong></li></ul><h1 id="Mobile"><a href="#Mobile" class="headerlink" title="Mobile"></a>Mobile</h1><h2 id="106c-Shop-mobile-phone-plan"><a href="#106c-Shop-mobile-phone-plan" class="headerlink" title="106c -Shop- mobile phone plan"></a>106c -Shop- mobile phone plan</h2><ul><li><p><strong>prepaid plan</strong> / monthly rate plan</p></li><li><p><strong>activate</strong> my cellphone / bank account</p><ul><li>make the cellphone work</li></ul></li><li>handset: the device / cellphone</li><li>rollover plan<ul><li>to rollover</li></ul></li><li><p>fee</p><ul><li>service fee</li><li>cannot be something which can be touched</li><li>wrong: bottle fee</li></ul></li><li><p><strong>be compatible with</strong></p><ul><li>applications compatible with the cellphone</li><li>roommates are compatible with the party</li></ul></li><li><p><strong>what’s the catch</strong></p><ul><li>catch: condition</li></ul></li><li><p><strong>in luck</strong></p><ul><li>you are in luck (used by the second person)</li></ul></li><li><p><strong>throw sth. in</strong> : include for free</p></li><li><p><strong>voice mail</strong></p></li><li><strong>screen your calls</strong></li></ul><h1 id="Internet-Service"><a href="#Internet-Service" class="headerlink" title="Internet Service"></a>Internet Service</h1><h2 id="c137-Getting-Internet-Service"><a href="#c137-Getting-Internet-Service" class="headerlink" title="c137 - Getting Internet Service"></a>c137 - Getting Internet Service</h2><ul><li>broadband internet<ul><li>bandwidth</li></ul></li><li>dialup</li><li>download<ul><li>download something</li><li>a download</li></ul></li><li>kbps: kilobytes per second</li><li>mbps: megabytes per second</li><li>lag: delay, slowness<ul><li>there’s too much lag: speed is slow</li></ul></li><li>router<ul><li>wireless router</li></ul></li><li>get in the way of a connect <ul><li>firewall</li></ul></li><li>I have no idea: I don’t know</li><li>bucks: Dallas</li><li>throw in for free<ul><li>include it for free</li><li>I will buy computer if you throw in a pair of headphones, deal?</li><li>salesman threw in a subscription to the local newspaper for buying his product.</li></ul></li></ul><h1 id="Automotive"><a href="#Automotive" class="headerlink" title="Automotive"></a>Automotive</h1><h2 id="b138-Renting-a-Car"><a href="#b138-Renting-a-Car" class="headerlink" title="b138 - Renting a Car"></a>b138 - Renting a Car</h2><ul><li>keep yourself in check</li><li>compact: small<ul><li>a compact car - VW Golf</li><li>very small</li></ul></li><li>mid-size vehicle<ul><li>Ford Taurus, Toyota Camry</li><li>SUV: sports utility vehicle<ul><li>for off-road</li><li>Ford Explorer / Jeep Cherokee</li></ul></li></ul></li><li><strong>make a reservation</strong></li><li>throw a fit</li><li>run out of cars<ul><li>run out of gasoline. We need to find a gas station soon</li><li>we ran out last night.</li><li>my pen ran out of ink.</li></ul></li><li>have no sth<ul><li>haven’t geo any …</li></ul></li><li>you’d better : a threat<ul><li>you had better</li></ul></li><li>beat the hell out of sb/sth<ul><li>keep hit sb/sth</li></ul></li><li>convertible<ul><li></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
+        &lt;h1 id=&quot;Restaurant&quot;&gt;&lt;a href=&quot;#Restaurant&quot; class=&quot;headerlink&quot; title=&quot;Restaurant&quot;&gt;&lt;/a&gt;Restaurant&lt;/h1&gt;&lt;h2 id=&quot;107c-Restaurant-complaining-at-a-
       
     
     </summary>
@@ -521,19 +459,50 @@
   </entry>
   
   <entry>
-    <title>Applied English in Social Activities</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <title>Applied English in Home</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Home/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Home/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-23T22:32:17.000Z</updated>
+    <updated>2020-02-09T22:18:44.810Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li><p>you are something else</p><ul><li>I cannot believe you</li></ul></li><li><p>keep my eye out for that</p></li></ul><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Fix"><a href="#Fix" class="headerlink" title="Fix"></a>Fix</h1><h2 id="112c-Dr-Plumber"><a href="#112c-Dr-Plumber" class="headerlink" title="112c - Dr. Plumber"></a>112c - Dr. Plumber</h2><ul><li><strong>clogged</strong></li><li><strong>faucet</strong></li><li><strong>flushing the toilet</strong></li><li><strong>shut off</strong></li></ul><ul><li><strong>not far from the truth</strong></li><li><strong>trades person</strong><ul><li>works in a trade</li></ul></li></ul><h1 id="Baby"><a href="#Baby" class="headerlink" title="Baby"></a>Baby</h1><h2 id="c118-baby-talk"><a href="#c118-baby-talk" class="headerlink" title="c118 - baby talk"></a>c118 - baby talk</h2><ul><li><p>widdle : little</p></li><li><p><strong>it’s your turn</strong></p></li><li><strong>I could just eat it up</strong>: it’s so cute</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
+        &lt;h1 id=&quot;Fix&quot;&gt;&lt;a href=&quot;#Fix&quot; class=&quot;headerlink&quot; title=&quot;Fix&quot;&gt;&lt;/a&gt;Fix&lt;/h1&gt;&lt;h2 id=&quot;112c-Dr-Plumber&quot;&gt;&lt;a href=&quot;#112c-Dr-Plumber&quot; class=&quot;headerlink
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English in Love</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:27:00.720Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
       
     
     </summary>
@@ -586,50 +555,50 @@
   </entry>
   
   <entry>
-    <title>Asset Pricing - Derivatives</title>
-    <link href="http://yoursite.com/2020/01/30/Summary%20of%20Asset%20Pricing%20Derivatives/"/>
-    <id>http://yoursite.com/2020/01/30/Summary of Asset Pricing Derivatives/</id>
-    <published>2020-01-30T05:00:00.000Z</published>
-    <updated>2020-02-22T22:17:55.332Z</updated>
+    <title>Python Regular Expression Basics</title>
+    <link href="http://yoursite.com/2020/01/29/Python%20Regular%20Expression%20Basics/"/>
+    <id>http://yoursite.com/2020/01/29/Python Regular Expression Basics/</id>
+    <published>2020-01-29T05:00:00.000Z</published>
+    <updated>2020-01-29T20:54:47.564Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Option"><a href="#Option" class="headerlink" title="Option"></a>Option</h1><h2 id="Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework"><a href="#Option-Profit-and-Loss-Attribution-and-Pricing-A-New-Framework" class="headerlink" title="Option Profit and Loss Attribution and Pricing: A New Framework"></a>Option Profit and Loss Attribution and Pricing: A New Framework</h2><p>21 February 2020 from JF<br><a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12894</a><br>This paper develops a new top‐down valuation framework that links the pricing of an option investment to its <strong>daily profit and loss attribution</strong>. The framework uses the Black‐Merton‐Scholes option pricing formula to attribute the short‐term option investment risk to <strong>variation in the underlying security price</strong> and the <strong>option’s implied volatility</strong>.<br>Taking risk‐neutral expectation and demanding no dynamic arbitrage results in a pricing relation that links <strong>an option’s fair implied volatility level</strong> to the <strong>underlying’s volatility level</strong> with corrections for the implied volatility’s own expected direction of movement, its variance, and its covariance with the underlying security return.</p><h2 id="Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times"><a href="#Real-Option-Valuation-in-Multiple-Dimensions-Using-Poisson-Optional-Stopping-Times" class="headerlink" title="Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times"></a>Real-Option Valuation in Multiple Dimensions Using Poisson Optional Stopping Times</h2><p>28 January 2020 from JFQA<br><a href="http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf" target="_blank" rel="noopener">http://pdfs.semanticscholar.org/94a1/56cdc6359a0c90061bb678fa9ef32ed5be6c.pdf</a><br>We provide <strong>a new framework for valuing multidimensional real options</strong> where opportunities to exercise the option are generated by an exogenous Poisson process, which can be viewed as a liquidity constraint on decision times. This approach, which we call the Poisson optional stopping times (POST) method, finds the value function as a monotone sequence of lower bounds. </p><ul><li>In a case study, we demonstrate that the frequently used quasi-analytic method yields a suboptimal policy and an inaccurate value function. </li><li>The proposed method is demonstrably correct, straightforward to implement, reliable in computation, and broadly applicable in analyzing multidimensional option-valuation problems.</li></ul><h1 id="Credit"><a href="#Credit" class="headerlink" title="Credit"></a>Credit</h1><h2 id="Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process"><a href="#Ruin-probabilities-for-a-Levy-driven-generalised-Ornstein–Uhlenbeck-process" class="headerlink" title="Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process"></a>Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process</h2><p>04 December 2019 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a></p><p>We study the asymptotics of the ruin probability for a process which is the solution of a linear SDE defined by a pair of independent Lévy processes. Our main interest is <strong>a model describing the evolution of the capital reserve of an insurance company</strong> selling annuities and investing in a risky asset. </p><ul><li>Let $\beta &gt; 0$  be the root of the cumulant-generating function ${H}$ of the increment $V_1$ of the log-price process. We show that the ruin probability admits the exact asymptotic  $Cu^{-\beta}$ as the initial capital $u \to \infty$, assuming only that the law of $V_{T}$ is non-arithmetic without any further assumptions on the price process.</li></ul><h2 id="Is-the-Credit-Spread-Puzzle-a-Myth"><a href="#Is-the-Credit-Spread-Puzzle-a-Myth" class="headerlink" title="Is the Credit Spread Puzzle a Myth?"></a>Is the Credit Spread Puzzle a Myth?</h2><p>20 February 2020 from JFE<br><a href="https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://www.sciencedirect.com/science/article/pii/S0304405X20300428?dgcid=rss_sd_all&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We revisit Feldhütter and Schaefer (FS, 2018), who report evidence of a “credit spread puzzle” for high-yield but not investment-grade bonds. We show their results are reversed when their model is calibrated to market values of debt (as required by theory) rather than book values.<br>We then demonstrate that using credit spreads rather than historical default rates to identify the default boundary provides the statistical power necessary to reject their assumption that firm dynamics follow geometric Brownian motion. A large market price of jump risk is required to match historical default rates, which generates a credit spread puzzle for investment-grade but not high-yield bonds.</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Regular-Expression-Quick-Link"><a href="#Regular-Expression-Quick-Link" class="headerlink" title="Regular Expression Quick Link"></a>Regular Expression Quick Link</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">^        Matches the beginning of a line</span><br><span class="line">$        Matches the end of the line</span><br><span class="line">.        Matches any character</span><br><span class="line">\s       Matches whitespace</span><br><span class="line">\S       Matches any non-whitespace character</span><br><span class="line">*        Repeats a character zero <span class="keyword">or</span> more times</span><br><span class="line">*?       Repeats a character zero or more times </span><br><span class="line">         (non-greedy)</span><br><span class="line">+        Repeats a character one <span class="keyword">or</span> more times</span><br><span class="line">+?       Repeats a character one or more times </span><br><span class="line">         (non-greedy)</span><br><span class="line">[aeiou]  Matches a single character <span class="keyword">in</span> the listed set</span><br><span class="line">[^XYZ]   Matches a single character <span class="keyword">not</span> <span class="keyword">in</span> the listed set</span><br><span class="line">[a-z0<span class="number">-9</span>] The set of characters can include a range</span><br><span class="line">(        Indicates where string extraction <span class="keyword">is</span> to start</span><br><span class="line">)        Indicates where string extraction <span class="keyword">is</span> to end</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Option&quot;&gt;&lt;a href=&quot;#Option&quot; class=&quot;headerlink&quot; title=&quot;Option&quot;&gt;&lt;/a&gt;Option&lt;/h1&gt;&lt;h2 id=&quot;Option-Profit-and-Loss-Attribution-and-Pricing-A-
+        &lt;h1 id=&quot;Regular-Expression-Quick-Link&quot;&gt;&lt;a href=&quot;#Regular-Expression-Quick-Link&quot; class=&quot;headerlink&quot; title=&quot;Regular Expression Quick Link&quot;&gt;&lt;/a
       
     
     </summary>
     
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+      <category term="Computer Science" scheme="http://yoursite.com/categories/Computer-Science/"/>
     
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+      <category term="Programming" scheme="http://yoursite.com/categories/Computer-Science/Programming/"/>
     
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
+      <category term="Python" scheme="http://yoursite.com/categories/Computer-Science/Programming/Python/"/>
     
     
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+      <category term="Regular Expression" scheme="http://yoursite.com/tags/Regular-Expression/"/>
     
   </entry>
   
   <entry>
-    <title>Asset Pricing - Fixed Income</title>
-    <link href="http://yoursite.com/2020/01/30/Summary%20of%20Asset%20Pricing%20Fixed%20Income/"/>
-    <id>http://yoursite.com/2020/01/30/Summary of Asset Pricing Fixed Income/</id>
-    <published>2020-01-30T05:00:00.000Z</published>
-    <updated>2020-02-22T22:18:06.759Z</updated>
+    <title>Monetary and Bank Papers</title>
+    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Macroeconomics%20Monetary%20Papers/"/>
+    <id>http://yoursite.com/2020/01/28/Summary of Macroeconomics Monetary Papers/</id>
+    <published>2020-01-28T05:00:00.000Z</published>
+    <updated>2020-02-22T22:08:35.841Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Theory"><a href="#Theory" class="headerlink" title="Theory"></a>Theory</h1><h2 id="An-incomplete-equilibrium-with-a-stochastic-annuity"><a href="#An-incomplete-equilibrium-with-a-stochastic-annuity" class="headerlink" title="An incomplete equilibrium with a stochastic annuity"></a>An incomplete equilibrium with a stochastic annuity</h2><p>29 January 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00415-6?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00415-6?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We prove the global existence of an incomplete, continuous-time finite-agent Radner equilibrium in which exponential agents optimise their expected utility over both running consumption and terminal wealth. </p><ul><li>The market consists of a traded annuity, and along with unspanned income, the market is incomplete. </li><li>Set in a Brownian framework, the income is driven by a multidimensional diffusion and in particular includes mean-reverting dynamics. </li><li>The equilibrium is characterised by a system of fully coupled quadratic backward stochastic differential equations, a solution to which is proved to exist under Markovian assumptions. </li><li>We also show that the equilibrium allocations lead to Pareto-optimal allocations only in exceptional situations.</li></ul><h2 id="Term-structure-modelling-for-multiple-curves-with-stochastic-discontinuities"><a href="#Term-structure-modelling-for-multiple-curves-with-stochastic-discontinuities" class="headerlink" title="Term structure modelling for multiple curves with stochastic discontinuities"></a>Term structure modelling for multiple curves with stochastic discontinuities</h2><p>15 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00416-5?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00416-5?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We develop a <strong>general term structure framework</strong> taking <strong>stochastic discontinuities</strong> explicitly into account. Stochastic discontinuities are a key feature in interest rate markets, as for example the jumps of the term structures in correspondence to monetary policy meetings of the ECB show. </p><ul><li>We provide a general analysis of multiple curve markets <strong>under minimal assumptions in an extended HJM framework</strong> and provide <strong>a fundamental theorem of asset pricing based on NAFLVR</strong>. </li><li>The approach with stochastic discontinuities permits to embed market models directly, unifying seemingly different modelling philosophies. </li><li>We also develop a tractable class of models, based on affine semimartingales, going beyond the requirement of stochastic continuity.</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Monetary-Policy"><a href="#Monetary-Policy" class="headerlink" title="Monetary Policy"></a>Monetary Policy</h1><h2 id="Optimal-Monetary-Policy-with-Informational-Frictions"><a href="#Optimal-Monetary-Policy-with-Informational-Frictions" class="headerlink" title="Optimal Monetary Policy with Informational Frictions"></a>Optimal Monetary Policy with Informational Frictions</h2><p>28 January 2020 from JPE<br><a href="https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf" target="_blank" rel="noopener">https://dspace.mit.edu/bitstream/1721.1/66950/1/Marios1122.pdf</a><br>We study optimal policy in a business-cycle setting in which firms hold dispersed private information about, or are rationally inattentive to, the state of the economy. The informational friction is the source of both nominal and real rigidity. </p><ul><li>Because of the latter, the optimal monetary policy does not target price stability. Instead, it targets a negative relation between the nominal price level and real economic activity. </li><li>Such leaning against the wind helps maximize production efficiency. An additional contribution is the adaptation of the primal approach of the Ramsey literature to a flexible form of informational friction.</li></ul><h2 id="Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral"><a href="#Banks’-Balance-Sheets-and-Liquidation-Values-Evidence-from-Real-Estate-Collateral" class="headerlink" title="Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral"></a>Banks’ Balance Sheets and Liquidation Values: Evidence from Real Estate Collateral</h2><p>17 June 2019 from RFS<br><a href="https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://academic.oup.com/rfs/article/33/2/504/5512487?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>This paper finds that <strong>declining bank equity or liquidity</strong> reduces <strong>liquidation values of bank-owned real estate and accelerates the pace of asset sales</strong>. </p><ul><li>Buyers of these assets earn significant returns for providing liquidity to banks, as prices tend to rebound sharply after sales by illiquid banks. </li><li>Lower liquidation values also depress the prices of nearby real estate transactions. </li><li>Policy interventions, such as equity injections and central bank asset purchases, increase liquidation values by providing institutions with the balance sheet capacity to slow asset sales. </li><li>This evidence suggests that <strong>balance sheet adjustments at financial institutions can explain real asset price dynamics</strong>.</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Theory&quot;&gt;&lt;a href=&quot;#Theory&quot; class=&quot;headerlink&quot; title=&quot;Theory&quot;&gt;&lt;/a&gt;Theory&lt;/h1&gt;&lt;h2 id=&quot;An-incomplete-equilibrium-with-a-stochastic-annui
+        &lt;h1 id=&quot;Monetary-Policy&quot;&gt;&lt;a href=&quot;#Monetary-Policy&quot; class=&quot;headerlink&quot; title=&quot;Monetary Policy&quot;&gt;&lt;/a&gt;Monetary Policy&lt;/h1&gt;&lt;h2 id=&quot;Optimal-Monet
       
     
     </summary>
@@ -638,14 +607,47 @@
     
       <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
     
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
+      <category term="Macroeconomics" scheme="http://yoursite.com/categories/Economics/Literature-Review/Macroeconomics/"/>
     
     
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+      <category term="Macroeconomics" scheme="http://yoursite.com/tags/Macroeconomics/"/>
     
       <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
-      <category term="Fixed Income" scheme="http://yoursite.com/tags/Fixed-Income/"/>
+      <category term="Monetary" scheme="http://yoursite.com/tags/Monetary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Economic Growth Papers</title>
+    <link href="http://yoursite.com/2020/01/28/Summary%20of%20Macroeconomics%20Growth%20Papers/"/>
+    <id>http://yoursite.com/2020/01/28/Summary of Macroeconomics Growth Papers/</id>
+    <published>2020-01-28T05:00:00.000Z</published>
+    <updated>2020-02-22T22:09:55.602Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Global-Economy"><a href="#Global-Economy" class="headerlink" title="Global Economy"></a>Global Economy</h1><h2 id="The-Global-Diffusion-of-Ideas"><a href="#The-Global-Diffusion-of-Ideas" class="headerlink" title="The Global Diffusion of Ideas"></a>The Global Diffusion of Ideas</h2><p>05 February 2020<br><a href="https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA14044?af=R&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA14044?af=R&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We provide a tractable, quantitatively‐oriented theory of innovation and technology diffusion to explore <strong>the role of international trade in the process of development</strong>. </p><ul><li><p>We model innovation and diffusion as a process involving the combination of new ideas with insights from other industries or countries. </p><ul><li>We provide conditions under which each country’s equilibrium frontier of knowledge converges to a Fréchet distribution, and derive a system of differential equations describing the evolution of the scale parameters of these distributions, that is, <strong>countries’ stocks of knowledge</strong>. </li></ul></li><li>The model remains tractable with many asymmetric countries and generates a rich set of predictions about <strong>how the level and composition of trade affect countries’ frontiers of knowledge</strong>. <ul><li>We use the framework to quantify the contribution of bilateral trade costs to long‐run changes in TFP and individual post‐war growth miracles. </li><li>For our preferred calibration, we find that both gains from trade and the fraction of variation of TFP growth accounted for by changes in trade more than double relative to a model without diffusion.</li></ul></li></ul><h1 id="Environmental-Economics"><a href="#Environmental-Economics" class="headerlink" title="Environmental Economics"></a>Environmental Economics</h1><h2 id="Pricing-Uncertainty-Induced-by-Climate-Change"><a href="#Pricing-Uncertainty-Induced-by-Climate-Change" class="headerlink" title="Pricing Uncertainty Induced by Climate Change"></a>Pricing Uncertainty Induced by Climate Change</h2><p><a href="https://academic.oup.com/rfs/article/33/3/1024/5735312?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">https://academic.oup.com/rfs/article/33/3/1024/5735312?rss=1&amp;utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>Geophysicists examine and document the repercussions for the earth’s climate induced by alternative emission scenarios and model specifications. Using simplified approximations, they produce <strong>tractable characterizations of the associated uncertainty</strong>. Meanwhile, economists write <strong>highly stylized damage functions</strong> to speculate about how climate change alters macroeconomic and growth opportunities. </p><ul><li>How can we assess <strong>both climate</strong> and <strong>emissions impacts</strong>, as well as <strong>uncertainty in the broadest sense, in social decision-making</strong>? We provide a framework for answering this question by embracing <strong>recent decision theory and tools from asset pricing</strong>, and we apply this structure with its interacting components to a revealing quantitative illustration.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Global-Economy&quot;&gt;&lt;a href=&quot;#Global-Economy&quot; class=&quot;headerlink&quot; title=&quot;Global Economy&quot;&gt;&lt;/a&gt;Global Economy&lt;/h1&gt;&lt;h2 id=&quot;The-Global-Diffus
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Macroeconomics" scheme="http://yoursite.com/categories/Economics/Literature-Review/Macroeconomics/"/>
+    
+    
+      <category term="Macroeconomics" scheme="http://yoursite.com/tags/Macroeconomics/"/>
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+      <category term="Economic Growth" scheme="http://yoursite.com/tags/Economic-Growth/"/>
     
   </entry>
   

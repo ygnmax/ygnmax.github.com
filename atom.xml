@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-23T22:51:29.199Z</updated>
+  <updated>2020-03-06T16:03:24.987Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Risk Management of Credit Products</title>
+    <link href="http://yoursite.com/2020/03/04/Financial%20Risk%20Management%20Credit/"/>
+    <id>http://yoursite.com/2020/03/04/Financial Risk Management Credit/</id>
+    <published>2020-03-04T05:00:00.000Z</published>
+    <updated>2020-03-06T16:03:24.987Z</updated>
+    
+    <content type="html"><![CDATA[<p>This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks.</p><h1 id="Credit-Market"><a href="#Credit-Market" class="headerlink" title="Credit Market"></a>Credit Market</h1><p>Credit market risk reflects the yield spread over the benchmark or risk free rate for a specific issuer,<br>which is a gauge of the probability of default and/or changes in the expected loss given default.<br>In order to properly evaluate, classify and understand credit market risk drivers, it is important to have<br>insight into the types of credit instruments available, distinguish between securitized and non<br>securitized forms of credit risk and understand direct and indirect credit exposures</p><h1 id="Loan"><a href="#Loan" class="headerlink" title="Loan"></a>Loan</h1><h2 id="Floating-rate-notes"><a href="#Floating-rate-notes" class="headerlink" title="Floating rate notes"></a>Floating rate notes</h2><script type="math/tex; mode=display">\begin{eqnarray*}PV &=& \frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}}{1+\frac{\text{Index} + \text{DM}}{m}} + \frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}}{(1+\frac{\text{Index} + \text{DM}}{m})^2} +... +\frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}+\text{FV}}{(1+\frac{\text{Index} + \text{DM}}{m})^N}\end{eqnarray*}</script><h2 id="Mortgage"><a href="#Mortgage" class="headerlink" title="Mortgage"></a>Mortgage</h2><script type="math/tex; mode=display">x = F_0 \times\frac{r(1+r)^n}{(1+r)^n-1}</script><script type="math/tex; mode=display">F_t = F_{t-1}+\frac{R}{12}\times F_{t-1}-x</script><p>Principle:</p><script type="math/tex; mode=display">F_t - F_{t-1}</script><h1 id="Securitization"><a href="#Securitization" class="headerlink" title="Securitization"></a>Securitization</h1><h1 id="Credit-Default-Swap"><a href="#Credit-Default-Swap" class="headerlink" title="Credit Default Swap"></a>Credit Default Swap</h1><h1 id="CXA"><a href="#CXA" class="headerlink" title="CXA"></a>CXA</h1><h2 id="CVA"><a href="#CVA" class="headerlink" title="CVA"></a>CVA</h2><p><strong>Credit valuation adjustment (CVA) is the present value of credit risk for a loan, bond or derivative obligation</strong>. The CVA calculation for a financial exposure is a function of <strong>expected exposure (EE)</strong>, <strong>recovery rate (RR)</strong>, <strong>loss given default (LGD)</strong>, the <strong>probability of default (POD)</strong> to arrive at an <strong>expected loss (EL)</strong>, and a discount factor to arrive at the present value of expected loss. Steps in the process are as follows:</p><p><img src="https://i.loli.net/2020/03/05/1SO9Qxo54Ywkp27.png" alt="cva.png"></p><h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><p>Consider exposure to a borrower who must deliver a zero-coupon government bond with a yield of 5% maturing in four years, assuming a recovery rate of 40% and probability of default per period of 1.25%. Following the steps on our prior slide:</p><h2 id="Credit-Scoring"><a href="#Credit-Scoring" class="headerlink" title="Credit Scoring"></a>Credit Scoring</h2><h3 id="advantage"><a href="#advantage" class="headerlink" title="advantage"></a>advantage</h3><p>shortcut to avoid risk </p><h3 id="disadvantage"><a href="#disadvantage" class="headerlink" title="disadvantage"></a>disadvantage</h3><p>lag indicator</p><h1 id="Sovereign-credit-risk"><a href="#Sovereign-credit-risk" class="headerlink" title="Sovereign credit risk"></a>Sovereign credit risk</h1><h1 id="Credit-Portfolio-Management"><a href="#Credit-Portfolio-Management" class="headerlink" title="Credit Portfolio Management"></a>Credit Portfolio Management</h1><p>Credit portfolio management involves aggregating information across obligors to classify, quantify, manage, report and mitigate (or securitize) risks</p><p>The key question is to estimate default probabilities, which can be estimated via:</p><ul><li>Historical data</li><li>Credit Spreads</li><li>Structural Credit / Reduced form model<ul><li>Structural Model</li><li>Reduced Form Model</li><li>Market Consolidation<ul><li>MSCI: Risk-Metrics</li><li>Moody: KMV</li></ul></li></ul></li></ul><h2 id="Z-score"><a href="#Z-score" class="headerlink" title="Z-score"></a>Z-score</h2><h2 id="Default-Probabilities"><a href="#Default-Probabilities" class="headerlink" title="Default Probabilities"></a>Default Probabilities</h2><h3 id="Historical-Default-Probabilities"><a href="#Historical-Default-Probabilities" class="headerlink" title="Historical Default Probabilities"></a>Historical Default Probabilities</h3><p>unconditional</p><h3 id="Hazard-Rate"><a href="#Hazard-Rate" class="headerlink" title="Hazard Rate"></a>Hazard Rate</h3><script type="math/tex; mode=display">Q(t)=1-e^{-\lambda(t)t}</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks.&lt;/p&gt;
+&lt;h1 i
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Finance" scheme="http://yoursite.com/categories/Economics/Finance/"/>
+    
+      <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
+    
+    
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
+    
+      <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
+    
+      <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
+    
+  </entry>
   
   <entry>
     <title>Applied English in Sports</title>
@@ -106,6 +140,37 @@
   </entry>
   
   <entry>
+    <title>Asset Pricing - Mathematics</title>
+    <link href="http://yoursite.com/2020/02/21/Summary%20of%20Asset%20Pricing%20Mathematics/"/>
+    <id>http://yoursite.com/2020/02/21/Summary of Asset Pricing Mathematics/</id>
+    <published>2020-02-21T05:00:00.000Z</published>
+    <updated>2020-02-22T22:18:18.547Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Stochastic-Processes"><a href="#Stochastic-Processes" class="headerlink" title="Stochastic Processes"></a>Stochastic Processes</h1><h2 id="Regime-switching-affine-processes-with-applications-to-finance"><a href="#Regime-switching-affine-processes-with-applications-to-finance" class="headerlink" title="Regime switching affine processes with applications to finance"></a>Regime switching affine processes with applications to finance</h2><p>21 February 2020 From FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We introduce the notion of a <strong>regime switching affine process</strong>. Informally this is a Markov process that behaves conditionally on each regime as an affine process with specific parameters. To facilitate our analysis, specific restrictions are imposed on these parameters. The regime switches are driven by a Markov chain. </p><ul><li>We prove that the joint process of the Markov chain and the conditionally affine part is a process with an affine structure on an enlarged state space, conditionally on the starting state of the Markov chain. </li><li>Like for affine processes, the characteristic function can be expressed in a set of ordinary differential equations that can sometimes be solved analytically. This result unifies several semi-analytical solutions found in the literature for pricing derivatives of specific regime switching processes on smaller state spaces. </li><li>It also provides a unifying theory that allows us to <strong>introduce regime switching to the pricing of many derivatives within the broad class of affine processes</strong>. Examples include European options and term structure derivatives with stochastic volatility and default. </li><li>Essentially, whenever there is a pricing solution based on an affine process, we can extend this to a regime switching affine process without sacrificing the analytical tractability of the affine process.</li></ul><h2 id="The-value-of-informational-arbitrage"><a href="#The-value-of-informational-arbitrage" class="headerlink" title="The value of informational arbitrage"></a>The value of informational arbitrage</h2><p>11 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>In the context of a general <strong>semimartingale model</strong>, we aim at determining how much an investor is willing to pay to learn additional information that allows achieving arbitrage. If such a value exists, we call it the value of informational arbitrage. We are interested in the case where the information yields arbitrage opportunities but not unbounded profits with bounded risk. As in Amendinger et al. (Finance Stoch. 7:29–46, 2003), we rely on an indifference valuation approach and study optimal consumption–investment problems under initial information and arbitrage. We establish some new results on models with additional information and characterise when the value of informational arbitrage is universal.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Stochastic-Processes&quot;&gt;&lt;a href=&quot;#Stochastic-Processes&quot; class=&quot;headerlink&quot; title=&quot;Stochastic Processes&quot;&gt;&lt;/a&gt;Stochastic Processes&lt;/h1&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
+    
+      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
+    
+    
+      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
+    
+      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Risk Management of Commodity</title>
     <link href="http://yoursite.com/2020/02/21/Financial%20Risk%20Management%20Commodity/"/>
     <id>http://yoursite.com/2020/02/21/Financial Risk Management Commodity/</id>
@@ -136,37 +201,6 @@
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Asset Pricing - Mathematics</title>
-    <link href="http://yoursite.com/2020/02/21/Summary%20of%20Asset%20Pricing%20Mathematics/"/>
-    <id>http://yoursite.com/2020/02/21/Summary of Asset Pricing Mathematics/</id>
-    <published>2020-02-21T05:00:00.000Z</published>
-    <updated>2020-02-22T22:18:18.547Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Stochastic-Processes"><a href="#Stochastic-Processes" class="headerlink" title="Stochastic Processes"></a>Stochastic Processes</h1><h2 id="Regime-switching-affine-processes-with-applications-to-finance"><a href="#Regime-switching-affine-processes-with-applications-to-finance" class="headerlink" title="Regime switching affine processes with applications to finance"></a>Regime switching affine processes with applications to finance</h2><p>21 February 2020 From FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00419-2?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>We introduce the notion of a <strong>regime switching affine process</strong>. Informally this is a Markov process that behaves conditionally on each regime as an affine process with specific parameters. To facilitate our analysis, specific restrictions are imposed on these parameters. The regime switches are driven by a Markov chain. </p><ul><li>We prove that the joint process of the Markov chain and the conditionally affine part is a process with an affine structure on an enlarged state space, conditionally on the starting state of the Markov chain. </li><li>Like for affine processes, the characteristic function can be expressed in a set of ordinary differential equations that can sometimes be solved analytically. This result unifies several semi-analytical solutions found in the literature for pricing derivatives of specific regime switching processes on smaller state spaces. </li><li>It also provides a unifying theory that allows us to <strong>introduce regime switching to the pricing of many derivatives within the broad class of affine processes</strong>. Examples include European options and term structure derivatives with stochastic volatility and default. </li><li>Essentially, whenever there is a pricing solution based on an affine process, we can extend this to a regime switching affine process without sacrificing the analytical tractability of the affine process.</li></ul><h2 id="The-value-of-informational-arbitrage"><a href="#The-value-of-informational-arbitrage" class="headerlink" title="The value of informational arbitrage"></a>The value of informational arbitrage</h2><p>11 February 2020 from FS<br><a href="http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound" target="_blank" rel="noopener">http://link.springer.com/article/10.1007/s00780-020-00418-3?utm_source=researcher_app&amp;utm_medium=referral&amp;utm_campaign=RESR_MRKT_Researcher_inbound</a><br>In the context of a general <strong>semimartingale model</strong>, we aim at determining how much an investor is willing to pay to learn additional information that allows achieving arbitrage. If such a value exists, we call it the value of informational arbitrage. We are interested in the case where the information yields arbitrage opportunities but not unbounded profits with bounded risk. As in Amendinger et al. (Finance Stoch. 7:29–46, 2003), we rely on an indifference valuation approach and study optimal consumption–investment problems under initial information and arbitrage. We establish some new results on models with additional information and characterise when the value of informational arbitrage is universal.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Stochastic-Processes&quot;&gt;&lt;a href=&quot;#Stochastic-Processes&quot; class=&quot;headerlink&quot; title=&quot;Stochastic Processes&quot;&gt;&lt;/a&gt;Stochastic Processes&lt;/h1&gt;&lt;
-      
-    
-    </summary>
-    
-      <category term="Economics" scheme="http://yoursite.com/categories/Economics/"/>
-    
-      <category term="Literature Review" scheme="http://yoursite.com/categories/Economics/Literature-Review/"/>
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/categories/Economics/Literature-Review/Asset-Pricing/"/>
-    
-    
-      <category term="Asset Pricing" scheme="http://yoursite.com/tags/Asset-Pricing/"/>
-    
-      <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
   </entry>
   
@@ -209,9 +243,9 @@
     <link href="http://yoursite.com/2020/02/10/Summary%20of%20Economic%20Inequality%20Papers/"/>
     <id>http://yoursite.com/2020/02/10/Summary of Economic Inequality Papers/</id>
     <published>2020-02-10T05:00:00.000Z</published>
-    <updated>2020-02-22T22:18:35.601Z</updated>
+    <updated>2020-03-01T01:42:35.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Heterogeneity-and-Persistence-in-Returns-to-Wealth"><a href="#Heterogeneity-and-Persistence-in-Returns-to-Wealth" class="headerlink" title="Heterogeneity and Persistence in Returns to Wealth"></a>Heterogeneity and Persistence in Returns to Wealth</h2><p>July 2018<br><a href="https://www.imf.org/~/media/Files/Publications/WP/2018/wp18171.ashx" target="_blank" rel="noopener">https://www.imf.org/~/media/Files/Publications/WP/2018/wp18171.ashx</a><br>We provide a systematic <strong>analysis of the properties of individual returns to wealth</strong> using 12 years of population data from Norway’s administrative tax records. We document a number of novel results. </p><ul><li>First, individuals earn markedly different average returns on their net worth (a standard deviation of 22.1%) and on its components. </li><li>Second, heterogeneity in returns does not arise merely from differences in the allocation of wealth between safe and risky assets: <strong>returns are heterogeneous even within narrow asset classes</strong>. </li><li>Third, returns are positively correlated with wealth: moving from the 10th to the 90th percentile of the net worth distribution increases the return by 18 percentage points (and 10 percentage points if looking at net‐of‐tax returns). </li><li>Fourth, individual wealth returns exhibit substantial persistence over time. We argue that while this persistence partly arises from stable differences in risk exposure and assets scale, it also reflects heterogeneity in sophistication and financial information, as well as entrepreneurial talent. </li><li>Finally, <strong>wealth returns are correlated across generations</strong>. We discuss the implications of these findings for several strands of the wealth inequality debate.</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="Heterogeneity-and-Persistence-in-Returns-to-Wealth"><a href="#Heterogeneity-and-Persistence-in-Returns-to-Wealth" class="headerlink" title="Heterogeneity and Persistence in Returns to Wealth"></a>Heterogeneity and Persistence in Returns to Wealth</h2><p>July 2018<br><a href="https://www.imf.org/~/media/Files/Publications/WP/2018/wp18171.ashx" target="_blank" rel="noopener">https://www.imf.org/~/media/Files/Publications/WP/2018/wp18171.ashx</a><br>We provide a systematic <strong>analysis of the properties of individual returns to wealth</strong> using 12 years of population data from Norway’s administrative tax records. We document a number of novel results. </p><ul><li>First, individuals earn markedly different average returns on their net worth (a standard deviation of 22.1%) and on its components. </li><li>Second, heterogeneity in returns does not arise merely from differences in the allocation of wealth between safe and risky assets: <strong>returns are heterogeneous even within narrow asset classes</strong>. </li><li>Third, returns are positively correlated with wealth: moving from the 10th to the 90th percentile of the net worth distribution increases the return by 18 percentage points (and 10 percentage points if looking at net‐of‐tax returns). </li><li>Fourth, individual wealth returns exhibit substantial persistence over time. We argue that while this persistence partly arises from stable differences in risk exposure and assets scale, it also reflects heterogeneity in sophistication and financial information, as well as entrepreneurial talent. </li><li>Finally, <strong>wealth returns are correlated across generations</strong>. We discuss the implications of these findings for several strands of the wealth inequality debate.</li></ul><h2 id="Genetic-Endowments-and-Wealth-Inequality"><a href="#Genetic-Endowments-and-Wealth-Inequality" class="headerlink" title="Genetic Endowments and Wealth Inequality"></a>Genetic Endowments and Wealth Inequality</h2><p>29 Feb 2020 from JPE<br><a href="http://www.nber.org/papers/w24642.pdf" target="_blank" rel="noopener">http://www.nber.org/papers/w24642.pdf</a><br>We show that <strong>genetic endowments</strong> linked to <strong>educational attainment</strong> strongly and robustly predict <strong>wealth at retirement</strong>. The estimated relationship is not fully explained by flexibly controlling for education and labor income. </p><ul><li>We therefore investigate a host of additional mechanisms that could account for the gene-wealth gradient, including inheritances, mortality, risk preferences, portfolio decisions, beliefs about the probabilities of macroeconomic events, and planning horizons. </li><li>We provide evidence that genetic endowments related to <strong>human capital accumulation</strong> are associated with wealth not only through <strong>educational attainment and labor income</strong> but also through <strong>a facility with complex financial decision-making</strong>.</li></ul>]]></content>
     
     <summary type="html">
     
@@ -270,68 +304,6 @@
   </entry>
   
   <entry>
-    <title>Applied English for Office and Work</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Office/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Office/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:28:15.046Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><h1 id="Late"><a href="#Late" class="headerlink" title="Late"></a>Late</h1><h2 id="113c-Sorry-I’m-late"><a href="#113c-Sorry-I’m-late" class="headerlink" title="113c - Sorry I’m late"></a>113c - Sorry I’m late</h2><ul><li><strong>when you arrive late</strong><ul><li>good excuses</li></ul></li><li><p><strong>get tied up</strong></p><ul><li>I got tied up at the office.</li><li>I was tied up on the phone all afternoon and didn’t get any work done</li><li>get tied up in traffic on the way here.</li></ul></li><li><p><strong>a huge traffic jam</strong></p><ul><li>a huge pileup<ul><li>accident</li><li>get pied on top of each other / get accident</li></ul></li></ul></li><li><p><strong>running late</strong></p><ul><li>I am running late. (The speaker knows it will be late)</li><li>Jane is running late, she’ll be here.</li></ul></li><li><p><strong>run over</strong></p><ul><li>a meet ran over 15mins</li><li>longer than expected</li></ul></li><li><p>be here <strong>in a sec</strong></p><ul><li>very very soon</li></ul></li><li><p>be here <strong>in a minute</strong></p></li><li><p>get stuck in a traffic</p><ul><li>in the traffic jam</li><li>the traffic is <strong>backed up for miles</strong></li></ul></li></ul><h1 id="Deadline"><a href="#Deadline" class="headerlink" title="Deadline"></a>Deadline</h1><h2 id="116c-You-missed-the-deadline"><a href="#116c-You-missed-the-deadline" class="headerlink" title="116c - You missed the deadline"></a>116c - You missed the deadline</h2><ul><li>tantamount</li><li>behind schedule</li><li>procrastinate</li><li>glitch<ul><li>an error</li></ul></li><li>rationalize <ul><li>an psychological word: try to convince sb about sth</li><li>You cannot rationalize your son’s behavior.</li><li>rationalize buying such an expensive pair of shoes</li><li>stop trying to rationalize it</li></ul></li><li><strong>phony</strong>: false, fake</li></ul><ul><li>a fairly significant deadline <ul><li>fairly: <ul><li>kind of, sort of</li><li>very important</li></ul></li></ul></li><li>essentially blame<ul><li>essentially:<ul><li>pretty much</li></ul></li></ul></li><li>I am not trying to <strong>pass the buck</strong> here<ul><li>I am not trying to pass the blame, put the responsibility on someone else</li></ul></li><li><strong>use something as a crutch</strong><ul><li>crutch: wooden or metal sticks to walk with<ul><li>excuses</li></ul></li><li>I was using alcohol as a crutch to get through the day.</li><li>he uses his disability as a crutch.</li><li>stop using your weight as a crutch.</li></ul></li><li><strong>assuming guilt</strong><ul><li>lose face</li></ul></li><li>in over your hand</li></ul><h1 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h1><h2 id="108c-Bad-News-Boss"><a href="#108c-Bad-News-Boss" class="headerlink" title="108c - Bad News, Boss"></a>108c - Bad News, Boss</h2><ul><li><strong>shoulder</strong> the burden</li></ul><ul><li><p><strong>go under</strong>: bankrupt</p></li><li><p><strong>lay it on me</strong></p><ul><li>tell me (the bad news)</li></ul></li><li><p><strong>for crying out loud</strong></p><ul><li>Oh, my God</li></ul></li><li><p><strong>how can I put this</strong> … <strong>let’s just say that…</strong></p><ul><li>soften it up a bit</li></ul></li></ul><h1 id="Day-off"><a href="#Day-off" class="headerlink" title="Day off"></a>Day off</h1><h2 id="c115-I-don’t-feel-so-good"><a href="#c115-I-don’t-feel-so-good" class="headerlink" title="c115 - I don’t feel so good"></a>c115 - I don’t feel so good</h2><ul><li>a hangover</li><li>drink fest</li><li>dizzy / spinning</li><li>throw up</li><li>dehydrated</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Interview&quot;&gt;&lt;a href=&quot;#Interview&quot; class=&quot;headerlink&quot; title=&quot;Interview&quot;&gt;&lt;/a&gt;Interview&lt;/h1&gt;&lt;h1 id=&quot;Late&quot;&gt;&lt;a href=&quot;#Late&quot; class=&quot;headerli
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Social Activities</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-23T22:32:17.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li><p>you are something else</p><ul><li>I cannot believe you</li></ul></li><li><p>keep my eye out for that</p></li></ul><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Applied English in Home</title>
     <link href="http://yoursite.com/2020/02/03/EnglishPod%20Home/"/>
     <id>http://yoursite.com/2020/02/03/EnglishPod Home/</id>
@@ -345,37 +317,6 @@
       
       
         &lt;h1 id=&quot;Fix&quot;&gt;&lt;a href=&quot;#Fix&quot; class=&quot;headerlink&quot; title=&quot;Fix&quot;&gt;&lt;/a&gt;Fix&lt;/h1&gt;&lt;h2 id=&quot;112c-Dr-Plumber&quot;&gt;&lt;a href=&quot;#112c-Dr-Plumber&quot; class=&quot;headerlink
-      
-    
-    </summary>
-    
-      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
-    
-      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
-    
-      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
-    
-    
-      <category term="English" scheme="http://yoursite.com/tags/English/"/>
-    
-      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Applied English in Love</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
-    <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-09T22:27:00.720Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
       
     
     </summary>
@@ -518,6 +459,99 @@
   </entry>
   
   <entry>
+    <title>Applied English for Office and Work</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Office/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Office/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:28:15.046Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Interview"><a href="#Interview" class="headerlink" title="Interview"></a>Interview</h1><h1 id="Late"><a href="#Late" class="headerlink" title="Late"></a>Late</h1><h2 id="113c-Sorry-I’m-late"><a href="#113c-Sorry-I’m-late" class="headerlink" title="113c - Sorry I’m late"></a>113c - Sorry I’m late</h2><ul><li><strong>when you arrive late</strong><ul><li>good excuses</li></ul></li><li><p><strong>get tied up</strong></p><ul><li>I got tied up at the office.</li><li>I was tied up on the phone all afternoon and didn’t get any work done</li><li>get tied up in traffic on the way here.</li></ul></li><li><p><strong>a huge traffic jam</strong></p><ul><li>a huge pileup<ul><li>accident</li><li>get pied on top of each other / get accident</li></ul></li></ul></li><li><p><strong>running late</strong></p><ul><li>I am running late. (The speaker knows it will be late)</li><li>Jane is running late, she’ll be here.</li></ul></li><li><p><strong>run over</strong></p><ul><li>a meet ran over 15mins</li><li>longer than expected</li></ul></li><li><p>be here <strong>in a sec</strong></p><ul><li>very very soon</li></ul></li><li><p>be here <strong>in a minute</strong></p></li><li><p>get stuck in a traffic</p><ul><li>in the traffic jam</li><li>the traffic is <strong>backed up for miles</strong></li></ul></li></ul><h1 id="Deadline"><a href="#Deadline" class="headerlink" title="Deadline"></a>Deadline</h1><h2 id="116c-You-missed-the-deadline"><a href="#116c-You-missed-the-deadline" class="headerlink" title="116c - You missed the deadline"></a>116c - You missed the deadline</h2><ul><li>tantamount</li><li>behind schedule</li><li>procrastinate</li><li>glitch<ul><li>an error</li></ul></li><li>rationalize <ul><li>an psychological word: try to convince sb about sth</li><li>You cannot rationalize your son’s behavior.</li><li>rationalize buying such an expensive pair of shoes</li><li>stop trying to rationalize it</li></ul></li><li><strong>phony</strong>: false, fake</li></ul><ul><li>a fairly significant deadline <ul><li>fairly: <ul><li>kind of, sort of</li><li>very important</li></ul></li></ul></li><li>essentially blame<ul><li>essentially:<ul><li>pretty much</li></ul></li></ul></li><li>I am not trying to <strong>pass the buck</strong> here<ul><li>I am not trying to pass the blame, put the responsibility on someone else</li></ul></li><li><strong>use something as a crutch</strong><ul><li>crutch: wooden or metal sticks to walk with<ul><li>excuses</li></ul></li><li>I was using alcohol as a crutch to get through the day.</li><li>he uses his disability as a crutch.</li><li>stop using your weight as a crutch.</li></ul></li><li><strong>assuming guilt</strong><ul><li>lose face</li></ul></li><li>in over your hand</li></ul><h1 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h1><h2 id="108c-Bad-News-Boss"><a href="#108c-Bad-News-Boss" class="headerlink" title="108c - Bad News, Boss"></a>108c - Bad News, Boss</h2><ul><li><strong>shoulder</strong> the burden</li></ul><ul><li><p><strong>go under</strong>: bankrupt</p></li><li><p><strong>lay it on me</strong></p><ul><li>tell me (the bad news)</li></ul></li><li><p><strong>for crying out loud</strong></p><ul><li>Oh, my God</li></ul></li><li><p><strong>how can I put this</strong> … <strong>let’s just say that…</strong></p><ul><li>soften it up a bit</li></ul></li></ul><h1 id="Day-off"><a href="#Day-off" class="headerlink" title="Day off"></a>Day off</h1><h2 id="c115-I-don’t-feel-so-good"><a href="#c115-I-don’t-feel-so-good" class="headerlink" title="c115 - I don’t feel so good"></a>c115 - I don’t feel so good</h2><ul><li>a hangover</li><li>drink fest</li><li>dizzy / spinning</li><li>throw up</li><li>dehydrated</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Interview&quot;&gt;&lt;a href=&quot;#Interview&quot; class=&quot;headerlink&quot; title=&quot;Interview&quot;&gt;&lt;/a&gt;Interview&lt;/h1&gt;&lt;h1 id=&quot;Late&quot;&gt;&lt;a href=&quot;#Late&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English in Love</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Love/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Love/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-09T22:27:00.720Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Love"><a href="#Love" class="headerlink" title="Love"></a>Love</h1><h2 id="117c-I-am-sorry-I-love-you-IX"><a href="#117c-I-am-sorry-I-love-you-IX" class="headerlink" title="117c - I am sorry I love you IX"></a>117c - I am sorry I love you IX</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Love&quot;&gt;&lt;a href=&quot;#Love&quot; class=&quot;headerlink&quot; title=&quot;Love&quot;&gt;&lt;/a&gt;Love&lt;/h1&gt;&lt;h2 id=&quot;117c-I-am-sorry-I-love-you-IX&quot;&gt;&lt;a href=&quot;#117c-I-am-sorry-
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Applied English in Social Activities</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <published>2020-02-03T05:00:00.000Z</published>
+    <updated>2020-02-23T22:32:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li><p>you are something else</p><ul><li>I cannot believe you</li></ul></li><li><p>keep my eye out for that</p></li></ul><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
+      
+    
+    </summary>
+    
+      <category term="Languages" scheme="http://yoursite.com/categories/Languages/"/>
+    
+      <category term="English" scheme="http://yoursite.com/categories/Languages/English/"/>
+    
+      <category term="EnglishPod" scheme="http://yoursite.com/categories/Languages/English/EnglishPod/"/>
+    
+    
+      <category term="English" scheme="http://yoursite.com/tags/English/"/>
+    
+      <category term="Speaking" scheme="http://yoursite.com/tags/Speaking/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Risk Management Basics</title>
     <link href="http://yoursite.com/2020/02/02/Financial%20Risk%20Management%20Basics/"/>
     <id>http://yoursite.com/2020/02/02/Financial Risk Management Basics/</id>
@@ -612,37 +646,6 @@
       <category term="Papers" scheme="http://yoursite.com/tags/Papers/"/>
     
       <category term="Fixed Income" scheme="http://yoursite.com/tags/Fixed-Income/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python Regular Expression Basics</title>
-    <link href="http://yoursite.com/2020/01/29/Python%20Regular%20Expression%20Basics/"/>
-    <id>http://yoursite.com/2020/01/29/Python Regular Expression Basics/</id>
-    <published>2020-01-29T05:00:00.000Z</published>
-    <updated>2020-01-29T20:54:47.564Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Regular-Expression-Quick-Link"><a href="#Regular-Expression-Quick-Link" class="headerlink" title="Regular Expression Quick Link"></a>Regular Expression Quick Link</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">^        Matches the beginning of a line</span><br><span class="line">$        Matches the end of the line</span><br><span class="line">.        Matches any character</span><br><span class="line">\s       Matches whitespace</span><br><span class="line">\S       Matches any non-whitespace character</span><br><span class="line">*        Repeats a character zero <span class="keyword">or</span> more times</span><br><span class="line">*?       Repeats a character zero or more times </span><br><span class="line">         (non-greedy)</span><br><span class="line">+        Repeats a character one <span class="keyword">or</span> more times</span><br><span class="line">+?       Repeats a character one or more times </span><br><span class="line">         (non-greedy)</span><br><span class="line">[aeiou]  Matches a single character <span class="keyword">in</span> the listed set</span><br><span class="line">[^XYZ]   Matches a single character <span class="keyword">not</span> <span class="keyword">in</span> the listed set</span><br><span class="line">[a-z0<span class="number">-9</span>] The set of characters can include a range</span><br><span class="line">(        Indicates where string extraction <span class="keyword">is</span> to start</span><br><span class="line">)        Indicates where string extraction <span class="keyword">is</span> to end</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Regular-Expression-Quick-Link&quot;&gt;&lt;a href=&quot;#Regular-Expression-Quick-Link&quot; class=&quot;headerlink&quot; title=&quot;Regular Expression Quick Link&quot;&gt;&lt;/a
-      
-    
-    </summary>
-    
-      <category term="Computer Science" scheme="http://yoursite.com/categories/Computer-Science/"/>
-    
-      <category term="Programming" scheme="http://yoursite.com/categories/Computer-Science/Programming/"/>
-    
-      <category term="Python" scheme="http://yoursite.com/categories/Computer-Science/Programming/Python/"/>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-      <category term="Regular Expression" scheme="http://yoursite.com/tags/Regular-Expression/"/>
     
   </entry>
   

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Risk Management of Credit Products | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="NYU,Risk Management,FRM">
+    
+    <meta name="description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks. Credit MarketCredit market risk reflects the yield spread over the bench">
+<meta name="keywords" content="NYU,Risk Management,FRM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Risk Management of Credit Products">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/Financial Risk Management Credit/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks. Credit MarketCredit market risk reflects the yield spread over the bench">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2020/03/05/1SO9Qxo54Ywkp27.png">
+<meta property="og:updated_time" content="2020-03-06T16:03:24.987Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Risk Management of Credit Products">
+<meta name="twitter:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks. Credit MarketCredit market risk reflects the yield spread over the bench">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/05/1SO9Qxo54Ywkp27.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability-Theory/">Probability Theory</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Financial Risk Management Credit" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Risk Management of Credit Products
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/03/04/Financial Risk Management Credit/" class="article-date">
+            <time datetime="2020-03-04T05:00:00.000Z" itemprop="datePublished">2020-03-04</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/FRM/">FRM</a>, <a class="tag-link" href="/tags/NYU/">NYU</a>, <a class="tag-link" href="/tags/Risk-Management/">Risk Management</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks.</p>
+<h1 id="Credit-Market"><a href="#Credit-Market" class="headerlink" title="Credit Market"></a>Credit Market</h1><p>Credit market risk reflects the yield spread over the benchmark or risk free rate for a specific issuer,<br>which is a gauge of the probability of default and/or changes in the expected loss given default.<br>In order to properly evaluate, classify and understand credit market risk drivers, it is important to have<br>insight into the types of credit instruments available, distinguish between securitized and non<br>securitized forms of credit risk and understand direct and indirect credit exposures</p>
+<h1 id="Loan"><a href="#Loan" class="headerlink" title="Loan"></a>Loan</h1><h2 id="Floating-rate-notes"><a href="#Floating-rate-notes" class="headerlink" title="Floating rate notes"></a>Floating rate notes</h2><script type="math/tex; mode=display">
+\begin{eqnarray*}
+PV &=& \frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}}{1+\frac{\text{Index} + \text{DM}}{m}} + \frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}}{(1+\frac{\text{Index} + \text{DM}}{m})^2} +... +\frac{\frac{(\text{Index}+\text{QM})\times \text{FV}}{m}+\text{FV}}{(1+\frac{\text{Index} + \text{DM}}{m})^N}
+\end{eqnarray*}</script><h2 id="Mortgage"><a href="#Mortgage" class="headerlink" title="Mortgage"></a>Mortgage</h2><script type="math/tex; mode=display">
+x = F_0 \times\frac{r(1+r)^n}{(1+r)^n-1}</script><script type="math/tex; mode=display">
+F_t = F_{t-1}+\frac{R}{12}\times F_{t-1}-x</script><p>Principle:</p>
+<script type="math/tex; mode=display">
+F_t - F_{t-1}</script><h1 id="Securitization"><a href="#Securitization" class="headerlink" title="Securitization"></a>Securitization</h1><h1 id="Credit-Default-Swap"><a href="#Credit-Default-Swap" class="headerlink" title="Credit Default Swap"></a>Credit Default Swap</h1><h1 id="CXA"><a href="#CXA" class="headerlink" title="CXA"></a>CXA</h1><h2 id="CVA"><a href="#CVA" class="headerlink" title="CVA"></a>CVA</h2><p><strong>Credit valuation adjustment (CVA) is the present value of credit risk for a loan, bond or derivative obligation</strong>. The CVA calculation for a financial exposure is a function of <strong>expected exposure (EE)</strong>, <strong>recovery rate (RR)</strong>, <strong>loss given default (LGD)</strong>, the <strong>probability of default (POD)</strong> to arrive at an <strong>expected loss (EL)</strong>, and a discount factor to arrive at the present value of expected loss. Steps in the process are as follows:</p>
+<p><img src="https://i.loli.net/2020/03/05/1SO9Qxo54Ywkp27.png" alt="cva.png"></p>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example:"></a>Example:</h3><p>Consider exposure to a borrower who must deliver a zero-coupon government bond with a yield of 5% maturing in four years, assuming a recovery rate of 40% and probability of default per period of 1.25%. Following the steps on our prior slide:</p>
+<h2 id="Credit-Scoring"><a href="#Credit-Scoring" class="headerlink" title="Credit Scoring"></a>Credit Scoring</h2><h3 id="advantage"><a href="#advantage" class="headerlink" title="advantage"></a>advantage</h3><p>shortcut to avoid risk </p>
+<h3 id="disadvantage"><a href="#disadvantage" class="headerlink" title="disadvantage"></a>disadvantage</h3><p>lag indicator</p>
+<h1 id="Sovereign-credit-risk"><a href="#Sovereign-credit-risk" class="headerlink" title="Sovereign credit risk"></a>Sovereign credit risk</h1><h1 id="Credit-Portfolio-Management"><a href="#Credit-Portfolio-Management" class="headerlink" title="Credit Portfolio Management"></a>Credit Portfolio Management</h1><p>Credit portfolio management involves aggregating information across obligors to classify, quantify, manage, report and mitigate (or securitize) risks</p>
+<p>The key question is to estimate default probabilities, which can be estimated via:</p>
+<ul>
+<li>Historical data</li>
+<li>Credit Spreads</li>
+<li>Structural Credit / Reduced form model<ul>
+<li>Structural Model</li>
+<li>Reduced Form Model</li>
+<li>Market Consolidation<ul>
+<li>MSCI: Risk-Metrics</li>
+<li>Moody: KMV</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Z-score"><a href="#Z-score" class="headerlink" title="Z-score"></a>Z-score</h2><h2 id="Default-Probabilities"><a href="#Default-Probabilities" class="headerlink" title="Default Probabilities"></a>Default Probabilities</h2><h3 id="Historical-Default-Probabilities"><a href="#Historical-Default-Probabilities" class="headerlink" title="Historical Default Probabilities"></a>Historical Default Probabilities</h3><p>unconditional</p>
+<h3 id="Hazard-Rate"><a href="#Hazard-Rate" class="headerlink" title="Hazard Rate"></a>Hazard Rate</h3><script type="math/tex; mode=display">
+Q(t)=1-e^{-\lambda(t)t}</script>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Risk Management of Credit Products",
+        "image": "http://yoursite.comhttps://i.loli.net/2020/03/05/1SO9Qxo54Ywkp27.png",
+        "keywords": "NYU Risk Management FRM",
+        "genre": "Economics Finance Risk Management",
+        "datePublished": "2020-03-04",
+        "dateCreated": "2020-03-04",
+        "dateModified": "2020-03-06",
+        "url": "http://yoursite.com/2020/03/04/Financial Risk Management Credit/",
+        "description": "This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Credit Product and risks.
+Credit MarketCredit market risk reflects the yield spread over the bench"
+        "wordCount": 386
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2020/02/23/EnglishPod Sports/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Applied English in Sports</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">15</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/SQL/">SQL</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability-Theory/">Probability Theory</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">17</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Annual-Letter/" style="font-size: 10px;">Annual Letter</a> <a href="/tags/Asset-Pricing/" style="font-size: 15px;">Asset Pricing</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/C/" style="font-size: 17px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 14px;">FRM</a> <a href="/tags/Finance/" style="font-size: 12px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/Journal/" style="font-size: 13px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 19px;">MOOC</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 16px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 12px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 14px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 18px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 11px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 10px;">Stochastic</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2020 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2020/03/04/Financial Risk Management Credit/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

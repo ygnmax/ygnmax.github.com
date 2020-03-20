@@ -41,9 +41,9 @@
       <category term="Bash" scheme="http://yoursite.com/categories/Computer-Science/Tools/Bash/"/>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="Bash" scheme="http://yoursite.com/tags/Bash/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
@@ -101,44 +101,11 @@
       <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
     
     
-      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
-    
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
     
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
+    
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Parameter Estimation</title>
-    <link href="http://yoursite.com/2020/03/12/Statistics%20Parameter%20Estimation/"/>
-    <id>http://yoursite.com/2020/03/12/Statistics Parameter Estimation/</id>
-    <published>2020-03-12T04:00:00.000Z</published>
-    <updated>2020-03-13T04:05:24.392Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Estimator"><a href="#Estimator" class="headerlink" title="Estimator"></a>Estimator</h1><h2 id="Criterion"><a href="#Criterion" class="headerlink" title="Criterion"></a>Criterion</h2><h3 id="unbiased"><a href="#unbiased" class="headerlink" title="unbiased"></a>unbiased</h3><p> For $\hat{\theta}$ which is the estimation of $\theta$, </p><script type="math/tex; mode=display">E_{\theta}(\hat{\theta})=\theta</script><h3 id="effectiveness"><a href="#effectiveness" class="headerlink" title="effectiveness"></a>effectiveness</h3><p>Assume $\hat{\theta_1}$ and $\hat{\theta_2}$ are both unbiased estimation, for $\forall \theta \in \Theta$,</p><script type="math/tex; mode=display">D(\hat{\theta_1}) \leq D(\hat{\theta_2})</script><p>then $\hat{\theta_1}$ is more effective than $\hat{\theta_2}$.</p><h3 id="Consistency"><a href="#Consistency" class="headerlink" title="Consistency"></a>Consistency</h3><p>For $\hat{\theta},$ $\forall ~ \theta \in \Theta$</p><script type="math/tex; mode=display">\lim\limits_{n \to \infty}P\{|\hat{\theta}-\theta|<\epsilon\}=1</script><h2 id="Moment-Estimation"><a href="#Moment-Estimation" class="headerlink" title="Moment Estimation"></a>Moment Estimation</h2><p>$ A_k = \frac{1}{n}\sum\limits_{i=1}^{n}X_i^k$ is convergent to $\mu_k$ by probability, where $\mu_k$ is k-order moment.</p><p>If there are $k$ parameters ($\theta_1, \theta_2,\cdots,\theta_k$), then we could compute $k$ order moment estimation:</p><script type="math/tex; mode=display">\begin{cases}\mu_1 &=& \mu_1(\theta_1, \theta_2,\cdots,\theta_k) \\\mu_2 &=& \mu_2(\theta_1, \theta_2,\cdots,\theta_k) \\&\vdots& \\\mu_2 &=& \mu_2(\theta_1, \theta_2,\cdots,\theta_k) \\\end{cases}</script><h2 id="Maximum-Likelihood-Estimation"><a href="#Maximum-Likelihood-Estimation" class="headerlink" title="Maximum Likelihood Estimation"></a>Maximum Likelihood Estimation</h2><h3 id="Likelihood-Function"><a href="#Likelihood-Function" class="headerlink" title="Likelihood Function"></a>Likelihood Function</h3><script type="math/tex; mode=display">L(\theta)=L(x_1, x_2, \cdots, x_n;\theta)=\prod\limits_{i=1}^{n}p(x_i;\theta), \theta\in \Theta</script><h3 id="Log-Likelihood-Function"><a href="#Log-Likelihood-Function" class="headerlink" title="Log Likelihood Function"></a>Log Likelihood Function</h3><script type="math/tex; mode=display">\ln L(\theta) =\ln\prod\limits_{i=1}^{n}p(x_i;\theta) = \sum_{i=1}^{n} \ln p(x_i;\theta), \theta\in \Theta</script><p>Example:</p><p>Assume $X\sim N(\mu,\sigma^2)$, $x_1, x_2, \cdots, x_n$ are samples, $\mu$ and $\sigma$ are unknown.</p><script type="math/tex; mode=display">\begin{eqnarray*}L(\mu, \sigma^2) &=& \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}} \\&=& \frac{1}{(\sqrt{2\pi} \sigma)^n}e^{-\frac{1}{2\sigma^2}\sum\limits_{i=1}^{n}(x_i-\mu)^2} \\\ln L(\mu, \sigma^2) &=& -\frac{n}{2} \ln(2\pi)-\frac{n}{2} \ln\sigma^2-\frac{1}{2\sigma^2}\sum\limits_{i=1}^{n}(x_i-\mu)^2\end{eqnarray*}</script><p>Compute the partial derivatives:</p><script type="math/tex; mode=display">\begin{eqnarray*}\frac{\part}{\part\mu}\ln L &=& \frac{1}{\sigma}\left(\sum_{i=1}^{n} x_i-n\mu\right) = 0\\\frac{\part}{\part\sigma^2}\ln L &=& -\frac{n}{2\sigma^2}+\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2 = 0  \\\end{eqnarray*}</script><p>We can solve</p><script type="math/tex; mode=display">\mu = \frac{1}{n}\sum_{i=1}^{n}x_i = \bar{x} \\\sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2</script>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Estimator&quot;&gt;&lt;a href=&quot;#Estimator&quot; class=&quot;headerlink&quot; title=&quot;Estimator&quot;&gt;&lt;/a&gt;Estimator&lt;/h1&gt;&lt;h2 id=&quot;Criterion&quot;&gt;&lt;a href=&quot;#Criterion&quot; class
-      
-    
-    </summary>
-    
-      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
-    
-      <category term="Statistics" scheme="http://yoursite.com/categories/Mathematics/Statistics/"/>
-    
-      <category term="Classic Statistics" scheme="http://yoursite.com/categories/Mathematics/Statistics/Classic-Statistics/"/>
-    
-    
-      <category term="Probability" scheme="http://yoursite.com/tags/Probability/"/>
-    
-      <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
-    
-      <category term="Stochastic" scheme="http://yoursite.com/tags/Stochastic/"/>
     
   </entry>
   
@@ -176,19 +143,19 @@
   </entry>
   
   <entry>
-    <title>Law of Large Numbers</title>
-    <link href="http://yoursite.com/2020/03/11/Statistics%20LLN/"/>
-    <id>http://yoursite.com/2020/03/11/Statistics LLN/</id>
-    <published>2020-03-11T04:00:00.000Z</published>
-    <updated>2020-03-11T21:21:37.537Z</updated>
+    <title>Parameter Estimation</title>
+    <link href="http://yoursite.com/2020/03/12/Statistics%20Parameter%20Estimation/"/>
+    <id>http://yoursite.com/2020/03/12/Statistics Parameter Estimation/</id>
+    <published>2020-03-12T04:00:00.000Z</published>
+    <updated>2020-03-13T04:05:24.392Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Lemma-Chebyshev-Inequality"><a href="#Lemma-Chebyshev-Inequality" class="headerlink" title="Lemma: Chebyshev Inequality"></a>Lemma: Chebyshev Inequality</h1><p>For $E(X) = \mu$ and $D(x) = \sigma^2$, then</p><script type="math/tex; mode=display">p\{| X-\mu| \geq \epsilon \} \leq\frac{\sigma^2}{\epsilon^2}</script><p>Proof:</p><script type="math/tex; mode=display">\begin{eqnarray*}p\{| X-\mu| \geq \epsilon \} &=& \int_{|x-\mu|\geq\epsilon}f(x)dx \\&\leq& \int_{|x-\mu|\geq\epsilon} \frac{|x-\mu|^2}{\epsilon^2} f(x)dx \\&\leq& \frac{1}{\epsilon^2}\int_{-\infty}^{\infty} (x-\mu)^2 f(x)dx \\&=& \frac{\sigma^2}{\epsilon^2}\end{eqnarray*}</script><p>which also implies</p><script type="math/tex; mode=display">p\{| X-\mu| < \epsilon \} \geq 1- \frac{\sigma^2}{\epsilon^2}</script><h1 id="Law-of-Large-Numbers"><a href="#Law-of-Large-Numbers" class="headerlink" title="Law of Large Numbers"></a>Law of Large Numbers</h1><h2 id="Khinchin-LLN"><a href="#Khinchin-LLN" class="headerlink" title="Khinchin LLN"></a>Khinchin LLN</h2><p>For infinite independent random variable $X_1, X_2, …$, which are from the identical distribution with the expectation $E(x_k) = \mu$, then for $\forall ~ \epsilon$</p><script type="math/tex; mode=display">\lim_{n \to \infty}P\left\{ \left| \frac{1}{n}\sum_{k=1}^{n}X_k-\mu \right| <\epsilon\right\} = 1</script><p>When the $n$ is close to positive infinity, $\frac{1}{n}\sum_{k=1}^{n}X_k$ is close to $\mu$, which is the expectation of $X$ </p><p>Proof:</p><p>Assume the variance exist $D(X) = \sigma^2$, then</p><script type="math/tex; mode=display">\begin{eqnarray*}E\left(\frac{1}{n}\sum_{k=1}^nX_k\right) &=& \frac{1}{n}\sum_{k=1}^nE(X_k) \\&=& \frac{1}{n}\times n\mu \\&=& \mu\end{eqnarray*}</script><script type="math/tex; mode=display">\begin{eqnarray*}D\left(\frac{1}{n}\sum_{k=1}^nX_k\right) &=& \frac{1}{n^2}\sum_{k=1}^nD(X_k) \\&=& \frac{1}{n^2}\times n\sigma^2 \\&=& \frac{\sigma^2}{n}\end{eqnarray*}</script><p>use the Chebyshev Inequity:</p><script type="math/tex; mode=display">\begin{eqnarray*}1 \geq  P\left\{ \left| \frac{1}{n}\sum_{k=1}^{n}X_k-\mu \right| <\epsilon\right\} \geq 1-\frac{\frac{\sigma^2}{n}}{\epsilon^2}\end{eqnarray*}</script><p>when $n\to\infty$, then we can draw the conclusion.</p><h2 id="Bernoulli-LLN"><a href="#Bernoulli-LLN" class="headerlink" title="Bernoulli LLN"></a>Bernoulli LLN</h2><p>Assume that $f_A$ is the frequency of event $A$ happening in $n$ times independent repeated experiment,  and $p$ is the probability of event $A$ happening in each experiment, then for $\forall ~ \epsilon&gt; 0$</p><script type="math/tex; mode=display">\lim_{n \to \infty}P\left\{ \left| \frac{f_A}{n}-p \right| <\epsilon\right\} = 1</script><p>Proof:</p><p>From the Khinchin LLN</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Estimator"><a href="#Estimator" class="headerlink" title="Estimator"></a>Estimator</h1><h2 id="Criterion"><a href="#Criterion" class="headerlink" title="Criterion"></a>Criterion</h2><h3 id="unbiased"><a href="#unbiased" class="headerlink" title="unbiased"></a>unbiased</h3><p> For $\hat{\theta}$ which is the estimation of $\theta$, </p><script type="math/tex; mode=display">E_{\theta}(\hat{\theta})=\theta</script><h3 id="effectiveness"><a href="#effectiveness" class="headerlink" title="effectiveness"></a>effectiveness</h3><p>Assume $\hat{\theta_1}$ and $\hat{\theta_2}$ are both unbiased estimation, for $\forall \theta \in \Theta$,</p><script type="math/tex; mode=display">D(\hat{\theta_1}) \leq D(\hat{\theta_2})</script><p>then $\hat{\theta_1}$ is more effective than $\hat{\theta_2}$.</p><h3 id="Consistency"><a href="#Consistency" class="headerlink" title="Consistency"></a>Consistency</h3><p>For $\hat{\theta},$ $\forall ~ \theta \in \Theta$</p><script type="math/tex; mode=display">\lim\limits_{n \to \infty}P\{|\hat{\theta}-\theta|<\epsilon\}=1</script><h2 id="Moment-Estimation"><a href="#Moment-Estimation" class="headerlink" title="Moment Estimation"></a>Moment Estimation</h2><p>$ A_k = \frac{1}{n}\sum\limits_{i=1}^{n}X_i^k$ is convergent to $\mu_k$ by probability, where $\mu_k$ is k-order moment.</p><p>If there are $k$ parameters ($\theta_1, \theta_2,\cdots,\theta_k$), then we could compute $k$ order moment estimation:</p><script type="math/tex; mode=display">\begin{cases}\mu_1 &=& \mu_1(\theta_1, \theta_2,\cdots,\theta_k) \\\mu_2 &=& \mu_2(\theta_1, \theta_2,\cdots,\theta_k) \\&\vdots& \\\mu_2 &=& \mu_2(\theta_1, \theta_2,\cdots,\theta_k) \\\end{cases}</script><h2 id="Maximum-Likelihood-Estimation"><a href="#Maximum-Likelihood-Estimation" class="headerlink" title="Maximum Likelihood Estimation"></a>Maximum Likelihood Estimation</h2><h3 id="Likelihood-Function"><a href="#Likelihood-Function" class="headerlink" title="Likelihood Function"></a>Likelihood Function</h3><script type="math/tex; mode=display">L(\theta)=L(x_1, x_2, \cdots, x_n;\theta)=\prod\limits_{i=1}^{n}p(x_i;\theta), \theta\in \Theta</script><h3 id="Log-Likelihood-Function"><a href="#Log-Likelihood-Function" class="headerlink" title="Log Likelihood Function"></a>Log Likelihood Function</h3><script type="math/tex; mode=display">\ln L(\theta) =\ln\prod\limits_{i=1}^{n}p(x_i;\theta) = \sum_{i=1}^{n} \ln p(x_i;\theta), \theta\in \Theta</script><p>Example:</p><p>Assume $X\sim N(\mu,\sigma^2)$, $x_1, x_2, \cdots, x_n$ are samples, $\mu$ and $\sigma$ are unknown.</p><script type="math/tex; mode=display">\begin{eqnarray*}L(\mu, \sigma^2) &=& \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi} \sigma}e^{-\frac{(x_i-\mu)^2}{2\sigma^2}} \\&=& \frac{1}{(\sqrt{2\pi} \sigma)^n}e^{-\frac{1}{2\sigma^2}\sum\limits_{i=1}^{n}(x_i-\mu)^2} \\\ln L(\mu, \sigma^2) &=& -\frac{n}{2} \ln(2\pi)-\frac{n}{2} \ln\sigma^2-\frac{1}{2\sigma^2}\sum\limits_{i=1}^{n}(x_i-\mu)^2\end{eqnarray*}</script><p>Compute the partial derivatives:</p><script type="math/tex; mode=display">\begin{eqnarray*}\frac{\part}{\part\mu}\ln L &=& \frac{1}{\sigma}\left(\sum_{i=1}^{n} x_i-n\mu\right) = 0\\\frac{\part}{\part\sigma^2}\ln L &=& -\frac{n}{2\sigma^2}+\frac{1}{2(\sigma^2)^2}\sum_{i=1}^{n}(x_i-\mu)^2 = 0  \\\end{eqnarray*}</script><p>We can solve</p><script type="math/tex; mode=display">\mu = \frac{1}{n}\sum_{i=1}^{n}x_i = \bar{x} \\\sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i-\bar{x})^2</script>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Lemma-Chebyshev-Inequality&quot;&gt;&lt;a href=&quot;#Lemma-Chebyshev-Inequality&quot; class=&quot;headerlink&quot; title=&quot;Lemma: Chebyshev Inequality&quot;&gt;&lt;/a&gt;Lemma: 
+        &lt;h1 id=&quot;Estimator&quot;&gt;&lt;a href=&quot;#Estimator&quot; class=&quot;headerlink&quot; title=&quot;Estimator&quot;&gt;&lt;/a&gt;Estimator&lt;/h1&gt;&lt;h2 id=&quot;Criterion&quot;&gt;&lt;a href=&quot;#Criterion&quot; class
       
     
     </summary>
@@ -275,6 +242,39 @@
   </entry>
   
   <entry>
+    <title>Law of Large Numbers</title>
+    <link href="http://yoursite.com/2020/03/11/Statistics%20LLN/"/>
+    <id>http://yoursite.com/2020/03/11/Statistics LLN/</id>
+    <published>2020-03-11T04:00:00.000Z</published>
+    <updated>2020-03-11T21:21:37.537Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Lemma-Chebyshev-Inequality"><a href="#Lemma-Chebyshev-Inequality" class="headerlink" title="Lemma: Chebyshev Inequality"></a>Lemma: Chebyshev Inequality</h1><p>For $E(X) = \mu$ and $D(x) = \sigma^2$, then</p><script type="math/tex; mode=display">p\{| X-\mu| \geq \epsilon \} \leq\frac{\sigma^2}{\epsilon^2}</script><p>Proof:</p><script type="math/tex; mode=display">\begin{eqnarray*}p\{| X-\mu| \geq \epsilon \} &=& \int_{|x-\mu|\geq\epsilon}f(x)dx \\&\leq& \int_{|x-\mu|\geq\epsilon} \frac{|x-\mu|^2}{\epsilon^2} f(x)dx \\&\leq& \frac{1}{\epsilon^2}\int_{-\infty}^{\infty} (x-\mu)^2 f(x)dx \\&=& \frac{\sigma^2}{\epsilon^2}\end{eqnarray*}</script><p>which also implies</p><script type="math/tex; mode=display">p\{| X-\mu| < \epsilon \} \geq 1- \frac{\sigma^2}{\epsilon^2}</script><h1 id="Law-of-Large-Numbers"><a href="#Law-of-Large-Numbers" class="headerlink" title="Law of Large Numbers"></a>Law of Large Numbers</h1><h2 id="Khinchin-LLN"><a href="#Khinchin-LLN" class="headerlink" title="Khinchin LLN"></a>Khinchin LLN</h2><p>For infinite independent random variable $X_1, X_2, …$, which are from the identical distribution with the expectation $E(x_k) = \mu$, then for $\forall ~ \epsilon$</p><script type="math/tex; mode=display">\lim_{n \to \infty}P\left\{ \left| \frac{1}{n}\sum_{k=1}^{n}X_k-\mu \right| <\epsilon\right\} = 1</script><p>When the $n$ is close to positive infinity, $\frac{1}{n}\sum_{k=1}^{n}X_k$ is close to $\mu$, which is the expectation of $X$ </p><p>Proof:</p><p>Assume the variance exist $D(X) = \sigma^2$, then</p><script type="math/tex; mode=display">\begin{eqnarray*}E\left(\frac{1}{n}\sum_{k=1}^nX_k\right) &=& \frac{1}{n}\sum_{k=1}^nE(X_k) \\&=& \frac{1}{n}\times n\mu \\&=& \mu\end{eqnarray*}</script><script type="math/tex; mode=display">\begin{eqnarray*}D\left(\frac{1}{n}\sum_{k=1}^nX_k\right) &=& \frac{1}{n^2}\sum_{k=1}^nD(X_k) \\&=& \frac{1}{n^2}\times n\sigma^2 \\&=& \frac{\sigma^2}{n}\end{eqnarray*}</script><p>use the Chebyshev Inequity:</p><script type="math/tex; mode=display">\begin{eqnarray*}1 \geq  P\left\{ \left| \frac{1}{n}\sum_{k=1}^{n}X_k-\mu \right| <\epsilon\right\} \geq 1-\frac{\frac{\sigma^2}{n}}{\epsilon^2}\end{eqnarray*}</script><p>when $n\to\infty$, then we can draw the conclusion.</p><h2 id="Bernoulli-LLN"><a href="#Bernoulli-LLN" class="headerlink" title="Bernoulli LLN"></a>Bernoulli LLN</h2><p>Assume that $f_A$ is the frequency of event $A$ happening in $n$ times independent repeated experiment,  and $p$ is the probability of event $A$ happening in each experiment, then for $\forall ~ \epsilon&gt; 0$</p><script type="math/tex; mode=display">\lim_{n \to \infty}P\left\{ \left| \frac{f_A}{n}-p \right| <\epsilon\right\} = 1</script><p>Proof:</p><p>From the Khinchin LLN</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Lemma-Chebyshev-Inequality&quot;&gt;&lt;a href=&quot;#Lemma-Chebyshev-Inequality&quot; class=&quot;headerlink&quot; title=&quot;Lemma: Chebyshev Inequality&quot;&gt;&lt;/a&gt;Lemma: 
+      
+    
+    </summary>
+    
+      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
+    
+      <category term="Statistics" scheme="http://yoursite.com/categories/Mathematics/Statistics/"/>
+    
+      <category term="Classic Statistics" scheme="http://yoursite.com/categories/Mathematics/Statistics/Classic-Statistics/"/>
+    
+    
+      <category term="Probability" scheme="http://yoursite.com/tags/Probability/"/>
+    
+      <category term="Statistics" scheme="http://yoursite.com/tags/Statistics/"/>
+    
+      <category term="Stochastic" scheme="http://yoursite.com/tags/Stochastic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Credit Products</title>
     <link href="http://yoursite.com/2020/03/04/Financial%20Risk%20Management%20Credit/"/>
     <id>http://yoursite.com/2020/03/04/Financial Risk Management Credit/</id>
@@ -300,9 +300,9 @@
       <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
     
     
-      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
-    
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
+    
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
     
@@ -371,35 +371,6 @@
   </entry>
   
   <entry>
-    <title>Optimization Basics</title>
-    <link href="http://yoursite.com/2020/02/22/Applied%20Optimization%20Basics/"/>
-    <id>http://yoursite.com/2020/02/22/Applied Optimization Basics/</id>
-    <published>2020-02-22T05:00:00.000Z</published>
-    <updated>2020-02-23T21:54:42.746Z</updated>
-    
-    <content type="html"><![CDATA[<p>This note contains basic knowledge and summary of Optimization, including basic mathematic knowledge etc. The main ideas come from Mooc.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;This note contains basic knowledge and summary of Optimization, including basic mathematic knowledge etc. The main ideas come from Mooc.&lt;
-      
-    
-    </summary>
-    
-      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
-    
-      <category term="Applied" scheme="http://yoursite.com/categories/Mathematics/Applied/"/>
-    
-      <category term="Optimization" scheme="http://yoursite.com/categories/Mathematics/Applied/Optimization/"/>
-    
-    
-      <category term="Optimization" scheme="http://yoursite.com/tags/Optimization/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linear Algebra Basics</title>
     <link href="http://yoursite.com/2020/02/22/Algebra%20Linear%20Algebra%20Basics/"/>
     <id>http://yoursite.com/2020/02/22/Algebra Linear Algebra Basics/</id>
@@ -425,6 +396,35 @@
     
     
       <category term="Linear Algebra" scheme="http://yoursite.com/tags/Linear-Algebra/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Optimization Basics</title>
+    <link href="http://yoursite.com/2020/02/22/Applied%20Optimization%20Basics/"/>
+    <id>http://yoursite.com/2020/02/22/Applied Optimization Basics/</id>
+    <published>2020-02-22T05:00:00.000Z</published>
+    <updated>2020-02-23T21:54:42.746Z</updated>
+    
+    <content type="html"><![CDATA[<p>This note contains basic knowledge and summary of Optimization, including basic mathematic knowledge etc. The main ideas come from Mooc.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;This note contains basic knowledge and summary of Optimization, including basic mathematic knowledge etc. The main ideas come from Mooc.&lt;
+      
+    
+    </summary>
+    
+      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
+    
+      <category term="Applied" scheme="http://yoursite.com/categories/Mathematics/Applied/"/>
+    
+      <category term="Optimization" scheme="http://yoursite.com/categories/Mathematics/Applied/Optimization/"/>
+    
+    
+      <category term="Optimization" scheme="http://yoursite.com/tags/Optimization/"/>
     
   </entry>
   
@@ -485,9 +485,9 @@
       <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
     
     
-      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
-    
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
+    
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
     
@@ -519,9 +519,9 @@
       <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
     
     
-      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
-    
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
+    
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
     
@@ -616,28 +616,28 @@
       <category term="Risk Management" scheme="http://yoursite.com/categories/Economics/Finance/Risk-Management/"/>
     
     
-      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
-    
       <category term="Risk Management" scheme="http://yoursite.com/tags/Risk-Management/"/>
+    
+      <category term="NYU" scheme="http://yoursite.com/tags/NYU/"/>
     
       <category term="FRM" scheme="http://yoursite.com/tags/FRM/"/>
     
   </entry>
   
   <entry>
-    <title>Applied English in Social Activities</title>
-    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Social/"/>
-    <id>http://yoursite.com/2020/02/03/EnglishPod Social/</id>
+    <title>Applied English in Formal situation</title>
+    <link href="http://yoursite.com/2020/02/03/EnglishPod%20Formal/"/>
+    <id>http://yoursite.com/2020/02/03/EnglishPod Formal/</id>
     <published>2020-02-03T05:00:00.000Z</published>
-    <updated>2020-02-23T22:32:17.000Z</updated>
+    <updated>2020-02-27T05:27:27.474Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Social"><a href="#Social" class="headerlink" title="Social"></a>Social</h1><h2 id="114c-1980’s-English"><a href="#114c-1980’s-English" class="headerlink" title="114c - 1980’s English"></a>114c - 1980’s English</h2><ul><li>butt ugly</li><li><p>air head</p></li><li><p><strong>a major dweeb</strong></p><ul><li>dweeb : nerd</li><li>major : big / serious</li></ul></li><li><strong>bad to the bone</strong><ul><li>super cool (from a song)</li></ul></li><li>get with someone / do the nasty (more rude)<ul><li>have sex with</li></ul></li><li><p><strong>don’t have a cow</strong></p><ul><li>don’t get really angry / freak out</li><li>make a big deal</li></ul></li><li><p><strong>psych</strong></p><ul><li>“just kidding”</li><li>show a little bit old-fashioned</li></ul></li></ul><h2 id="135c-cheer-up"><a href="#135c-cheer-up" class="headerlink" title="135c cheer up"></a>135c cheer up</h2><ul><li>sad:<ul><li>I am a bit down</li><li>someone is grouchy</li></ul></li><li>anxiety<ul><li>somebody is stressed out<ul><li>you have too much stuff to do</li></ul></li><li>nerve wracking<ul><li>being a doctor is one the most nerve wracking jobs in the word</li></ul></li><li><strong>on edge</strong><ul><li>easily anger</li><li>he seems on edge, doesn’t he?</li></ul></li><li>lose your temper / lose one’s temper<ul><li>getting angry </li><li>get brushed off</li></ul></li><li>blow your top</li><li>every one has different remedies  </li></ul></li><li>cheer you up</li><li><p>you are something else</p><ul><li>I cannot believe you</li></ul></li><li><p>keep my eye out for that</p></li></ul><h1 id="Smoking"><a href="#Smoking" class="headerlink" title="Smoking"></a>Smoking</h1><h2 id="b125-no-smoking"><a href="#b125-no-smoking" class="headerlink" title="b125 - no smoking"></a>b125 - no smoking</h2><ul><li><strong>willpower</strong><ul><li>I don’t have the willpower</li><li>willpower in discipline </li></ul></li><li><strong>urge</strong><ul><li>temptation</li></ul></li><li>social smoker vs habitual smoker</li><li>light up</li><li>cut down</li><li>quit</li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="Politics"><a href="#Politics" class="headerlink" title="Politics"></a>Politics</h1><h2 id="129c-Presidential-Speech"><a href="#129c-Presidential-Speech" class="headerlink" title="129c - Presidential Speech"></a>129c - Presidential Speech</h2><ul><li>pre-eminence<ul><li>state of being the leader of something</li><li>pre-eminent adj<ul><li>pre-eminent expert on nuclear</li><li>his pre-eminence has never been questioned</li></ul></li></ul></li><li><strong>foster progress</strong><ul><li>a foster child<ul><li>take care of a child, because the parents can’t look after him</li></ul></li></ul></li><li><strong>yearn for</strong> sth.(freedom)<ul><li>really want sth. Almost painful</li></ul></li><li><strong>scourges</strong> of poverty<ul><li>be a scourage </li><li>eliminate the scourge of cancer</li><li>wipe out the scourge of terrorism</li></ul></li><li><strong>We now stand ten years past the midpoint of the century</strong><ul><li>we now stand before you to declare our love</li><li>we now stand before this court</li><li>we now stand before this great challenge</li></ul></li><li>despite …</li><li>carnage: a massacre, many people got hurt or killed</li></ul><h2 id="144E-capital-punishment"><a href="#144E-capital-punishment" class="headerlink" title="144E capital punishment"></a>144E capital punishment</h2><ul><li>commit a crime</li><li>be put to death</li><li>juvenile offenders<ul><li>offender: someone who commits a crime</li></ul></li><li>wrongful conviction<ul><li>conviction: decision whether or not a person is guilty</li></ul></li><li>fabricated</li><li>deterrent: <ul><li>deter my staff from</li><li>punish someone as a deterrent</li></ul></li><li><p>impose</p><ul><li>put in place / set up or enact<ul><li>the dictator imposes his will</li><li>forcibly making people follow some kind of a rule</li></ul></li><li>I don’t want to impose on you</li></ul></li><li><p>miscarriage of justice</p><ul><li>metaphor: justice was not carried out: the law failed</li></ul></li><li>in my reckoning<ul><li>share your opinion</li><li>I reckon</li></ul></li><li><p>get away with it</p><ul><li>do something bad or illegal without getting caught<ul><li>get away with murder</li></ul></li><li>get away with two Picassos</li></ul></li><li><p>draconian measures</p><ul><li>excessive or severe</li></ul></li><li>in comparison with the United States</li><li>it is stunting that</li><li>a justifiable way to do justice</li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Social&quot;&gt;&lt;a href=&quot;#Social&quot; class=&quot;headerlink&quot; title=&quot;Social&quot;&gt;&lt;/a&gt;Social&lt;/h1&gt;&lt;h2 id=&quot;114c-1980’s-English&quot;&gt;&lt;a href=&quot;#114c-1980’s-Englis
+        &lt;h1 id=&quot;Politics&quot;&gt;&lt;a href=&quot;#Politics&quot; class=&quot;headerlink&quot; title=&quot;Politics&quot;&gt;&lt;/a&gt;Politics&lt;/h1&gt;&lt;h2 id=&quot;129c-Presidential-Speech&quot;&gt;&lt;a href=&quot;#129c-
       
     
     </summary>

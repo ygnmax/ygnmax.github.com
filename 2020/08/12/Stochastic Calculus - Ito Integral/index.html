@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="Ito IntegralWhy do we need Ito Integral$\int_{0}^{T}\Delta(t)dg(t) = \int_{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivati">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-12T21:00:24.000Z">
+<meta property="og:updated_time" content="2020-08-12T23:34:40.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ito Integral">
 <meta name="twitter:description" content="Ito IntegralWhy do we need Ito Integral$\int_{0}^{T}\Delta(t)dg(t) = \int_{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivati">
@@ -182,10 +182,9 @@
 \int_{0}^{T}\Delta(t)dW(t)</script><p>Here, $\Delta(t)$ is $\mathscr{F_t}$-measurable (which is an adapted process). In finance, $\Delta(t)$ is position, $W(t)$ is asset price, and then the integral is a gain during $[0,T]$.</p>
 <h2 id="Ito-Integral-for-simple-function"><a href="#Ito-Integral-for-simple-function" class="headerlink" title="Ito Integral for simple function"></a>Ito Integral for simple function</h2><p>Consider an Integral $I(t) = \int_{0}^{t}\Delta(s)dW(s)$, if $\Delta(s)$ is simple function, then</p>
 <ul>
-<li>$0 \leq t \leq t_1$: <script type="math/tex; mode=display">
+<li><p>$0 \leq t \leq t_1$: </p>
+<script type="math/tex; mode=display">
 I(t) = \int_0^{t}\Delta(s)dW(s) = \Delta(0)\int_0^{t}dW(s) = \Delta(0)(W(t)-W(0))</script></li>
-</ul>
-<ul>
 <li><p>$t_1 \leq t \leq t_2$: </p>
 <script type="math/tex; mode=display">
 I(t)= \int_0^{t}\Delta(s)dW(s) = \Delta(0)(W(t_1)-W(0)) + \Delta(t_1)(W(t)-W(t_1))</script></li>
@@ -253,12 +252,13 @@ I^2(t) &=& \sum_{j=0}^{k}\Delta(t_j)^2D_j^2 + 2 \sum_{0 \leq i \leq j \leq k}\De
 \mathbb{E}[I^2(t)] &=& \mathbb{E}\left[\sum_{j=0}^{k}\Delta^2(t_j)(t_{j+1} - t_j)\right] \\
 &=& \sum_{j=0}^{k-1}\int_{t_j}^{t_{j+1}}\mathbb{E}[\Delta^2(u)]du + \int_{t_k}^{t}\mathbb{E}[\Delta^2(u)]du  \\
 &=& \mathbb{E}\left[\int_{0}^{t}\Delta^2(u)du \right] 
-\end{eqnarray}</script><strong>_Ito Isometry is a constant (expectation)._</strong></li>
+\end{eqnarray}</script><strong>Ito Isometry is a constant (expectation).</strong></li>
 </ul>
 </li>
 </ul>
-<h3 id="Quadratic-Variation"><a href="#Quadratic-Variation" class="headerlink" title="Quadratic Variation"></a>Quadratic Variation</h3><p>$<a href="t">I,I</a> = \int_{0}^{t}\Delta^2(u)du$ and $dI(t)dI(t) = \Delta^2(t)dt$</p>
-<ul>
+<h3 id="Quadratic-Variation"><a href="#Quadratic-Variation" class="headerlink" title="Quadratic Variation"></a>Quadratic Variation</h3><script type="math/tex; mode=display">
+[I,I](t) = \int_{0}^{t}\Delta^2(u)du \\
+dI(t)dI(t) = \Delta^2(t)dt</script><ul>
 <li><p>proof</p>
 <p>In $[t_j,t_{j+1}]$ and $[t_k,t]$, $t_j = s_0&lt;s_1&lt;\cdots&lt; t_m=t_{j+1}$, $I(s_i) = \int_{0}^{s_i}\Delta(u)dW(u)$, $I(s_{i+1}) = \int_{0}^{s_{i+1}}\Delta(u)dW(u)$</p>
 <script type="math/tex; mode=display">
@@ -271,17 +271,17 @@ I^2(t) &=& \sum_{j=0}^{k}\Delta(t_j)^2D_j^2 + 2 \sum_{0 \leq i \leq j \leq k}\De
 \lim_{m \to \infty}\Delta^2(t_j)\sum_{i=0}^{m-1}\left[W(s_{i+1})-W(s_i)\right]^2 &=& \Delta^2(t_j)\lim_{m \to \infty}\sum_{i=0}^{m-1}\left[W(s_{i+1})-W(s_i)\right]^2 \\
 &=& \Delta^2(t_j)(t_{j+1}-t_j) \\
 &=& \int_{t_{j}}^{t_{j+1}}\Delta^2(u)du
-\end{eqnarray}</script></li>
+\end{eqnarray}</script><p>therefore, </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+[I,I](t) &=& \sum_{j=0}^{k-1}\Delta^2(t_j)(t_{j+1}-t_j) + \Delta^2(t_k)(t-t_k) \\
+&=& \sum_{j=0}^{k-1}\int_{t_{j}}^{t_{j+1}}\Delta^2(u)du + \int_{t_{k}}^{t}\Delta^2(u)du \\
+&=& \int_{0}^{t}\Delta^2(u)du
+\end{eqnarray}</script><p>and</p>
+<script type="math/tex; mode=display">
+dI(t)dI(t) = \Delta^2(t)dt</script><p><strong>Quadratic Variation of Ito Integral is a random variable, path by path. It’s average level is the variance of Integral integral (Ito Isometry).</strong></p>
+</li>
 </ul>
-<p>  therefore, </p>
-<script type="math/tex; mode=display">
-  \begin{eqnarray}
-  [I,I](t) &=& \sum_{j=0}^{k-1}\Delta^2(t_j)(t_{j+1}-t_j) + \Delta^2(t_k)(t-t_k) \\
-  &=& \sum_{j=0}^{k-1}\int_{t_{j}}^{t_{j+1}}\Delta^2(u)du + \int_{t_{k}}^{t}\Delta^2(u)du \\
-  &=& \int_{0}^{t}\Delta^2(u)du
-  \end{eqnarray}</script><p>  and</p>
-<script type="math/tex; mode=display">
-  dI(t)dI(t) = \Delta^2(t)dt</script><p>  <strong>_Quadratic Variation of Ito Integral is a random variable, path by path. It’s average level is the variance of Integral integral (Ito Isometry)._</strong></p>
 <h3 id="Notation"><a href="#Notation" class="headerlink" title="Notation"></a>Notation</h3><script type="math/tex; mode=display">
 I(t) = \int_{0}^{t}\Delta(u)dW(u) \tag{1}</script><p>In equation (1), there is an assumption that $I(0) = 0$.</p>
 <script type="math/tex; mode=display">
@@ -392,7 +392,7 @@ dI(t) = \Delta(t)dW(t) \tag{3}</script><p>The differential form of equation (1) 
         "dateModified": "2020-08-12",
         "url": "http://yoursite.com/2020/08/12/Stochastic Calculus - Ito Integral/",
         "description": "Ito IntegralWhy do we need Ito Integral$\int_{0}^{T}\Delta(t)dg(t) = \int_{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivati"
-        "wordCount": 798
+        "wordCount": 780
     }
 </script>
 

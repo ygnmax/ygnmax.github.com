@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="Definition of Brownian MotionSymmetric Random WalkConsider that we toss a fair coin independently for each time. The initial position  $M_0 = 0$. A random variable $X_j$ is defined as  X_j = \begin{ca">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-12T23:09:58.282Z">
+<meta property="og:updated_time" content="2020-08-12T23:32:26.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Brownian Motion">
 <meta name="twitter:description" content="Definition of Brownian MotionSymmetric Random WalkConsider that we toss a fair coin independently for each time. The initial position  $M_0 = 0$. A random variable $X_j$ is defined as  X_j = \begin{ca">
@@ -318,6 +318,7 @@ FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f'(t_{j}^{*})(t_{j+1}-t_j)| = \li
 <script type="math/tex; mode=display">
 [f,f](T) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}(f(t_{j+1})-f(t_j))^2, ~~~||\pi|| = \max_{1\leq j \leq n}(t_j - t_{j-1})</script><ul>
 <li><p>Conclusion 1: suppose $f$ has a continuous derivative, then $<a href="T">f,f</a>=0$</p>
+<p><strong>Proof</strong>:</p>
 <script type="math/tex; mode=display">
 \begin{eqnarray}
 \sum_{j=0}^{n-1}(f(t_{j+1})-f(t_j))^2 &=& \sum_{j=0}^{n-1}|f'(t_{j}^{*})|^2(t_{j+1}-t_j)(t_{j+1}-t_j) \\
@@ -328,20 +329,25 @@ FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f'(t_{j}^{*})(t_{j+1}-t_j)| = \li
 &=& 0 \times \int_{0}^{T}|f'(t)|dt
 \end{eqnarray}</script><p>because $f’(t)$ is continuous, then $\exists M&gt;0 \in[0,T]$ s.t. $|f’(t)| \leq M &lt; \infty$</p>
 <script type="math/tex; mode=display">
-[f,f](T) \leq 0</script><p>and $\left<a href="T">f,f\right</a> \geq 0$ by definition, we get $<a href="T">f,f</a> = 0$.</p>
+[f,f](T) \leq 0</script><p>and by definition the quadratic variation should be greater than 0, we get </p>
+<script type="math/tex; mode=display">
+[f,f](T) = 0</script></li>
+<li><p>Conclusion 2 (quadratic variation of Brownian Motion): Let $w(t)$ be Brownian motion, then  </p>
+<script type="math/tex; mode=display">
+\left[w,w\right](T) = T</script><p>$\forall  T \geq 0$ almost surely.</p>
 </li>
-<li><p>Conclusion 2 (quadratic variation of Brownian Motion): Let $w(t)$ be Brownian motion, then  $ \left<a href="T">w,w\right</a> = T $, $\forall  T \geq 0$, almost surely.</p>
+</ul>
+<p><strong>Proof</strong>:</p>
 <p>Let $\pi = {t_0, t_1,\cdots, t_n}$ where $0=t_0 &lt; t_1&lt;t_2&lt;\cdots&lt;t_n = T$ be a partition of $[0,T]$, and then define </p>
 <script type="math/tex; mode=display">
-Q_{\pi} = \sum_{j=0}^{n-1}(w(t_{j+1})-w(t_j))^2</script><ul>
-<li>Expectation</li>
-</ul>
+  Q_{\pi} = \sum_{j=0}^{n-1}(w(t_{j+1})-w(t_j))^2</script><ul>
+<li><p>Expectation</p>
 <script type="math/tex; mode=display">
 \begin{eqnarray}
 \mathbb{E}[Q_{\pi}] &=& \sum\limits_{j=0}^{n-1}\mathbb{E}(w(t_{j+1})-w(t_j))^2 = \sum\limits_{j=0}^{n-1}\mathbb{Var}[w(t_{j+1})-w(t_j)] + (\mathbb{E}[w(t_{j+1})-w(t_j)])^2 \\
 &=& \sum\limits_{j=0}^{n-1}\mathbb{Var}[w(t_{j+1})-w(t_j)] + 0^2 \\
 &=& \sum\limits_{j=0}^{n-1}(t_{j+1}-t_{j}) = t_{n}-t_0 = T
-\end{eqnarray}</script><ul>
+\end{eqnarray}</script></li>
 <li><p>Variance: because $w(t_{j+1})$ and $w(t_{j})$ are independent, and $w(t_{j+1})-w(t_j) \sim N(0,t_{j+1}-t_j)$then</p>
 <script type="math/tex; mode=display">
 \begin{eqnarray}
@@ -374,8 +380,6 @@ Y = \frac{x-0}{\sigma} \sim N(0,1) \\
 <script type="math/tex; mode=display">
 \lim_{\pi \to 0} \mathbb{Var}[Q_{\pi}] = 0</script></li>
 <li><p>Now, we have the expectation $\mathbb{E}[Q_{\pi}] = T$ and variance $\mathbb{Var}[Q_{\pi}] = 0$ of the quadratic variance of Brownian Motion, therefore</p>
-</li>
-</ul>
 <script type="math/tex; mode=display">
 [W,W](T) = Q_{\pi} = T</script></li>
 </ul>
@@ -493,7 +497,7 @@ w(T) = w(T)-w(0) = \epsilon\sqrt{T}</script><ul>
         "description": "Definition of Brownian MotionSymmetric Random WalkConsider that we toss a fair coin independently for each time. The initial position  $M_0 = 0$. A random variable $X_j$ is defined as
 
 X_j = \begin{ca"
-        "wordCount": 1390
+        "wordCount": 1395
     }
 </script>
 

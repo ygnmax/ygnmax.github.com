@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="Guangnan&#39;s Notes">
 <meta property="og:description" content="Definition of Brownian MotionSymmetric Random WalkConsider that we toss a fair coin independently for each time. The initial position  $M_0 = 0$. A random variable $X_j$ is defined as  X_j = \begin{ca">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-08-12T14:45:43.000Z">
+<meta property="og:updated_time" content="2020-08-12T22:47:27.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Brownian Motion">
 <meta name="twitter:description" content="Definition of Brownian MotionSymmetric Random WalkConsider that we toss a fair coin independently for each time. The initial position  $M_0 = 0$. A random variable $X_j$ is defined as  X_j = \begin{ca">
@@ -311,7 +311,7 @@ FV_T(f) &=& [f(t_1)-f(0)] - [f(t_2)-f(t_1)] + [f(T)-f(t_2))] \\
 &=& \int_{0}^{T}|f'(t)|dt
 \end{eqnarray}</script><p>​        in general, choose a partition $\pi = {t_0, t_1,\cdots, t_n}$ where $0=t_0 &lt; t_1&lt;t_2&lt;\cdots&lt;t_n = T$. Define</p>
 <script type="math/tex; mode=display">
-FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f(t_{j+1})-f(t_j)|, ~~~||\pi|| = \max_{1\leq j \leq n}(t_j - t_{j-1})</script><p>​        As $n \to \infty$, $||\pi|| \to 0$. According to the Mean Value Theorem, $\exist t_j^*$ satisfying</p>
+FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f(t_{j+1})-f(t_j)|, ~~~||\pi|| = \max_{1\leq j \leq n}(t_j - t_{j-1})</script><p>​        As $n \to \infty$, $||\pi|| \to 0$. According to the Mean Value Theorem, $\exists ~ t_j^*$ satisfying</p>
 <script type="math/tex; mode=display">
 FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f'(t_{j}^{*})(t_{j+1}-t_j)| = \lim_{||\pi|| \to 0}(t_{j+1}-t_j)\sum_{j=0}^{n-1}|f'(t_{j}^{*})| = \int_{0}^{T}|f'(t)|dt</script><ul>
 <li><p>Quadratic Variation</p>
@@ -326,11 +326,11 @@ FV_T(f) = \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f'(t_{j}^{*})(t_{j+1}-t_j)| = \li
 \begin{eqnarray}
 [f,f](T) &\leq& \lim_{||\pi|| \to 0}||\pi|| \times \lim_{||\pi|| \to 0}\sum_{j=0}^{n-1}|f'(t_{j}^{*})|^2(t_{j+1}-t_j) \\
 &=& 0 \times \int_{0}^{T}|f'(t)|dt
-\end{eqnarray}</script><p>because $f’(t)$ is continuous, then $\exist M&gt;0 \in[0,T]$ s.t. $|f’(t)| \leq M &lt; \infty$</p>
+\end{eqnarray}</script><p>because $f’(t)$ is continuous, then $\exists M&gt;0 \in[0,T]$ s.t. $|f’(t)| \leq M &lt; \infty$</p>
 <script type="math/tex; mode=display">
 [f,f](T) \leq 0</script><p>and $<a href="T">f,f</a> \geq 0$ by definition, we get $<a href="T">f,f</a> = 0$.</p>
 </li>
-<li><p>Conclusion 2 (quadratic variation of Brownian Motion): Let $w(t)$ be Brownian motion, then $ <a href="T">W,W</a> = T, ~\forall ~ T \geq 0$, almost surely.</p>
+<li><p>Conclusion 2 (quadratic variation of Brownian Motion): Let $w(t)$ be Brownian motion, then $<a href="T">W,W</a> = T$, $\forall ~ T \geq 0$, almost surely.</p>
 <p>Let $\pi = {t_0, t_1,\cdots, t_n}$ where $0=t_0 &lt; t_1&lt;t_2&lt;\cdots&lt;t_n = T$ be a partition of $[0,T]$, and then define </p>
 <script type="math/tex; mode=display">
 Q_{\pi} = \sum_{j=0}^{n-1}(w(t_{j+1})-w(t_j))^2</script><ul>

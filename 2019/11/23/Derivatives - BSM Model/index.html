@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+
+    
+
+    
+    <title>Black Scholes Model | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Finance,Asset Pricing">
+    
+    <meta name="description" content="Black-Scholes-Merton FormulaEuropean Call  C_t = S_t N(d_1) - Ke^{-r(T-t)}N(d_2)where  \begin{eqnarray} d_1 &amp;=&amp; \frac{ln\frac{S_0}{K}+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}} \\ d_2 &amp;=&amp; d_1 - \">
+<meta name="keywords" content="Finance,Asset Pricing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Black Scholes Model">
+<meta property="og:url" content="http://yoursite.com/2019/11/23/Derivatives - BSM Model/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="Black-Scholes-Merton FormulaEuropean Call  C_t = S_t N(d_1) - Ke^{-r(T-t)}N(d_2)where  \begin{eqnarray} d_1 &amp;=&amp; \frac{ln\frac{S_0}{K}+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}} \\ d_2 &amp;=&amp; d_1 - \">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-08-13T01:57:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Black Scholes Model">
+<meta name="twitter:description" content="Black-Scholes-Merton FormulaEuropean Call  C_t = S_t N(d_1) - Ke^{-r(T-t)}N(d_2)where  \begin{eqnarray} d_1 &amp;=&amp; \frac{ln\frac{S_0}{K}+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}} \\ d_2 &amp;=&amp; d_1 - \">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Derivatives - BSM Model" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Black Scholes Model
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/11/23/Derivatives - BSM Model/" class="article-date">
+            <time datetime="2019-11-23T05:00:00.000Z" itemprop="datePublished">2019-11-23</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Asset-Pricing/">Asset Pricing</a>, <a class="tag-link" href="/tags/Finance/">Finance</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Black-Scholes-Merton-Formula"><a href="#Black-Scholes-Merton-Formula" class="headerlink" title="Black-Scholes-Merton Formula"></a>Black-Scholes-Merton Formula</h1><p>European Call</p>
+<script type="math/tex; mode=display">
+C_t = S_t N(d_1) - Ke^{-r(T-t)}N(d_2)</script><p>where</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+d_1 &=& \frac{ln\frac{S_0}{K}+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}} \\
+d_2 &=& d_1 - \sigma\sqrt{T-t}
+\end{eqnarray}</script><p>European put</p>
+<script type="math/tex; mode=display">
+P_t = C_t - S_t + Ke^{-r(T-t)}</script><h1 id="Partial-Differential-Equation"><a href="#Partial-Differential-Equation" class="headerlink" title="Partial Differential Equation"></a>Partial Differential Equation</h1><h2 id="Construct-the-PDE"><a href="#Construct-the-PDE" class="headerlink" title="Construct the PDE"></a>Construct the PDE</h2><h3 id="Method-1-Risk-Free-Gain"><a href="#Method-1-Risk-Free-Gain" class="headerlink" title="Method 1: Risk-Free Gain"></a>Method 1: Risk-Free Gain</h3><p>This method is from the class of Prof. Zheng, Zhenlong</p>
+<p>Assumptions:</p>
+<ul>
+<li><p>The short-term interest rate is known and is constant through time. (The interest term structure is flat.) (not restrict)</p>
+</li>
+<li><p>The stock price follows a random walk in continuous time with a variance rate proportional to the square of the stock price. Thus the distribution of stock prices is log-normal. The variance rate of the return on the stock is constant.(Geometric Brownian Motion.) ($\mu$ is a constant, and $\sigma$ is a constant.) (not restrict)</p>
+<script type="math/tex; mode=display">
+dS = \mu S d t + \sigma S d W_t</script></li>
+<li><p>Pays no dividends (not restrict)</p>
+</li>
+<li><p>No transaction costs. (restrict)</p>
+</li>
+<li><p>European</p>
+</li>
+<li><p>possible to borrow money to buy stocks / no penalties to short selling.</p>
+</li>
+</ul>
+<p>Deduction:</p>
+<p>$S$ is the stock price, $W_t$ is Standard Brownian Motion, $\mu$ is drift, $\sigma $ is volatility, $f$ is the price of a derivative of Stock.</p>
+<script type="math/tex; mode=display">
+\Delta S = \mu S \Delta t + \sigma S \Delta W_t</script><p>According to Ito lemma,</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+df &=& \frac{\partial f}{\partial t}dt + \frac{\partial f}{\partial S}dS + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}dS \times dS \\
+&=& \frac{\partial f}{\partial t}dt + \frac{\partial f}{\partial S}(\mu S d t + \sigma S d W_t) + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2 dt \\
+&=& (\frac{\partial f}{\partial t} + \frac{\partial f}{\partial S}\mu S + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2) dt + \frac{\partial f}{\partial S}\sigma S d W_t
+\end{eqnarray*}</script><p>therefore, in discrete form</p>
+<script type="math/tex; mode=display">
+\Delta f = (\frac{\partial f}{\partial t} + \frac{\partial f}{\partial S}\mu S + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2) \Delta t + \frac{\partial f}{\partial S}\sigma S \Delta W_t</script><p>Now that the stock and the derivative both have uncertainty term $\Delta W_t$, we want to  build a portfolio of stock and derivative to eliminate the uncertainty in a short time:</p>
+<ul>
+<li><p>$\text{short} ~ 1 ~ \text{derivative} ~ (f)$</p>
+</li>
+<li><p>$\text{long} ~ \frac{\partial f}{\partial S} ~ \text{shares} ~ (S)$</p>
+<p>In a short time, it is a risk-free portfolio, the value of which is</p>
+<script type="math/tex; mode=display">
+\Pi = -f + \frac{\partial f}{\partial S} S</script><p>On the one hand, it has to have the risk-free return:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+\Pi_t &=& \Pi_0 e ^{rt} \\
+\mathbb{ln}\Pi_t &=& \mathbb{ln}\Pi_0 + rt \\
+\frac{d\Pi}{\Pi} &=& rdt
+\end{eqnarray*}</script><p>Therefore,</p>
+<script type="math/tex; mode=display">
+\Delta \Pi = r \Pi \Delta t</script><p>On the other hand, the change of its value is:</p>
+<script type="math/tex; mode=display">
+\Delta \Pi = - \Delta f + \frac{\partial f}{\partial S} \Delta S</script><p>Then we can get an equation, </p>
+<script type="math/tex; mode=display">
+r \Pi \Delta t =- \Delta f + \frac{\partial f}{\partial S} \Delta S</script><p>with substituting for $\Delta f$, $\Delta S$ and $\Pi$</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+r\Delta t (-f + \frac{\partial f}{\partial S} S) = &-&(\frac{\partial f}{\partial t} + \frac{\partial f}{\partial S}\mu S + \frac{1}{2}\frac{\partial^2 f}{\partial S^2}\sigma^2 S^2) \Delta t + \frac{\partial f}{\partial S}\sigma S \Delta W_t \\
+&+&  \frac{\partial f}{\partial S}(\mu S \Delta t + \sigma S \Delta W_t)
+\end{eqnarray*}</script><p>After simplifying the equation, we get the famous differential equation</p>
+<script type="math/tex; mode=display">
+\frac{\partial f}{\partial t} + rS\frac{\partial f}{\partial S}+\frac{1}{2}\sigma^2S^2\frac{\partial^2 f}{\partial S^2} = rf</script><p>We need to find a $f$ which satisfies the above equation.</p>
+</li>
+</ul>
+<h3 id="Method-2-Discount-Processes"><a href="#Method-2-Discount-Processes" class="headerlink" title="Method 2: Discount Processes"></a>Method 2: Discount Processes</h3><p>This method is from the Shreve’s book _Stochastic Calculus for Finance_</p>
+<p>Assume stock price is $S(t)$, at time $t$ the position is $\Delta(t)$ shares, which is $\mathscr{F_t}$-measurable. We need to build a self-financing portfolio replicate the European call option.</p>
+<ul>
+<li>long $\Delta(t)$ shares</li>
+<li>short 1 call option</li>
+</ul>
+<p>The portfolio value is $X(t)$. The change of portfolio value is</p>
+<script type="math/tex; mode=display">
+dX(t) = \Delta(t)dS(t) + r(X(t)-\Delta(t)S(t))dt \tag{1}</script><p>where $\Delta(t)dS(t)$ is the value change of the stock, $r(X(t)-\Delta(t)S(t))dt$ is the value change of cash</p>
+<p>Because stock price is a Geometric Brownian Motion</p>
+<script type="math/tex; mode=display">
+dS(t) = \alpha S(t)dt+\sigma S(t)dW(t) \tag{2}</script><p>we get</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dX(t) &=& \Delta(t)[\alpha S(t)dt+\sigma S(t)dW(t)] + r(X(t)-\Delta(t)S(t))dt \\
+&=& (\alpha-r)\Delta(t)S(t)dt+ rX(t)dt + \Delta(t)\sigma S(t)dW(t) \tag{3}
+\end{eqnarray}</script><p>In equation (3), the first term $(\alpha-r)\Delta(t)S(t)dt$ is <strong>excess returns</strong>, the second term $rX(t)dt$ is <strong>risk-free returns</strong>, and the third term $\Delta(t)\sigma S(t)dW(t)$ is risk.</p>
+<p>When we consider the discount of these two processes:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+d(e^{-rt}S(t)) &=& d(e^{-rt})S(t) + e^{-rt}dS(t)+d(e^{-rt})dS(t) \\
+&=& -rS(t)e^{-rt}dt + e^{-rt}[\alpha S(t)dt+\sigma S(t)dW(t)] + 0 \\
+&=& (\alpha - r)S(t)e^{-rt}dt + \sigma S(t)e^{-rt}dW(t) \tag{4}
+\\
+\\
+d(e^{-rt}X(t)) &=& d(e^{-rt})X(t) + e^{-rt}dX(t)+d(e^{-rt})dX(t) \\
+&=& -rX(t)e^{-rt}dt + e^{-rt}[(\alpha-r)\Delta(t)S(t)dt+ rX(t)dt + \Delta(t)\sigma S(t)dW(t)] + 0 \\
+&=& (\alpha - r)\Delta(t)e^{-rt}S(t)dt + \Delta(t) \sigma e^{-rt}S(t)dW(t) \\
+&=& \Delta(t)[(\alpha - r)e^{-rt}S(t)dt + \sigma e^{-rt}S(t)dW(t)] \\
+&=& \Delta(t)d(e^{-rt}S(t)) \tag{5}
+\end{eqnarray}</script><p>Here, the increasing value in cash is discount back to the initial state in equation (5).</p>
+<p>Let $C(t,S(t))$ be the value of European call option, and $K,r, \sigma$ is invariant. </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dC(t,S(t)) &=& C_tdt+C_xdS_t+\frac{1}{2}C_{xx}dS_tdS_t \\
+&=& C_tdt+C_x(\alpha S_tdt+\sigma S_tdW_t)+\frac{1}{2}C_{xx}\sigma^2S_t^2d_t \\
+&=& (C_t + \alpha C_xS_t+\frac{1}{2}C_{xx}\sigma^2S_t^2)d_t + C_x\sigma S_tdW_t \tag{6} \\
+\\
+\\
+d(e^{-rt}C(t,S_t)) &=& e^{-rt}(C_t + \alpha C_xS_t+\frac{1}{2}C_{xx}\sigma^2S_t^2 -rC)d_t + e^{-rt}C_x\sigma S_tdW_t \tag{7}
+
+\end{eqnarray}</script><p>Because the portfolio is the replication of this European call option, we have</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dC(t,S(t)) &=& dX(t) \\
+d(e^{-rt}C(t,S_t)) &=& d(e^{-rt}X_t)
+\end{eqnarray}</script><p>Therefore, by comparing equation (5) and (7), the first and second term should be equivalent respectively. The random terms shows that</p>
+<script type="math/tex; mode=display">
+\Delta(t)\sigma e^{-rt}S_tdW_t =e^{-rt}C_x\sigma S_tdW_t \\
+\Delta(t) = C_x</script><p>and the drift term shows that </p>
+<script type="math/tex; mode=display">
+\Delta(t)(\alpha - r)e^{-rt}S_tdt = e^{-rt}(C_t + \alpha C_xS_t+\frac{1}{2}C_{xx}\sigma^2S_t^2-rC) dt \\
+C_x(\alpha - r)e^{-rt}S_tdt = e^{-rt}(C_t + \alpha C_xS_t+\frac{1}{2}C_{xx}\sigma^2S_t^2 -rC)dt \\
+C_xrS_tdt = (C_t + \frac{1}{2}C_{xx}\sigma^2S_t^2 -rC)dt \\
+rC = C_t+rC_x+\frac{1}{2}C_{xx}\sigma^2S_t^2 \tag{9}</script><p>Rewrite equation (9) as</p>
+<script type="math/tex; mode=display">
+rC = \frac{\partial{C}}{\partial{t}}+r\frac{\partial{C}}{\partial{X}}+\frac{1}{2}C_{xx}\sigma^2X^2 \\</script><h2 id="Solve-the-PDE"><a href="#Solve-the-PDE" class="headerlink" title="Solve the PDE"></a>Solve the PDE</h2><h1 id="Equivalent-Martingale-Measure"><a href="#Equivalent-Martingale-Measure" class="headerlink" title="Equivalent Martingale Measure"></a>Equivalent Martingale Measure</h1>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Black Scholes Model",
+        "image": "http://yoursite.com",
+        "keywords": "Finance Asset Pricing",
+        "genre": "Economics Finance Derivatives",
+        "datePublished": "2019-11-23",
+        "dateCreated": "2019-11-23",
+        "dateModified": "2020-08-12",
+        "url": "http://yoursite.com/2019/11/23/Derivatives - BSM Model/",
+        "description": "Black-Scholes-Merton FormulaEuropean Call
+
+C_t = S_t N(d_1) - Ke^{-r(T-t)}N(d_2)where
+
+\begin{eqnarray}
+d_1 &=& \frac{ln\frac{S_0}{K}+(r+\frac{1}{2}\sigma^2)(T-t)}{\sigma\sqrt{T-t}} \\
+d_2 &=& d_1 - \"
+        "wordCount": 888
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/12/15/Derivatives - Binomial Model/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Binomial Model
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/10/04/C++ Pointer/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">C++ Class</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 10.91px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 15.45px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 10.91px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 15.45px;">C++</a> <a href="/tags/Calculus/" style="font-size: 10.91px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 11.82px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 14.55px;">FRM</a> <a href="/tags/Finance/" style="font-size: 12.73px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 13.64px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 10.91px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 16.36px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 10.91px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 17.27px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 17.27px;">Papers</a> <a href="/tags/Probability/" style="font-size: 19.09px;">Probability</a> <a href="/tags/Python/" style="font-size: 12.73px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 10.91px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 14.55px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 11.82px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 18.18px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 17.27px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 14.55px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 13.64px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 10px;">Stochastic Differential Equation</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 12.73px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10.91px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2020 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/11/23/Derivatives - BSM Model/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</body>
+</html>

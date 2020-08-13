@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-08-13T19:15:21.000Z</updated>
+  <updated>2020-08-13T19:49:06.848Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jump Process</title>
+    <link href="http://yoursite.com/2020/08/15/Stochastic%20Calculus%20-%20Jump%20Process/"/>
+    <id>http://yoursite.com/2020/08/15/Stochastic Calculus - Jump Process/</id>
+    <published>2020-08-15T04:00:00.000Z</published>
+    <updated>2020-08-13T19:49:06.848Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Jump-Process"><a href="#Jump-Process" class="headerlink" title="Jump Process"></a>Jump Process</h1><p>Consider a jump process $X(t)$:</p><script type="math/tex; mode=display">\begin{eqnarray}X(t) &=& X(0) + I(t) + R(t) + J(t) \\&=& X^c(t) + J(t) \\ &=& X(0) + \int_{0}^{t}\Gamma(s)dW_s + \int_{0}^{t}\Theta(s)ds+J(t)\end{eqnarray}</script><p>where $X^c(t)$ is Ito process and $J(t)$ is a pure jump process</p><ul><li>no jump at time 0</li><li><p>has only finitely many jumps on each finite time interval $[0, T]$</p></li><li><p>constant between jumps</p></li><li><p>right-continuous $J(0) = 0$ and $J(t) = \lim_{s \to t^+}J(s)$ , $t \geq 0$</p></li></ul><p>The jump size is defined as $\Delta J(t) = J(t) - J(t^-)$. And $\Delta J(0) = 0 \Rightarrow J(0) = J(0^-)$, $X(0) = X(0^-)$ </p><p>If $X(t)$ is continuous at time $t$, then $\Delta X(t) = 0$. If $X(t)$ jump at time $t$, then $\Delta X(t) \neq 0$ is the size of the jump: $\Delta X(t) \neq 0$ is the size of the jump: $\Delta X(t) = J(t) - J(t^-) = \Delta J(t)$</p><p>The quadratic deviation: </p><script type="math/tex; mode=display">\begin{eqnarray}dX^c(t)dX^c(t) = \Gamma^2(t)dt \\[X^c, X^c](t) = \int_0^t\Gamma^2(s)ds\end{eqnarray}</script><p>Let $X(t)$ be a jump process defined above, and let $\Phi(s)$ be an adapted process. The stochastic integral of $\Phi(s)$ with respect to $X(t)$ is </p><script type="math/tex; mode=display">\begin{eqnarray}\label{eqn1}\int_{0}^{t}\Phi(s)dX_s = \int_{0}^{t}\Phi(s)\Gamma(s)dW_s + \int_{0}^{t}\Phi(s)\Theta(s)ds + \int_{0}^{t}\Phi(s)dJ(s)\end{eqnarray}</script><p>Because</p><script type="math/tex; mode=display">\\dX_s = \Gamma(s)dW_s+\Theta(s)ds + dJ(s)</script><p>Here, $dJ(s)$ has no definition at the jump point, but the integral $\int_{0}^{t}\Phi(s)dJ(s)$ is exactly </p><script type="math/tex; mode=display">\sum_{0 < s \leq t}\Phi(s)\Delta J(s)</script><p>Recall that </p><script type="math/tex; mode=display">I(t) = \int_{0}^{t}\Phi(s)dW_s</script><p>is a martingale $s \leq t \Rightarrow E[I(t)|F(s)] = I(s)$. Now, consider </p><script type="math/tex; mode=display">H(t) = \int_{0}^{t}\Phi(s)dX_s</script><p>where $X(s)$ is a jump process. <strong>$H(t)$ is not necessarily a martingale</strong>. For example, $X(t) = N(t) - \lambda t$, $\Phi(s) = \Delta N(s)$</p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s) = \int_0^{t}\Phi(s)dX^c_s + \int_0^{t}\Phi(s)dJ(s)</script><p>The first part is </p><script type="math/tex; mode=display">-\lambda \int_{0}^{t} \Phi(s)ds = 0</script><p>the second part is </p><script type="math/tex; mode=display">\sum_{0<s\leq t} (\Delta N(s))^2 = \sum_{s = 0}^t 1^2 = N(t)</script><p>therefore, </p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s) = N(t)</script><p>which is not a martingale.</p><p>Theorem: Assume that the jump process $X(s)$ is a martingale, the integrand $\Phi(s)$ is left-continuous and adapted, and $E\left[\int_0^t \Gamma^2(s)\Phi^2(s)ds\right] &lt; \infty$ for all $t \geq 0$, then</p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s)</script><p>is also a martingale.</p><p>$\Phi(s)$ can be regarded as a position, $X(s)$ can be regarded as a price, then $\int_{0}^{t}\Phi(s)dX(s)$ can be regarded as a gain.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Jump-Process&quot;&gt;&lt;a href=&quot;#Jump-Process&quot; class=&quot;headerlink&quot; title=&quot;Jump Process&quot;&gt;&lt;/a&gt;Jump Process&lt;/h1&gt;&lt;p&gt;Consider a jump process $X(t)$
+      
+    
+    </summary>
+    
+      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
+    
+      <category term="Probability" scheme="http://yoursite.com/categories/Mathematics/Probability/"/>
+    
+      <category term="Stochastic Calculus" scheme="http://yoursite.com/categories/Mathematics/Probability/Stochastic-Calculus/"/>
+    
+    
+      <category term="Probability" scheme="http://yoursite.com/tags/Probability/"/>
+    
+      <category term="Stochastic Calculus" scheme="http://yoursite.com/tags/Stochastic-Calculus/"/>
+    
+  </entry>
   
   <entry>
     <title>Stochastic Differential Equation</title>
@@ -63,37 +94,6 @@
       
       
         &lt;h1 id=&quot;Probability-Measure-Change&quot;&gt;&lt;a href=&quot;#Probability-Measure-Change&quot; class=&quot;headerlink&quot; title=&quot;Probability Measure Change&quot;&gt;&lt;/a&gt;Probabil
-      
-    
-    </summary>
-    
-      <category term="Mathematics" scheme="http://yoursite.com/categories/Mathematics/"/>
-    
-      <category term="Probability" scheme="http://yoursite.com/categories/Mathematics/Probability/"/>
-    
-      <category term="Stochastic Calculus" scheme="http://yoursite.com/categories/Mathematics/Probability/Stochastic-Calculus/"/>
-    
-    
-      <category term="Probability" scheme="http://yoursite.com/tags/Probability/"/>
-    
-      <category term="Stochastic Calculus" scheme="http://yoursite.com/tags/Stochastic-Calculus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ito Integral</title>
-    <link href="http://yoursite.com/2020/08/13/Stochastic%20Calculus%20-%20Jump%20Process/"/>
-    <id>http://yoursite.com/2020/08/13/Stochastic Calculus - Jump Process/</id>
-    <published>2020-08-13T04:00:00.000Z</published>
-    <updated>2020-08-12T14:55:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Jump-Process"><a href="#Jump-Process" class="headerlink" title="Jump Process"></a>Jump Process</h1><p>Consider a jump process $X(t)$:</p><script type="math/tex; mode=display">\begin{eqnarray}X(t) &=& X(0) + I(t) + R(t) + J(t) \\&=& X^c(t) + J(t) \\ &=& X(0) + \int_{0}^{t}\Gamma(s)dW_s + \int_{0}^{t}\Theta(s)ds+J(t)\end{eqnarray}</script><p>where $X^c(t)$ is Ito process and $J(t)$ is a pure jump process</p><ul><li>no jump at time 0</li><li><p>has only finitely many jumps on each finite time interval $[0, T]$</p></li><li><p>constant between jumps</p></li><li><p>right-continuous $J(0) = 0$ and $J(t) = \lim_{s \to t^+}J(s)$ , $t \geq 0$</p></li></ul><p>The jump size is defined as $\Delta J(t) = J(t) - J(t^-)$. And $\Delta J(0) = 0 \Rightarrow J(0) = J(0^-)$, $X(0) = X(0^-)$ </p><p>If $X(t)$ is continuous at time $t$, then $\Delta X(t) = 0$. If $X(t)$ jump at time $t$, then $\Delta X(t) \neq 0$ is the size of the jump: $\Delta X(t) \neq 0$ is the size of the jump: $\Delta X(t) = J(t) - J(t^-) = \Delta J(t)$</p><p>The quadratic deviation: </p><script type="math/tex; mode=display">\begin{eqnarray}dX^c(t)dX^c(t) = \Gamma^2(t)dt \\[X^c, X^c](t) = \int_0^t\Gamma^2(s)ds\end{eqnarray}</script><p>Let $X(t)$ be a jump process defined above, and let $\Phi(s)$ be an adapted process. The stochastic integral of $\Phi(s)$ with respect to $X(t)$ is </p><script type="math/tex; mode=display">\begin{eqnarray}\label{eqn1}\int_{0}^{t}\Phi(s)dX_s = \int_{0}^{t}\Phi(s)\Gamma(s)dW_s + \int_{0}^{t}\Phi(s)\Theta(s)ds + \int_{0}^{t}\Phi(s)dJ(s)\end{eqnarray}</script><p>Because</p><script type="math/tex; mode=display">\\dX_s = \Gamma(s)dW_s+\Theta(s)ds + dJ(s)</script><p>Here, $dJ(s)$ has no definition at the jump point, but the integral $\int_{0}^{t}\Phi(s)dJ(s)$ is exactly </p><script type="math/tex; mode=display">\sum_{0 < s \leq t}\Phi(s)\Delta J(s)</script><p>Recall that </p><script type="math/tex; mode=display">I(t) = \int_{0}^{t}\Phi(s)dW_s</script><p>is a martingale $s \leq t \Rightarrow E[I(t)|F(s)] = I(s)$. Now, consider </p><script type="math/tex; mode=display">H(t) = \int_{0}^{t}\Phi(s)dX_s</script><p>where $X(s)$ is a jump process. <strong>$H(t)$ is not necessarily a martingale</strong>. For example, $X(t) = N(t) - \lambda t$, $\Phi(s) = \Delta N(s)$</p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s) = \int_0^{t}\Phi(s)dX^c_s + \int_0^{t}\Phi(s)dJ(s)</script><p>The first part is </p><script type="math/tex; mode=display">-\lambda \int_{0}^{t} \Phi(s)ds = 0</script><p>the second part is </p><script type="math/tex; mode=display">\sum_{0<s\leq t} (\Delta N(s))^2 = \sum_{s = 0}^t 1^2 = N(t)</script><p>therefore, </p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s) = N(t)</script><p>which is not a martingale.</p><p>Theorem: Assume that the jump process $X(s)$ is a martingale, the integrand $\Phi(s)$ is left-continuous and adapted, and $E\left[\int_0^t \Gamma^2(s)\Phi^2(s)ds\right] &lt; \infty$ for all $t \geq 0$, then</p><script type="math/tex; mode=display">\int_{0}^{t}\Phi(s)dX(s)</script><p>is also a martingale.</p><p>$\Phi(s)$ can be regarded as a position, $X(s)$ can be regarded as a price, then $\int_{0}^{t}\Phi(s)dX(s)$ can be regarded as a gain.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Jump-Process&quot;&gt;&lt;a href=&quot;#Jump-Process&quot; class=&quot;headerlink&quot; title=&quot;Jump Process&quot;&gt;&lt;/a&gt;Jump Process&lt;/h1&gt;&lt;p&gt;Consider a jump process $X(t)$
       
     
     </summary>

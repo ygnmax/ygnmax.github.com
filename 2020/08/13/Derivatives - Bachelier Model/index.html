@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>Bachelier Model | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Finance,Asset Pricing">
+    
+    <meta name="description" content="This is from a lecture of Prof. Peter Carr Bachelier Put Pricing FormulaAssumptions No frictions, no default,  no arbitrage  there exists a risk-neutral probability measure $\mathbb{Q}$ such that all">
+<meta name="keywords" content="Finance,Asset Pricing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bachelier Model">
+<meta property="og:url" content="http://yoursite.com/2020/08/13/Derivatives - Bachelier Model/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This is from a lecture of Prof. Peter Carr Bachelier Put Pricing FormulaAssumptions No frictions, no default,  no arbitrage  there exists a risk-neutral probability measure $\mathbb{Q}$ such that all">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-05-29T05:18:28.445Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bachelier Model">
+<meta name="twitter:description" content="This is from a lecture of Prof. Peter Carr Bachelier Put Pricing FormulaAssumptions No frictions, no default,  no arbitrage  there exists a risk-neutral probability measure $\mathbb{Q}$ such that all">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Derivatives - Bachelier Model" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Bachelier Model
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/08/13/Derivatives - Bachelier Model/" class="article-date">
+            <time datetime="2020-08-13T04:00:00.000Z" itemprop="datePublished">2020-08-13</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Asset-Pricing/">Asset Pricing</a>, <a class="tag-link" href="/tags/Finance/">Finance</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This is from a lecture of Prof. Peter Carr</p>
+<h2 id="Bachelier-Put-Pricing-Formula"><a href="#Bachelier-Put-Pricing-Formula" class="headerlink" title="Bachelier Put Pricing Formula"></a>Bachelier Put Pricing Formula</h2><h3 id="Assumptions"><a href="#Assumptions" class="headerlink" title="Assumptions"></a>Assumptions</h3><ul>
+<li>No frictions, no default, </li>
+<li>no arbitrage <ul>
+<li>there exists a risk-neutral probability measure $\mathbb{Q}$ such that all security prices are martingales under it.</li>
+</ul>
+</li>
+<li>no carry costs (storage costs, convenience yields, dividends) <ul>
+<li>therefore no early option exercise </li>
+</ul>
+</li>
+</ul>
+<p>under the risk-neutral probability measure $\mathbb{Q}$, the spot price $s$ of the underlying security follows driftless arithmetic Brownian motion:</p>
+<script type="math/tex; mode=display">
+s_t = s_0 + a(t)W_t, t\in[t_0,T]</script><p>where $s<em>0$ is known real-valued initial spot price of the underlying security $a(t)&gt;0$ is the known deterministic positive instantaneous normal volatility of the underlying security, and $W$ is a $ \mathbb{Q} $ standard Brownian motion. $T$ is the option’s fixed maturity date. Let $\tau = T-t_0$ be the time to maturity of the option at the valuation time $t_0$. The standard deviation of $s</em>\tau$ is</p>
+<script type="math/tex; mode=display">
+b(\tau) = \sqrt{\int_{0}^{\tau}a^2(t_0+u)du}, ~~ \tau > 0</script><p>$b$ captures the investor’s bewilderment at $t<em>0$ surrounding the future spot price $s_T$ at $T$. Here $b(\tau)$ is an increasing deterministic function of $\tau &gt; 0$ with $\lim\limits</em>{\tau \to 0} = 0$.</p>
+<h3 id="Probability-Method"><a href="#Probability-Method" class="headerlink" title="Probability Method"></a>Probability Method</h3><ul>
+<li>binary put</li>
+</ul>
+<p>A binary put struck at $k \in \mathbb{R}$ pays $1(s_{\tau} &lt; k)$ when it matures at $T$. The arbitrage-free binary put value in the Bachelier model is given in closed-form by</p>
+<script type="math/tex; mode=display">
+bp^{b}(k,b(\tau),s) = \mathbb{E}^{\mathbb{Q}}1[s_{\tau}<k|s_t=s] = N\left(\frac{k-s}{b(\tau)}\right)</script><p>where $N(z) = \int_{-\infty}^{z}\frac{e^{-\frac{y^2}{2}}}{\sqrt{2\pi}}dy$ is standard normal distribution function</p>
+<ul>
+<li>vanilla put</li>
+</ul>
+<p>A vanilla put struck at $k \in \mathbb{R}$ pays $(k - s_T)^+$ dollars when it matures at $T$. When the underlying real-valued, the payoff of a vanilla out is:</p>
+<script type="math/tex; mode=display">
+(k - s_T)^+ = \int_{-\infty}^{k}1(s_T<L)dL</script><p>Taking conditional expectations, the arbitrage-free value of the vanilla put in the Bachelier model is given by</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+vp^{b}(k,b(\tau),s) &=& \int_{-\infty}^{k}\mathbb{E}^{\mathbb{Q_b}}[1(s_T<L)|s_0 = s]dL \\
+&=&  \int_{-\infty}^{k}bp^{b}(L,b(\tau),s)dL 
+\end{eqnarray}</script><p>where the $bp^{b}(L,b(\tau),s) = N\left(\frac{L-s}{b(\tau)}\right)$.</p>
+<p>By Integrating by parts, the closed-form Bachelier model put pricing formula is</p>
+<script type="math/tex; mode=display">
+vp^{b}(k,b(\tau),s) = (k-s)N\left(\frac{k-s}{b(\tau)}\right) + b(\tau)N'\left(\frac{k-s}{b(\tau)}\right)</script><p>Let $x = k-s$ be the excess of strike k over spot s.</p>
+<script type="math/tex; mode=display">
+vp^{b}(x,b(\tau)) = xN\left(\frac{x}{b(\tau)}\right) + b(\tau)N'\left(\frac{x}{b(\tau)}\right)</script><p>The vanilla put value function $vp_b(x,b(\tau))$ is increasing in $x \in \mathbb{R}$ and the first derivative with regard to $x$ is the probability of the put finishing in the money.</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial x}vp(x,b(\tau)) = N\left(\frac{x}{b(\tau)}\right)</script><h3 id="Convex-Duality-Method"><a href="#Convex-Duality-Method" class="headerlink" title="Convex Duality Method"></a>Convex Duality Method</h3><h4 id="What’s-driving-the-uncertainty"><a href="#What’s-driving-the-uncertainty" class="headerlink" title="What’s driving the uncertainty?"></a>What’s driving the uncertainty?</h4><ul>
+<li><p>The probability of finishing in the money itself.</p>
+<ul>
+<li>It shows that how deep in the money we are. It is not determined by the difference between strike and spot, but by the probability we are going to finish in the money in maturity.</li>
+</ul>
+</li>
+<li><p>In currency liquid markets and there is a binary option. You can see this probability directly.</p>
+</li>
+<li><p>or just pick a dynamics for it not knowing where it is now</p>
+</li>
+</ul>
+<p>Define the probability</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial x}vp(x,b(\tau)) = N\left(\frac{x}{b(\tau)}\right) = \pi</script><p>as $\pi$</p>
+<p>Since the standard normal CDF $N(x)$ is increasing, $\exists$ a function $N^{-1}(x)$ $s.t.$</p>
+<script type="math/tex; mode=display">
+\frac{x}{b(\tau)} = N^{-1}(\pi)</script><p>Now, let’s consider $\pi$ as a new independent variables. Define a tangency portfolio value function $tp(x,\pi,b(\tau))$ by</p>
+<script type="math/tex; mode=display">
+tp(x,\pi,b(\tau)) = x\pi + b(\tau)N'(N^{-1}(\pi)), \pi \in [0,1]</script><p>The right hand side can be interpreted as the cost of holding $\pi$ short forward contracts with each short forward contract worth $x=k-s$ and also keeping $b(\tau)N’(N^{-1}(\pi))$ dollars in a cash reserve. The second term depends on $\pi$, which can be interpreted as the probability of the binary put finishing in the money.</p>
+<h4 id="What-happens-if-we-maximize-it-over-pi"><a href="#What-happens-if-we-maximize-it-over-pi" class="headerlink" title="What happens if we maximize it over $\pi$"></a>What happens if we maximize it over $\pi$</h4><script type="math/tex; mode=display">
+\sup_{\pi \in [0,1]}[x\pi+bN'(N^{-1}(\pi))]</script><p>The first order condition is</p>
+<script type="math/tex; mode=display">
+x+bN'(N^{-1}(\pi))[-N^{-1}(\pi)]\frac{1}{N'(N^{-1}(\pi))} = 0</script><p>simplifying it implies that</p>
+<script type="math/tex; mode=display">
+x = bN^{-1}(\pi)</script><p>while inverting implies</p>
+<script type="math/tex; mode=display">
+\pi^* = N\left(\frac{x}{b}\right)</script><p>Therefore, the maximized cost is</p>
+<script type="math/tex; mode=display">
+tp(x,\pi^*,b(\tau)) = x\pi + b(\tau)N'(N^{-1}(\pi)) = vp(x,b)</script><p>This result means that the option value can be a supreme over supporting lines. The lines are the tangency portfolio. When replicating the option, one always holds the tangency portfolio, and in order to stay tangent, one has to change the slope and intercept of the portfolio. Maximizing the slope makes tangency line transform to a curve.</p>
+<h4 id="Martingale"><a href="#Martingale" class="headerlink" title="Martingale"></a>Martingale</h4><p>$x = s - k$ is a martingale, because $k$ is just a constant. $\pi$ is also martingale because it is the price of a binary put. These two martingales have positive correlation: $x$ goes up and $\pi$ goes up; $x$ goes down and $\pi$ goes down. It can be interpreted that it costs money if one holds $\pi$ units of $x$.</p>
+<p>The second term is a cash reserve that you need to charge when selling a put as well as the constant like buying $\pi$ units of $x$. And cash reserve is actually rated every unit of time to finance and push forward of the product of the martingales $x$ and $\pi$. As long as the right volatility is used in the Bachelier model, the cash reserve is depleted just as the put matures. The holding of $\pi_T = 1(x_T &gt; 0)$ short forward contracts each worth $x_T$ delivers the vanilla put payoff, $1(x_T&gt;0)x_T = x_T^+$</p>
+<h3 id="Logistics-Alternative-using-Convex-Duality"><a href="#Logistics-Alternative-using-Convex-Duality" class="headerlink" title="Logistics Alternative using Convex Duality"></a>Logistics Alternative using Convex Duality</h3><p>Generalize the tangency portfolio value function in the Bachelier model to</p>
+<script type="math/tex; mode=display">
+tp(x, \pi, b) = x\pi + C(\pi,b), \pi \in[0,1]</script><p>where $C(\pi,b)$ are the cash holdings needed to push the pair of martingales $x$ and $\pi$ forward to maturity. Instead of setting $C = bN’(N^{-1}(\pi))$, we model the cash reserves by</p>
+<script type="math/tex; mode=display">
+C(\pi,b) = b_{\tau}H(\pi)</script><p>where $H(\pi)$ is the Shannon entropy of a Bernoulli random variable defined by</p>
+<script type="math/tex; mode=display">
+H(\pi) = -\pi ln\pi - (1-\pi)\ln(1-\pi) \geq 0,~~\pi \in [0,1]</script><p>Therefore,</p>
+<script type="math/tex; mode=display">
+tp(x, \pi, b) = x\pi - b(\pi ln\pi + (1-\pi)\ln(1-\pi)] \geq 0,~~\pi \in [0,1]</script><p>The truth is that the more uncertainty you are about the final price, the more you need to charge in cash reserves upfront. As before, consider maximizing the combined cost over $\pi \in [0,1]$</p>
+<script type="math/tex; mode=display">
+\sup_{\pi \in [0,1]} x\pi - b(\pi ln\pi + (1-\pi)\ln(1-\pi)</script><p>the first-order condition is</p>
+<script type="math/tex; mode=display">
+x - b\ln\left(\frac{\pi}{1-\pi}\right) = 0</script><p>the $\pi^*$ is</p>
+<script type="math/tex; mode=display">
+\pi^* = \frac{e^{\frac{x}{b}}}{1+e^{\frac{x}{b}}}</script><p>which is the logistic CDF. Substituting in the objective function at the top implies that the maximized cost is</p>
+<script type="math/tex; mode=display">
+tp(x,\pi^*(x,b),b) = b \ln(1+e^{\frac{x}{b}})</script><p>which is our candidate for a new put option pricing formula.</p>
+<p>The logistic mo-nicker arises from differentiating w.r.t x:</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial x}vp(x,b(\tau)) = (1+e^{-\frac{x}{b}})^{-1} = \pi^*(x,b)</script><p>which is the logistic CDF.</p>
+<p>The price change $s_T - s_0$ in the bachelier model is normally distributed with mean $0$ and standard deviation $b(\tau)$. In constrast, the price change $s_T - s_0$ in the logistic model is logistically distributed with mean 0 and scale parameter $b(\tau)$. Hence, the standard deviation of the price change $s_T - s_0$ in the logistic model is $\frac{b(\tau)\pi}{\sqrt{3}}$.</p>
+<h4 id="validate-the-model"><a href="#validate-the-model" class="headerlink" title="validate the model"></a>validate the model</h4><ul>
+<li><p>validate it is arbitrage free</p>
+</li>
+<li><p>find the supporting Dynamics</p>
+<ul>
+<li>there are two supporting dynamics for the logistic model<ul>
+<li>logistic</li>
+<li>pure-jump</li>
+</ul>
+</li>
+<li>Bachelier model also has two supporting dynamics, which deliver the very same formula </li>
+</ul>
+</li>
+</ul>
+<h3 id="Comparison-of-the-Two-Pricing-Formulas"><a href="#Comparison-of-the-Two-Pricing-Formulas" class="headerlink" title="Comparison of the Two Pricing Formulas"></a>Comparison of the Two Pricing Formulas</h3><h4 id="Logistic-is-sampler"><a href="#Logistic-is-sampler" class="headerlink" title="Logistic is sampler"></a>Logistic is sampler</h4><p>It only contains elementary function of the two inputs $x$ and $b$. but in Bachelier model, the probabilty density function is not a elementary function.</p>
+<h4 id="Convexity"><a href="#Convexity" class="headerlink" title="Convexity"></a>Convexity</h4><p>Both put prcing formulas are convex in $x$ and hence arise via maximizing over $\pi$</p>
+<p>put premium is convex, which is not true in the black scholes model</p>
+<h4 id="Greeks"><a href="#Greeks" class="headerlink" title="Greeks"></a>Greeks</h4><p>By the envelop theorem</p>
+<script type="math/tex; mode=display">
+\frac{\partial}{\partial x}vp_b(x,b) \\
+\frac{\partial}{\partial x}vp_l(x,b) \\
+\frac{\partial}{\partial b}vp_b(x,b) \\
+\frac{\partial}{\partial b}vp_l(x,b) \\</script><h4 id="Implied-Volatility-by-Delta"><a href="#Implied-Volatility-by-Delta" class="headerlink" title="Implied Volatility by Delta"></a>Implied Volatility by Delta</h4><p>Dividing each vanilla put value by $b = b(\tau) &gt; 0$ causes each normalized put price, $\frac{vp(x,b)}{b}$ to depend on a single variable $\frac{x}{b}$</p>
+<h4 id="Put-Premium"><a href="#Put-Premium" class="headerlink" title="Put Premium"></a>Put Premium</h4><p>When the options are at the money $x = 0$, the second derivative in $b$ vanishes. At the money opton prices are actually positively proportional to $b &gt; 0$:</p>
+<script type="math/tex; mode=display">
+vp_b(0,b) \approx 0.3989b</script><script type="math/tex; mode=display">
+vp_l(0,b) = b\ln2 \approx0.69b</script><p>The normalizing divisions by $b &gt; 0$ can be interpreted as a change of numeraire. At the money strike derivatives are both $\frac{1}{2}$. The ratios of away from the money option prices to at the money option prices just depends on the deviation of $\pi$ from $\frac{1}{2}$.</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Bachelier Model",
+        "image": "http://yoursite.com",
+        "keywords": "Finance Asset Pricing",
+        "genre": "Economics Finance Derivatives",
+        "datePublished": "2020-08-13",
+        "dateCreated": "2020-08-13",
+        "dateModified": "2021-05-29",
+        "url": "http://yoursite.com/2020/08/13/Derivatives - Bachelier Model/",
+        "description": "This is from a lecture of Prof. Peter Carr
+Bachelier Put Pricing FormulaAssumptions
+No frictions, no default, 
+no arbitrage 
+there exists a risk-neutral probability measure $\mathbb{Q}$ such that all "
+        "wordCount": 1351
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/08/14/Stochastic Differential Equation - Introdunction/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Stochastic Differential Equation1
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/08/13/Stochastic Calculus - Change of Probability Measure/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Change of Probability Measure</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 17px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 15px;">FRM</a> <a href="/tags/Finance/" style="font-size: 14px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 11px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 17px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 18px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 11px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 20px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 15px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 19px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 18px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 15px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 15px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 11px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2020/08/13/Derivatives - Bachelier Model/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

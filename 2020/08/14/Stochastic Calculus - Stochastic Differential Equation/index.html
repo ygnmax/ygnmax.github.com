@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>Stochastic Differential Equation | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Probability,Stochastic Calculus,Stochastic Differential Equation">
+    
+    <meta name="description" content="Source of RandomnessConsider an ordinary differential equation  \begin{eqnarray} \begin{cases} dX(t) = a(t,X(t))dt \\ X(0) = X_0 \end{cases} \end{eqnarray}There are two kinds of source of randomness i">
+<meta name="keywords" content="Probability,Stochastic Calculus,Stochastic Differential Equation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Stochastic Differential Equation">
+<meta property="og:url" content="http://yoursite.com/2020/08/14/Stochastic Calculus - Stochastic Differential Equation/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="Source of RandomnessConsider an ordinary differential equation  \begin{eqnarray} \begin{cases} dX(t) = a(t,X(t))dt \\ X(0) = X_0 \end{cases} \end{eqnarray}There are two kinds of source of randomness i">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-08-13T15:15:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stochastic Differential Equation">
+<meta name="twitter:description" content="Source of RandomnessConsider an ordinary differential equation  \begin{eqnarray} \begin{cases} dX(t) = a(t,X(t))dt \\ X(0) = X_0 \end{cases} \end{eqnarray}There are two kinds of source of randomness i">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/">Probability</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Stochastic Calculus - Stochastic Differential Equation" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Stochastic Differential Equation
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/08/14/Stochastic Calculus - Stochastic Differential Equation/" class="article-date">
+            <time datetime="2020-08-14T04:00:00.000Z" itemprop="datePublished">2020-08-14</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Probability/">Probability</a>, <a class="tag-link" href="/tags/Stochastic-Calculus/">Stochastic Calculus</a>, <a class="tag-link" href="/tags/Stochastic-Differential-Equation/">Stochastic Differential Equation</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Source-of-Randomness"><a href="#Source-of-Randomness" class="headerlink" title="Source of Randomness"></a>Source of Randomness</h1><p>Consider an ordinary differential equation</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\begin{cases}
+dX(t) = a(t,X(t))dt \\
+X(0) = X_0
+\end{cases}
+\end{eqnarray}</script><p>There are two kinds of source of randomness if we change it to SDE: </p>
+<ul>
+<li><p>Randomize the initial value</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\begin{cases}
+dX(t) = a(t,X(t))dt \\
+X_0(\omega) = Y(\omega)
+\end{cases}
+\end{eqnarray}</script><p>Example:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\begin{cases}
+dX_t = X_tdt \\
+X_0 = e^N, N\sim N(0,\sigma)
+\end{cases}
+\end{eqnarray}</script><p>The solution is </p>
+<script type="math/tex; mode=display">
+X_t = X_0e^t=e^{N+t}</script><p>which is a stochastic process.</p>
+</li>
+<li><p>There is an additional Random Noise $B_t$</p>
+<script type="math/tex; mode=display">
+dX_t = a(t,X_t)dt + b(t,X_t)dB_t</script><p>The Integral form is</p>
+<script type="math/tex; mode=display">
+X_t = X_0 + \int_{0}^{t} a(s,X_s)ds + \int_{0}^{t} b(s,X_s)dB_s</script></li>
+</ul>
+<p>The Noise term is called driving process. If the driving process is a Brownian Motion, we call it <strong>Ito Stochastic Differential Equation (Ito SDE)</strong>. But it can be other processes, like semi-martingale, Levy process, etc. Brownian Motion is a special semi-martingale.</p>
+<h1 id="Existence-of-Solution"><a href="#Existence-of-Solution" class="headerlink" title="Existence of Solution"></a>Existence of Solution</h1><h2 id="Strong-Solution"><a href="#Strong-Solution" class="headerlink" title="Strong Solution"></a>Strong Solution</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>A stochastic differential equation </p>
+<script type="math/tex; mode=display">
+X_t = X_0 + \int_{0}^{t} a(s,X_s)ds + \int_{0}^{t} b(s,X_s)dB_s</script><p>has strong solution if the following conditions are satisfied:</p>
+<ul>
+<li>$X_t$ is adapted $B_t$, i.e. $X_t$ is a function of $B_s$, $s \leq t$. </li>
+<li>$\int<em>{0}^{t} a(s,X_s)ds$ and $\int</em>{0}^{t} b(s,X_s)dB_s$ are well defined</li>
+<li>$X_t$ is a function of the underlying sample path and of $a(t,X_t)$ and $b(t, X_t)$</li>
+</ul>
+<p>If we only care about the solution at the distribution level, then it is a weak solution.</p>
+<h3 id="Lipschitz-Condition"><a href="#Lipschitz-Condition" class="headerlink" title="Lipschitz Condition"></a>Lipschitz Condition</h3><p>Assume the initial condition $X_0$ satisfying </p>
+<ul>
+<li><p>$\mathbb{E}[X_0^2] &lt; \infty$</p>
+</li>
+<li><p>independent of $B_t$, $t \geq 0$</p>
+</li>
+</ul>
+<p>If $\forall t \in [0,T]$ and $x,y \in \mathbb{R}$</p>
+<ul>
+<li>$a(t,X_t)$, $b(t,X_t)$ are continuous</li>
+<li>$\exists k \in [0,T]$ such that  $|a(t,X_t)-a(t,Y_t)| +|b(t,X_t)-b(t,Y_t)| \leq k|X_t-Y_t| $ </li>
+</ul>
+<p>Then Ito SDE has unique strong solution $S_t$ on $[0,T]$</p>
+<p>For example</p>
+<script type="math/tex; mode=display">
+X_t = X_0 + \int_{0}^{t} (c_1X_s+c_2)ds + \int_{0}^{t} (\sigma_1X_s+\sigma_2)dB_s, s \in [0,T]</script><p>then Lipschitz condition shows that </p>
+<script type="math/tex; mode=display">
+|c_1||X-Y|+|\sigma_1||X-Y| \leq k|X-Y| \\
+k \geq |c_1| + |\sigma_1|</script><p>This linear Ito SDE has unique strong solution.</p>
+<h1 id="Solution-of-SDE"><a href="#Solution-of-SDE" class="headerlink" title="Solution of SDE"></a>Solution of SDE</h1><h2 id="Ito-SDE"><a href="#Ito-SDE" class="headerlink" title="Ito SDE"></a>Ito SDE</h2><h3 id="Equivalent-SDE"><a href="#Equivalent-SDE" class="headerlink" title="Equivalent SDE"></a>Equivalent SDE</h3><p>Consider a SDE in two Calculus system:</p>
+<p>In Ito Calculus</p>
+<script type="math/tex; mode=display">
+dX_t = a(t,X_t)dt + b(t,X_t)dB_t</script><p>In Stratonovich Calculus</p>
+<script type="math/tex; mode=display">
+dX_t = \widetilde{a}(t,X_t)dt + \widetilde{b}(t,X_t) \circ dB_t</script><p>These two SDEs should give the same solution, which means they are <strong>equivalent SDE</strong>. In practice. We need to find the relationship between $a$ and $\tilde{a}$; $b$ and $\tilde{b}$.</p>
+<h3 id="From-Ito-to-Stratonovich"><a href="#From-Ito-to-Stratonovich" class="headerlink" title="From Ito to Stratonovich"></a>From Ito to Stratonovich</h3><p>Consider an Ito SDE</p>
+<script type="math/tex; mode=display">
+X_T = X_0 + \int_{0}^{T}a(t,X_t)dt + \int_{0}^{T}b(t,X_t)dB_t</script><p>Then the transformation formula from Ito Calculus to Stratonovich Calculus is</p>
+<script type="math/tex; mode=display">
+\int_{0}^{T}f(t,X_t) \circ dB_t = \int_{0}^{T}f(t,X_t)dB_t + \frac{1}{2}\int_{0}^{T}b(t,X_t)f_X(t,X_t) dt</script><blockquote>
+<p>For example, consider an Ito SDE</p>
+<script type="math/tex; mode=display">
+dX_t = dW_t \\
+f(t,X) = X</script><p>Here, $b(t,X_t) = 1$, $f_X(t,X) = 1$, then</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\int_{0}^{T}W_t\circ dW_t &=& \int_{0}^{T}W_tdW_t + \frac{1}{2}\int_{0}^{T}dt \\
+&=& \int_{0}^{T}W_tdW_t + \frac{1}{2}T \\
+&=& \frac{1}{2}W_t^2 - \frac{T}{2} + \frac{1}{2}T \\
+&=& \frac{1}{2}W_t^2
+\end{eqnarray}</script></blockquote>
+<h3 id="Solve-Ito-SDE"><a href="#Solve-Ito-SDE" class="headerlink" title="Solve Ito SDE"></a>Solve Ito SDE</h3><p>Consider an Ito SDE</p>
+<script type="math/tex; mode=display">
+X_T = X_0 + \int_{0}^{T}a(t,X_t)dt + \int_{0}^{T}b(t,X_t)dB_t</script><p>Because</p>
+<script type="math/tex; mode=display">
+\int_{0}^{T}f(t,X_t)\circ dB_t = \int_{0}^{T}f(t,X_t)dB_t + \frac{1}{2}\int_{0}^{T}b(t,X_t)f_X(t,X_t) dt</script><p>where $\int_{0}^{T}f(t,X_t)\circ dB_t$ is Stratonovich Integral. Let $f(t,X_t) \to b(t, X_t)$</p>
+<script type="math/tex; mode=display">
+\int_{0}^{T}f(t,X_t)\circ dB_t = \int_{0}^{T}b(t,X_t)\circ dB_t = \int_{0}^{T}b(t,X_t)dB_t + \frac{1}{2}\int_{0}^{T}b(t,X_t)b_X(t,X_t) dt \\
+\int_{0}^{T}b(t,X_t)dB_t  =  \int_{0}^{T}b(t,X_t)\circ dB_t -\frac{1}{2}\int_{0}^{T}b(t,X_t)b_X(t,X_t) dt</script><p>Therefore</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dX_t &=& a(t,X_t)dt + b(t,X_t)dB_t \\
+&=& a(t,X_t)dt+b(t,X_t)\circ dB_t -\frac{1}{2}b(t,X_t)b_X(t,X_t)dt \\
+&=& \left[a(t,X_t) - \frac{1}{2}b(t,X_t)b_X(t,X_t)\right]dt + b(t,X_t)\circ dB_t \\
+&=& \widetilde{a}(t,X_t)dt + \widetilde{b}(t,X_t) \circ dB_t
+\end{eqnarray}</script><p>We can get the relationship</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\widetilde{a}(t,X_t) &=& \left[a(t,X_t) - \frac{1}{2}b(t,X_t)b_X(t,X_t)\right] \\
+\widetilde{b}(t,X_t) &=& b(t,X_t)
+\end{eqnarray}</script><p>Then for each Stratonovich SDE, we can solve the analogue of in ODE. After getting the solution to ODE, we can derive it back to the solution of Stratonovich SDE, which is the equivalent solution to Ito SDE.</p>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h4><p>Consider an Ito SDE</p>
+<script type="math/tex; mode=display">
+dX_t = \frac{1}{2}f(X_t)f'(X_t)dt + f(X_t)dB_t</script><p>but we want to solve it in Stratonovich Calculus. We can find that</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\tilde{a} &=& \frac{1}{2}f(X_t)f'(X_t) - \frac{1}{2}f(X_t)f'(X_t) = 0 \\
+\tilde{b} &=& f(X_t)
+\end{eqnarray}</script><p>Therefore, the equivalent Stratonovich SDE is</p>
+<script type="math/tex; mode=display">
+dX_t = f(X_t) \circ dB_t</script><p>Assume the original function of $\frac{1}{f(x)}$ is $g(x)$, the analogue in ODE is </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dl_t &=& f(l_t)dc_t \\
+\frac{dl_t}{f(l_t)} &=& dc_t \\
+\int_{l_0}^{l_t}\frac{du}{f(u)} &=& c_t-c_0 \\
+g(l_t)-g(l_0) &=& c_t - c_0 \\
+g(l_t) &=& g(l_0) + c_t - c_0 \\
+\end{eqnarray}</script><p>and we change change it back to Stratonovich SDE:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+g(X_t) &=& g(X_0) + B_t - B_0 \\
+X_t &=& g^{-1}(g(X_0) + B_t - B_0)
+\end{eqnarray}</script><p>The solution is also for Ito SDE.</p>
+<h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h4><p> Solve the SDE</p>
+<script type="math/tex; mode=display">
+dX_t = \frac{1}{2}nX_t^{2n-1}d_t+X_t^ndB_t</script><p>The $f(X) = X^n, \frac{1}{2}f(X)f’(X) = \frac{1}{2}X^{2n-1}$, so the equivalent SDE is</p>
+<script type="math/tex; mode=display">
+dX_t = X_t^n \circ dB_t</script><p>the analogue in ODE is</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dl_t &=& l_t^ndc_t \\
+\frac{1}{l_t^n}dl_t &=& dc_t \\
+\int_{l_0}^{l_t}\frac{1}{u^n}du &=& \int_{0}^{t}dc_t \\
+\int_{l_0}^{l_t}\frac{1}{u^n}du &=& c_t - c_0 \\
+\frac{1}{1-n}u^{1-n}|_{l_0}^{l_t} &=& c_t - c_0 \\
+\frac{1}{1-n}(l_t)^{1-n}-\frac{1}{1-n}(l_0)^{1-n} &=& c_t - c_0
+\end{eqnarray}</script><p>Then transform it back to SDE</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\frac{1}{1-n}X_t^{1-n}-\frac{1}{1-n}X_0^{1-n} &=& B_t -B_0 \\
+X_t^{1-n} &=& B_t(1-n) + X_0^{1-n} \\
+X_t &=& [B_t(1-n) + X_0^{1-n}]^{\frac{1}{^{1-n}}}, n \geq 2
+\end{eqnarray}</script><h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h4><p>Solve the SDE</p>
+<script type="math/tex; mode=display">
+dX_t = [qf(X_t)+\frac{1}{2}f(X_t)f'(X_t)]dt+f(X_t)dB_t</script><p>Here, $a(t,X_t) = qf(X_t)+\frac{1}{2}f(X_t)f’(X_t)$, $b(t,X_t)=f(X_t)$</p>
+<p>Then </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\tilde{a}(t,X_t) &=& a(t,X_t)-\frac{1}{2}f(X)f'(X) \\
+&=& qf(X_t) \\
+\tilde{b}(t,X_t) &=& b(t,X_t)\\
+&=& f(X_t) \\
+\end{eqnarray}</script><p>Therefore, the corresponding SDE in Stratonovich is</p>
+<script type="math/tex; mode=display">
+dX_t = qf(X_t)dt+f(X_t) \circ dB_t</script><p>Then find the analogue of the Stratonovich SDE in ODE</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dl_t &=& qf(l_t)dt+f(l_t)dc_t \\
+\frac{dl_t}{f(l_t)}  &=& qdt+dc_t \\
+\int_{l_0}^{l_t}\frac{du}{f(u)}  &=& qt+c_t -c_0 \\
+g(l_t)-g(l_0) &=& qt + c_t - c_0 \\
+\end{eqnarray}</script><p>And change it back to SDE</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+g(X_t) &=& g(X_0) + qt + B_t - B_0 \\
+&=& g(X_0) + qt + B_t \\
+X_t &=& g^{-1}(g(X_0) + qt + B_t - B_0)
+\end{eqnarray}</script><h4 id="Example-4-Ornstein-Uhlenbeck-Process"><a href="#Example-4-Ornstein-Uhlenbeck-Process" class="headerlink" title="Example 4 Ornstein-Uhlenbeck Process"></a>Example 4 Ornstein-Uhlenbeck Process</h4><script type="math/tex; mode=display">
+X_t = X_0 + c\int_{0}^{t}X_sds + \sigma\int_{0}^{t}dB_s</script><p>$X<em>0$ is not random. It is also called <em>_Langevin Equation</em></em>. The differential form is</p>
+<script type="math/tex; mode=display">
+dX_t = cX_tdt+\sigma dB_t</script><h5 id="Time-series"><a href="#Time-series" class="headerlink" title="Time-series"></a>Time-series</h5><p>If $dt$ = 1, then the Ornstein-Uhlenbeck Process become</p>
+<script type="math/tex; mode=display">
+X_{t+1}-X_t = cX_t+\sigma(B_{t+1}-B_{t}) \\
+X_{t+1} = (c+1)X_t+\sigma(B_{t+1}-B_{t})</script><p>if we define $\phi = c+1, \epsilon<em>t = \sigma(B</em>{t+1}-B_{t}) \sim N(0,\sigma^2)$, then</p>
+<script type="math/tex; mode=display">
+X_{t+1}=\phi X_t+\epsilon_t</script><p>This is Autoregressive Model with order 1.</p>
+<h5 id="Solution-to-Ornstein-Uhlenbeck-Process"><a href="#Solution-to-Ornstein-Uhlenbeck-Process" class="headerlink" title="Solution to Ornstein-Uhlenbeck Process"></a>Solution to Ornstein-Uhlenbeck Process</h5><p>solve $dX_t = cX_tdt+\sigma dB_t$, $X_0$ is deterministic.</p>
+<p>Step 1: Define $Y<em>t = f(t,X_t) = e^{-ct}X_t$, we can easily get $f_t = -ce^{-ct}X_t$, $f_X = e^{-ct}$, $f</em>{XX}=0$. </p>
+<p>Step 2: According Ito formula:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dY_t = df(t,X_t) &=& -ce^{-ct}X_tdt +  e^{-ct}dX_t + \frac{1}{2} \times0 \times dt \\
+&=& -ce^{-ct}X_tdt +  e^{-ct}(cX_tdt+\sigma dB_t) \\
+&=& -ce^{-ct}X_tdt +  e^{-ct}(cX_tdt+\sigma dB_t) \\
+&=& e^{-ct}\sigma dB_t
+\end{eqnarray}</script><blockquote>
+<p>How to find the function like $e^{-ct}$?</p>
+<p>Let $Y<em>t = f(t,X_t) = P_tX_t$, we can easily get $f_t = X_tP’_t$, $f_X = P_t$, $f</em>{XX}=0$, then by Ito formula</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dY_t = df(t,X_t) &=& P'_tX_tdt +  P_tdX_t + \frac{1}{2} \times0 \times dt \\
+&=& P'_tX_tdt +  P_t(cX_tdt+\sigma dB_t) \\
+&=& P'_tX_tdt +  P_t(cX_tdt+\sigma dB_t) \\
+&=& (P'_t + cP_t) X_tdt+ P_t\sigma dB_t
+\end{eqnarray}</script><p>We want to eliminate the drift term $(P’_t + cP_t) X_tdt$ because we can solve the equation only if there is no $X_t$ in the RHS. The $X_t$ can only appear in the LHS. Therefore, let $P’_t = -cP_t$, we can easily get</p>
+<script type="math/tex; mode=display">
+P_t = \lambda e^{-ct}</script></blockquote>
+<p>Step3: Integrate both sides</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\int_{0}^{t}dY_s &=& \sigma\int_{0}^{t} e^{-cs} dB_s \\
+Y_t -Y_0 &=& \sigma\int_{0}^{t} e^{-cs} dB_s \\
+e^{-ct}X_t -X_0 &=& \sigma\int_{0}^{t} e^{-cs} dB_s \\
+X_t &=& e^{ct}X_0 + \sigma e^{ct}\int_{0}^{t} e^{-cs} dB_s \\
+\end{eqnarray}</script><h3 id="General-Solution-to-Ito-SDE"><a href="#General-Solution-to-Ito-SDE" class="headerlink" title="General Solution to Ito SDE"></a>General Solution to Ito SDE</h3><p>Consider a general Ito SDE</p>
+<script type="math/tex; mode=display">
+dX(u) = (a(u)+b(u)X(u))du + (\gamma(u)+\sigma(u)X(u))dW(u)</script><p>where $a(u), b(u), \gamma(u), \sigma(u)$ are adapted to $\mathcal{F(u)}$, $u \geq 0$. $\mathcal{F(u)}$ is a generated $\sigma$-algebra, which means that all the events in the Borel set can be found in $\mathcal{F(u)}$. In the finance, this means that it contains all the information at $u$.</p>
+<p>Let</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+Z(u) &=& e^{\int_{t}^{u}\sigma(v)dW(v)+\int_{t}^{u}(b(v)-\frac{1}{2}\sigma^2(v))dv} = e^{Q(u)} \\
+Y(u) &=& X + \int_{t}^{u}\frac{a(v)-\sigma(v)\gamma(v)}{Z(v)}dv + \int_{t}^{u}\frac{\gamma(v)}{Z(v)}dW(v)
+\end{eqnarray}</script><p>where $0 \leq t \leq u$.</p>
+<p>When $Z(t) = 1$, then</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dZ(u) &=& de^{Q(u)} = e^{Q(u)}dQ(u) + \frac{1}{2}e^{Q(u)}dQ(u)dQ(u) \\
+&=& Z(u)[\sigma(u)dW(u)+(b(u)-\frac{1}{2}\sigma^2(u))du]+\frac{1}{2}Z(u)\sigma^2(u)du \\
+&=& Z(u)\sigma(u)dW(u) + Z(u)b(u)du
+\end{eqnarray}</script><p>which is generalized geometric Brownian Motion.</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dY(u) &=& \frac{a(u)-\sigma(u)\gamma(u)}{Z(u)}du + \frac{\gamma(u)}{Z(u)}dW(u)
+\end{eqnarray}</script><p>Because</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+dX(u) &=& d[Y(u)Z(u)] = Z(u)dY(u) + Y(u)dZ(u) + dZ(u)dY(u) \\
+&=& (a(u)-\sigma(u)\gamma(u))du + \gamma(u)dW(u) \\
+&+& Y(u)Z(u)(\sigma(u)dW(u) +b(u)du) \\
+&+& \sigma(u)\gamma(u)du \\
+&=& (a(u)-\sigma(u)\gamma(u)+b(u)Y(u)Z(u)+\sigma(u)\gamma(u))du + (\gamma(u)+Y(u)Z(u)\sigma(u))dW(u) \\
+&=& (a(u)+b(u)X(u))du + (\gamma(u)+\sigma(u)X(u))dW(u) \\
+\end{eqnarray}</script><p>The solution is</p>
+<script type="math/tex; mode=display">
+X(u) = Y(u)Z(u)</script><p>According the Lipschitz Condition, let $m(t,X) = a(t)+b(t)X(t)$, $n(t,X) = \gamma(u)+\sigma(u)X(u)$, then solve the inequity:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+|m(t,X)-m(t,Y)|+|n(t,X)-n(t,Y)| &\leq& k|X-Y| \\
+|b(t)+\sigma(t)||X-Y| &\leq& k|X-Y| \\
+|b(t)+\sigma(t)| &\leq& k
+\end{eqnarray}</script><p>In $0 \leq t \leq T$, $b(t)$ and $\sigma(t)$ should be bounded.</p>
+<p>Therefore, the solution is the unique strong solution.</p>
+<h2 id="Feynman-Kac-Formula"><a href="#Feynman-Kac-Formula" class="headerlink" title="Feynman-Kac Formula"></a>Feynman-Kac Formula</h2>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Stochastic Differential Equation",
+        "image": "http://yoursite.com",
+        "keywords": "Probability Stochastic Calculus Stochastic Differential Equation",
+        "genre": "Mathematics Probability Stochastic Calculus",
+        "datePublished": "2020-08-14",
+        "dateCreated": "2020-08-14",
+        "dateModified": "2020-08-13",
+        "url": "http://yoursite.com/2020/08/14/Stochastic Calculus - Stochastic Differential Equation/",
+        "description": "Source of RandomnessConsider an ordinary differential equation
+
+\begin{eqnarray}
+\begin{cases}
+dX(t) = a(t,X(t))dt \\
+X(0) = X_0
+\end{cases}
+\end{eqnarray}There are two kinds of source of randomness i"
+        "wordCount": 1356
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/08/14/Stochastic Differential Equation - Introdunction/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Stochastic Differential Equation1
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/08/13/Stochastic Calculus - Change of Probability Measure/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Change of Probability Measure</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 16px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 15px;">FRM</a> <a href="/tags/Finance/" style="font-size: 13px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 11px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 17px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 18px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 20px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 15px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 19px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 18px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 15px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 15px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 11px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2020/08/14/Stochastic Calculus - Stochastic Differential Equation/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

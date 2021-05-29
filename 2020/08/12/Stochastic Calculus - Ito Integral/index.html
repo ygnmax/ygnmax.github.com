@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>Ito Integral | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Probability,Stochastic Calculus">
+    
+    <meta name="description" content="Ito IntegralWhy do we need Ito Integral$\int{0}^{T}\Delta(t)dg(t) = \int{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivative">
+<meta name="keywords" content="Probability,Stochastic Calculus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ito Integral">
+<meta property="og:url" content="http://yoursite.com/2020/08/12/Stochastic Calculus - Ito Integral/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="Ito IntegralWhy do we need Ito Integral$\int{0}^{T}\Delta(t)dg(t) = \int{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivative">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-08-13T14:34:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ito Integral">
+<meta name="twitter:description" content="Ito IntegralWhy do we need Ito Integral$\int{0}^{T}\Delta(t)dg(t) = \int{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivative">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Mathematics/">Mathematics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/">Probability</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Stochastic Calculus - Ito Integral" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Ito Integral
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/08/12/Stochastic Calculus - Ito Integral/" class="article-date">
+            <time datetime="2020-08-12T04:00:00.000Z" itemprop="datePublished">2020-08-12</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Probability/">Probability</a>, <a class="tag-link" href="/tags/Stochastic-Calculus/">Stochastic Calculus</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Ito-Integral"><a href="#Ito-Integral" class="headerlink" title="Ito Integral"></a>Ito Integral</h1><h2 id="Why-do-we-need-Ito-Integral"><a href="#Why-do-we-need-Ito-Integral" class="headerlink" title="Why do we need Ito Integral"></a>Why do we need Ito Integral</h2><p>$\int<em>{0}^{T}\Delta(t)dg(t) = \int</em>{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivative:</p>
+<script type="math/tex; mode=display">
+\int_{0}^{T}\Delta(t)dW(t)</script><p>Here, $\Delta(t)$ is $\mathscr{F_t}$-measurable (which is an adapted process). In finance, $\Delta(t)$ is position, $W(t)$ is asset price, and then the integral is a gain during $[0,T]$.</p>
+<h2 id="Ito-Integral-for-simple-function"><a href="#Ito-Integral-for-simple-function" class="headerlink" title="Ito Integral for simple function"></a>Ito Integral for simple function</h2><p>Consider an Integral $I(t) = \int_{0}^{t}\Delta(s)dW(s)$, if $\Delta(s)$ is simple function, then</p>
+<ul>
+<li><p>$0 \leq t \leq t_1$: </p>
+<script type="math/tex; mode=display">
+I(t) = \int_0^{t}\Delta(s)dW(s) = \Delta(0)\int_0^{t}dW(s) = \Delta(0)(W(t)-W(0))</script></li>
+<li><p>$t_1 \leq t \leq t_2$: </p>
+<script type="math/tex; mode=display">
+I(t)= \int_0^{t}\Delta(s)dW(s) = \Delta(0)(W(t_1)-W(0)) + \Delta(t_1)(W(t)-W(t_1))</script></li>
+<li><p>$t<em>k \leq t \leq t</em>{k+1}$:</p>
+<script type="math/tex; mode=display">
+I(t)= \int_0^{t}\Delta(s)dW(s) = \sum_{j=0}^{k-1}\Delta(t_j)(W(t_{j+1})-W(t_j)) + \Delta(t_k)[W(t)-W(t_k)]</script></li>
+</ul>
+<h3 id="Martingale"><a href="#Martingale" class="headerlink" title="Martingale"></a>Martingale</h3><p>$0 \leq s \leq t \leq T, \mathbb{E}[I(t)|\mathscr{F_s}] = I(s)$</p>
+<ul>
+<li><p>proof: </p>
+<p>Assume $t<em>l \leq s \leq t</em>{l+1} \leq t<em>k \leq t &lt; t</em>{k+1}$,</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+I(t) &=& \sum_{j=0}^{k-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})]+\Delta(t_k)[W(t)-W(t_k)] \\
+&=& \sum_{j=0}^{l-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})]+\Delta(t_l)[W(t_{l+1})-W(t_{l})]+\sum_{j=l+1}^{k-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})]+\Delta(t_k)[W(t)-W(t_k)] \\
+&=& A_1 + A_2 + A_4 + A_4
+\end{eqnarray}</script><p>Then</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\mathbb{E}[A_1|\mathscr{F_s}] &=& A_1 = \sum_{j=0}^{l-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})] \\
+
+\mathbb{E}[A_2|\mathscr{F_s}] &=& \mathbb{E}[\Delta(t_l)(W(t_{l+1})-W(t_{l}))|\mathscr{F_s}] \\
+&=& \Delta(t_l)(\mathbb{E}[W(t_{l+1})|\mathscr{F_s}] - W(t_l)) \\
+&=& \Delta(t_l)[W(s) - W(t_l)] \\
+
+\mathbb{E}[A_3|\mathscr{F_s}] &=& \mathbb{E}\left[\mathbb{E}\left[\sum_{j=l+1}^{k-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})]|\mathscr{F_{t_j}}\right]|\mathscr{F_s}\right] \text{where $t_j \geq s $} \\
+&=& \mathbb{E}\left[\Delta(t_j)\left[\sum_{j=l+1}^{k-1}\mathbb{E}[W(t_{j+1})|\mathscr{F_{t_j}}]-\mathbb{E}[W(t_{j})|\mathscr{F_{t_j}}]\right]|\mathscr{F_s}\right] \\
+&=& \mathbb{E}\left[\Delta(t_j)\left[\sum_{j=l+1}^{k-1}\mathbb{E}[W(t_{j})]-\mathbb{E}[W(t_{j})]\right]|\mathscr{F_s}\right] = 0 \\
+
+\mathbb{E}[A_4|\mathscr{F_s}] &=& \mathbb{E}[\Delta(t_k)(W(t)-W(t_k))|\mathscr{F_s}] \\
+&=& \mathbb{E}[\mathbb{E}[\Delta(t_k)(W(t_{t}) - W(t_k))|\mathscr{F_{t_{k}}}]|\mathscr{F_s}] \\
+&=& \mathbb{E}[\Delta(t_k)(\mathbb{E}[W(t_{t})|\mathscr{F_{t_k}}] - W(t_k))|\mathscr{F_s}] \\
+&=& 0
+\end{eqnarray}</script><p>Therefore, </p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\mathbb{E}[I(t)|\mathscr{F_s}] = \mathbb{E}[A_1 + A_2|\mathscr{F_s}] =  \sum_{j=0}^{l-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})] + \Delta(t_l)[W(s) - W(t_l)] = I(s)</script><h3 id="Moment"><a href="#Moment" class="headerlink" title="Moment"></a>Moment</h3><ul>
+<li><p>When $s = 0$, $\mathbb{E}[I(t)|\mathscr{F_s}] = I(0) = 0$. Therefore, we have $\mathbb{E}[I(t)] = 0$ for all $t \geq 0$ </p>
+</li>
+<li><p><strong>Ito Isometry</strong>: $\mathbb{Var}[I(t)] = \mathbb{E}[I^2(t)] - \mathbb{E}[I(t)]^2 = \mathbb{E}[I^2(t)] = \mathbb{E}[\int_{0}^{t}\Delta^2(u)du]$</p>
+<ul>
+<li>Proof:<script type="math/tex; mode=display">
+I(t) = \sum_{j=0}^{k-1}\Delta(t_j)[W(t_{j+1})-W(t_{j})]+\Delta(t_k)[W(t)-W(t_k)]</script>For $0 \leq j \leq k-1$, let $w(t_{j+1})-w(t_j) = D_j$ and $w(t)-w(t_k) = D_k$, then<script type="math/tex; mode=display">
+\begin{eqnarray}
+I(t) &=& \sum_{j=0}^{k}\Delta(t_j)D_j \\
+I^2(t) &=& \sum_{j=0}^{k}\Delta(t_j)^2D_j^2 + 2 \sum_{0 \leq i \leq j \leq k}\Delta(t_i)\Delta(t_j)D_iD_j \\
+\end{eqnarray}</script>Here, $\Delta(t<em>i), \Delta(t_j), D_i$ are adapted to $\mathscr{F</em>{t<em>j}}$ ($\mathscr{F</em>{t<em>j}}$-measurable), but $D_j$ is $\mathscr{F</em>{t_{j+1}}}$-measurable. In addition, they are independent increments. And $ are\Delta(t_i), \Delta(t_j)$ are finite.<script type="math/tex; mode=display">
+\begin{eqnarray}
+\mathbb{E}[\Delta(t_i)\Delta(t_j)D_iD_j] &=& \mathbb{E}[\Delta(t_i)\Delta(t_j)D_i]\mathbb{E}[D_j] = 0 \\
+\end{eqnarray}</script>Because<script type="math/tex; mode=display">
+\begin{eqnarray}
+\mathbb{E}[\Delta^2(t_j)D_j^2] &=& \mathbb{E}[\Delta^2(t_j)]\mathbb{E}[D_j^2] \\
+\mathbb{E}[D_j^2] &=&  \mathbb{E}[D_j^2] + \mathbb{E}^2[D_j] ~~~\text{where $D_j \sim N(0,t_{j+1}-t_j)$} \\
+&=& \mathbb{Var}[D_j] = t_{j+1} - t_j
+\end{eqnarray}</script>and $\Delta(t)$ is a simple integrand, which means that $\Delta^2(t_j)$ is a constant, we get<script type="math/tex; mode=display">
+\begin{eqnarray}
+\mathbb{E}[\Delta^2(t_j)D_j^2] &=& \mathbb{E}[\Delta^2(t_j)](t_{j+1} - t_j) \\
+&=& \begin{cases}
+\int_{t_j}^{t_{j+1}}\mathbb{E}[\Delta^2(u)]du ~~~ (0 \leq j \leq k-1) \\
+\int_{t_k}^{t}\mathbb{E}[\Delta^2(u)]du ~~~ (j = k) \\
+\end{cases}
+\end{eqnarray}</script>Therefore, the Ito Isometry (Variance) is<script type="math/tex; mode=display">
+\begin{eqnarray}
+\mathbb{E}[I^2(t)] &=& \mathbb{E}\left[\sum_{j=0}^{k}\Delta^2(t_j)(t_{j+1} - t_j)\right] \\
+&=& \sum_{j=0}^{k-1}\int_{t_j}^{t_{j+1}}\mathbb{E}[\Delta^2(u)]du + \int_{t_k}^{t}\mathbb{E}[\Delta^2(u)]du  \\
+&=& \mathbb{E}\left[\int_{0}^{t}\Delta^2(u)du \right] 
+\end{eqnarray}</script><strong>Ito Isometry is a constant (expectation).</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="Quadratic-Variation"><a href="#Quadratic-Variation" class="headerlink" title="Quadratic Variation"></a>Quadratic Variation</h3><script type="math/tex; mode=display">
+[I,I](t) = \int_{0}^{t}\Delta^2(u)du \\
+dI(t)dI(t) = \Delta^2(t)dt</script><ul>
+<li><p>proof</p>
+<p>In $[t<em>j,t</em>{j+1}]$ and $[t<em>k,t]$, $t_j = s_0&lt;s_1&lt;\cdots&lt; t_m=t</em>{j+1}$, $I(s<em>i) = \int</em>{0}^{s<em>i}\Delta(u)dW(u)$, $I(s</em>{i+1}) = \int<em>{0}^{s</em>{i+1}}\Delta(u)dW(u)$</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\sum_{i=0}^{m-1}[I(s_{i+1})-I(s_i)]^2 &=& \sum_{i=0}^{m-1}\left[\int_{s_i}^{s_{i+1}}\Delta(u)dW(u)\right]^2 \\
+ &=& \Delta^2(t_j)\sum_{i=0}^{m-1}\left[W(s_{i+1})-W(s_i)\right]^2
+\end{eqnarray}</script><p>Let $\max\limits<em>{0 \leq k \leq m-1}(s</em>{k+1}-s_k) \to 0$ and $m \to \infty$, according to the quadratic variation of Brownian Motion, we get</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\lim_{m \to \infty}\Delta^2(t_j)\sum_{i=0}^{m-1}\left[W(s_{i+1})-W(s_i)\right]^2 &=& \Delta^2(t_j)\lim_{m \to \infty}\sum_{i=0}^{m-1}\left[W(s_{i+1})-W(s_i)\right]^2 \\
+&=& \Delta^2(t_j)(t_{j+1}-t_j) \\
+&=& \int_{t_{j}}^{t_{j+1}}\Delta^2(u)du
+\end{eqnarray}</script><p>therefore, </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+[I,I](t) &=& \sum_{j=0}^{k-1}\Delta^2(t_j)(t_{j+1}-t_j) + \Delta^2(t_k)(t-t_k) \\
+&=& \sum_{j=0}^{k-1}\int_{t_{j}}^{t_{j+1}}\Delta^2(u)du + \int_{t_{k}}^{t}\Delta^2(u)du \\
+&=& \int_{0}^{t}\Delta^2(u)du
+\end{eqnarray}</script><p>and</p>
+<script type="math/tex; mode=display">
+dI(t)dI(t) = \Delta^2(t)dt</script><p><strong>Quadratic Variation of Ito Integral is a random variable, path by path. It’s average level is the variance of Integral integral (Ito Isometry).</strong></p>
+</li>
+</ul>
+<h3 id="Notation"><a href="#Notation" class="headerlink" title="Notation"></a>Notation</h3><script type="math/tex; mode=display">
+I(t) = \int_{0}^{t}\Delta(u)dW(u) \tag{1}</script><p>In equation (1), there is an assumption that $I(0) = 0$.</p>
+<script type="math/tex; mode=display">
+I(t) = I(0) + \int_{0}^{t}\Delta(u)dW(u) \tag{2}</script><p>In equation (2), we don’t know the value of $I(0)$.</p>
+<script type="math/tex; mode=display">
+dI(t) = \Delta(t)dW(t) \tag{3}</script><p>The differential form of equation (1) and equation (2) are equation (3).</p>
+<h2 id="Ito-Integral-for-general-function"><a href="#Ito-Integral-for-general-function" class="headerlink" title="Ito Integral for general function"></a>Ito Integral for general function</h2><p>In general, $\Delta(t)$ is no longer a simple function. However, it is possible to choose a sequence $\Delta_n(t)$ of simple processes, such that as $n \to \infty$ these processes converge to $\Delta(t)$ in mean square sense. $\Delta(t)$ is continuously varying. $\Delta_n(t)$ can be regarded as an approximation of $\Delta(t)$.</p>
+<ul>
+<li><p><strong>Convergence in Mean Square</strong></p>
+<p>During the convergence, mean squared error is random because both $\Delta_n(t)$ and $\Delta(t)$ are random. We want to make convergence possible and minimize the ‘mean squared error’ by defining that</p>
+<script type="math/tex; mode=display">
+\lim_{n\to \infty}\mathbb{E}\left[\int_{0}^{T}|\Delta_n(t)-\Delta(t)|^2dt\right] = 0</script><p>Here, $\Delta_n(t) \neq \Delta(t)$, but the expectation of the mean squared error is going to 0 when the frequency is going to infinity. In this sense, we call it as convergence in mean square sense (in the stochastic background).</p>
+</li>
+</ul>
+<p>Therefore, ${\Delta<em>n(t)} \to \Delta(t)$ as $n \to \infty$, $\int</em>{0}^{t}\Delta_n(u)dW(u)$ has been defined on $0 \leq t \leq T$:</p>
+<script type="math/tex; mode=display">
+\int_{0}^{t}\Delta(u)dW(u) = \lim_{n \to \infty}\int_{0}^{t}\Delta_n(u)dW(u)</script><h3 id="Martingale-1"><a href="#Martingale-1" class="headerlink" title="Martingale"></a>Martingale</h3><p>$I(t)$ is martingale.</p>
+<h3 id="Moment-1"><a href="#Moment-1" class="headerlink" title="Moment"></a>Moment</h3><ul>
+<li><p>Expectation</p>
+<script type="math/tex; mode=display">
+\mathbb{E}[I(t)] = \mathbb{E}[I(t)|\mathscr{F_0}] = I(0) = 0</script></li>
+<li><p>Ito Isometry</p>
+<script type="math/tex; mode=display">
+\mathbb{E}[I^2(t)] = \mathbb{E}\left[\int_{0}^{t}\Delta^2(u)du\right]</script></li>
+<li><p>Distribution</p>
+<p>If $\Delta(u)$ is a deterministic function, then </p>
+<script type="math/tex; mode=display">
+I(t) = \int_{0}^{t}\Delta(u)dW(u) \sim N\left(0,\mathbb{E}\left[\int_{0}^{t}\Delta^2(u)du\right]\right)</script></li>
+</ul>
+<h3 id="Quadratic-Variation-1"><a href="#Quadratic-Variation-1" class="headerlink" title="Quadratic Variation"></a>Quadratic Variation</h3><p>$<a href="t">I,I</a> = \int_{0}^{t}\Delta^2(u)du$ </p>
+<p>$dI(t)dI(t) = \Delta^2(t)dt$</p>
+<h3 id="Continuity"><a href="#Continuity" class="headerlink" title="Continuity"></a>Continuity</h3><p>$I(t)$ is continuous.</p>
+<h3 id="Adaptivity"><a href="#Adaptivity" class="headerlink" title="Adaptivity"></a>Adaptivity</h3><p>$I(t)$ is $\mathscr{F_t}$-measurable</p>
+<h3 id="Linearity"><a href="#Linearity" class="headerlink" title="Linearity"></a>Linearity</h3><ul>
+<li><p>$\int<em>{0}^{t}\Delta(u) \pm \Gamma(u)dW(u) = \int</em>{0}^{t}\Delta(u)dW(u) \pm \int_{0}^{t}\Gamma(u)dW(u) $</p>
+</li>
+<li><p>$\int<em>{0}^{t}c\Delta(u) dW(u) = c\int</em>{0}^{t}\Delta(u)dW(u)$, for every constant $c$</p>
+</li>
+</ul>
+<h1 id="Stratonovich-Integral"><a href="#Stratonovich-Integral" class="headerlink" title="Stratonovich Integral"></a>Stratonovich Integral</h1>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Ito Integral",
+        "image": "http://yoursite.com",
+        "keywords": "Probability Stochastic Calculus",
+        "genre": "Mathematics Probability Stochastic Calculus",
+        "datePublished": "2020-08-12",
+        "dateCreated": "2020-08-12",
+        "dateModified": "2020-08-13",
+        "url": "http://yoursite.com/2020/08/12/Stochastic Calculus - Ito Integral/",
+        "description": "Ito IntegralWhy do we need Ito Integral$\int{0}^{T}\Delta(t)dg(t) = \int{0}^{T}\Delta(t)g’(t)dt$, but it is not true if we replace $g(t)$ with a Brownian Motion $W(t)$ because $W(t)$ has no derivative"
+        "wordCount": 805
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/08/12/Stochastic Calculus - Ito Doeblin Formula/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Ito Doeblin Formula
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/08/11/Stochastic Calculus - Brownian Motion/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Brownian Motion</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 16px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 15px;">FRM</a> <a href="/tags/Finance/" style="font-size: 13px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 11px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 17px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 18px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 20px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 15px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 19px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 18px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 15px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 15px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 11px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2020/08/12/Stochastic Calculus - Ito Integral/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

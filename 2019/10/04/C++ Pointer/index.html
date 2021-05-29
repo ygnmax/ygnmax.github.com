@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>C++ Class | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="C++,MOOC">
+    
+    <meta name="description" content="1234567// define without initializedint *p// defineint n = 10; int *p = &amp;amp;n;int a a[8] = &amp;#123;1, 2, 3, 4, 5, 6, 7, 8&amp;#125;; int * p = a; p as a pointer will point to the first element of array a 1">
+<meta name="keywords" content="C++,MOOC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++ Class">
+<meta property="og:url" content="http://yoursite.com/2019/10/04/C++ Pointer/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="1234567// define without initializedint *p// defineint n = 10; int *p = &amp;amp;n;int a a[8] = &amp;#123;1, 2, 3, 4, 5, 6, 7, 8&amp;#125;; int * p = a; p as a pointer will point to the first element of array a 1">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-26T12:14:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++ Class">
+<meta name="twitter:description" content="1234567// define without initializedint *p// defineint n = 10; int *p = &amp;amp;n;int a a[8] = &amp;#123;1, 2, 3, 4, 5, 6, 7, 8&amp;#125;; int * p = a; p as a pointer will point to the first element of array a 1">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Computer-Science/">Computer Science</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Computer-Science/Programming/C/">C++</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-C++ Pointer" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        C++ Class
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/10/04/C++ Pointer/" class="article-date">
+            <time datetime="2019-10-04T04:00:00.000Z" itemprop="datePublished">2019-10-04</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/C/">C++</a>, <a class="tag-link" href="/tags/MOOC/">MOOC</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// define without initialized</span></span><br><span class="line"><span class="keyword">int</span> *p</span><br><span class="line"></span><br><span class="line"><span class="comment">// define</span></span><br><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>; <span class="keyword">int</span> *p = &amp;n;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a a[<span class="number">8</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;; <span class="keyword">int</span> * p = a;</span><br></pre></td></tr></table></figure>
+<p>p as a pointer will point to the first element of array a</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Pointer Assignment </span><br><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>; <span class="keyword">int</span> *p = &amp;n, *q; q = p;</span><br></pre></td></tr></table></figure>
+<p>“&amp;”: get the address</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m, n = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> *q = &amp; n;</span><br><span class="line">m = *q;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Swap 2 integers</li>
+</ul>
+<p>example 1: swap 2 integers by changing integer values</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//exchange m and n, without changing the pointer p and q    </span></span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">10</span>， n = <span class="number">20</span>； t;</span><br><span class="line">	<span class="keyword">int</span> *p = &amp;m;</span><br><span class="line">	<span class="keyword">int</span> *q = &amp;n;</span><br><span class="line"></span><br><span class="line">	t = *p;</span><br><span class="line">	*p = *q;</span><br><span class="line">	*q = t;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example 2: swap 2 integers by changing pointer</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m =<span class="number">10</span>, n = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">int</span> *p = &amp;m, *q = &amp;n, *t;</span><br><span class="line">    </span><br><span class="line">    t = p;</span><br><span class="line">	p = q;</span><br><span class="line">	q = t;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>example 3: swap 3 integers by function</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span> *y)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> m = <span class="number">10</span>, n = <span class="number">20</span>;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">ifndef</span> NDEBUG</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"main (before swapped): m = "</span> &lt;&lt; m &lt;&lt; <span class="string">"; n = "</span> &lt;&lt; n &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    Swap(&amp;m, &amp;n);</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">ifndef</span> NDEBUG</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"main (after swapped): m = "</span> &lt;&lt; m &lt;&lt; <span class="string">"; n = "</span> &lt;&lt; n &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="meta">#<span class="meta-keyword">endif</span>    </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span> *y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="keyword">if</span> (! x || !y)&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">""</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Constant-Pointer"><a href="#Constant-Pointer" class="headerlink" title="Constant Pointer"></a>Constant Pointer</h2><ul>
+<li>Constant Pointer</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>; <span class="keyword">const</span> <span class="keyword">int</span> *p = &amp;n;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintObject</span><span class="params">( <span class="keyword">const</span> <span class="keyword">int</span> *p)</span></span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Pointer pointing to a constant</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> n = <span class="number">10</span>; <span class="keyword">int</span> * <span class="keyword">const</span> p = &amp;n;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Constant pointer pointing to a constant</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> n = <span class="number">10</span>; <span class="keyword">const</span> <span class="keyword">int</span> * <span class="keyword">const</span> p = &amp;n;</span><br></pre></td></tr></table></figure>
+<h2 id="pointer-and-return-value"><a href="#pointer-and-return-value" class="headerlink" title="pointer and return value"></a>pointer and return value</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> global = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> *<span class="title">ReturnPointer</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &amp;global;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Pointer-and-complicated-data-type"><a href="#Pointer-and-complicated-data-type" class="headerlink" title="Pointer and complicated data type"></a>Pointer and complicated data type</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">8</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> *p; p =&amp;a[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p; p = a</span><br><span class="line"><span class="keyword">int</span> *q; q = &amp;a[<span class="number">2</span>]; <span class="comment">// q point to a[2]</span></span><br></pre></td></tr></table></figure>
+<h3 id="pointer-operation"><a href="#pointer-operation" class="headerlink" title="pointer operation"></a>pointer operation</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">*p = a</span><br><span class="line">p+<span class="number">2</span></span><br><span class="line">*p = a[<span class="number">3</span>]; p<span class="number">-2</span></span><br><span class="line">q = p+<span class="number">2</span></span><br><span class="line">p++</span><br><span class="line">--p</span><br><span class="line">*p = a[<span class="number">0</span>]; *q = a[<span class="number">2</span>]; q-p = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">p == q</span><br><span class="line">p = <span class="literal">NULL</span></span><br><span class="line"><span class="keyword">if</span>(p != <span class="literal">NULL</span>)</span><br><span class="line"><span class="keyword">if</span>(p)</span><br></pre></td></tr></table></figure>
+<h2 id="pointer-and-array"><a href="#pointer-and-array" class="headerlink" title="pointer and array"></a>pointer and array</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Definition</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GenerateIntegers</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> i;</span><br><span class="line">    Randomize();</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        a[i] = GenerateRandomNumber(Lower, Upper);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Call</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUM_OF_ELEMENTS 8</span></span><br><span class="line"><span class="keyword">int</span> a[NUM_OF_ELEMENTS];</span><br><span class="line">GenerateIntegers(a, NUM_OF_ELEMENTS);</span><br></pre></td></tr></table></figure>
+<p>Pointers as parameter</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Definition</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">GenerateIntegers</span><span class="params">(<span class="keyword">int</span> *p, <span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> i;</span><br><span class="line">    Randomize();</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        *p++ = GenerateRandomNumber(Lower, Upper);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Call</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUM_OF_ELEMENTS 8</span></span><br><span class="line"><span class="keyword">int</span> a[NUM_OF_ELEMENTS];</span><br><span class="line">GenerateIntegers(a, NUM_OF_ELEMENTS);</span><br></pre></td></tr></table></figure>
+<p>example:</p>
+<h3 id="Similarity-of-pointer-and-array"><a href="#Similarity-of-pointer-and-array" class="headerlink" title="Similarity of pointer and array"></a>Similarity of pointer and array</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">3</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;; <span class="keyword">int</span> *p = &amp;a; <span class="keyword">int</span> i;</span><br><span class="line"><span class="keyword">for</span> (i  = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; p[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">for</span> (i  = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *(a+i) &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>multidimensional array </li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintTwoDimensinalArray</span><span class="params">( <span class="keyword">int</span> a[<span class="number">8</span>][<span class="number">8</span>], <span class="keyword">unsigned</span> <span class="keyword">int</span> m, <span class="keyword">unsigned</span> <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintTwoDimensinalArray</span><span class="params">( <span class="keyword">int</span> a[][], <span class="keyword">unsigned</span> <span class="keyword">int</span> m, <span class="keyword">unsigned</span> <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintTwoDimensinalArray</span><span class="params">( <span class="keyword">int</span> * a, <span class="keyword">unsigned</span> <span class="keyword">int</span> m, <span class="keyword">unsigned</span> <span class="keyword">int</span> n )</span></span>;</span><br><span class="line"><span class="comment">// a + n * i + j</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintTwoDimensinalArray</span><span class="params">(<span class="keyword">int</span> * a, <span class="keyword">unsigned</span> <span class="keyword">int</span> m, <span class="keyword">unsigned</span> <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">int</span> i, j;</span><br><span class="line"><span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; m; i++ )</span><br><span class="line"><span class="keyword">for</span>( j = <span class="number">0</span>; j &lt; n; j++ )</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; *(a + n * i + j) &lt;&lt; <span class="string">"; "</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="keyword">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = &#123; &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> &#125;, &#123; <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span> &#125; &#125;;</span><br><span class="line">PrintTwoDimensinalArray( a, <span class="number">2</span>, <span class="number">3</span> );</span><br></pre></td></tr></table></figure>
+<h2 id="pointer-and-structure"><a href="#pointer-and-structure" class="headerlink" title="pointer and structure"></a>pointer and structure</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">STUDENT</span>&#123;</span> <span class="keyword">int</span> id; STRING name; <span class="keyword">int</span> age; &#125;;</span><br><span class="line">STUDENT student = &#123; <span class="number">2007010367</span>, <span class="string">"Name"</span>, <span class="number">19</span> &#125;;</span><br><span class="line">STUDENT * pstudent = &amp;student;</span><br><span class="line"></span><br><span class="line">(*pstudent).id = <span class="number">2007010367</span>;</span><br><span class="line">(*pstudent).name = DuplicateString( <span class="string">"Name"</span> );</span><br><span class="line">(*pstudent).age = <span class="number">19</span>;</span><br><span class="line"></span><br><span class="line">pstudent-&gt;id = <span class="number">2007010367</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ARRAY</span>&#123;</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> count; <span class="keyword">int</span> * elements; &#125;;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">8</span>] = &#123; <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span> &#125;;</span><br><span class="line">ARRAY <span class="built_in">array</span> = &#123; <span class="number">8</span>, &amp;a &#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//访问 elements 的第 i 个元素: array.elements[i]</span></span><br><span class="line"><span class="comment">//若有定义:ARRAY * parray = &amp;array;</span></span><br><span class="line"><span class="comment">//访问 parray 指向的结构体对象 elements 的第 i 个元素:</span></span><br><span class="line">(*parray).elements[i]</span><br><span class="line">parray-&gt;elements[i]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>dynamic array</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ARRAY</span> &#123;</span> <span class="keyword">unsigned</span> <span class="keyword">int</span> count; <span class="keyword">int</span> *</span><br><span class="line">elements; &#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><h2 id="String-array"><a href="#String-array" class="headerlink" title="String array"></a>String array</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">8</span>] = &#123; <span class="string">'C'</span>, <span class="string">'P'</span>, <span class="string">'P'</span>, <span class="string">'-'</span>, <span class="string">'P'</span>, <span class="string">'r'</span>, <span class="string">'o'</span>, <span class="string">'g'</span> &#125;;</span><br><span class="line"><span class="keyword">char</span> t[<span class="number">5</span>] = &#123; <span class="string">'H'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'l'</span>, <span class="string">'o'</span> &#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// add '\0' at the end of string array</span></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">9</span>] = &#123; <span class="string">'C'</span>, <span class="string">'P'</span>, <span class="string">'P'</span>, <span class="string">'-'</span>, <span class="string">'P'</span>, <span class="string">'r'</span>, <span class="string">'o'</span>, <span class="string">'g'</span>, <span class="string">'\0'</span> &#125;;</span><br><span class="line"><span class="keyword">char</span> t[<span class="number">6</span>] = &#123; <span class="string">'H'</span>, <span class="string">'e'</span>, <span class="string">'l'</span>, <span class="string">'l'</span>, <span class="string">'o'</span>, <span class="string">'\0'</span> &#125;;</span><br></pre></td></tr></table></figure>
+<p>example:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">FindCharFirst</span><span class="params">( <span class="keyword">char</span> c, <span class="keyword">char</span> s[] )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">if</span>( !s )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"FindCharFirst: Illegal string.\n"</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">for</span>( i = <span class="number">0</span>; s[i] != <span class="string">'\0'</span>; i++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( s[i] == c )</span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> inexistent_index; <span class="comment">// 0xFFFFFFFF</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">FindCharFirst</span><span class="params">( <span class="keyword">char</span> c, <span class="keyword">char</span> * s )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> * t;</span><br><span class="line">    <span class="keyword">if</span>( !s )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"FindCharFirst: Illegal string.\n"</span>;</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">for</span>( t = s; *t != <span class="string">'\0'</span>; t++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>( *t == c )</span><br><span class="line">        <span class="keyword">return</span> t - s;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> inexistent_index; <span class="comment">// 0xFFFFFFFF</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="abstract-string"><a href="#abstract-string" class="headerlink" title="abstract string"></a>abstract string</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">char</span> * STRING;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keyword">char</span> * CSTRING;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">FindCharFirst</span><span class="params">( <span class="keyword">char</span> c, <span class="keyword">char</span> s[] )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">FindCharFirst</span><span class="params">( <span class="keyword">char</span> c, <span class="keyword">char</span>* s )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">unsigned</span> <span class="keyword">int</span> <span class="title">FindCharFirst</span><span class="params">( <span class="keyword">char</span> c, STRING s )</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">9</span>] = &#123; <span class="string">'C'</span>, <span class="string">'P'</span>, <span class="string">'P'</span>, <span class="string">'-'</span>, <span class="string">'P'</span>, <span class="string">'r'</span>, <span class="string">'o'</span>, <span class="string">'g'</span>, <span class="string">'\0'</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> * s = <span class="string">"CPP-Prog"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> * s; s = <span class="string">"CPP-Prog"</span>; <span class="comment">//correct</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">9</span>]; s = <span class="string">"CPP-Prog"</span>; <span class="comment">//wrong</span></span><br><span class="line"><span class="keyword">char</span> s[<span class="number">9</span>] = <span class="string">"CPP-Prog"</span> <span class="comment">//correct</span></span><br></pre></td></tr></table></figure>
+<p>example</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">STRING <span class="title">TransformCharIntoString</span><span class="params">( <span class="keyword">char</span> c )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    STRING _s = (STRING)<span class="built_in">malloc</span>( <span class="number">2</span> );</span><br><span class="line">    _s[<span class="number">0</span>] = c;</span><br><span class="line">    _s[<span class="number">1</span>] = <span class="string">'\0'</span>;</span><br><span class="line">    <span class="keyword">return</span> _s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//wrong</span></span><br><span class="line"><span class="function">STRING <span class="title">TransformCharIntoString</span><span class="params">( <span class="keyword">char</span> c )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> _s[<span class="number">2</span>];</span><br><span class="line">    _s[<span class="number">0</span>] = c;</span><br><span class="line">	_s[<span class="number">1</span>] = <span class="string">'\0'</span>;</span><br><span class="line">	<span class="keyword">return</span> _s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="standard-string-library"><a href="#standard-string-library" class="headerlink" title="standard string library"></a>standard string library</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">strcat</span><span class="params">( <span class="keyword">char</span> * dest, <span class="keyword">const</span> <span class="keyword">char</span> * src )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strcmp</span><span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> * s1, <span class="keyword">const</span> <span class="keyword">char</span> * s2 )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">strcpy</span><span class="params">( <span class="keyword">char</span> * dest, <span class="keyword">const</span> <span class="keyword">char</span> * src )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">strlen</span><span class="params">( <span class="keyword">const</span> <span class="keyword">char</span> * s )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">strtok</span><span class="params">( <span class="keyword">char</span> * token, <span class="keyword">const</span> <span class="keyword">char</span> * delimiters )</span></span>;</span><br></pre></td></tr></table></figure>
+<h1 id="String-Class"><a href="#String-Class" class="headerlink" title="String Class"></a>String Class</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"abcdefg"</span>;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">s</span><span class="params">( <span class="string">"abcdefg"</span> )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s; </span><br><span class="line">getline( <span class="built_in">cin</span>, s, <span class="string">'\n'</span> );</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> s = <span class="string">"abcdefg"</span>;</span><br><span class="line"><span class="keyword">int</span> a = s.length();</span><br><span class="line">s.resize(<span class="number">32</span>); <span class="comment">// 将s设为32字符长,多余舍弃,不足空闲</span></span><br><span class="line">s.resize(<span class="number">32</span>, <span class="string">'='</span>); <span class="comment">// 多余舍弃,不足补‘=’</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> s1 = <span class="string">"abcd"</span>, s2 = <span class="string">"efg"</span>;</span><br><span class="line">s1.append( s2 ); <span class="comment">// 将字符串s2追加到s1尾部</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> s1 = <span class="string">"abcdefg"</span>, s2 = <span class="string">"abcdxyz"</span>;</span><br><span class="line"><span class="keyword">int</span> a = s1.compare( s2, <span class="number">0</span> ); <span class="comment">// 从0号位字符开始比较</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> s1 = <span class="string">"abcdefg"</span>, s2 = <span class="string">"bcd"</span>;</span><br><span class="line"><span class="keyword">int</span> a = s1.find( s2, <span class="number">0</span> );</span><br></pre></td></tr></table></figure>
+<h1 id="Dynamic-Storage-Allocation"><a href="#Dynamic-Storage-Allocation" class="headerlink" title="Dynamic Storage Allocation"></a>Dynamic Storage Allocation</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmalloc&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> * <span class="title">malloc</span><span class="params">( <span class="keyword">unsigned</span> <span class="keyword">int</span> size )</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">free</span><span class="params">( <span class="keyword">void</span> * memblock )</span></span>;</span><br></pre></td></tr></table></figure>
+<h2 id="malloc"><a href="#malloc" class="headerlink" title="malloc"></a>malloc</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * p;</span><br><span class="line">p = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">11</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">DuplicateString</span><span class="params">( <span class="keyword">char</span> * s )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> * t;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> n, i;</span><br><span class="line">    <span class="keyword">if</span>( !s )</span><br><span class="line">    &#123; </span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"DuplicateString: Parameter Illegal."</span>; </span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>); </span><br><span class="line">    &#125;</span><br><span class="line">    n = <span class="built_in">strlen</span>( s );</span><br><span class="line">    t = ( <span class="keyword">char</span> * )<span class="built_in">malloc</span>( n + <span class="number">1</span> );</span><br><span class="line">    <span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; n; i++ )</span><br><span class="line">    	t[i] = s[i];</span><br><span class="line">    t[n] = <span class="string">'\0'</span>;</span><br><span class="line">    <span class="keyword">return</span> t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * p;</span><br><span class="line">p = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">11</span>);</span><br><span class="line"><span class="built_in">free</span>(p);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> * p = ( <span class="keyword">int</span> * )<span class="built_in">malloc</span>( <span class="number">10</span> * <span class="keyword">sizeof</span>( <span class="keyword">int</span> ) );</span><br><span class="line"><span class="built_in">free</span>( p );</span><br><span class="line"></span><br><span class="line"><span class="built_in">free</span>( p ); p = <span class="literal">NULL</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span> <span class="keyword">int</span>; *p = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span>( <span class="keyword">int</span> ); *p = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span> <span class="keyword">int</span>(<span class="number">10</span>); <span class="comment">// 将 *p 初始化为 10</span></span><br><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span>(<span class="keyword">int</span>)(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">8</span>]; <span class="comment">// 分配 8 个元素的整数数组</span></span><br></pre></td></tr></table></figure>
+<h2 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span> <span class="keyword">int</span>; *p = <span class="number">10</span>; <span class="keyword">delete</span> p;</span><br><span class="line"><span class="keyword">int</span> * p; p = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">8</span>]; <span class="keyword">delete</span>[] p;</span><br><span class="line"><span class="comment">// not delete p[ ]!</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *p, *q;</span><br><span class="line">q = ( <span class="keyword">int</span>* )<span class="built_in">malloc</span>( <span class="keyword">sizeof</span>(<span class="keyword">int</span>) );</span><br><span class="line">p = q;</span><br><span class="line"></span><br><span class="line"><span class="built_in">free</span>( p ); </span><br><span class="line">p = <span class="literal">NULL</span>; <span class="comment">// q is dangling pointer</span></span><br></pre></td></tr></table></figure>
+<h2 id="storage-leak"><a href="#storage-leak" class="headerlink" title="storage leak"></a>storage leak</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> * p = <span class="keyword">new</span> <span class="keyword">int</span>; </span><br><span class="line">    *p = <span class="number">10</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a; <span class="keyword">int</span> &amp; ref = a;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">int</span> &amp; ref = a;</span><br><span class="line">    a = <span class="number">5</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"a: "</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>; <span class="built_in">cout</span> &lt;&lt; <span class="string">"ref: "</span> &lt;&lt; ref &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    ref = <span class="number">8</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"a: "</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>; <span class="built_in">cout</span> &lt;&lt; <span class="string">"ref: "</span> &lt;&lt; ref &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="call-by-reference"><a href="#call-by-reference" class="headerlink" title="call by reference"></a>call by reference</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">( <span class="keyword">int</span> &amp; x, <span class="keyword">int</span> &amp; y )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t; t = x; x = y; y = t; <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>; </span><br><span class="line">    Swap( a, b ); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="constant-reference"><a href="#constant-reference" class="headerlink" title="constant reference"></a>constant reference</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">Inc</span><span class="params">( <span class="keyword">int</span> &amp; dest, <span class="keyword">const</span> <span class="keyword">int</span> &amp; alpha )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> &amp; <span class="title">Inc</span><span class="params">( <span class="keyword">int</span> &amp; dest, <span class="keyword">const</span> <span class="keyword">int</span> &amp; alpha )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	dest += alpha; </span><br><span class="line">    <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>, c; </span><br><span class="line">    Inc( a, b ); </span><br><span class="line">    c = Inc(a, b)++; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Function-Pointer"><a href="#Function-Pointer" class="headerlink" title="Function Pointer"></a>Function Pointer</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span> * ADT; <span class="keyword">typedef</span> <span class="keyword">const</span> <span class="keyword">void</span> * CADT;</span><br></pre></td></tr></table></figure>
+<p>data type ()()</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * ( * as_string )( ADT object );</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">DoTransformObjectIntoString</span><span class="params">( ADT object )</span></span></span><br><span class="line"><span class="function"></span>&#123; <span class="keyword">return</span> PtTransformIntoString( (PPOINT)object ); &#125;</span><br><span class="line">as_string = DoTransformObjectIntoString;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> * returned_value;</span><br><span class="line">PPOINT pt = PtCreate( <span class="number">10</span>, <span class="number">20</span> );</span><br><span class="line">as_string = DoTransformObjectIntoString;</span><br><span class="line">returned_value = as_string( (ADT)pt );</span><br></pre></td></tr></table></figure>
+<p>example: qsort</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">qsort</span><span class="params">( <span class="keyword">void</span> * base, <span class="keyword">unsigned</span> <span class="keyword">int</span> number_of_elements,</span></span></span><br><span class="line"><span class="function"><span class="params"><span class="keyword">unsigned</span> <span class="keyword">int</span> size_of_elements,</span></span></span><br><span class="line"><span class="function"><span class="params"><span class="keyword">int</span> ( * compare )( <span class="keyword">const</span> <span class="keyword">void</span> *, <span class="keyword">const</span> <span class="keyword">void</span> * ) )</span></span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"arrmanip.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NUMBER_OF_ELEMENTS 8</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">DoCompareObject</span><span class="params">( <span class="keyword">const</span> <span class="keyword">void</span> * e1, <span class="keyword">const</span> <span class="keyword">void</span> * e2 )</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[NUMBER_OF_ELEMENTS];</span><br><span class="line">    GenerateIntegers( a, NUMBER_OF_ELEMENTS );</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Array generated at random as follows: \n"</span>;</span><br><span class="line">    PrintIntegers( a, NUMBER_OF_ELEMENTS );</span><br><span class="line">    qsort( a, NUMBER_OF_ELEMENTS, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), DoCompareObject );</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"After sorted: \n"</span>;</span><br><span class="line">    PrintIntegers( a, NUMBER_OF_ELEMENTS );</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">DoCompareObject</span><span class="params">( <span class="keyword">const</span> <span class="keyword">void</span> * e1, <span class="keyword">const</span> <span class="keyword">void</span> * e2 )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> CompareInteger( *(<span class="keyword">const</span> <span class="keyword">int</span> *)e1, *(<span class="keyword">const</span> <span class="keyword">int</span> *)e2 );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "C++ Class",
+        "image": "http://yoursite.com",
+        "keywords": "C++ MOOC",
+        "genre": "Computer Science Programming C++",
+        "datePublished": "2019-10-04",
+        "dateCreated": "2019-10-04",
+        "dateModified": "2020-01-26",
+        "url": "http://yoursite.com/2019/10/04/C++ Pointer/",
+        "description": "1234567// define without initializedint *p// defineint n = 10; int *p = &amp;n;int a a[8] = &#123;1, 2, 3, 4, 5, 6, 7, 8&#125;; int * p = a;
+p as a pointer will point to the first element of array a
+1"
+        "wordCount": 3634
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/11/23/Derivatives - BSM Model/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Black Scholes Model
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/08/05/Python NumPy Basics/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Python NumPy Basics</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 16px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 15px;">FRM</a> <a href="/tags/Finance/" style="font-size: 13px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 11px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 17px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 18px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 20px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 15px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 19px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 18px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 15px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 15px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 11px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2019/10/04/C++ Pointer/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

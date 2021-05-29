@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>Fixed Income | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Risk Management,NYU,FRM">
+    
+    <meta name="description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income. Fixed Income OverviewFixed Income Market identify primary risks classify other risks">
+<meta name="keywords" content="Risk Management,NYU,FRM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fixed Income">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/Financial Risk Management Fixed Income/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income. Fixed Income OverviewFixed Income Market identify primary risks classify other risks">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png">
+<meta property="og:updated_time" content="2020-08-12T20:45:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fixed Income">
+<meta name="twitter:description" content="This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income. Fixed Income OverviewFixed Income Market identify primary risks classify other risks">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Statistics/">Statistics</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Financial Risk Management Fixed Income" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Fixed Income
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2020/02/07/Financial Risk Management Fixed Income/" class="article-date">
+            <time datetime="2020-02-07T05:00:00.000Z" itemprop="datePublished">2020-02-07</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/FRM/">FRM</a>, <a class="tag-link" href="/tags/NYU/">NYU</a>, <a class="tag-link" href="/tags/Risk-Management/">Risk Management</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p>This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income.</p>
+<h1 id="Fixed-Income-Overview"><a href="#Fixed-Income-Overview" class="headerlink" title="Fixed Income Overview"></a>Fixed Income Overview</h1><h2 id="Fixed-Income-Market"><a href="#Fixed-Income-Market" class="headerlink" title="Fixed Income Market"></a>Fixed Income Market</h2><ul>
+<li>identify primary risks</li>
+<li>classify other risks which are incidental to the business</li>
+<li>maximize return for a given level of risk</li>
+</ul>
+<h2 id="Compared-to-Equity-Market"><a href="#Compared-to-Equity-Market" class="headerlink" title="Compared to Equity Market"></a>Compared to Equity Market</h2><h3 id="Why-equity-is-special"><a href="#Why-equity-is-special" class="headerlink" title="Why equity is special?"></a>Why equity is special?</h3><ul>
+<li>equity market is with much more volatility<ul>
+<li>because the residuals take over the leftovers and risks of bankruptcy</li>
+</ul>
+</li>
+</ul>
+<h3 id="Why-Debt-market-size-is-larger-than-equity-market"><a href="#Why-Debt-market-size-is-larger-than-equity-market" class="headerlink" title="Why Debt market size is larger than equity market?"></a>Why Debt market size is larger than equity market?</h3><ul>
+<li>Indebtedness outside of the Private Sector</li>
+<li><strong>Cost and Other Benefits of Debt Financing</strong> and Leverage<ul>
+<li>loans / debt financing is cheaper than equity</li>
+</ul>
+</li>
+</ul>
+<h3 id="Why-in-emerging-market-debt-market-and-equity-market-is-inverse"><a href="#Why-in-emerging-market-debt-market-and-equity-market-is-inverse" class="headerlink" title="Why in emerging market, debt market and equity market is inverse?"></a>Why in emerging market, debt market and equity market is inverse?</h3><ul>
+<li>emerging market is more likely to grow</li>
+<li>then there is more volatility </li>
+<li>more currency to rush in</li>
+</ul>
+<h3 id="Advantage-of-Fixed-Income"><a href="#Advantage-of-Fixed-Income" class="headerlink" title="Advantage of Fixed Income"></a>Advantage of Fixed Income</h3><ul>
+<li>Time Value of Money Cost of Carry</li>
+<li>Key Instrument of Monetary Policy</li>
+<li>Discounting Tool for All Other Asset Classes and Investments</li>
+<li><p>Key Factor in the Balance Sheet of Financial Firms</p>
+</li>
+<li><p>for lenders: give your money back</p>
+</li>
+</ul>
+<h1 id="Bond-Pricing"><a href="#Bond-Pricing" class="headerlink" title="Bond Pricing"></a>Bond Pricing</h1><h2 id="Value-of-Bond"><a href="#Value-of-Bond" class="headerlink" title="Value of Bond"></a>Value of Bond</h2><p>Price of a bond is the present value (PV) of the promised cash flows</p>
+<ul>
+<li><p>Promised cash flows are <strong>coupons</strong> and repayment of <strong>principal</strong> at maturity</p>
+</li>
+<li><p>Coupon payments are on regularly scheduled dates</p>
+</li>
+</ul>
+<p>Market discount = yield</p>
+<p>Valuation basics:</p>
+<script type="math/tex; mode=display">
+PV = \frac{PMT}{(1+r)^1}+\frac{PMT}{(1+r)^2}+...+\frac{PMT+FV}{(1+r)^N}</script><p>If $PMT &lt; r$, priced at a discount below par.</p>
+<script type="math/tex; mode=display">
+94.583 = \frac{2}{(1+3\%)^1}+\frac{2}{(1+3\%)^2}+\frac{2}{(1+3\%)^3}+\frac{2}{(1+3\%)^4}+\frac{2}{(1+3\%)^5}+\frac{102}{(1+3\%)^6}</script><p>If $PMT &gt; r$, priced at a premium above par.</p>
+<script type="math/tex; mode=display">
+107.26 = \frac{6}{(1+4\%)^1}+\frac{6}{(1+4\%)^2}+\frac{6}{(1+4\%)^3}+\frac{106}{(1+4\%)^4}</script><p>If $PMT = r$, priced at par</p>
+<script type="math/tex; mode=display">
+100 = \frac{3}{(1+3\%)^1}+\frac{3}{(1+3\%)^2}+\frac{3}{(1+3\%)^3}+\frac{3}{(1+3\%)^4}+\frac{103}{(1+3\%)^5}</script><h2 id="Yield-to-Maturity"><a href="#Yield-to-Maturity" class="headerlink" title="Yield to Maturity"></a>Yield to Maturity</h2><h3 id="Three-conditions"><a href="#Three-conditions" class="headerlink" title="Three conditions"></a>Three conditions</h3><ul>
+<li>Holds the bond to maturity</li>
+<li>Receives all coupon and principal payments (no default)</li>
+<li>May <strong>reinvest all coupon payments at the same yield</strong> (hard  to be realistic)</li>
+</ul>
+<h3 id="Relationship-between-bond-price-and-YTM"><a href="#Relationship-between-bond-price-and-YTM" class="headerlink" title="Relationship between bond price and YTM"></a>Relationship between bond price and YTM</h3><ul>
+<li>Inverse Effect: Duration</li>
+<li>Convexity Effect: convexity</li>
+<li>Coupon Effect</li>
+<li>Maturity Effect: prices of a bond converge to par</li>
+</ul>
+<h2 id="Quotes-and-Conventions"><a href="#Quotes-and-Conventions" class="headerlink" title="Quotes and Conventions"></a>Quotes and Conventions</h2><h3 id="Full-Price-and-Flat-Price"><a href="#Full-Price-and-Flat-Price" class="headerlink" title="Full Price and Flat Price"></a>Full Price and Flat Price</h3><p>Relation:</p>
+<script type="math/tex; mode=display">
+\text{Full (“Dirty”) Price} = \text{Flat (“Clean”) Price} + \text{Accrued Interest}</script><ul>
+<li><p>Dealers <strong>quote</strong> clean prices but <strong>settle</strong> at the dirty price.</p>
+</li>
+<li><p>accrued interest</p>
+<script type="math/tex; mode=display">
+\text{Accrued Interest} = \frac{t}{T} \times PMT</script><p>where t is days from last coupon date to settlement and T is days in coupon period</p>
+<p>Days conventions:</p>
+<ul>
+<li>U.S. Treasury notes, bonds (2 - 30 years): Semiannual, Actual / Actual basis</li>
+<li>U.S. corporate bonds: Semiannual, 30/360 basis</li>
+<li>European government and corporate bonds: Annual, Actual/Actual basis</li>
+</ul>
+</li>
+</ul>
+<p>Examples: </p>
+<ul>
+<li><p>A U.S. T bond with 5/15 and 11/15 coupon dates trades with settlement on 6/27. Calculate accrued interest based upon a 5% coupon:</p>
+<p>Actual days from 5/15 to 6/27 is 43, Actual days from 5/15 to 11/15 is 184.</p>
+<script type="math/tex; mode=display">
+AI = \frac{43}{184}\times\frac{5.00}{2} = 0.584239 ~~\text{per \$100 of par}</script></li>
+</ul>
+<h3 id="Discount-basis-or-Add-on-basis"><a href="#Discount-basis-or-Add-on-basis" class="headerlink" title="Discount basis or Add-on basis"></a>Discount basis or Add-on basis</h3><p>Money market instruments are short term $(&lt; 1 ~ \text{year})$ securities with annualized (not compounded) return measures quoted on a <strong>discount</strong> or <strong>add on</strong> basis</p>
+<ul>
+<li>DR: U S commercial paper, Treasury bills and bankers’ acceptances</li>
+</ul>
+<script type="math/tex; mode=display">
+PV = FV \times (1-\frac{Days}{Year}\times DR)</script><ul>
+<li>AOR: Bank certificates of deposit (CDs), repurchase agreements and LIBOR / EURIBOR</li>
+</ul>
+<script type="math/tex; mode=display">
+PV = \frac{FV}{(1+\frac{Days}{Year}\times AOR)}</script><p>Example:</p>
+<ul>
+<li><p>DR understates investor return / cost of borrowed funds as it divides by the total return at FV versus PV. For example, for a 90 day, $10 MM instrument:</p>
+<ul>
+<li><p>T-bill @ DR of 2.25%</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+PV &=& FV \times (1-\frac{Days}{Year}\times DR) \\
+&=& 10 \times (1-\frac{90}{360}\times 0.0225) \\
+&=& 9943750
+\end{eqnarray*}</script></li>
+<li><p>Bank CD @ AOR of 2.25%</p>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+PV &=& \frac{FV}{(1+\frac{Days}{Year}\times AOR)} \\
+&=& \frac{10}{(1+\frac{90}{360}\times 0.0225)} \\
+&=& 9944065
+\end{eqnarray*}</script></li>
+</ul>
+<h3 id="Periodicity-conversion"><a href="#Periodicity-conversion" class="headerlink" title="Periodicity conversion"></a>Periodicity conversion</h3><p>from m to n periods (i.e., from monthly to quarterly):</p>
+<script type="math/tex; mode=display">
+\left(1 + \frac{APR_m}{m} \right)^{m} = \left(1 + \frac{APR_n}{n} \right)^{n}</script><h3 id="Semiannual-Bond-Equivalent-Yield"><a href="#Semiannual-Bond-Equivalent-Yield" class="headerlink" title="Semiannual Bond Equivalent Yield"></a>Semiannual Bond Equivalent Yield</h3><p>Most common periodicity for USD denominated bond yields is two. An annual rate having a periodicity of two is known as a semiannual bond basis yield, or semiannual bond equivalent yield.<br>Example: </p>
+<ul>
+<li>What is the SA bond equivalent for a zero priced at 78 2 maturing in 4 years?<script type="math/tex; mode=display">
+78.2 = \frac{100}{(1+r)^8} \\
+r = 0.0167</script>Semiannual yield = 0.0334 </li>
+</ul>
+<h2 id="Matrix-Pricing"><a href="#Matrix-Pricing" class="headerlink" title="Matrix Pricing"></a>Matrix Pricing</h2><p>to price a new issued bond</p>
+<h3 id="Principle-of-Matrix-Pricing"><a href="#Principle-of-Matrix-Pricing" class="headerlink" title="Principle of Matrix Pricing"></a>Principle of Matrix Pricing</h3><p>Suppose a BBB rated pharmaceutical corporation intends to <strong>issue a new five year bond</strong>. The firm currently has a four year, 4 annual coupon bond outstanding which is priced at 103.1 (full and flat price with accrued interest of zero) The <strong>four year rate of return rate</strong> required by investors is 3.16%:</p>
+<script type="math/tex; mode=display">
+103.1 = \frac{4}{(1+r\%)^1}+\frac{4}{(1+r\%)^2}+\frac{4}{(1+r\%)^3}+\frac{104}{(1+r\%)^4}, ~r = 3.16\%</script><p>Without a four year government bond to calculate a more precise yield spread, we look to three year<br>and five year ‘on the run’ government bonds yielding 2.10 and 2.45 respectively. The average of<br>the two yields is 2.2750%, which is the estimated four year benchmark yield.</p>
+<p>The <strong>estimated yield spread</strong> is 88.5 bps over the implied benchmark rate $(0.0316-0.02275 =0.00885)$. </p>
+<p>The issuer and underwriter then compare and adjust this four year yield spread based upon recent five year issues for companies <strong>with similar ratings</strong> and/or in <strong>the same industry</strong> for a proposed spread for the new issuance.</p>
+<h3 id="Credit-spreads"><a href="#Credit-spreads" class="headerlink" title="Credit spreads"></a>Credit spreads</h3><ul>
+<li><strong>Benchmark spread</strong> is the spread over the most recently issued government bond of similar maturity</li>
+<li><strong>G-spread</strong> is the spread over actual or interpolated government bond with matched maturity</li>
+<li><strong>I-spread</strong> is the spread over swap rates that match the credit security’s tenor and currency</li>
+<li><strong>Z-spread</strong> is the zero volatility spread measured across each point along the implied spot yield curve</li>
+<li><strong>Option adjusted spread (OAS)</strong> is a generalized Z spread and often most appropriate for portfolios</li>
+</ul>
+<h3 id="Current-yield"><a href="#Current-yield" class="headerlink" title="Current yield"></a>Current yield</h3><p>Current yield is sometimes called the <strong>income or interest yield</strong> and is the <strong>sum of coupon payments<br>received</strong> over the year divided by the <strong>flat price</strong>.</p>
+<p>For example, a 10 year, 2 semiannual coupon payment bond is priced at 95 per 100 of par value Its current yield is $\frac{2}{95} = 2.105%$. This crude measure neglects coupon payment frequency in the numerator and accrued interest in the denominator</p>
+<h1 id="Structure-of-Interest-rates"><a href="#Structure-of-Interest-rates" class="headerlink" title="Structure of Interest rates"></a>Structure of Interest rates</h1><h2 id="yield-curve"><a href="#yield-curve" class="headerlink" title="yield curve"></a>yield curve</h2><h3 id="definition"><a href="#definition" class="headerlink" title="definition"></a>definition</h3><p>The yield curve on coupon bonds is a snapshot of rates for non-callable securities with similar risk profile across maturities.</p>
+<ul>
+<li>Yield curves generally have <strong>a positive slope</strong> given the <strong>higher risk of holding longer-term securities</strong><ul>
+<li>Investors typically demand a higher premium to lend for longer</li>
+<li>The change in price for a given change in yield is higher for longer duration securities</li>
+</ul>
+</li>
+<li><p>Yield curve shape is dynamic, and the term structure is influenced by various factors</p>
+<ul>
+<li>Short-term policy rates such as U.S. Federal Funds tend to drive short-term yields</li>
+<li>Long-term Treasury yields are more affected by long-term inflation and growth expectations</li>
+<li>U.S. Federal Funds have an impact on long-term yield by adjusting short-term yields</li>
+</ul>
+</li>
+<li><p>Term structure theories are driven by <strong>expectations</strong>, <strong>segmentation</strong> and <strong>liquidity preference</strong></p>
+<ul>
+<li>Expectations theories rely solely on investor / issuer expectations of future short-term rates</li>
+<li>Segmented market theory implies that investors / issuers have limited maturity selection</li>
+<li>Liquidity preference theory combines risk and return as critical factors for issuers / investors</li>
+</ul>
+</li>
+</ul>
+<h3 id="shapes-tool-to-forecast-economic-activity"><a href="#shapes-tool-to-forecast-economic-activity" class="headerlink" title="shapes - tool to forecast economic activity"></a>shapes - tool to forecast economic activity</h3><ul>
+<li><p>A positively sloped curve is generally associated with a future increase in real economic activity</p>
+</li>
+<li><p><strong>Curve flattening or inversion</strong> where short term yields exceed long term yields portends <strong>a drop in short term rates and an expected decline in GDP</strong></p>
+</li>
+</ul>
+<p><img src="https://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png" alt="yield_curve_invision.png"></p>
+<p>Influence Factors:</p>
+<ul>
+<li>Monetary policy (<strong>tightening tends to slow the economy and flatten (or invert) the curve</strong>) </li>
+<li>Investor expectations of future short-term rates as influenced by both credit demand and expected inflation </li>
+<li>General financial market conditions</li>
+</ul>
+<h3 id="spot-curves"><a href="#spot-curves" class="headerlink" title="spot curves"></a>spot curves</h3><p>Zero curves represent one cash flow on a pre-determined date. </p>
+<ul>
+<li>One example is for zero-coupon government bonds across maturities. This government bond spot curve (or zero or “strip” curve as individual coupons are “stripped” off of coupon bonds) is a set of yields-to-maturity on zero-coupon bonds. While often referred to as “risk-free” yields, this only refers to relative default risk, not inflation or liquidity risk.</li>
+</ul>
+<h3 id="par-curves"><a href="#par-curves" class="headerlink" title="par curves"></a>par curves</h3><p>Par curves represent par value bonds maturing on pre-determined dates. </p>
+<ul>
+<li>In addition to the yield curve on coupon bonds and the spot curve on zero-coupon bonds, maturity structure can be assessed using a par curve. A par curve is <strong>a sequence of yields-to-maturity such that each bond is priced at par value</strong>. The bonds have the same currency, credit risk, liquidity, tax status, and annual yields stated for the same periodicity</li>
+</ul>
+<h3 id="forward-curves"><a href="#forward-curves" class="headerlink" title="forward curves"></a>forward curves</h3><p>Forward curves are a series of forward (future delivery) rates derived from spot rates. </p>
+<ul>
+<li>Implied forward rates (also known as forward yields) are calculated from spot rates as a break-even reinvestment rate linking return on investment in a shorter-term zero-coupon bond to that of a longer-term zero-coupon bond.</li>
+</ul>
+<p>Example:</p>
+<p>There are two alternative loans:</p>
+<ul>
+<li>A is for 1 year at 2%; B is for 2 Years at 3%. Then $F_{1,1}$ is the one-year rate a year from now which equates 102 at year 1 to 106 at year 2:<script type="math/tex; mode=display">
+r = \frac{106}{102}-1 = 3.9216\%</script>which means <script type="math/tex; mode=display">
+102 \times 1.039216 = 106</script>The implied forward rate may be checked by investing 102 for 1 year at this rate. This is also the basic principle of forward rate agreement(FRA):<script type="math/tex; mode=display">
+(1 + Z_A)^A \times(1+IFR_{A,B-A})^{B-A}=(1+Z_B)^B</script>A is the shorter term bond in A periods. B is longer term bond in B periods.</li>
+</ul>
+<h1 id="Source-of-bond-risk"><a href="#Source-of-bond-risk" class="headerlink" title="Source of bond risk"></a>Source of bond risk</h1><p>The market value sensitivity of a bond (or other rate sensitive instrument) to interest rate changes is<br>based on the bond valuation formula shown below based upon the full (or “dirty”) price</p>
+<script type="math/tex; mode=display">
+MV = \frac{PMT}{(1+y)^{1-\frac{t}{T}}} + \frac{PMT}{(1+y)^{2-\frac{t}{T}}}+ ... +\frac{PMT}{(1+y)^{N-\frac{t}{T}}}</script><p>where MV is the full price, PMT is the coupon, FV is principal, y is yield per period and the bond settles t days into the T day period with N periods to maturity. It can be expanded as:</p>
+<script type="math/tex; mode=display">
+dMV = (\frac{\partial MV}{\partial y}\times dy)+(\frac{1}{2}\frac{\partial^2 MV}{\partial y^2}\times dy^2)</script><p>The first expression is a duration and the second term is a convexity, which are often shown divided by 100 on Bloomberg.</p>
+<h2 id="Duration"><a href="#Duration" class="headerlink" title="Duration"></a>Duration</h2><h3 id="Macaulay-duration"><a href="#Macaulay-duration" class="headerlink" title="Macaulay duration"></a>Macaulay duration</h3><p>measures <strong>the sensitivity of the bond’s full price</strong> (including accrued interest) to changes in the <strong>bond’s yield to maturity</strong> or, more generally, to changes in <strong>benchmark interest rates</strong>. It assumes variables other than yield or benchmark rates (including time to maturity) are unchanged:</p>
+<script type="math/tex; mode=display">
+\text{Macaulay Duration} = -\frac{\partial  \text{MV}}{\partial y}\times\frac{1+y}{MV}=-\frac{\frac{\partial  \text{MV}}{MV}}{\frac{\partial y}{1+y}}</script><p>Duration measures <strong>instantaneous (or same day) bond price changes</strong> and may be considered a<br><strong>weighted average</strong> (the share of full price corresponding to each cash flow) of the time to receipt of<br>promised cash flows. Using an annual coupon example on a coupon date, we can simplify</p>
+<script type="math/tex; mode=display">
+\sum_{t=1}^{n}\frac{(\text{PV of CF})\times t}{PV^{full}}</script><p>Example:</p>
+<p>For a 6% annual coupon 5 year bond with 5% yield to maturity, the price is:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.329477,~ ~ r=5\%</script><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Cash Flow</th>
+<th>Present Value</th>
+<th>Weight</th>
+<th>Period $\times$ Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^1}=5.714$</td>
+<td>$\frac{5.714}{104.329}=0.0548$</td>
+<td>0.055</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^2}=5.442$</td>
+<td>$\frac{5.442}{104.329}=0.0522$</td>
+<td>0.104</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^3}=5.183$</td>
+<td>$\frac{5.183}{104.329}=0.0497$</td>
+<td>0.149</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>$\frac{6}{(1+5\%)^4}=4.936$</td>
+<td>$\frac{4.936}{104.329}=0.0473$</td>
+<td>0.189</td>
+</tr>
+<tr>
+<td>5</td>
+<td>106</td>
+<td>$\frac{106}{(1+5\%)^5}=83.054$</td>
+<td>$\frac{83.054}{104.329}=0.7961$</td>
+<td>3.981</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>104.329</td>
+<td><strong>Duration</strong></td>
+<td>4.478</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Modified-duration"><a href="#Modified-duration" class="headerlink" title="Modified duration"></a>Modified duration</h3><p>Modified duration is a minor adjustment to Macaulay duration (dividing by 1 + yield per period) and is<br>directly related to the percentage change in a bond’s market value:</p>
+<script type="math/tex; mode=display">
+\text{Modified Duration} = -\frac{\text{Macaulay Duration}}{(1+\frac{r}{c})}</script><p>This is a linear estimate of a fixed-rate bond’s price change for a given yield to maturity change:</p>
+<script type="math/tex; mode=display">
+\%\Delta PV = -\text{Modified Duration} \times\Delta\text{Yield}</script><p>Example:</p>
+<p>How does the bond price in the prior example (6% annual 5 yr coupon bond with a 5% yield to maturity) change if yields decline 100 bps?</p>
+<p>Given a Macaulay Duration of 4.478, the Modified Duration is $\frac{4.478}{1.05}=4.265$. Therefore,</p>
+<script type="math/tex; mode=display">
+-4.265 \times (-100bps) \times \%= 4.265\%</script><p>there will be 4.2645% price appreciation.</p>
+<p>The error:</p>
+<p>For original bond price:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.329477,~ ~ r=5\%</script><p>For the new price estimate:</p>
+<script type="math/tex; mode=display">
+104.329477 \times (1 + 4.2645\%) = 108.77863</script><p>For the Actual new bond price:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 108.903645,~ ~ r=4\%</script><p>There are $108.90365 - 108.77863 = -.125$ difference in price explained by the non-linearity of the price-yield relationship.</p>
+<h3 id="Effective-Duration"><a href="#Effective-Duration" class="headerlink" title="Effective Duration"></a>Effective Duration</h3><p>Effective Duration is <strong>the sensitivity of a bond’s price</strong> to <strong>a change in a benchmark yield curve</strong> such as a <strong>government par curve</strong>, similar to approximate modified duration except it involves a benchmark and also may be used for more complex bonds or portfolios of complex bonds</p>
+<script type="math/tex; mode=display">
+\text{Effective Duration} = \frac{PV_{-}-PV_{+}}{2\times(\Delta\text{Curve})(PV_0)}</script><h3 id="Money-Duration-Dollar-Duration"><a href="#Money-Duration-Dollar-Duration" class="headerlink" title="Money Duration (Dollar Duration)"></a>Money Duration (Dollar Duration)</h3><p>Dollar Duration is <strong>the price change</strong> for a given change in yield in units of the currency in which the bond is denominated (as opposed to a percentage change) stated per 100 of par or based upon an actual<br>portfolio position (known as “dollar duration in the U.S.)</p>
+<script type="math/tex; mode=display">
+\text{Dollar Duration} = -\frac{\partial MV}{\partial y}=\text{Modified Duration}\times MV</script><script type="math/tex; mode=display">
+\Delta PV = -\text{Dollar Duration} \times\Delta\text{Yield}</script><p>A related statistic is the present value of a basis point:</p>
+<script type="math/tex; mode=display">
+\text{PV of a Basis Point} = \frac{PV_{-} - PV_{+}}{2}</script><p>This is the dollar value (DV01) or present value of a basis point (PV01), which is calculated by increasing and decreasing the yield by 1 bp to get the price change.</p>
+<h3 id="Portfolio-Duration"><a href="#Portfolio-Duration" class="headerlink" title="Portfolio Duration"></a>Portfolio Duration</h3><p>Portfolio duration is <strong>the sum of market value weighted durations</strong> of component positions.</p>
+<ul>
+<li>Positive is a long position and negative is a short position </li>
+<li>Practitioners use duration and DV 01 PVBP statistics to analyze cash and synthetic positions to gauge net exposure, profitability and/or evaluate trade ideas</li>
+</ul>
+<p>Example:</p>
+<p>A bond trader holds two 2 year U.S. Treasury notes and one 30 year U S Treasury bond. Each bond has a face value of $1000000 with 2 year duration of 1.94 and the 30 year duration of 19.69.</p>
+<ul>
+<li><p>Portfolio duration is $7.86 = \frac{2}{3} \times 1.94 + \frac{1}{3} \times 19.69$</p>
+</li>
+<li><p>Portfolio DV01 equals $7.86 \times \frac{$3000000}{10 000} = $2358$</p>
+</li>
+<li><p>If 2 year and 30 year yields rise 10 bps, her portfolio LOSS $$23580 = $2358 \times 10 bps$</p>
+</li>
+</ul>
+<p>Coupon: For zero-coupon bonds, duration = maturity. As  Coupons increase, duration decrease.</p>
+<p>Maturity: increase as maturity increase.</p>
+<p>Time: As maturity decrease to 0, time goes down</p>
+<p>Yield: As yields increase, duration decrease.</p>
+<h2 id="Convexity"><a href="#Convexity" class="headerlink" title="Convexity"></a>Convexity</h2><p>While modified duration is a linear approximation of price changes for a given change in yield, the true price/yield relationship is a convexity adjusted equation expressed as follows:</p>
+<script type="math/tex; mode=display">
+\%\Delta PV = -\text{Modified Duration} \times\Delta\text{Yield} + \frac{1}{2}\times\text{Convexity}\times(\Delta Yield)^2</script><p>The second convexity term is positive for traditional (option free) fixed rate bond for a yield increase or decrease. Convexity may be calculated with tables, precisely derived or closely approximated:</p>
+<script type="math/tex; mode=display">
+\text{Convexity} = \frac{PV_-+PV_+}{(\Delta \text{yield})^2\times PV_0}</script><p>Example:</p>
+<p>Calculate the change in full bond price from the prior example (6% annual 5 yr coupon bond with a 5% yield to maturity) given a 100 bp yield decline with the convexity adjustment?</p>
+<p>At a yield of $5\%$, the bond price was $104.329477$ and the Modified Duration is $4.264525$, so</p>
+<script type="math/tex; mode=display">
+\%\Delta \text{PV}=-4.264525 \times\Delta\text{Yield} = 4.2645\%</script><p>The approximate convexity with the bond price at 4.99%, 5.00%, 5.01% ($\Delta \text{Yeild}=0.0001$) as follows:</p>
+<script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.3739805,~ ~ r=4.99\%</script><script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.3294767,~ ~ r=5\%</script><script type="math/tex; mode=display">
+\frac{6}{(1+r)^1}+\frac{6}{(1+r)^2}+\frac{6}{(1+r)^3}+\frac{6}{(1+r)^4}+\frac{106}{(1+r)^5} = 104.2849973,~ ~ r=5.01\%</script><p>According to the formula:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+\text{ApproxCon} &=& \frac{\text{PV}_{-}+\text{PV}_{+}-2\text{PV}_{0}}{(\Delta \text{Yield})^2 \times \text{PV}_{0}} \\
+&=&\frac{104.3739805 + 104.2849973 -2\times104.3294767}{0.0001^2\times104.3294767} \\
+&=& 23.444
+\end{eqnarray*}</script><p>Therefore, the full price change percent is:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+\%\Delta\text{PV} &\approx& -4.264525 \times 0.01 + \frac{1}{2}\times23.444\times0.01^2 \\
+&\approx& 0.043817455
+\end{eqnarray*}</script><p>the convexity-adjusted price increase given -1% in yield is $4.3817455\%$, which is a $0.0026%$ difference compared to the actual price increase.</p>
+<h2 id="Bond-Portfolio-Risk"><a href="#Bond-Portfolio-Risk" class="headerlink" title="Bond Portfolio Risk"></a>Bond Portfolio Risk</h2><h3 id="Bond-Portfolio-Duration-and-Convexity"><a href="#Bond-Portfolio-Duration-and-Convexity" class="headerlink" title="Bond Portfolio Duration and Convexity"></a>Bond Portfolio Duration and Convexity</h3><p><strong>Duration is the primary measure of price risk</strong> arising from a change in the yield to maturity. </p>
+<ul>
+<li>It is most important over short time horizons where investor focus is on price as opposed to coupon reinvestment risk.</li>
+<li>Duration is also referred to as <strong>repricing risk</strong>, and it is important to note that variable rate instruments with longer maturities have short duration dictated by the timing of that repricing (such as 3 month LIBOR)</li>
+</ul>
+<p><strong>Convexity represents a secondary measure of price risk Investors may benefit from positive convexity</strong>, for example, a 100 year or century bond will exhibit much higher convexity than a 30 year bond despite similar duration, resulting in a larger gain amid declining interest rates.</p>
+<p>Callable bond investors expect to be compensated for the uncertainty related to final maturity which these bonds exhibit in terms of negative convexity (i e bond price appreciation amid falling rates is effectively capped by the call feature)</p>
+<h3 id="Portfolio-Duration-and-Convexity"><a href="#Portfolio-Duration-and-Convexity" class="headerlink" title="Portfolio Duration and Convexity"></a>Portfolio Duration and Convexity</h3><p><strong>Duration for a fixed income bond portfolio</strong> may be calculated in two ways:</p>
+<ul>
+<li>Weight the average time to receipt of the aggregate cash flows (which is theoretically correct but difficult to put into practice)</li>
+<li>Weight the average of individual bond durations within the portfolio</li>
+</ul>
+<script type="math/tex; mode=display">
+\text{MV}=\frac{CF_1}{(1+\text{Yield of Portfolio})^1}+\frac{CF_2}{(1+\text{Yield of Portfolio})^2}+...+\frac{CF_N}{(1+\text{Yield of Portfolio})^N}</script><p>Theoretically, the formula above should be based upon a homogenous non-callable bond portfolio where the full and flat price are equal, but in practice, the weighted averages are used:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+\text{AvgMacDur of Portfolio} &=& \sum_{j=1}^{J}\text{MacDur}_j\times\left(\frac{\text{MV}_{j}}{\text{MV}}\right) \\
+\text{AvgModDur of Portfolio} &=& \sum_{j=1}^{J}\text{ModDur}_j\times\left(\frac{\text{MV}_{j}}{\text{MV}}\right) \\
+\text{AvgConvexity of Portfolio} &=& \sum_{j=1}^{J}\text{Convexity}_j\times\left(\frac{\text{MV}_{j}}{\text{MV}}\right)
+\end{eqnarray*}</script><h3 id="Source-of-Bond-YTM-Changes"><a href="#Source-of-Bond-YTM-Changes" class="headerlink" title="Source of Bond YTM Changes"></a>Source of Bond YTM Changes</h3><p>Yield changes may originate in either benchmark or spread changes or a combination of the two<br>components.</p>
+<p><strong>Credit spread example</strong>:</p>
+<p>A risk manager is tasked with weighing the relative risk of two spread positions under a recession scenario<br>Bond 1 has modified duration of 3.00 and a convexity of 24.00 and is expected to face 25 bps of spread<br>widening, and Bond 2 has modified duration of 5.00 and a convexity of 40.00 and is expected to see<br>spreads widen by 15 bps in a downturn. Which bond has more price risk? Bond 2 has slightly more risk:</p>
+<script type="math/tex; mode=display">
+\% \Delta \text{PV}_\text{Full} \approx (-3\times0.0025) + \left[\frac{1}{2}\times24\times(0.0025)^2\right] \approx-0.007425 \\
+\% \Delta \text{PV}_\text{Full} \approx (-5\times0.0015) + \left[\frac{1}{2}\times40\times(0.0015)^2\right] \approx-0.007455</script><p><strong>Liquidity example:</strong></p>
+<p>A trader’s boss wants her to gauge the precise bid offer cost of liquidating a thinly traded corporate bond<br>position The face value is $$120 000 000$ with a modified duration of 4.5 and convexity of 35 and the bid<br>offer cost is expected to be 5 bps What is the estimated cost of trading the position?</p>
+<script type="math/tex; mode=display">
+\%\Delta\text{PV} \approx -4.5 \times 0.0005 + \frac{1}{2}\times35\times0.0005^2 \approx -0.002245625</script><p>That means the estimated trading cost using modified duration only is</p>
+<script type="math/tex; mode=display">
+$120000000\times-0.0022445625 = -$269475</script><h1 id="Other-Products"><a href="#Other-Products" class="headerlink" title="Other Products"></a>Other Products</h1><h2 id="Risk-free-rate-Repurchase-agreement"><a href="#Risk-free-rate-Repurchase-agreement" class="headerlink" title="Risk free rate: Repurchase agreement"></a>Risk free rate: Repurchase agreement</h2><h2 id="Interest-Rate-Swap"><a href="#Interest-Rate-Swap" class="headerlink" title="Interest Rate Swap"></a>Interest Rate Swap</h2>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "Fixed Income",
+        "image": "http://yoursite.comhttps://i.loli.net/2020/02/11/t1LvP57m3b2GwrM.png",
+        "keywords": "Risk Management NYU FRM",
+        "genre": "Economics Finance Risk Management",
+        "datePublished": "2020-02-07",
+        "dateCreated": "2020-02-07",
+        "dateModified": "2020-08-12",
+        "url": "http://yoursite.com/2020/02/07/Financial Risk Management Fixed Income/",
+        "description": "This notes is based on the class Financial Risk Management of NYU MFE, including basic conceptions of Fixed Income.
+Fixed Income OverviewFixed Income Market
+identify primary risks
+classify other risks"
+        "wordCount": 3059
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2020/02/08/ML Overview/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Machine Learning Overview
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2020/02/03/EnglishPod Art/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Applied English in Art</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">20</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">4</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Bash/">Bash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Conda/">Conda</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/Vim/">Vim</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">19</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/">Statistics</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Statistics/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">7</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">3</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 16px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 11px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/Calculus/" style="font-size: 11px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 12px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 15px;">FRM</a> <a href="/tags/Finance/" style="font-size: 13px;">Finance</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 11px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 17px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 11px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 18px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 18px;">Papers</a> <a href="/tags/Probability/" style="font-size: 20px;">Probability</a> <a href="/tags/Python/" style="font-size: 13px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 11px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 15px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 12px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 19px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 18px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 15px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 15px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 11px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 13px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 11px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2020/02/07/Financial Risk Management Fixed Income/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>

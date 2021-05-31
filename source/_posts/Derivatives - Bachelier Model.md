@@ -7,7 +7,7 @@ tags:
 categories: 
 	- Economics
 	- Finance
-	- Derivatives
+	- Derivatives Pricing
 ---
 
 This is from a lecture of Prof. Peter Carr

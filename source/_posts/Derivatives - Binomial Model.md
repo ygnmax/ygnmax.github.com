@@ -8,7 +8,7 @@ tags:
 categories: 
 	- Economics
 	- Finance
-	- Derivatives
+	- Derivatives Pricing
 ---
 
 

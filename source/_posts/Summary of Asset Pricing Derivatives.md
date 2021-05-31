@@ -5,7 +5,7 @@ tags:
 	- Asset Pricing
 	- Papers
 categories: 
-	- Economics
+	- Research
 	- Literature Review
 	- Asset Pricing
 ---

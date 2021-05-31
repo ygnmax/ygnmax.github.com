@@ -6,7 +6,7 @@ tags:
 	- Papers
 	- Fixed Income
 categories: 
-	- Economics
+	- Research
 	- Literature Review
 	- Asset Pricing
 ---

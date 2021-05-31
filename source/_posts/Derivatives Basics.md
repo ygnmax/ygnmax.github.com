@@ -8,7 +8,7 @@ tags:
 categories:
 	- Economics
 	- Finance
-	- Derivatives
+	- Derivatives Pricing
 ---
 
 This note contains basic conceptions of financial instruments and derivatives including stock, bonds, forward contracts, swaps, options.
@@ -107,13 +107,11 @@ The two parties may be exposed to different interest rates in different markets,
 
 > Example: Swap Comparative Advantage
 US firm B wants to borrow AUD, Australian firm A wants to borrow USD: 
->
 + Firm B can borrow at 5% in USD, 12.6% AUD
 + Firm A can borrow at 7% USD, 13% AUD
 + Expected gain = (7-5) – (13-12.6) = 1.6%
 >
 Swaps:
->
 + Bank gains 1.3% on USD, loses 1.1% on AUD, gain=0.2%
 + Firm B gains (12.6-11.9) = 0.7%
 + Firm A gains (7-6.3) = 0.7%

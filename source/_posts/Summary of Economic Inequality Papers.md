@@ -5,7 +5,7 @@ tags:
 	- Inequality
 	- Papers
 categories: 
-	- Economics
+	- Research
 	- Literature Review
 	- Inequality
 ---

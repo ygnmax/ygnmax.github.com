@@ -5,7 +5,7 @@ tags:
 	- Financial Market
 	- Papers
 categories: 
-	- Economics
+	- Research
 	- Literature Review
 	- Financial Market
 ---

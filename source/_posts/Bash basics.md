@@ -1,14 +1,29 @@
 ---
 title: Bash Basics
 date: 2020-3-17
-tags: 
-	- Bash
-	- Linux
-categories: 
-	- Computer Science
-	- Tools
-	- Bash
+tags:
+  - Bash
+  - Linux
+categories:
+  - Computer Science
+  - Tools
+  - BashFiles
 ---
+# Manipulate Files and Folders
+
+# Files
+
+## cp / scp
+
+```bash
+## cp <from path> <to path>
+## scp <from path> <to path>
+## probabily scp require you to type the password
+
+## -r : copy all the folder, followed by scp
+scp -r account@address:~/data/ .
+```
+
 # List
 
 ## list
@@ -21,10 +36,10 @@ ls -alhtr
 # -a: all files
 # -d: show as a directory, don't show the sub-files
 # -l: long information: permission, owner, sizes
-# -l --full-time: full time 
+# -l --full-time: full time
 # -l --full-time --time=atime/ctime/mtime
 # -r: recursive
-# -h: human-readable 
+# -h: human-readable
 # -si: similar to -h
 # -t: order by time
 # -v: order by version
@@ -53,20 +68,34 @@ ls -F |grep /$
 ls -lt
 ```
 
-
-
 ### 4. useful link:
 
 [linux ls命令](https://www.cnblogs.com/sparkdev/p/7476005.html)
 
 [ls命令](https://www.cnblogs.com/peida/archive/2012/10/23/2734829.html)
 
+## df
+
+```bash
+# check the information about the disk
+df -h
+```
+
+## du
+
+```bash
+# check the current folder size
+du -h --max-depth=1 <path>
+```
+
+
+
 # Search
 
 ## grep
 
 ```bash
-ls | grep 
+ls | grep
 ```
 
 # Check files
@@ -84,7 +113,29 @@ vim ./test.py
 head test.py
 ```
 
+## wc
 
+```bash
+wc - lcw <file>
+
+# total number of files in the current folder
+ls -l|grep "^-"| wc -l
+
+ls -l *AL* | wc -l
+```
+
+
+# Install and Uninstall
+```Bash
+dpkg --list
+
+sudo apt-get remove “package-name”
+```
+or
+```Bash
+sudo apt-get purge “package-name”
+sudo apt-get autoremove
+```
 
 # Process Management
 
@@ -103,6 +154,24 @@ ps aux | grep ygnmax
 # u = display the process's user/owner
 # x = also show processes not attached to a terminal
 ```
+
+## fg / bg /&
+
+```bash
+# add &, setting process running in the background
+stata-mp -e test.do &
+
+# transfer the process from background to foregraound
+fg <job ID>
+
+# transfer the process from foreground to backgraound
+# first step: ctrl + D
+# second step: bg + <job ID>
+<ctrl + D>
+bg <job ID>
+```
+
+
 
 
 
@@ -150,4 +219,3 @@ module unload statamp/15
 [Environment Modules](http://modules.sourceforge.net/)
 
 [Environment Modules 简明教程](https://zhuanlan.zhihu.com/p/50725572)
-

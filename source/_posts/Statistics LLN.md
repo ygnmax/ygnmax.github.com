@@ -7,7 +7,7 @@ tags:
 	- Stochastic
 categories: 
 	- Mathematics
-	- Statistics
+	- Probability
 	- Classic Statistics
 mathjax: true
 ---

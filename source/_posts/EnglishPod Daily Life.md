@@ -128,7 +128,8 @@ categories:
     +  salesman threw in a subscription to the local newspaper for buying his product.
 
 # Automotive
-##b138 - Renting a Car
+## b138 - Renting a Car
+
 + keep yourself in check
 + compact: small
     + a compact car - VW Golf
@@ -176,3 +177,42 @@ categories:
 
 
 
+# Bank
+
+## c83 - Using the ATM
+
++ local authorities
+  + local government
++ ATM: automatic teller machine
+  + cash machine
++ slot
+  + rectangular hole
+  + put into your mailbox through the slot
++ six-digit pin code
+  + 100 is made up of three digits
+  + pin code is numbers
++ pound key: #
+  + star key: *
++ withdraw: v
+  + a withdrawal: n
++ transfer: v./n.
++ insert your card
+  + place inside
+  + insert a CD into CD player
++ select an option
+  + make a choice
++ swipe
+
+# Holiday
+
+## c181 - Christmas Day
+
++ grouch: a bad-tempered person
++ head to: go to somewhere
++ host: hold an activity
++ eggnog
++ are you all-set?
++ knock yourself out: go ahead; do as you please
+
++ bursting with excitement:
+  +  being so excited that one feels as though it is bursting out from within themselves

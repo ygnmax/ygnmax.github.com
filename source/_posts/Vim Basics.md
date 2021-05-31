@@ -7,7 +7,6 @@ tags:
 categories: 
 	- Computer Science
 	- Tools
-	- Vim
 ---
 # Introduction to vim
 ##3 modes for vim
@@ -44,13 +43,11 @@ In the normal mode, type ```/```, then type what you want to search
 + delete multiple lines:
     + in the normal mode, type numbers, like ```20```
     + then type ```dd```
-    
 ## Revoke
 + backward: return to the stage before some commands
     + in the normal mode, type: ```u```
 + forward: return to the stage before revoking
     + in the normal mode, control: ```control + R```
-    
 ## Loop
 + insert a great number of an indentical word
     + eg: insert 100 “hello”s

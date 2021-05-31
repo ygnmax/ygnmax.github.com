@@ -7,7 +7,6 @@ tags:
 categories:
   - Computer Science
   - Tools
-  - BashFiles
 ---
 # Manipulate Files and Folders
 

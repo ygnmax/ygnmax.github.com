@@ -6,7 +6,6 @@ tags:
 categories: 
 	- Computer Science
 	- Tools
-	- Conda
 ---
 # Conda commands
 

@@ -5,7 +5,7 @@ tags:
 	- Financial Market
 	- Papers
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Financial Market
 ---
@@ -125,8 +125,27 @@ In this paper, I estimate the __magnitude of an informational friction limiting 
 + I show how to separately identify private information from information common to all lenders but unobservable to the econometrician by using bank shocks within a discrete choice model of relationships. 
 + __Quantitatively, these informational frictions appears to be too small to explain the credit crunch in the U.S. syndicated corporate loan market.__
 
+## Anatomy of a liquidity crisis: Corporate bonds in the COVID-19 crisis
+1 June 2021 from [JFE](https://doi-org.ezproxy.med.nyu.edu/10.1016/j.jfineco.2021.05.052)
+We examine the microstructure of liquidity provision in the COVID-19 corporate bond liquidity crisis. During the two weeks leading up to Federal Reserve System interventions, __volume shifted to liquid securities, transaction costs soared, trade-size pricing inverted, and dealers, particularly non-primary dealers, shifted from buying to selling, causing dealers' inventories to plummet__. 
++ Liquidity provisions in electronic customer-to-customer trading increased, though at prohibitively high costs. By improving dealer funding conditions and providing a liquidity backstop, the Primary Dealer Credit Facility and the Secondary Market Corporate Credit Facility (SMCCF) stabilized trading conditions. Most of the impact of SMCCF on bond liquidity seems to have materialized following its announcement. 
++ We argue that the Federal Reserve's actions reflect a new role as market maker of last resort. 
 
 # Phenomenon / Products
 ## Pre-Trade Hedging: Evidence from the Issuance of Retail Structured Products
 12 February 2020 from [JFE](https://www.sciencedirect.com/science/article/pii/S0304405X20300374?dgcid=rss_sd_all&utm_source=researcher_app&utm_medium=referral&utm_campaign=RESR_MRKT_Researcher_inbound)
 We find evidence consistent with previously unrecognized market manipulation by broker-dealers. Specifically, __we show that pre-trade hedging, which is distinct from front-running, alters prices at which derivative trades occur__. We show this behavior is intentional by exploiting variation in the design of structured equity products (SEPs). We find positive abnormal returns on SEP pricing dates for which issuers benefit from altering closing stock prices but no such returns on pricing dates of otherwise similar SEPs. We also show that large buy trades near the close of trading are more frequent when SEP issuers have incentives to alter closing stock prices.
+
+# International Finance / Regulation
+## Does regulatory cooperation help integrate equity markets?
+1 June 2021 from [JFE](https://doi-org.ezproxy.med.nyu.edu/10.1016/j.jfineco.2021.05.040)
+This study tests __whether cooperation between securities regulators influences global market integration__. 
++ I measure cooperation using arrangements between securities regulators that enable enhanced cross-border enforcement, better regulatory decisions, and reduced compliance obligations for cross-border activities. 
++ These arrangements—formed at different times for different country pairs—are associated with an 11% increase in cross-border investment. I find similar increases using other proxies for market integration. 
++ Cross-border investment and market integration thus depend, in part, on regulators working together to extend legal and institutional capacities across borders. This reframes our understanding of the role of institutions in global capital markets.
+
+## Exchange Rate Disconnect in General Equilibrium
+7 June 2021 from [JPE](https://www.journals.uchicago.edu/doi/10.1086/714447)
+We propose a dynamic general equilibrium model of exchange rate determination that accounts for all major exchange rate puzzles, including __Meese-Rogoff__, __Backus-Smith__, __purchasing power parity__, and __uncovered interest rate parity puzzles__. 
++ We build on a standard international real business cycle model with home bias in consumption, augmented with shocks in the financial market that result in a volatile near-martingale behavior of exchange rates and ensure their empirically relevant comovement with macroeconomic variables, both nominal and real. 
++ Combining financial shocks with conventional productivity and monetary shocks allows the model to reproduce the exchange rate disconnect properties without compromising the fit of the business cycle moments.

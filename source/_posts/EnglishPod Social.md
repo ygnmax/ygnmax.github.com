@@ -12,6 +12,26 @@ categories:
 
 # Social
 
+## 98c flattering
+
++ bar exam
+  + final exam to become a lawyer
++ obnoxious: annoying
+  + something or someone can be obnoxious
++ I love what you have done with your ......
+  + I love what you have done with your hair
++ you haven't aged a day
++ he is such a handsome guy
++ Example
+  + I love what you’ve done with this space! Such a wonderful garden!
+  + I love what you’ve done with your hair! Such a nice color on you!
+  + We love what you’ve done with this place! Such a beautiful room!
++ gets one's looks from his mother/father
++ he gets his intelligence from his father
++ It's been such a long time
++ by the way, I heard ...
++ it's been great talking to you, but I have to get going
+
 ## 114c - 1980’s English
 
 + butt ugly
@@ -66,6 +86,16 @@ categories:
 + on top of all that: and also
 + credit history
   + have a good credit history
+
+## c184 fresh start (new year)
+
++ turn over a new leaf: start anew/radical change
++ wipe the slate clean
+
++ pinch pennies: to be thrifty
+  + save money
++ with you: support/agree with you
++ come out of the closet
 
 # Smoking
 

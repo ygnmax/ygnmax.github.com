@@ -5,7 +5,7 @@ tags:
 	- Behavioral Finance
 	- Papers
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Asset Pricing
 ---

@@ -10,6 +10,22 @@ categories:
 	- EnglishPod
 ---
 
+
+
+# Job Hunting
+
+## c195 Job Hunting
+
++ gas station attendant:
+  + a person employed to provide a service
++ job listing: list of job which is available
++ resume: summary of your work life
+  + CV
++ cover letter: cover for your resume
++ career: a long time profession
++ I am in the market for the new job
++ make it big: to be successful
+
 # Interview
 
 
@@ -160,3 +176,23 @@ categories:
 + I will take care of it / t will take repsonibility
   + get out
 
+## c186 business plan
+
++ hassle: a great deal of trouble; difficulty; nuisance
++ prospects: an apparent probability of advancement, success, profit, etc
++ quit a job
+
+# c72 You are fired
+
++ preoccupied
+  + Were you talking to me honey? I am sorry I just really preoccupied with work.
++ direct impact
++ I resent that
+  + after someone insults you
++ beat around the bush
+  + have something to say but take a long time to say it 
++ come out with it
+
++ let you go: fired
+  + pink slip
+  + get laid off

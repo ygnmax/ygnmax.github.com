@@ -23,8 +23,17 @@ categories:
 + I will be there in a second
 + would / could you sweep the floor
 + vacuum [US], hoover [BR]
-
 + househusband
+
+## 182c Boxing Day
+
++ Dec. 26
++ flashy: smart and noticeable, but in a rather vulgar way
+  + this orange shirt is flashy
++ hideous: ugly
++ yapping on: continue to talk and talk about sth.
++ blabber on: continue to talk sth. stupid
++ I might just
 
 # Fix
 

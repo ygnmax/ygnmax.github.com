@@ -73,12 +73,36 @@ categories:
     + lean beef: 
     + ninety five percent lean
 
-    
+
+## c190 Family Barbecue
+
++ barbecue
++ marinate: be soaked in marinaded
+  + to marinate sth.
++ hamburger bun:
+  + a round bun shaped to hold a hamburger patty
++ half a dozen
++ kebab: pieces of roasted meat, fish, and vegetables on a skewer
++ lawn furniture: furniture intended for use outside in the yard
++ serviette: napkin 
+
+## c194 Stir Fry
+
++ throw in: add some
+  + put into the pan
+  + throw in some onion and garlic and ginger
++ die for sth: really want sth.
++ What a disgrace to sth/sb: sth is bad
+  + this is a disgrace
++ oyster sauce
++ soy sauce
++ Chop suey
++ Fortune cookie
+
 # Mobile
 ## 106c -Shop- mobile phone plan
 
 + __prepaid plan__ / monthly rate plan
-
 + __activate__ my cellphone / bank account
   + make the cellphone work
 + handset: the device / cellphone
@@ -88,21 +112,21 @@ categories:
   + service fee
   + cannot be something which can be touched
   + wrong: bottle fee
-
 + __be compatible with__
   + applications compatible with the cellphone
   + roommates are compatible with the party
-
 + __what’s the catch__
   + catch: condition
-
 + __in luck__
   +  you are in luck (used by the second person)
-
 + __throw sth. in__ : include for free
-
 + __voice mail__
 + __screen your calls__
+
+## c189 Buying a new mobile phone
+
++ accidentally
++ leading mobile phone manufacturers
 
 # Internet Service
 ## c137 - Getting Internet Service 
@@ -177,6 +201,25 @@ categories:
 
 
 
+## c196 Going to the tailor
+
++ cashmeres: fine, soft wool, originally that from the Kashmir goat.
++ tailor: a tailor tailors clothes
+  + revise and fit sth.
+  + custom-made 
+    + custom-made kitchen
++ measure
+  + width / length / height
+  + get sb. measured
++ waist
++ collar
++ inseam:  inside length
+  + inseam of pans or shorts
++ tend to gain a few pounds
+  + usually do
+
+
+
 # Bank
 
 ## c83 - Using the ATM
@@ -216,3 +259,14 @@ categories:
 
 + bursting with excitement:
   +  being so excited that one feels as though it is bursting out from within themselves
+
+# Travel
+
+## c191 Daylight Savings Time
+
++ daylight savings time
++ rotation: spin around
++ compensate: make amends to
+  + compensate time
+
++ time difference

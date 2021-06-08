@@ -68,3 +68,18 @@ categories:
   + sleighing
 + catchy: pleasing and easily remembered
 + jingle: (verb) to make gentle ringing noise
+
+```mermaid
+
+
+graph LR 
+
+A[test]-->B[a] 
+
+A-->C[b] 
+
+A-->D[c] 
+
+
+```
+

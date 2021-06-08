@@ -6,7 +6,7 @@ tags:
 	- Papers
 	- Macroeconomics
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Macroeconomics
 ---

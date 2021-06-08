@@ -5,7 +5,7 @@ tags:
 	- Asset Pricing
 	- Papers
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Asset Pricing
 ---
@@ -84,3 +84,13 @@ Using the complete history of regular quarterly and annual filings by U.S. corpo
 20 March 2020 from [JF](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jofi.12898)
 Based on a novel high‐frequency data set for a large number of firms, I estimate __the time‐varying latent continuous and jump factors__ that explain individual stock returns. 
 + The factors are estimated using __principal component analysis__ applied to __a local volatility and jump covariance matrix__. I find four stable continuous systematic factors, which can be well‐approximated by a market, oil, finance, and electricity portfolio, while there is only one stable jump market factor. The exposure of stocks to these risk factors and their explained variation is time‐varying. __The four continuous factors carry an intraday risk premium that reverses overnight.__
+
+# Event
+## Does target firm insider trading signal the target's synergy potential in mergers and acquisitions
+1 June 2021 from [JFE](https://doi-org.ezproxy.med.nyu.edu/10.1016/j.jfineco.2021.05.038)
++ We find that the acquirer's abnormal returns increase with target firm insiders' net purchase ratios:
+    + (1) abnormal returns at merger and acquisition (M&A) announcements and 
+    + (2) long-term abnormal returns after acquisitions 
++ Further, __acquisition synergies__, measured as the (1) acquirer-target combined cumulative abnormal returns at M&A announcements and (2) changes in three-year operating performance after acquisitions, increase with target insider net purchase ratios. 
++ Notwithstanding, targets with higher insider net purchase ratios receive higher takeover premiums. 
++ Overall, our findings suggest that, even under the SEC's "short-swing rule," target insider trading prior to the M&A announcement serves as a credible signal for acquisition outcomes.

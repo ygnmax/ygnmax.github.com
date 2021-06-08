@@ -6,7 +6,7 @@ tags:
 	- Papers
 	- Monetary
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Macroeconomics
 ---

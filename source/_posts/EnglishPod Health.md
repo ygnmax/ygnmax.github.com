@@ -40,3 +40,18 @@ categories:
 
 
 
+## Health Insurance
++ deductible
++ coverage
++ got me thinking
++ pre existing conditions: illnesses
+
+
+
+## c183 Winter Clothes
+
++ hat
++ mittens: hand covering separating thumb from fingers
+  + glove
++ scarf: a long narrow piece of cloth worn around the neck
++ ear muff: a warm tubular covering for the ears

@@ -5,7 +5,7 @@ tags:
 	- Asset Pricing
 	- Papers
 categories: 
-	- Research
+	- Economics
 	- Literature Review
 	- Asset Pricing
 ---
@@ -32,11 +32,17 @@ We provide __a new framework for valuing multidimensional real options__ where o
 + In a case study, we demonstrate that the frequently used quasi-analytic method yields a suboptimal policy and an inaccurate value function. 
 + The proposed method is demonstrably correct, straightforward to implement, reliable in computation, and broadly applicable in analyzing multidimensional option-valuation problems.
 
-# Credit
+## Hedging macroeconomic and financial uncertainty and volatility
+01 June 2021 from [JFE](https://doi-org.ezproxy.med.nyu.edu/10.1016/j.jfineco.2021.05.053)
+We study the pricing of __shocks to uncertainty and volatility using a wide-ranging set of options contracts covering a variety of different markets__. 
++ If uncertainty shocks are viewed as bad by investors, they should carry negative risk premiums. 
+    + Empirically, however, uncertainty risk premiums are positive in most markets. Instead, it is the realization of large shocks to fundamentals that has historically carried a negative premium. 
+    + In other words, we find that the return premium for gamma is negative, while that for vega is positive. 
++ These results imply that it is jumps, for which exposure is measured by gamma, not forward-looking uncertainty shocks, measured by vega, that drive investors' marginal utility. __In further support of the jump interpretation, the return patterns are more extreme for deeper out-of-the-money options__.
 
+# Credit
 ## Ruin probabilities for a Lévy-driven generalised Ornstein–Uhlenbeck process
-04 December 2019 from FS
-http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&utm_medium=referral&utm_campaign=RESR_MRKT_Researcher_inbound
+04 December 2019 from [FS](http://link.springer.com/article/10.1007/s00780-019-00413-3?utm_source=researcher_app&utm_medium=referral&utm_campaign=RESR_MRKT_Researcher_inbound)
 
 We study the asymptotics of the ruin probability for a process which is the solution of a linear SDE defined by a pair of independent Lévy processes. Our main interest is __a model describing the evolution of the capital reserve of an insurance company__ selling annuities and investing in a risky asset. 
 

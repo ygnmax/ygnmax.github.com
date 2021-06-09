@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+
+    
+
+    
+    <title>American Options | Guangnan&#39;s Notes</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Asset Pricing,Finance - Options">
+    
+    <meta name="description" content="Perpetual American PutDefinitionPerpetual means that there is no maturity. The payoff at $t$ will be:   (K-S_t)^{+} = \max\{0, K-S_t\}The price at time $0$ and time $t$ will be the same (time-homogene">
+<meta name="keywords" content="Asset Pricing,Finance - Options">
+<meta property="og:type" content="article">
+<meta property="og:title" content="American Options">
+<meta property="og:url" content="http://yoursite.com/2021/06/08/Derivatives - American Options/index.html">
+<meta property="og:site_name" content="Guangnan&#39;s Notes">
+<meta property="og:description" content="Perpetual American PutDefinitionPerpetual means that there is no maturity. The payoff at $t$ will be:   (K-S_t)^{+} = \max\{0, K-S_t\}The price at time $0$ and time $t$ will be the same (time-homogene">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2021-06-08T23:43:02.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="American Options">
+<meta name="twitter:description" content="Perpetual American PutDefinitionPerpetual means that there is no maturity. The payoff at $t$ will be:   (K-S_t)^{+} = \max\{0, K-S_t\}The price at time $0$ and time $t$ will be the same (time-homogene">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Guangnan&#39;s Notes" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/facion.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+
+
+</head>
+</html>
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">I rest, I rust</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/">Home</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/">Computer Science</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Programming/">Programming</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Computer-Science/Tools/">Tools</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/">Economics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Econometrics/">Econometrics</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Finance/">Finance</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/">Languages</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Languages/English/">English</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/">Mathematics</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Algebra/">Algebra</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Analysis/">Analysis</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Applied/">Applied</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Mathematics/Probability/">Probability</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/">Thoughts</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Other/">Other</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Economics/">Economics</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/">Finance</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Derivatives - American Options" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        American Options
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2021/06/08/Derivatives - American Options/" class="article-date">
+            <time datetime="2021-06-08T04:00:00.000Z" itemprop="datePublished">2021-06-08</time>
+        </a>
+    </div>
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Asset-Pricing/">Asset Pricing</a>, <a class="tag-link" href="/tags/Finance-Options/">Finance - Options</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="Perpetual-American-Put"><a href="#Perpetual-American-Put" class="headerlink" title="Perpetual American Put"></a>Perpetual American Put</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Perpetual means that there is no maturity. The payoff at $t$ will be: </p>
+<script type="math/tex; mode=display">
+(K-S_t)^{+} = \max\{0, K-S_t\}</script><p>The price at time $0$ and time $t$ will be the same (time-homogeneity).</p>
+<h3 id="Stopping-time"><a href="#Stopping-time" class="headerlink" title="Stopping time"></a>Stopping time</h3><ol>
+<li><p>If a random variable $\tau$ satisfies ${\tau \leq t} \in \mathcal{F}(t)$ for any $t \geq 0$, then $\tau$ is a stopping time.</p>
+<ul>
+<li>example: $\tau_L = \inf{u \geq 0: S_u \leq L}$ is a stopping time</li>
+</ul>
+</li>
+<li><p>Definition of a Stopped Process, $X_t$ is</p>
+</li>
+</ol>
+<script type="math/tex; mode=display">
+X_{t \land \tau} = 
+\begin{cases}
+X_t, ~~~ 0 \leq t \leq \tau \\
+X_{\tau}, ~~~ t \geq \tau
+\end{cases}</script><ol>
+<li>stopping-time martingale theorem: <ul>
+<li>A martingale (super-martingale or sub-martingale) stopped at a stopping time, is still a martingale (super-martingale or sub-martingale).  </li>
+<li>$M<em>t$ is martingale, $\tau$ is stopping time of $M_t$, then $M</em>{t \land \tau}$ is also a martingale.</li>
+<li>$\mathbb{E} [M<em>{t \land \tau}|\mathcal{F}_s] = M</em>{s \land \tau}, s \leq t$</li>
+</ul>
+</li>
+</ol>
+<h3 id="Dominated-Convergence"><a href="#Dominated-Convergence" class="headerlink" title="Dominated Convergence"></a>Dominated Convergence</h3><p>$X_1, X_2, …, X_n, …$ is a sequence of random variable and $X_n \to X$ almost surely. If $\exist ~ Y$, $\mathbb{E} Y &lt; \infty$ and $|X_n| \leq Y$ almost surely for each $n$, then </p>
+<script type="math/tex; mode=display">
+\mathbb{E}X = \mathbb{E}\lim_{n \to \infty}X_n = \lim_{n \to \infty}\mathbb{E}X_n</script><h2 id="Pricing"><a href="#Pricing" class="headerlink" title="Pricing"></a>Pricing</h2><p>Recall the value of an European put is</p>
+<script type="math/tex; mode=display">
+V(t, S_t) = \mathbb{E}^{Q}\left[e^{-r(T-t)}(K-S_T)^{+}|\mathcal{F}_t \right]</script><p>Define $f(t, S_t)$ as the value of perpetual American Put at time $t$, assume the put will be exercised at $t = \tau$, $T(t)$ is a set of all the stopping time (greater or equal to $t$), then</p>
+<script type="math/tex; mode=display">
+f(t, S_t) = \sup_{\tau \in T(t)} \mathbb{E}^{Q} \left[e^{-r(\tau-t)}(K-S_{\tau})^{+}|\mathcal{F}_t \right]</script><p>Because $\mathcal{F}_t$ means the information of the underlying price before $t$ and the underlying price is a geometric Brownian motion which has Markov property, we have:</p>
+<script type="math/tex; mode=display">
+f(t, S_t) = \sup_{\tau \in T(t)} \mathbb{E}^{Q} \left[e^{-r(\tau-t)}(K-S_{\tau})^{+}|S_t \right].</script><h3 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h3><p>Define a price level $L &lt; K$, at any time $t$, the put will be exercised if and only if $S<em>t \leq L$. If $L &lt; S_t &lt; K$ or $S_t \geq K$, don’t exercise and wait until the first hitting time $\tau_L = \inf{u \geq t: S_u \leq L}, S</em>{\tau_L} \leq L$ and then exercise the option if $\tau_L \leq \infty$. If $\tau_L = \infty$, the option value should be zero because it will never be exercised. </p>
+<ul>
+<li><p>if $L \leq S_t &lt; K$ or $K \leq S_t$, the option will not be exercised and we have to wait. Here $0 \leq t \leq \tau_L$.</p>
+<p>payoff is $K - S_t$, then put value is a function of $L, t, S_t$:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+f_L(t, S_t) &=& \sup_{\tau_L \in T(t)} \mathbb{E}^{Q} \left[e^{-r(\tau_L-t)}(K-S_{\tau_L})^{+}|S_t \right] \\
+&=& \mathbb{E}^{Q} \left[e^{-r(\tau_L-t)}(K-S_{\tau_L})^{+}\mathbb{I}_{\tau_L < \infty}|S_t \right] \\
+&=& \mathbb{E}^{Q} \left[e^{-r(\tau_L-t)}(K-L)^{+}\mathbb{I}_{\tau_L < \infty}|S_t \right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[e^{-r(\tau_L-t)}\mathbb{I}_{\tau_L < \infty}|S_t \right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[e^{-r(\tau_L-t)}|S_t \right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[e^{-r(\tau_L)}|S_0 \right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[e^{-r(\tau_L)}\right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[e^{-r\tau_L} \mathbb{I}_{\tau_L< \infty}\right] \\
+&=& (K-L)\mathbb{E}^{Q} \left[S^{-\lambda}_{\tau_L} S^{\lambda}_{\tau_L} e^{-r\tau_L} \mathbb{I}_{\tau_L< \infty}\right] \\
+&=& (K-L)L^{-\lambda} \mathbb{E}^{Q} \left[S^{\lambda}_{\tau_L} e^{-r\tau_L} \mathbb{I}_{\tau_L< \infty}\right] \\
+\end{eqnarray*}</script><p>Considering the time homogeneity, the put option value will be the same at any time $t$, therefore we can change the $t$ to $0$. Because there is no additional information at time 0, we can leave the filtration alone. The $\lambda$ is a parameter we want to choose based on the property of a stochastic exponential process. </p>
+</li>
+<li><p>if $S_t \leq L &lt; K$, the option will be exercised and the value is $K-S_t$. </p>
+</li>
+</ul>
+<h3 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2:"></a>Step 2:</h3><p>Because the underlying price is a geometric Brownian motion:</p>
+<script type="math/tex; mode=display">
+S_t = S_0 e^{(r-\frac{1}{2}\sigma^2)t + \sigma W^Q_t}</script><p>$\forall \lambda \in \mathbb{R}$, we have:</p>
+<script type="math/tex; mode=display">
+S_t^{\lambda} = S_0^{\lambda} e^{(r-\frac{1}{2}\sigma^2)\lambda t + \sigma \lambda W^Q_t}.</script><p>We can define a stochastic exponential:</p>
+<script type="math/tex; mode=display">
+Z_t^{(\lambda)} = S_0^{\lambda} e^{-\frac{1}{2}\sigma^2\lambda^2t + \sigma \lambda W^Q_t}.</script><p>Then the differential of $Z_t^{(\lambda)}$ is</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+dZ_t^{(\lambda)} &=& S_0^{\lambda} d(e^{X_t}) \\
+&=& S_0^{\lambda} e^{X_t}\left[dX_t + \frac{1}{2}dX_tdX_t\right] \\
+&=& S_0^{\lambda} e^{X_t}\left[\lambda\sigma dW_t^Q-\frac{1}{2}\sigma^2\lambda^2dt + \frac{1}{2}\left(\lambda\sigma dW_t^Q-\frac{1}{2}\sigma^2\lambda^2dt\right)\left(\lambda\sigma dW_t^Q-\frac{1}{2}\sigma^2\lambda^2dt\right)\right] \\
+&=& S_0^{\lambda} e^{X_t}\left[\lambda\sigma dW_t^Q-\frac{1}{2}\sigma^2\lambda^2dt+\frac{1}{2}\sigma^2\lambda^2dt \right] \\
+&=& S_0^{\lambda} e^{X_t} \lambda\sigma dW_t^Q
+\end{eqnarray*}</script><p>Therefore $Z_t^{(\lambda)}$ is a Q-martingale.</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+Z_t^{(\lambda)} &=& S_0^{\lambda} e^{-\frac{1}{2}\sigma^2\lambda^2t + \sigma \lambda W^Q_t} \\
+&=& S_0^{\lambda} e^{(r-\frac{1}{2}\sigma^2)\lambda t + \sigma \lambda W^Q_t -(r-\frac{1}{2}\sigma^2)\lambda t -\frac{1}{2}\sigma^2\lambda^2t} \\
+&=& S_t^{\lambda} e^{[-r\lambda+\frac{1}{2}\sigma^2\lambda (1-\lambda)]t} \\
+\end{eqnarray}</script><p>In order to match with $S^{\lambda}_{\tau_L} e^{-r\tau_L}$, we can let </p>
+<script type="math/tex; mode=display">
+[-r\lambda+\frac{1}{2}\sigma^2\lambda (1-\lambda)]t = -rt \\
+(1-\lambda)\left(\frac{1}{2}\sigma^2\lambda + r\right) = 0,</script><p>therefore $\lambda<em>+ = 1$, $\lambda</em>{-} = -\frac{2r}{\sigma^2}$. We can choose $\lambda = \lambda_{-} = -\frac{2r}{\sigma^2}$, and then</p>
+<script type="math/tex; mode=display">
+Z_t^{(\lambda)} = Z_t^{(\lambda_{-})} = S_t^{\lambda_{-}}e^{-rt}</script><p>Because $L \leq S<em>t$, $\lambda</em>{-} = -\frac{2r}{\sigma^2} &lt; 0$ and $0 \leq t \leq \tau_L$: </p>
+<script type="math/tex; mode=display">
+0 \leq Z_t^{(\lambda_{-})} = S^{\lambda_{-}}_{t} e^{-rt} \leq L^{\lambda_{-}}e^{-rt} \leq L^{\lambda_{-}}</script><p>if $\tau<em>L = \infty$, then $Z_t^{(\lambda</em>{-})}$, $0 \leq t \leq \tau_L$:</p>
+<script type="math/tex; mode=display">
+0 \leq \lim_{t \to \infty} Z_t^{(\lambda_{-})} \leq \lim_{t\to\infty}L^{\lambda_{-}}e^{-rt} = 0</script><p>if $\tau<em>L &lt; \infty$, then we should consider the stopped process $Z</em>{t\land \tau<em>L}^{(\lambda</em>{-})}$ rather than $Z<em>t^{(\lambda</em>{-})}$ because the support of stopped process $Z<em>{t\land \tau_L}^{(\lambda</em>{-})}$will include $\infty$:</p>
+<script type="math/tex; mode=display">
+\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} = Z_{\tau_L}^{\lambda_{-}}</script><h3 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3:"></a>Step 3:</h3><p>Consider the put value function $f<em>L(t,S_t)$ again. Because we have let $\lambda = \lambda</em>{-}$, then:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+f_L(t, S_t) &=&(K-L)L^{-\lambda} \mathbb{E}^{Q} \left[S^{\lambda}_{\tau_L} e^{-r\tau_L} \mathbb{I}_{\tau_L< \infty}\right] \\
+&=& (K-L)L^{-\lambda_{-}} \mathbb{E}^{Q} \left[Z_{\tau_L}^{\lambda_{-}} \mathbb{I}_{\tau_L< \infty}\right] \\
+&=& (K-L)L^{-\lambda_{-}} \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L< \infty}\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] \\
+&=& (K-L)L^{-\lambda_{-}} \left\{ \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L< \infty}\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] + 0 \right\} \\
+&=& (K-L)L^{-\lambda_{-}} \left\{ \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L< \infty}\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] + \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L= \infty}\lim_{t \to \infty} Z_{t}^{(\lambda_{-})} \right] \right\} \\
+&=& (K-L)L^{-\lambda_{-}} \left\{ \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L< \infty}\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] + \mathbb{E}^{Q} \left[\mathbb{I}_{\tau_L= \infty}\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] \right\} \\
+&=& (K-L)L^{-\lambda_{-}} \mathbb{E}^{Q} \left[\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right]
+\end{eqnarray*}</script><p>Because $Z<em>t^{(\lambda</em>{-})}$ is a Q-martingale, $Z<em>{t\land \tau_L}^{(\lambda</em>{-})}$ is also a Q-martingale. According to the Dominated Convergence Theorem (DCT), </p>
+<script type="math/tex; mode=display">
+\left|Z_{t\land \tau_L}^{(\lambda_{-})}\right| = Z_{t\land \tau_L}^{(\lambda_{-})} \leq L^{\lambda_{-}} \\
+\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} = Z_{\tau_L}^{\lambda_{-}}</script><p>we can change the order between the expectation and limit. Therefore, we have </p>
+<script type="math/tex; mode=display">
+\begin{eqnarray*}
+f_L(t, S_t) &=& (K-L)L^{-\lambda_{-}} \mathbb{E}^{Q} \left[\lim_{t \to \infty} Z_{t\land \tau_L}^{(\lambda_{-})} \right] \\
+&=& (K-L)L^{-\lambda_{-}} \lim_{t \to \infty} \mathbb{E}^{Q} \left[ Z_{t\land \tau_L}^{(\lambda_{-})} \right] \\
+&=& (K-L)L^{-\lambda_{-}} \lim_{t \to \infty} Z_{0\land \tau_L}^{(\lambda_{-})} \\
+&=& (K-L)L^{-\lambda_{-}} Z_{0\land \tau_L}^{(\lambda_{-})} \\
+&=& (K-L)L^{-\lambda_{-}} Z_{0}^{(\lambda_{-})} \\
+&=& (K-L)L^{-\lambda_{-}} S_{0}^{\lambda_{-}} \\
+&=& (K-L) \frac{S_{0}^{\lambda_{-}}}{L^{\lambda_{-}}} \\
+\end{eqnarray*}</script><p>In total:</p>
+<script type="math/tex; mode=display">
+f_L(S) = 
+\begin{cases}
+K-S, ~~~S \leq L \\
+(K - L)\left(\frac{S}{L}\right)^{-\frac{2r}{\sigma^2}}, ~~~ S > L
+\end{cases}</script><h3 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4:"></a>Step 4:</h3><p>The formula above contains $L$, which is not the final answer. If every investors are rational, then we can continue to find maximum of $f_L(S)$ in term of $L$:</p>
+<script type="math/tex; mode=display">
+\begin{eqnarray}
+\frac{d f}{d L} &=& -\left(\frac{S}{L}\right)^{-\frac{2r}{\sigma^2}}+(K - L)\left({-\frac{2r}{\sigma^2}}\right)\left(\frac{S}{L}\right)^{-\frac{2r}{\sigma^2}-1}S\left(-\frac{1}{L^2}\right) \\
+&=& \left(\frac{S}{L}\right)^{-\frac{2r}{\sigma^2}}\left[-1-(K - L)\left({-\frac{2r}{\sigma^2}}\right)\left(\frac{1}{L}\right)\right] = 0
+\end{eqnarray}</script><p>Therefore,</p>
+<script type="math/tex; mode=display">
+L^* = \frac{2rK}{2r+\sigma^2}</script><p>we have the final fomula:</p>
+<script type="math/tex; mode=display">
+f_L(S) = 
+\begin{cases}
+K-S, ~~~S \leq \frac{2rK}{2r+\sigma^2} \\
+\frac{\sigma^2K}{2r+\sigma^2}\left(\frac{S(2r+\sigma^2)}{2rK}\right)^{-\frac{2r}{\sigma^2}}, ~~~ S > \frac{2rK}{2r+\sigma^2}
+\end{cases}</script>
+        </div>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "ygnmax"
+        },
+        "headline": "American Options",
+        "image": "http://yoursite.com",
+        "keywords": "Asset Pricing Finance - Options",
+        "genre": "Economics Finance Derivatives",
+        "datePublished": "2021-06-08",
+        "dateCreated": "2021-06-08",
+        "dateModified": "2021-06-08",
+        "url": "http://yoursite.com/2021/06/08/Derivatives - American Options/",
+        "description": "Perpetual American PutDefinitionPerpetual means that there is no maturity. The payoff at $t$ will be: 
+
+(K-S_t)^{+} = \max\{0, K-S_t\}The price at time $0$ and time $t$ will be the same (time-homogene"
+        "wordCount": 1074
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin" href="https://linkedin.com/in/guangnan-yang" target="_blank" rel="noopener">
+                        <i class="icon fa fa-linkedin"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="instagram" href="https://instagram.com/ygnmax" target="_blank" rel="noopener">
+                        <i class="icon fa fa-instagram"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2021/05/29/PJ_03 Eventful Age of 24/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Eventful Age of 24</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/">Big Data</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/JSON/">JSON</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Big-Data/SQL/">SQL</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/">Data Structure & Algorithm</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Data-Structure-Algorithm/Data-Structure/">Data Structure</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Machine-Learning/">Machine Learning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/">Programming</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/C/">C++</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Programming/Python/">Python</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/Tools/">Tools</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/">Economics</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/">Econometrics</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Econometrics/Time-Series/">Time Series</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/">Finance</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives/">Derivatives</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Derivatives-Pricing/">Derivatives Pricing</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Finance/Risk-Management/">Risk Management</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/">Literature Review</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Asset-Pricing/">Asset Pricing</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Financial-Market/">Financial Market</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Inequality/">Inequality</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Economics/Literature-Review/Macroeconomics/">Macroeconomics</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/">Languages</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/">English</a><span class="category-list-count">17</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/EnglishPod/">EnglishPod</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/TED-Collections/">TED Collections</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Verbal-Advantage/">Verbal Advantage</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Languages/English/Wall-Street-Journal/">Wall Street Journal</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/">Mathematics</a><span class="category-list-count">21</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/">Algebra</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Algebra/Linear-Algebra/">Linear Algebra</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/">Analysis</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Analysis/Real-Analysis/">Real Analysis</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/">Applied</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Applied/Optimization/">Optimization</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/">Probability</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Classic-Statistics/">Classic Statistics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Probability-Theory/">Probability Theory</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Calculus/">Stochastic Calculus</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mathematics/Probability/Stochastic-Processes/">Stochastic Processes</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/">Thoughts</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Other/">Other</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thoughts/Personal-Journals/">Personal Journals</a><span class="category-list-count">4</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Anaconda/" style="font-size: 10px;">Anaconda</a> <a href="/tags/Annual-Letter/" style="font-size: 11.82px;">Annual Letter</a> <a href="/tags/Artificial-Intelligence/" style="font-size: 10px;">Artificial Intelligence</a> <a href="/tags/Asset-Pricing/" style="font-size: 17.27px;">Asset Pricing</a> <a href="/tags/Bash/" style="font-size: 10px;">Bash</a> <a href="/tags/Behavioral-Finance/" style="font-size: 10px;">Behavioral Finance</a> <a href="/tags/Big-Data/" style="font-size: 10px;">Big Data</a> <a href="/tags/Bootcamp/" style="font-size: 10.91px;">Bootcamp</a> <a href="/tags/Brownian-Motion/" style="font-size: 10px;">Brownian Motion</a> <a href="/tags/C/" style="font-size: 15.45px;">C++</a> <a href="/tags/Calculus/" style="font-size: 10.91px;">Calculus</a> <a href="/tags/Data-Science/" style="font-size: 10px;">Data Science</a> <a href="/tags/Data-Structure/" style="font-size: 10px;">Data Structure</a> <a href="/tags/Database/" style="font-size: 11.82px;">Database</a> <a href="/tags/Derivatives/" style="font-size: 10px;">Derivatives</a> <a href="/tags/Econometrics/" style="font-size: 10px;">Econometrics</a> <a href="/tags/Economic-Growth/" style="font-size: 10px;">Economic Growth</a> <a href="/tags/English/" style="font-size: 20px;">English</a> <a href="/tags/FRM/" style="font-size: 14.55px;">FRM</a> <a href="/tags/Finance/" style="font-size: 13.64px;">Finance</a> <a href="/tags/Finance-Options/" style="font-size: 10px;">Finance - Options</a> <a href="/tags/Financial-Market/" style="font-size: 10px;">Financial Market</a> <a href="/tags/Fixed-Income/" style="font-size: 10px;">Fixed Income</a> <a href="/tags/Inequality/" style="font-size: 10px;">Inequality</a> <a href="/tags/JSON/" style="font-size: 10px;">JSON</a> <a href="/tags/Journal/" style="font-size: 14.55px;">Journal</a> <a href="/tags/Linear-Algebra/" style="font-size: 10px;">Linear Algebra</a> <a href="/tags/Linux/" style="font-size: 10.91px;">Linux</a> <a href="/tags/MOOC/" style="font-size: 16.36px;">MOOC</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Macroeconomics/" style="font-size: 10.91px;">Macroeconomics</a> <a href="/tags/Monetary/" style="font-size: 10px;">Monetary</a> <a href="/tags/NYU/" style="font-size: 17.27px;">NYU</a> <a href="/tags/Numpy/" style="font-size: 10px;">Numpy</a> <a href="/tags/Optimization/" style="font-size: 10.91px;">Optimization</a> <a href="/tags/Pandas/" style="font-size: 10px;">Pandas</a> <a href="/tags/Papers/" style="font-size: 17.27px;">Papers</a> <a href="/tags/Probability/" style="font-size: 19.09px;">Probability</a> <a href="/tags/Python/" style="font-size: 15.45px;">Python</a> <a href="/tags/Real-Analysis/" style="font-size: 10.91px;">Real Analysis</a> <a href="/tags/Regular-Expression/" style="font-size: 10px;">Regular Expression</a> <a href="/tags/Risk-Management/" style="font-size: 14.55px;">Risk Management</a> <a href="/tags/SQL/" style="font-size: 11.82px;">SQL</a> <a href="/tags/Speaking/" style="font-size: 18.18px;">Speaking</a> <a href="/tags/Statistics/" style="font-size: 15.45px;">Statistics</a> <a href="/tags/Stochastic/" style="font-size: 14.55px;">Stochastic</a> <a href="/tags/Stochastic-Calculus/" style="font-size: 14.55px;">Stochastic Calculus</a> <a href="/tags/Stochastic-Differential-Equation/" style="font-size: 10.91px;">Stochastic Differential Equation</a> <a href="/tags/Stochastic-Processes/" style="font-size: 10px;">Stochastic Processes</a> <a href="/tags/TED/" style="font-size: 10px;">TED</a> <a href="/tags/Time-Series/" style="font-size: 10px;">Time Series</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Vocabularies/" style="font-size: 12.73px;">Vocabularies</a> <a href="/tags/WSJ/" style="font-size: 10.91px;">WSJ</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">contact</h3>
+        <div class="widget">
+            Email: <a href="mailto:ygnmax@gmail.com" target="_blank">ygnmax@gmail.com</a>
+        </div>
+    </div>
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy;2018 - 2021 ygnmax</p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'guest';
+    
+    
+    var disqus_url = 'http://yoursite.com/2021/06/08/Derivatives - American Options/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
